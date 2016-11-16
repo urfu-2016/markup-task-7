@@ -1,0 +1,120 @@
+body
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header,
+main,
+footer
+{
+    flex: 1 100%;
+}
+
+/* Header styles */
+
+header
+{
+    height: 7rem;
+    text-align: center;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+header p
+{
+    font-size: 2rem
+}
+
+/* Footer styles */
+
+footer
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    padding: 1rem 10px;
+    border-top: 2px solid #aca6a6;
+    font-size: 1.5rem;
+}
+
+footer p
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Main section styles */
+
+main
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+main nav,
+main .rating
+{
+    flex: 2 2 0;
+}
+
+main .container
+{
+    flex: 1 1 60%;
+}
+
+/* Container styles */
+
+.container
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+article
+{
+    box-sizing: border-box;
+    flex: 2 30%;
+    min-width: 200px;
+    margin: 5px;
+
+    display: flex;
+    align-items: center;
+
+    border: 1px solid #000;
+
+    position: relative;
+}
+
+/* Article styles */
+
+article img
+{
+    width: 100%;
+}
+
+article p
+{
+    position: absolute;
+    bottom: 20px;
+    background: #000;
+    opacity: 0;
+    color: #fff;
+    padding: 10px;
+    transition: .2s ease-in-out;
+}
+
+article:hover p
+{
+    display: block;
+    opacity: .8;
+}
+
+.two-column
+{
+    flex: 1 66%;
+}
