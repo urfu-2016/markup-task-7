@@ -2,7 +2,92 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <header>
+        <h1>Котятки</h1>
+    </header>
+    <div class="container">
+        <aside class="breed">
+            <label for="dalmatin">Далматинец</label>
+            <label for="pug">Мопс</label>
+            <label for="terrier">Терьер</label>
+        </aside>
+        <main>
+            <input type="checkbox" id="pug" class="select-pug">
+            <input type="checkbox" id="dalmatin" class="select-dalmatin">
+            <input type="checkbox" id="terrier" class="select-terrier">
+            <article class="pug">
+                <div class="card-content">
+                    <img src="http://dog.pet2me.com/upload/cl/full/2012/06/05_4852.jpg">
+                    <span class="dog-info">Вася, 4 годика</span>
+                </div>
+            </article>
+            <article class="pug">
+                <div class="card-content">
+                    <img src="http://www.pitomec.ru/upload/admin/images/kinds/dogs/Pug4.jpg">
+                    <span class="dog-info">Ларрик, 6 годиков</span>
+                </div>
+            </article>
+            <article class="dalmatin">
+                <div class="card-content">
+                    <img src="https://i.ytimg.com/vi/6GeeSCaRIMI/maxresdefault.jpg">
+                    <span class="dog-info">Пёс, 3 годика</span>
+                </div>
+            </article>
+            <article>
+                <div class="card-content">
+                    <img src="http://www.robotshop.com/media/files/images/dasa-robot-genibo-robot-dog-a-large.jpg">
+                    <span class="dog-info">Годдарт, 624 годика</span>
+                </div>
+            </article>
+            <article>
+                <div class="card-content">
+                    <img src="http://kot-pes.com/wp-content/uploads/2015/03/Russkiy_toy_041-650x392.jpg">
+                    <span class="dog-info">Котопес, 1 годик</span>
+                </div>
+            </article>
+            <article class="terrier">
+                <div class="card-content">
+                    <img src="http://www.zooclub.ru/skat/img.php?w=700&h=700&img=./attach/8695.jpg">
+                    <span class="dog-info">Баскервилль, 1 годик</span>
+                </div>
+            </article>
+            <article class="dalmatin">
+                <div class="card-content">
+                    <img src="http://dogcentr.ru/wp-content/uploads/2014/05/131.jpg">
+                    <span class="dog-info">Спотти, 3 годика</span>
+                </div>
+            </article>
+            <article>
+                <div class="card-content">
+                    <img src="http://dudley.ru/sites/default/files/field/image/labrador_puppy_0.jpg">
+                    <span class="dog-info">Гибралтар, 2 месяца</span>
+                </div>
+            </article>
+        </main>
+        <aside class="ratings">
+            <h2>РЕЙТИНГ</h2>
+            <label for="sort-ratings">по убыванию</label>
+            <input class="sort-ratings" id="sort-ratings" type="checkbox">
+            <div>
+                Мопс<br>
+                <span class="rating rating-10" data-rating="10"></span>
+            </div>
+            <div>
+                Той терьер<br>
+                <span class="rating rating-3" data-rating="3"></span>
+            </div>
+            <div>
+                Далматинец<br>
+                <span class="rating rating-6" data-rating="6"></span>
+            </div>
+            <div>
+                Йоркширский терьер<br>
+                <span class="rating rating-8" data-rating="8"></span>
+            </div>
+        </aside>
+    </div>
 </body>
 </html>
