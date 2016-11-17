@@ -1,18 +1,35 @@
+html
+{
+    height: 100%;
+}
+
 body
 {
     font-family: Verdana, sans-serif;
-    font-size: 12px;
     background: #eee;
-}
-
-header
-{
-    text-align: center;
+    margin: 0;
+    height: 100%;
 }
 
 .container
 {
     display: flex;
+    flex-wrap: wrap;
+    padding: 0 10px 0 20px;
+    min-height: 100%;
+}
+
+header
+{
+    flex: 0 0 100%;
+    align-self: flex-start;
+}
+
+header h1
+{
+    text-align: center;
+    margin: 0;
+    padding: 21px;
 }
 
 .breed,
@@ -20,11 +37,7 @@ header
 {
     flex: 0 0 20%;
     background: #ccc;
-}
-
-main input
-{
-    display: none;
+    font-size: 1.2em;
 }
 
 .breed label
@@ -53,6 +66,11 @@ main
     padding: 0 7px;
 }
 
+main > input
+{
+    display: none;
+}
+
 main article
 {
     position: relative;
@@ -70,13 +88,13 @@ main article:nth-of-type(8n+4),
 main article:nth-of-type(8n+5),
 main article:nth-of-type(8n+7)
 {
-    flex: 0 0 33%;
+    flex: 0 0 33.3%;
 }
 
 main article:nth-of-type(8n+2),
 main article:nth-of-type(8n+6)
 {
-    flex: 0 0 66%;
+    flex: 0 0 66.6%;
 }
 
 main article:nth-of-type(8n+8)
@@ -84,17 +102,12 @@ main article:nth-of-type(8n+8)
     flex: 0 0 100%;
 }
 
-.card-content
+article:hover .dog-info
 {
-    position: relative;
+    opacity: .6;
 }
 
-.card-content:hover .dog-info
-{
-    opacity: 0.6;
-}
-
-.card-content img
+article img
 {
     max-width: 100%;
     max-height: 100%;
@@ -102,12 +115,13 @@ main article:nth-of-type(8n+8)
 
 main input:checked ~ article
 {
-    opacity: 0.4;
+    opacity: .4;
 }
 
 .container main .select-pug:checked ~ .pug,
 .container main .select-dalmatin:checked ~ .dalmatin,
-.container main .select-terrier:checked ~ .terrier
+.container main .select-terrier:checked ~ .terrier,
+.container main .select-toy-terrier:checked ~ .toy-terrier
 {
     opacity: 1;
 }
@@ -129,31 +143,68 @@ main input:checked ~ article
 
 .ratings
 {
-    display: flex;
-    flex-wrap: wrap;
     align-self: flex-start;
-    padding: 0 0 8px 8px;
+    padding: 8px;
+    box-sizing: border-box;
 }
 
 .ratings h2
 {
-    flex: 0 0 100%;
     font-weight: normal;
     color: #f00;
+    margin: 0;
 }
 
-.ratings div
+.sort-label
 {
+    font-size: .7em;
+    float: right;
+}
+
+.sort-ratings
+{
+    float: right;
+}
+
+.sort-ratings:checked ~ .ratings-container
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ratings-container
+{
+    clear: both;
+}
+
+.ratings-container div
+{
+    padding-top: 5px;
     flex: 0 0 100%;
 }
 
 .rating
 {
+    height: 1.2em;
+    text-align: right;
+    font-weight: bold;
+}
+
+.rating:before
+{
+    content: '';
     display: inline-block;
-    height: 1.5em;
+    height: 100%;
+    float: left;
+    box-sizing: border-box;
 }
 
 .rating-10
+{
+    order: 1;
+}
+
+.rating-10 .rating:before
 {
     width: 80%;
     background: linear-gradient(to right, #0f0, #fff);
@@ -162,12 +213,22 @@ main input:checked ~ article
 
 .rating-8
 {
+    order: 3;
+}
+
+.rating-8 .rating:before
+{
     width: 64%;
     background: linear-gradient(to right, #0f0, #fff);
     border: 1px solid #0f0;
 }
 
 .rating-3
+{
+    order: 8;
+}
+
+.rating-3 .rating:before
 {
     width: 24%;
     background: linear-gradient(to right, #f00, #fff);
@@ -176,17 +237,40 @@ main input:checked ~ article
 
 .rating-6
 {
+    order: 5;
+}
+
+.rating-6 .rating:before
+{
     width: 48%;
     background: linear-gradient(to right, #ff0, #fff);
     border: 1px solid #ff0;
 }
 
-.rating:before
+footer
 {
-    content: attr(data-rating);
-    margin-top: -3px;
-    display: inline-block;
+    flex: 0 0 100%;
+    align-self: flex-end;
+    padding: 16px 20px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+
+footer:before
+{
+    left: 0;
+    margin-top: -16px;
     position: absolute;
-    font-size: 1.5em;
-    right: 12px;
+    content: '';
+    border-top: 1px solid #333;
+    width: 100%;
+}
+
+address
+{
+    text-align: right;
+    color: #44f;
+    display: inline-block;
+    float: right;
+    font-style: normal;
 }
