@@ -84,18 +84,27 @@ header h1
     opacity: .4;
 }
 
-.container .select-pug:checked ~ main .pug,
-.container .select-dalmatin:checked ~ main .dalmatin,
-.container .select-terrier:checked ~ main .terrier,
-.container .select-toy-terrier:checked ~ main .toy-terrier
+.container > input:checked ~ main article .dog-info
+{
+    opacity: 0;
+}
+
+.select-pug:checked ~ main .pug,
+.select-dalmatin:checked ~ main .dalmatin,
+.select-terrier:checked ~ main .terrier,
+.select-toy-terrier:checked ~ main .toy-terrier,
+.select-pug:checked ~ main .pug:hover .dog-info,
+.select-dalmatin:checked ~ main .dalmatin:hover .dog-info,
+.select-terrier:checked ~ main .terrier:hover .dog-info,
+.select-toy-terrier:checked ~ main .toy-terrier:hover .dog-info
 {
     opacity: 1;
 }
 
-.container .select-pug:checked ~ .breed .pug-label,
-.container .select-dalmatin:checked ~ .breed .dalmatin-label,
-.container .select-terrier:checked ~ .breed .terrier-label,
-.container .select-toy-terrier:checked ~ .breed .toy-terrier-label
+.select-pug:checked ~ .breed .pug-label,
+.select-dalmatin:checked ~ .breed .dalmatin-label,
+.select-terrier:checked ~ .breed .terrier-label,
+.select-toy-terrier:checked ~ .breed .toy-terrier-label
 {
     background: #555;
     color: #fff;
@@ -169,12 +178,12 @@ article img
 
 .dog-info
 {
-    background: rgba(0, 0, 0, .6);
-    color: #fff;
     position: absolute;
-    left: 0;
+    left: 2px;
     bottom: 30px;
     padding: 16px 8px;
+    background: rgba(0, 0, 0, .6);
+    color: #fff;
     opacity: 0;
     -webkit-transition: opacity .2s;
     -moz-transition: opacity .2s;
@@ -338,4 +347,26 @@ address
     display: inline-block;
     float: right;
     font-style: normal;
+}
+
+@media (max-width: 850px)
+{
+    .change-layout:not(:checked) ~ .container .breed,
+    .change-layout:not(:checked) ~ .container main,
+    .change-layout:not(:checked) ~ .container .ratings
+    {
+        flex: 0 0 100%;
+    }
+
+    .change-layout:checked ~ .container
+    {
+        grid-template-columns: 100%;
+    }
+
+    .change-layout:checked ~ .container .breed,
+    .change-layout:checked ~ .container main,
+    .change-layout:checked ~ .container .ratings
+    {
+        grid-column: span 3;
+    }
 }
