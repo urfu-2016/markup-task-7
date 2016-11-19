@@ -16,6 +16,8 @@ main
     justify-content: center;
 }
 
+/*Навигация*/
+
 .navigation
 {
     display: flex;
@@ -25,7 +27,7 @@ main
 
 .breed
 {
-    padding: 10px 7px;
+    padding: 5px;
     border-bottom: 1px solid #443504;
     font-size: 20px;
 }
@@ -34,6 +36,8 @@ main
 {
     background-color: #eeb046;
 }
+
+/*Галерея*/
 
 .gallery
 {
@@ -59,6 +63,11 @@ main
     position: relative;
 }
 
+.cell > img
+{
+    height: 250px;
+}
+
 .cell > .description
 {
     display: none;
@@ -75,25 +84,67 @@ main
     top: 200px;
 }
 
-.type1:checked ~ .row .cell:not(.cat1)
+.cat1
+{
+    width: 350px;
+}
+
+.cat2
+{
+    width: 496px;
+}
+
+.cat3
+{
+    width: 280px;
+}
+
+.cat4
+{
+    width: 280px;
+}
+
+.cat5
+{
+    width: 280px;
+}
+
+.cat6
+{
+    width: 496px;
+}
+
+.cat7
+{
+    width: 350px;
+}
+
+.cat8
+{
+    width: 852px;
+}
+
+.type1:checked ~ .row .cell:not(.breed1)
 {
     opacity: .5;
 }
 
-.type2:checked ~ .row .cell:not(.cat2)
+.type2:checked ~ .row .cell:not(.breed2)
 {
     opacity: .5;
 }
 
-.type3:checked ~ .row .cell:not(.cat3)
+.type3:checked ~ .row .cell:not(.breed3)
 {
     opacity: .5;
 }
 
-.type4:checked ~ .row .cell:not(.cat4)
+.type4:checked ~ .row .cell:not(.breed4)
 {
     opacity: .5;
 }
+
+/*Рейтинг*/
 
 .rating
 {
