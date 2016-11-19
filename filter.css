@@ -1,0 +1,49 @@
+input[name="kind"]
+{
+    display: none;
+}
+
+input[name="kind"]:checked ~ .content-panel main .kitten
+{
+    opacity: 0.3;
+}
+
+input[name="kind"]:checked ~ .content-panel main .kitten .kitten-label
+{
+    display: none;
+}
+
+
+input[id="abissian"]:checked ~ .content-panel main .abissian,
+input[id="britan"]:checked ~ .content-panel main .britan,
+input[id="russian-blue"]:checked ~ .content-panel main .russian-blue,
+input[id="siam"]:checked ~ .content-panel main .siam
+{
+    opacity: 1;
+}
+
+input[id="abissian"]:checked ~ .content-panel main .abissian .kitten-label,
+input[id="britan"]:checked ~ .content-panel main .britan .kitten-label,
+input[id="russian-blue"]:checked ~ .content-panel main .russian-blue .kitten-label,
+input[id="siam"]:checked ~ .content-panel main .siam .kitten-label
+{
+    display: block;
+}
+
+input[id="abissian"]:checked ~ .content-panel .type-filter .abissian,
+input[id="britan"]:checked ~ .content-panel .type-filter .britan,
+input[id="russian-blue"]:checked ~ .content-panel .type-filter .russian-blue,
+input[id="siam"]:checked ~ .content-panel .type-filter .siam
+{
+    background: grey;
+    color: white;
+}
+
+.button
+{
+    align-content: center;
+    padding: 15px;
+    font-size: 150%;
+    cursor: pointer;
+    border-bottom: 1px solid black;
+}
