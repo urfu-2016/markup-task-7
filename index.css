@@ -1,0 +1,353 @@
+body
+{
+    width: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ebebeb;
+}
+
+header
+{
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+main
+{
+    display: flex;
+}
+
+nav
+{
+    display: flex;
+    flex-direction: column;
+    background: #d9d9d9;
+}
+
+aside
+{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    background: #d9d9d9;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding: 10px;
+    border-top: 1px solid #5a5a5a;
+}
+
+.right-footer
+{
+    color: #000fff;
+}
+
+aside h1
+{
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+    color: #f00;
+}
+
+aside,
+nav
+{
+    white-space: nowrap;
+}
+
+.show-sort,
+.label-sort
+{
+    margin-left: 35px;
+}
+
+.show-sort
+{
+    position: relative;
+    top: -18px;
+    left: 100px;
+}
+
+.show-sort:checked ~ .value
+{
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.value1,
+.value2,
+.value3,
+.value4,
+.value5,
+.value6
+{
+    display: block;
+}
+
+.scale
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.values-cats
+{
+    width: 20px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.scale1,
+.scale2,
+.scale3,
+.scale4,
+.scale5,
+.scale6
+{
+    height: 15px;
+    width: 100%;
+}
+
+.scale1
+{
+    width: 40%;
+    background: #f00;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scale2
+{
+    width: 70%;
+    background: #fff608;
+    background: linear-gradient(to right, #fff608, #fff);
+}
+
+.scale3
+{
+    width: 90%;
+    background: #04e86f;
+    background: linear-gradient(to right, #04e86f, #fff);
+}
+
+.scale4
+{
+    width: 80%;
+    background: #fff608;
+    background: linear-gradient(to right, #fff608, #fff);
+}
+
+.scale5
+{
+    width: 100%;
+    background: #04e86f;
+    background: linear-gradient(to right, #04e86f, #fff);
+}
+
+.scale6
+{
+    width: 60%;
+    background: #fa5;
+    background: linear-gradient(to right, #fa5, #fff);
+}
+
+.list
+{
+    padding: 15px 10px;
+    border-bottom: 1px solid #ebebeb;
+    background: #d9d9d9;
+}
+
+.close-list
+{
+    flex-shrink: 0;
+}
+
+.photo-cat
+{
+    width: 100%;
+    height: 100%;
+}
+
+.images
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 200px 200px 200px 200px 200px;
+    grid-template-areas: "a b b" "c d e" "f f g" "h h h" "k l l";
+}
+
+.cat1,
+.cat2,
+.cat3,
+.cat4,
+.cat5,
+.cat6,
+.cat7,
+.cat8,
+.cat9,
+.cat10
+{
+    margin: 0 5px 10px;
+}
+
+.cat1
+{
+    grid-area: a;
+}
+
+.cat2
+{
+    grid-area: b;
+}
+
+.cat3
+{
+    grid-area: c;
+}
+
+.cat4
+{
+    grid-area: d;
+}
+
+.cat5
+{
+    grid-area: e;
+}
+
+.cat6
+{
+    grid-area: f;
+}
+
+.cat7
+{
+    grid-area: g;
+}
+
+.cat8
+{
+    grid-area: h;
+}
+
+.cat9
+{
+    grid-area: k;
+}
+
+.cat10
+{
+    grid-area: l;
+}
+
+.name
+{
+    display: none;
+    width: 100%;
+    padding: 5px 0;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    bottom: 40px;
+}
+
+.cat1:hover .name,
+.cat2:hover .name,
+.cat3:hover .name,
+.cat4:hover .name,
+.cat5:hover .name,
+.cat6:hover .name,
+.cat7:hover .name,
+.cat8:hover .name,
+.cat9:hover .name,
+.cat10:hover .name
+{
+    display: block;
+}
+
+.checkbox-list1,
+.checkbox-list2,
+.checkbox-list3,
+.checkbox-list4,
+.checkbox-list5,
+.checkbox-list6
+{
+    display: none;
+}
+
+.checkbox-list1:checked ~ .images > .cat1,
+.checkbox-list1:checked ~ .images > .cat2,
+.checkbox-list1:checked ~ .images > .cat3,
+.checkbox-list1:checked ~ .images > .cat4,
+.checkbox-list1:checked ~ .images > .cat7,
+.checkbox-list1:checked ~ .images > .cat8,
+.checkbox-list1:checked ~ .images > .cat9,
+.checkbox-list1:checked ~ .images > .cat10,
+.checkbox-list2:checked ~ .images > .cat1,
+.checkbox-list2:checked ~ .images > .cat2,
+.checkbox-list2:checked ~ .images > .cat3,
+.checkbox-list2:checked ~ .images > .cat5,
+.checkbox-list2:checked ~ .images > .cat6,
+.checkbox-list2:checked ~ .images > .cat7,
+.checkbox-list2:checked ~ .images > .cat8,
+.checkbox-list3:checked ~ .images > .cat2,
+.checkbox-list3:checked ~ .images > .cat3,
+.checkbox-list3:checked ~ .images > .cat4,
+.checkbox-list3:checked ~ .images > .cat5,
+.checkbox-list3:checked ~ .images > .cat6,
+.checkbox-list3:checked ~ .images > .cat7,
+.checkbox-list3:checked ~ .images > .cat8,
+.checkbox-list3:checked ~ .images > .cat10,
+.checkbox-list4:checked ~ .images > .cat1,
+.checkbox-list4:checked ~ .images > .cat3,
+.checkbox-list4:checked ~ .images > .cat4,
+.checkbox-list4:checked ~ .images > .cat5,
+.checkbox-list4:checked ~ .images > .cat6,
+.checkbox-list4:checked ~ .images > .cat7,
+.checkbox-list4:checked ~ .images > .cat8,
+.checkbox-list4:checked ~ .images > .cat9,
+.checkbox-list4:checked ~ .images > .cat10,
+.checkbox-list5:checked ~ .images > .cat1,
+.checkbox-list5:checked ~ .images > .cat2,
+.checkbox-list5:checked ~ .images > .cat4,
+.checkbox-list5:checked ~ .images > .cat5,
+.checkbox-list5:checked ~ .images > .cat6,
+.checkbox-list5:checked ~ .images > .cat7,
+.checkbox-list5:checked ~ .images > .cat8,
+.checkbox-list5:checked ~ .images > .cat9,
+.checkbox-list5:checked ~ .images > .cat10,
+.checkbox-list6:checked ~ .images > .cat1,
+.checkbox-list6:checked ~ .images > .cat2,
+.checkbox-list6:checked ~ .images > .cat3,
+.checkbox-list6:checked ~ .images > .cat4,
+.checkbox-list6:checked ~ .images > .cat5,
+.checkbox-list6:checked ~ .images > .cat6,
+.checkbox-list6:checked ~ .images > .cat8,
+.checkbox-list6:checked ~ .images > .cat9,
+.checkbox-list6:checked ~ .images > .cat10
+{
+    opacity: .5;
+}
+
+.checkbox-list1:checked ~ nav > .l1,
+.checkbox-list2:checked ~ nav > .l2,
+.checkbox-list3:checked ~ nav > .l3,
+.checkbox-list4:checked ~ nav > .l4,
+.checkbox-list5:checked ~ nav > .l5,
+.checkbox-list6:checked ~ nav > .l6
+{
+    background: #5a5a5a;
+    color: #d9d9d9;
+}
