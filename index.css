@@ -1,0 +1,250 @@
+.grid
+{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+}
+.breeds
+{
+    padding: 2px;
+    background: red;
+}
+
+main
+{
+    padding: 2px;
+    background: blue;
+}
+
+.rating
+{
+    padding: 2px;
+    background: black;
+}
+
+.cards-grid-template
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "first second second"
+                         "third fourth fifth"
+                         "sixth sixth seventh"
+                         "eighth eighth eighth";
+}
+
+.card-image
+{
+    width: 100%;
+    height: 100%;
+}
+
+.cards-grid-template > .card
+{
+    height: 250px;
+    padding: 2px;
+}
+
+.cards-grid-template > :nth-child(8n+1)
+{
+    grid-column-start: first-start;
+    grid-column-end: first-end;
+}
+
+.cards-grid-template > :nth-child(8n+2)
+{
+    grid-column-start: second-start;
+    grid-column-end: second-end;
+}
+
+.cards-grid-template > :nth-child(8n+3)
+{
+    grid-column-start: third-start;
+    grid-column-end: third-end;
+}
+
+.cards-grid-template > :nth-child(8n+4)
+{
+    grid-column-start: fourth-start;
+    grid-column-end: fourth-end;
+}
+
+.cards-grid-template > :nth-child(8n+5)
+{
+    grid-column-start: fifth-start;
+    grid-column-end: fifth-end;
+}
+
+.cards-grid-template > :nth-child(8n+6)
+{
+    grid-column-start: sixth-start;
+    grid-column-end: sixth-end;
+}
+
+.cards-grid-template > :nth-child(8n+7)
+{
+    grid-column-start: seventh-start;
+    grid-column-end: seventh-end;
+}
+
+.cards-grid-template > :nth-child(8n)
+{
+    grid-column-start: eighth-start;
+    grid-column-end: eighth-end;
+}
+
+.rating > .rating-values
+{
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.rating-info
+{
+    display: grid;
+    grid-template-columns: auto 50px;
+    grid-template-areas: "title title"
+                         "bar value";
+    order: 50;
+}
+
+.rating-breed-name
+{
+    grid-column-start: title-start;
+    grid-column-end: title-end;
+    color: blue;
+}
+
+.rating-title
+{
+    color: blue;
+    order: 1;
+}
+
+.rating-value
+{
+    color: blue;
+    grid-column-start: value-start;
+    grid-column-end: value-end;
+}
+
+.rating-sort
+{
+    order: 2;
+}
+
+.rating-bar
+{
+    height: 20px;
+    border: 1px solid blue;
+    grid-column-start: bar-start;
+    grid-column-end: bar-end;
+}
+
+.rating-bar[title='5']
+{
+    width: 50%;
+    background: yellow;
+}
+
+.rating-bar[title='10']
+{
+    width: 100%;
+    background: green;
+}
+
+.rating-bar[title='1']
+{
+    width: 10%;
+    background: red;
+}
+
+.rating-bar[title='2']
+{
+    width: 20%;
+    background: red;
+}
+
+.rating-bar[title='3']
+{
+    width: 30%;
+    background: red;
+}
+
+.rating-bar[title='4']
+{
+    width: 40%;
+    background: red;
+}
+
+.rating-bar[title='6']
+{
+    width: 60%;
+    background: yellow;
+}
+
+.rating-bar[title='7']
+{
+    width: 70%;
+    background: yellow;
+}
+
+.rating-bar[title='8']
+{
+    width: 80%;
+    background: green;
+}
+
+.rating-bar[title='9']
+{
+    width: 90%;
+    background: green;
+}
+
+.rating-sort:checked ~ .rating-info[title='10']
+{
+    order: 3;
+}
+
+.rating-sort:checked ~ .rating-info[title='9']
+{
+    order: 4;
+}
+
+.rating-sort:checked ~ .rating-info[title='8']
+{
+    order: 5;
+}
+
+.rating-sort:checked ~ .rating-info[title='7']
+{
+    order: 6;
+}
+
+.rating-sort:checked ~ .rating-info[title='6']
+{
+    order: 7;
+}
+
+.rating-sort:checked ~ .rating-info[title='5']
+{
+    order: 8;
+}
+
+.rating-sort:checked ~ .rating-info[title='4']
+{
+    order: 9;
+}
+
+.rating-sort:checked ~ .rating-info[title='3']
+{
+    order: 19;
+}
+
+.rating-sort:checked ~ .rating-info[title='2']
+{
+    order: 11;
+}
+
+.rating-sort:checked ~ .rating-info[title='1']
+{
+    order: 12;
+}
