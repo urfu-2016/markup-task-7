@@ -1,0 +1,421 @@
+body
+{
+    background-color: #ebebeb;
+}
+
+header
+{
+    text-align: center;
+    font-size: 2rem;
+    font-family: sans-serif;
+}
+
+.shop
+{
+    display: flex;
+    margin: auto;
+    min-width: 960px;
+}
+
+main
+{
+    align-content: stretch;
+    display: flex;
+    flex-basis: 60%;
+    flex-wrap: wrap;
+    min-height: 100%;
+    align-items: stretch;
+    margin-top: -6px;
+}
+
+.species
+{
+    display: flex;
+    height: 78px;
+    border-bottom: 1px #8d8a8a solid;
+    text-align: center;
+    flex-direction: column;
+    font: 1.5rem sans-serif;
+}
+
+.species::after
+{
+    content: '';
+    display: flex;
+    border-bottom: 1px #fff solid;
+}
+
+.species:hover
+{
+    background-color: #5a5a5a;
+}
+
+.cat
+{
+    height: 360px;
+    margin: .5%;
+    overflow: hidden;
+    position: relative;
+    opacity: .3;
+}
+
+.description
+{
+    visibility: hidden;
+}
+
+footer
+{
+    width: 100%;
+    margin-top: 40px;
+    border-top: 1px #7c7c7c solid;
+}
+
+.left-menu
+{
+    flex-basis: 20%;
+    background-color: #d9d9d9;
+}
+
+.left-menu label span
+{
+    margin: 1em;
+}
+
+.right-menu
+{
+    flex-basis: 22%;
+    align-self: flex-start;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+
+}
+
+.russian-blue1,
+.russian-blue2,
+.british1,
+.british2
+{
+    width: 32%;
+}
+
+.siamese1
+{
+    width: 33%;
+}
+
+.abyssinian1,
+.abyssinian2
+{
+    width: 66%;
+}
+
+.abyssinian3
+{
+    width: 100%;
+}
+
+.cat-foto
+{
+    object-fit: cover;
+    min-width: 100%;
+    height: 100%;
+}
+
+.cat p
+{
+    background: #ababab;
+    color: #fff;
+    display: none;
+    padding: 13px;
+    position: absolute;
+    text-align: center;
+    top: 75%;
+}
+
+.cat:hover p
+{
+    display: block;
+}
+
+input[id='abyssinian']:checked ~ .shop main [class^='cat ab'],
+input[id='british']:checked ~ .shop main [class^='cat br'],
+input[id='russian-blue']:checked ~ .shop main [class^='cat ru'],
+input[id='siamese']:checked ~ .shop main [class^='cat si'],
+input[id='all']:checked ~ .shop main [class^='cat']
+{
+    opacity: 1;
+}
+
+input[id='abyssinian']:checked ~ .shop .left-menu label:nth-of-type(1),
+input[id='british']:checked ~ .shop .left-menu label:nth-of-type(2),
+input[id='russian-blue']:checked ~ .shop .left-menu label:nth-of-type(3),
+input[id='siamese']:checked ~ .shop .left-menu label:nth-of-type(4)
+{
+    background: #5a5a5a;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+address
+{
+    float: right;
+    margin-top: 16px;
+    color: #1634a3;
+}
+
+footer p
+{
+    float: left;
+}
+
+.view-rating
+{
+    float: left;
+    margin-top: 15px;
+}
+
+.right-menu h2
+{
+    color: #db0606;
+    font-family: sans-serif;
+    margin-left: 20px;
+}
+
+.right-menu section
+{
+    align-self: flex-end;
+    margin-right: 5%;
+}
+
+.right-menu input
+{
+    display: none;
+}
+
+.right-menu section label:nth-of-type(3)
+{
+    display: none;
+}
+
+input[id='lower']:checked ~ section label:nth-of-type(2)
+{
+    display: none;
+}
+
+input[id='lower']:checked ~ section label:nth-of-type(3)
+{
+    display: initial;
+}
+
+.count-rating
+{
+    float: right;
+}
+
+.breed
+{
+    width: 90%;
+    margin: auto;
+}
+
+.view-rating
+{
+    height: 25px;
+}
+
+.rating10 .view-rating
+{
+    background: linear-gradient(to right, #01e86e, #fff);
+    width: 90%;
+    border: 1px solid #00b153;
+}
+
+.rating9 .view-rating
+{
+    background: linear-gradient(to right, #01e86e, #fff);
+    width: 85%;
+    border: 1px solid #00b153;
+}
+
+.rating8 .view-rating
+{
+    background: linear-gradient(to right, #01e86e, #fff);
+    width: 80%;
+    border: 1px solid #00b153;
+}
+
+.rating7 .view-rating
+{
+    background: linear-gradient(to right, #fff601, #fff);
+    width: 70%;
+    border: 1px solid #c3bc00;
+}
+
+.rating6 .view-rating
+{
+    background: linear-gradient(to right, #fff601, #fff);
+    width: 60%;
+    border: 1px solid #c3bc00;
+}
+
+.rating5 .view-rating
+{
+    background: linear-gradient(to right, #fff601, #fff);
+    width: 50%;
+    border: 1px solid #c3bc00;
+}
+
+.rating4 .view-rating
+{
+    background: linear-gradient(to right, #e80802, #fff);
+    width: 40%;
+    border: 1px solid #ba0803;
+}
+
+.rating3 .view-rating
+{
+    background: linear-gradient(to right, #e80802, #fff);
+    width: 30%;
+    border: 1px solid #ba0803;
+}
+
+.rating2 .view-rating
+{
+    background: linear-gradient(to right, #e80802, #fff);
+    width: 20%;
+    border: 1px solid #ba0803;
+}
+
+.rating1 .view-rating
+{
+    background: linear-gradient(to right, #e80802, #fff);
+    width: 10%;
+    border: 1px solid #ba0803;
+}
+
+input[id='lower']:checked ~ .rating10
+{
+    order: 1;
+}
+
+input[id='lower']:checked ~ .rating9
+{
+    order: 2;
+}
+
+input[id='lower']:checked ~ .rating8
+{
+    order: 3;
+}
+
+input[id='lower']:checked ~ .rating7
+{
+    order: 4;
+}
+
+input[id='lower']:checked ~ .rating6
+{
+    order: 5;
+}
+
+input[id='lower']:checked ~ .rating5
+{
+    order: 6;
+}
+
+input[id='lower']:checked ~ .rating4
+{
+    order: 7;
+}
+
+input[id='lower']:checked ~ .rating3
+{
+    order: 8;
+}
+
+input[id='lower']:checked ~ .rating2
+{
+    order: 9;
+}
+
+input[id='lower']:checked ~ .rating1
+{
+    order: 10;
+}
+
+input[id='grid-enable']:checked ~ .shop
+{
+    display: grid;
+    /*grid-template-columns: 1fr 3fr 1fr;*/
+    grid-template-rows: auto 100%;
+    grid-template-areas: 'a b c'
+        'a b e';
+}
+
+input[id='grid-enable']:checked ~ .shop .left-menu
+{
+    grid-area: a;
+}
+
+input[id='grid-enable']:checked ~ .shop main
+{
+    grid-area: b;
+    display: grid;
+    /*grid-template-columns: 1fr 1fr 1fr;*/
+    grid-template-areas: 'a b b'
+        'c d e'
+        'f f g'
+        'z z z';
+}
+
+input[id='grid-enable']:checked ~ .shop .right-menu
+
+{
+    grid-area: c;
+}
+
+input[id='grid-enable']:checked ~ .shop main .russian-blue1
+{
+    grid-area: a;
+}
+
+input[id='grid-enable']:checked ~ .shop main .abyssinian1
+{
+    grid-area: b;
+}
+
+input[id='grid-enable']:checked ~ .shop main .british1
+{
+    grid-area: c;
+}
+
+input[id='grid-enable']:checked ~ .shop main .siamese1
+{
+    grid-area: d;
+}
+
+input[id='grid-enable']:checked ~ .shop main .russian-blue2
+{
+    grid-area: e;
+}
+
+input[id='grid-enable']:checked ~ .shop main .abyssinian2
+{
+    grid-area: f;
+}
+
+input[id='grid-enable']:checked ~ .shop main .british2
+{
+    grid-area: g;
+}
+
+input[id='grid-enable']:checked ~ .shop main .abyssinian3
+{
+    grid-area: z;
+}
