@@ -2,7 +2,86 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Бабуленькины котятки</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <header class="theme">
+        <h1>Бабуленькины котятки</h1>        
+    </header>
+    <main class="container">
+        <nav class="menu">
+            <div class="category"><label for="normal">Обычные</label></div>
+            <div class="category"><label for="lazy">Лентяи</label></div>
+            <div class="category"><label for="slogger">Трудяги</label></div>
+        </nav>
+        <section class="cats">
+            <input type="radio" class="normal" name="slider" id="normal">
+            <input type="radio" class="lazy" name="slider" id="lazy">
+            <input type="radio" class="slogger" name="slider" id="slogger">
+            <article class="card cat1 slogger-cat">
+                <img src="images/sherif_cat.jpg" title="Кот-шериф" alt="Кот-шериф" >
+                <p>Шериф</p>
+            </article>
+            <article class="card cat2 lazy-cat">
+                <img src="images/gangster.jpg" title="Гангстер" alt="Кот-гангстер" >
+                <p>Гангстер</p>
+            </article>
+            <article class="card cat1 slogger-cat">
+                <img src="images/ninja.jpg" title="Ниндзя" alt="Кот-ниндзя" >
+                <p>Ниндзя</p>
+            </article>
+            <article class="card cat1 normal-cat">
+                <img src="images/humourist.jpeg" title="Весельчак" alt="Кот-весельчак" >
+                <p>Весельчак</p>
+            </article>
+            <article class="card cat1 normal-cat">
+                <img src="images/what.jpg" title="Чего тебе?" alt="Кот, смотрящий с вопросительным взглядом" >
+                <p>Чего тебе?</p>
+            </article>
+            <article class="card cat2 lazy-cat">
+                <img src="images/lazy_cat.jpg" title="Лентяй" alt="Кот-лентяй" >
+                <p>Лентяй</p>
+            </article>
+            <article class="card cat1 lazy-cat">
+                <img src="images/book_cat.jpg" title="Читающий" alt="Кот, читающий книгу" >
+                <p>Читающий</p>
+            </article>
+            <article class="card cat3 slogger-cat">
+                <img src="images/businessman.jpg" title="Бизнесмен" alt="Кот в галстуке" >
+                <p>Бизнесмен</p>
+            </article>
+        </section>
+        <aside class="rating">
+            <h2>РЕЙТИНГ</h2>
+            <label for="sort">По убыванию</label>
+            <input type="checkbox" class="sort" id="sort">
+            <div class="type first">
+                <p>Обычные</p>
+                <div class="info">
+                    <div class="rate1"></div>
+                    <span>7</span>
+                </div>
+            </div>
+            <div class="type second">
+                <p>Лентяи</p>
+                <div class="info">
+                    <div class="rate2"></div>
+                    <span>10</span>
+                </div>
+            </div>
+            <div class="type third">
+                <p>Трудяги</p>
+                <div class="info">
+                    <div class="rate3"></div>
+                    <span>8</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <p>© ООО Бабуленькины котятки, 2015</p>
+        <p class="address">Наш адрес: улица Котовая, д.5</p>        
+    </footer>
 </body>
 </html>

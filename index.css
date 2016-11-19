@@ -1,0 +1,205 @@
+html
+{
+    background-color: #f5f5f5;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    font: 20px arial;
+    padding: 10px;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+}
+
+.type
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font: 20px arial;
+}
+
+.info
+{
+    width: 190px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate1,
+.rate2,
+.rate3
+{
+    height: 20px;
+}
+
+.rate1
+{
+    width: 100px;
+    background: linear-gradient(to right, #008500, #fff);
+}
+
+.rate2
+{
+    width: 140px;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.rate3
+{
+    width: 120px;
+    background: linear-gradient(to right, #ffd600, #fff);
+}
+
+.sort:checked ~ .first
+{
+    order: 3;
+}
+
+.sort:checked ~ .second
+{
+    order: 1;
+}
+
+.sort:checked ~ .third
+{
+    order: 2;
+}
+
+.address
+{
+    color: #1533ad;
+}
+
+.rating
+{
+    display: flex;
+    flex-flow: row wrap;
+    align-self: flex-start;
+    flex-basis: 200px;
+    margin: 0 20px;
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    font-family: arial;
+}
+
+.rating h2
+{
+    margin-top: 0;
+    font-size: 23px;
+    color: #a60000;
+}
+
+.theme
+{
+    text-align: center;
+}
+
+.menu
+{
+    background-color: #dcdcdc;
+    margin: 0 20px;
+    flex-basis: 200px;
+}
+
+.category
+{
+    display: flex;
+    cursor: pointer;
+    padding-left: 10px;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.category:hover
+{
+    background-color: #c2c2c2;
+}
+
+.cat1
+{
+    flex: 1 30%;
+}
+
+.cat2
+{
+    flex: 1 60%;
+}
+
+.cat3
+{
+    flex: 1 100%;
+}
+
+.card
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    margin: 8px;
+}
+
+.card img
+{
+    min-width: 100%;
+    min-height: 100%;
+    zoom: 1%;
+}
+
+.card p
+{
+    position: absolute;
+    left: 0;
+    background: #000;
+    color: #fff;
+    display: none;
+    font-size: 30px;
+    bottom: 10px;
+    opacity: .7;
+}
+
+.card:hover p
+{
+    display: block;
+}
+
+label
+{
+    cursor: pointer;
+    width: 100%;
+}
+
+.cats input
+{
+    display: none;
+}
+
+.cats
+{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container
+{
+    display: flex;
+}
+
+.normal:checked ~ .lazy-cat,
+.normal:checked ~ .slogger-cat,
+.lazy:checked ~ .normal-cat,
+.lazy:checked ~ .slogger-cat,
+.slogger:checked ~ .normal-cat,
+.slogger:checked ~ .lazy-cat
+{
+    opacity: .5;
+}
