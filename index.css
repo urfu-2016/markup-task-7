@@ -1,0 +1,318 @@
+body,
+html
+{
+    margin: 0;
+    padding: 0;
+    font-family: arial, sans-serif;
+    height: 145%;
+}
+
+body
+{
+    flex-direction: column;
+    display: flex;
+}
+
+.main-header
+{
+    height: 100px;
+    background: #ebebeb;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 2;
+    max-height: 100px;
+}
+
+main
+{
+    background: #ebebeb;
+    display: flex;
+    flex: 9;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+
+main .breeds-nav
+{
+    flex: 1;
+    background: #d9d9d9;
+    margin: 0 20px;
+}
+
+main .breeds-nav ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.main-content
+{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content .row
+{
+    flex: 10;
+    display: flex;
+    margin: 5px 0;
+    justify-content: space-between;
+}
+
+.main-content .row .cat
+{
+    margin: 0 5px;
+    padding: 0 5px;
+    position: relative;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.cat .die
+{
+    padding: 20px;
+    position: absolute;
+    background: rgba(0, 0, 0, .3);
+    bottom: 20px;
+    color: #fff;
+    font-weight: 900;
+    left: -500px;
+    transition: left 1s;
+    max-width: 500px;
+}
+
+.cat:hover .die
+{
+    left: 0;
+}
+
+.cat-1
+{
+    background-image: url('images/Ашот.jpg');
+}
+
+.cat-2
+{
+    background-image: url('images/Бандит.jpg');
+}
+
+.cat-3
+{
+    background-image: url('images/Вася.jpg');
+}
+
+.cat-4
+{
+    background-image: url('images/Жора.jpg');
+}
+
+.cat-5
+{
+    background-image: url('images/Соня.jpg');
+}
+
+.cat-6
+{
+    background-image: url('images/Пушистик.jpg');
+}
+
+.cat-7
+{
+    background-image: url('images/Масяня.jpg');
+}
+
+.cat-8
+{
+    background-image: url('images/Грусняш.jpg');
+}
+
+.cat-1,
+.cat-3,
+.cat-4,
+.cat-5,
+.cat-7
+{
+    flex-grow: 1;
+}
+
+.cat-2,
+.cat-6
+{
+    flex-grow: 2;
+}
+
+.cat-8
+{
+    flex-grow: 1;
+}
+
+main .rating
+{
+    flex: 1;
+    align-self: baseline;
+    background: #d9d9d9;
+    margin: 0 20px;
+    height: auto;
+}
+
+.main-footer
+{
+    height: 70px;
+    background: #ebebeb;
+    width: 100%;
+    border-top: 1px solid #a9a8a8;
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 70px;
+}
+
+address
+{
+    color: #00f;
+    flex: 1;
+    text-align: right;
+    margin-right: 30px;
+}
+
+.main-footer .copy
+{
+    margin-left: 30px;
+    flex: 1;
+}
+
+.breeds-nav .nav-item
+{
+    border-bottom: 1px solid #a9a8a8;
+    padding: 20px;
+    font-size: 20px;
+    display: block;
+}
+
+.nav-input
+{
+    display: none;
+}
+
+.nav-input[id='breed1']:checked ~ .breeds-nav .nav-item:nth-of-type(1),
+.nav-input[id='breed2']:checked ~ .breeds-nav .nav-item:nth-of-type(2),
+.nav-input[id='breed3']:checked ~ .breeds-nav .nav-item:nth-of-type(3),
+.nav-input[id='breed4']:checked ~ .breeds-nav .nav-item:nth-of-type(4),
+.breeds-nav .nav-item:hover
+{
+    background: #666;
+    color: #fff;
+    cursor: pointer;
+}
+
+.breeds-nav .nav-item:hover
+{
+    background: #999;
+}
+
+.nav-input[id='breed1']:checked ~ .main-content .cat-1,
+.nav-input[id='breed1']:checked ~ .main-content .cat-4,
+.nav-input[id='breed1']:checked ~ .main-content .cat-7,
+.nav-input[id='breed2']:checked ~ .main-content .cat-2,
+.nav-input[id='breed2']:checked ~ .main-content .cat-3,
+.nav-input[id='breed3']:checked ~ .main-content .cat-6,
+.nav-input[id='breed3']:checked ~ .main-content .cat-8,
+.nav-input[id='breed4']:checked ~ .main-content .cat-5
+{
+    opacity: .5;
+}
+
+.red-text
+{
+    font-weight: 100;
+    font-size: 30px;
+    color: #f00;
+    margin: 5px 0;
+}
+
+.rating
+{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-label
+{
+    text-align: right;
+}
+
+.rating-input
+{
+    display: block;
+    text-align: right;
+}
+
+.rating-input:checked ~ .rating-item:nth-of-type(1)
+{
+    order: 2;
+}
+
+.rating-input:checked ~ .rating-item:nth-of-type(2)
+{
+    order: 3;
+}
+
+.rating-input:checked ~ .rating-item:nth-of-type(3)
+{
+    order: 1;
+}
+
+.rating-input:checked ~ .rating-item:nth-of-type(4)
+{
+    order: 4;
+}
+
+.rating-scale
+{
+    font-weight: 900;
+    text-align: right;
+}
+
+.rating-scale .score
+{
+    height: 20px;
+    float: left;
+}
+
+.rating-scale .score-9,
+.rating-scale .score-10
+{
+    background: linear-gradient(to right, #0f0, #fff);
+    border: 1px solid #41c300;
+}
+
+.rating-scale .score-8
+{
+    background: linear-gradient(to right, #ff0, #fff);
+    border: 1px solid #bfb800;
+    width: 70%;
+}
+
+.rating-scale .score-4
+{
+    background: linear-gradient(to right, #f00, #fff);
+    border: 1px solid #c72800;
+    width: 35%;
+}
+
+.rating-scale .score-9
+{
+    width: 75%;
+}
+
+.rating-scale .score-10
+{
+    width: 80%;
+}
