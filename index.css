@@ -239,37 +239,41 @@ address
 .rating
 {
     padding: 10px;
+}
+
+.rating-breeds
+{
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .rating-label
 {
-    text-align: right;
+    float: right;
 }
 
 .rating-input
 {
-    display: block;
-    text-align: right;
+    float: right;
 }
 
-.rating-input:checked ~ .rating-item:nth-of-type(1)
+.rating-input:checked ~ .rating-breeds .rating-item:nth-of-type(1)
 {
     order: 2;
 }
 
-.rating-input:checked ~ .rating-item:nth-of-type(2)
+.rating-input:checked ~ .rating-breeds .rating-item:nth-of-type(2)
 {
     order: 3;
 }
 
-.rating-input:checked ~ .rating-item:nth-of-type(3)
+.rating-input:checked ~ .rating-breeds .rating-item:nth-of-type(3)
 {
     order: 1;
 }
 
-.rating-input:checked ~ .rating-item:nth-of-type(4)
+.rating-input:checked ~ .rating-breeds .rating-item:nth-of-type(4)
 {
     order: 4;
 }
