@@ -2,7 +2,93 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <link rel="icon" href="catsymbol.png" />
+    <title>Ну, купите котиков!</title>
 </head>
 <body>
+<header>
+    <h1>Бабуленькины котятки</h1>
+</header>
+
+<main>
+    <div class="navigation">
+        <label for="type1"><div class="breed">Абиссинская</div></label>
+        <label for="type2"><div class="breed">Британская</div></label>
+        <label for="type3"><div class="breed">Русская голубая</div></label>
+        <label for="type4"><div class="breed">Сиамская</div></label>
+    </div>
+    <div class="gallery">
+        <input name="choiceCat" type="radio" value="type1" id="type1" class="type1">
+        <input name="choiceCat" type="radio" value="type2" id="type2" class="type2">
+        <input name="choiceCat" type="radio" value="type3" id="type3" class="type3">
+        <input name="choiceCat" type="radio" value="type4" id="type4" class="type4">
+        <div class="row">
+            <div class="cell cat3">
+                <img src="russian_blue2.jpg" alt="Фото Пупсика" width="350px" height="250px">
+                <div class="description">Пупсик, 3 месяца</div>
+            </div>
+            <div class="cell cat4">
+                <img src="siamskaya1.jpg" alt="Фото Красотки" width="496px" height="250px">
+                <div class="description">Красотка, 2 годика</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell cat4">
+                <img src="siamskaya2.jpg" alt="Фото Ляли" width="280px" height="250px">
+                <div class="description">Ляля, 1 годик</div>
+            </div>
+            <div class="cell cat2">
+                <img src="britanskaya2.jpg" alt="Фото Близняток" width="280px" height="250px">
+                <div class="description">Близнята, 7 месяцев</div>
+            </div>
+            <div class="cell cat1">
+                <img src="abyssinian1.jpg" alt="Фото Заботушки" width="280px" height="250px">
+                <div class="description">Заботушка, 4 годика</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell cat2">
+                <img src="britanskaya1.jpg" alt="Фото Плюшечки" width="496px" height="250px">
+                <div class="description">Плюшечка, 6 годиков</div>
+            </div>
+            <div class="cell cat3">
+                <img src="russian_blue1.jpg" alt="Фото Шустрика" width="350px" height="250px">
+                <div class="description">Шустрик, 1 годик</div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="cell cat1">
+                <img src="abyssinian2.jpg" alt="Фото Хищника" width="852px" height="250px">
+                <div class="description">Хищник, 10 месяцев</div>
+            </div>
+        </div>
+    </div>
+    <div class="rating">
+        <h3>Рейтинг</h3>
+        По убыванию <input type="checkbox">
+        <div class="catrating first">
+            <p>Абиссинская</p>
+            <div class="scale"><div class="nine"></div>9</div>
+        </div>
+        <div class="catrating second">
+            <p>Британская</p>
+            <div class="scale"><div class="eight"></div>8</div>
+        </div>
+        <div class="catrating third">
+            <p>Русская голубая</p>
+            <div class="scale"><div class="ten"></div>10</div>
+        </div>
+        <div class="catrating fourth">
+            <p>Сиамская</p>
+            <div class="scale"><div class="four"></div>4</div>
+        </div>
+    </div>
+</main>
+<hr>
+<footer>
+    <div class="firm">ООО Миленькие котятки, 2016</div>
+    <address>Наш адрес: ул. Котейкина, д.3</address>
+</footer>
 </body>
 </html>

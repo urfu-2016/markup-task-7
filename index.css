@@ -1,0 +1,176 @@
+body
+{
+    background-color: #fae291;
+    color: #322703;
+}
+
+header
+{
+    display: flex;
+    justify-content: center;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+}
+
+.navigation
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #fccc7a;
+}
+
+.breed
+{
+    padding: 10px 7px;
+    border-bottom: 1px solid #443504;
+    font-size: 20px;
+}
+
+.breed:hover
+{
+    background-color: #eeb046;
+}
+
+.gallery
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #fccc7a;
+}
+
+.gallery input
+{
+    display: none;
+}
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+
+.cell
+{
+    margin: 0 3px;
+    position: relative;
+}
+
+.cell > .description
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(252,204,122,.3);
+    padding: 7px 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.cell:hover > div
+{
+    display: block;
+    top: 200px;
+}
+
+.type1:checked ~ .row .cell:not(.cat1)
+{
+    opacity: .5;
+}
+
+.type2:checked ~ .row .cell:not(.cat2)
+{
+    opacity: .5;
+}
+
+.type3:checked ~ .row .cell:not(.cat3)
+{
+    opacity: .5;
+}
+
+.type4:checked ~ .row .cell:not(.cat4)
+{
+    opacity: .5;
+}
+
+.rating
+{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 0 5px;
+    background-color: #fccc7a;
+}
+
+.catrating
+{
+    margin: 10px 0;
+}
+
+.scale .four
+{
+    display: inline-block;
+    width: 40px;
+    height: 15px;
+    border: .5px solid grey;
+    background: linear-gradient(to right, #df0101, white);
+    margin-right: 4px;
+}
+
+.scale .eight
+{
+    display: inline-block;
+    width: 80px;
+    height: 15px;
+    border: .5px solid grey;
+    background: linear-gradient(to right, yellow, white);
+    margin-right: 4px;
+}
+
+.scale .nine
+{
+    display: inline-block;
+    width: 90px;
+    height: 15px;
+    border: .5px solid grey;
+    background: linear-gradient(to right, #04b404, white);
+    margin-right: 4px;
+}
+
+.scale .ten
+{
+    display: inline-block;
+    width: 100px;
+    height: 15px;
+    border: .5px solid grey;
+    background: linear-gradient(to right, #04b404, white);
+    margin-right: 4px;
+}
+
+input:checked ~ .first
+{
+    order: 2;
+}
+
+input:checked ~ .second
+{
+    order: 3;
+}
+
+input:checked ~ .third
+{
+    order: 1;
+}
+
+input:checked ~ .fourth
+{
+    order: 4;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+}
