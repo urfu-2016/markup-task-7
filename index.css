@@ -120,42 +120,36 @@ nav
 .scale1
 {
     width: 40%;
-    background: #f00;
     background: linear-gradient(to right, #f00, #fff);
 }
 
 .scale2
 {
     width: 70%;
-    background: #fff608;
     background: linear-gradient(to right, #fff608, #fff);
 }
 
 .scale3
 {
     width: 90%;
-    background: #04e86f;
     background: linear-gradient(to right, #04e86f, #fff);
 }
 
 .scale4
 {
     width: 80%;
-    background: #fff608;
     background: linear-gradient(to right, #fff608, #fff);
 }
 
 .scale5
 {
     width: 100%;
-    background: #04e86f;
     background: linear-gradient(to right, #04e86f, #fff);
 }
 
 .scale6
 {
     width: 60%;
-    background: #fa5;
     background: linear-gradient(to right, #fa5, #fff);
 }
 
@@ -183,7 +177,7 @@ nav
     width: 100%;
     grid-template-columns: 33.3% 33.3% 33.3%;
     grid-template-rows: 200px 200px 200px 200px 200px;
-    grid-template-areas: "a b b" "c d e" "f f g" "h h h" "k l l";
+    grid-template-areas: 'a b b' 'c d e' 'f f g' 'h h h' 'k l l';
 }
 
 .cat1,
