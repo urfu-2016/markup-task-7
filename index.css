@@ -1,0 +1,296 @@
+body
+{
+    background: #eee;
+}
+
+header
+{
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 50px;
+}
+
+main
+{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+main > input
+{
+    display: none;
+}
+
+.button
+{
+    display: block;
+    font-size: 24px;
+    padding: 5% 10px;
+    transition: .5s;
+}
+
+nav hr
+{
+    margin: 0;
+}
+
+nav,
+aside
+{
+    background-color: #ccc;
+    width: 20%;
+}
+
+.button:hover
+{
+    background-color: #999;
+}
+
+.input-1:checked ~ nav .button-1,
+.input-2:checked ~ nav .button-2,
+.input-3:checked ~ nav .button-3,
+.input-4:checked ~ nav .button-4
+{
+    background-color: #777;
+}
+
+.input-1:checked ~ section .second-cat img,
+.input-1:checked ~ section .third-cat img,
+.input-1:checked ~ section .fourth-cat img,
+.input-1:checked ~ section .sixth-cat img,
+.input-1:checked ~ section .seventh-cat img,
+.input-1:checked ~ section .eighth-cat img,
+.input-2:checked ~ section .first-cat img,
+.input-2:checked ~ section .third-cat img,
+.input-2:checked ~ section .fourth-cat img,
+.input-2:checked ~ section .fifth-cat img,
+.input-2:checked ~ section .sixth-cat img,
+.input-2:checked ~ section .seventh-cat img,
+.input-3:checked ~ section .first-cat img,
+.input-3:checked ~ section .second-cat img,
+.input-3:checked ~ section .third-cat img,
+.input-3:checked ~ section .fifth-cat img,
+.input-3:checked ~ section .seventh-cat img,
+.input-3:checked ~ section .eighth-cat img,
+.input-4:checked ~ section .first-cat img,
+.input-4:checked ~ section .second-cat img,
+.input-4:checked ~ section .fourth-cat img,
+.input-4:checked ~ section .fifth-cat img,
+.input-4:checked ~ section .sixth-cat img,
+.input-4:checked ~ section .eighth-cat img
+{
+    opacity: .6;
+}
+
+section
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 55%;
+}
+
+section article
+{
+    position: relative;
+    padding: 3px 0;
+}
+
+.cat img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.explanation
+{
+    font-size: 24px;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    height: 35px;
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+    opacity: 0;
+    transition: .3s;
+}
+
+.cat img:hover ~ .explanation,
+.explanation:hover
+{
+    opacity: .5;
+}
+
+.first-cat,
+.third-cat,
+.fourth-cat,
+.fifth-cat,
+.seventh-cat
+{
+    flex-basis: 33%;
+}
+
+.second-cat,
+.sixth-cat
+{
+    flex-basis: 66%;
+}
+
+.eighth-cat
+{
+    flex-basis: 100%;
+}
+
+aside
+{
+    align-self: flex-start;
+    min-height: 550px;
+}
+
+.header-rate
+{
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 26px;
+    text-align: left;
+    color: #8b0000;
+    text-transform: uppercase;
+}
+
+aside input,
+aside label
+{
+    float: right;
+}
+
+aside label
+{
+    font-size: 18px;
+}
+
+aside article
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rating
+{
+    flex-basis: 100%;
+    display: block;
+    margin: 5%;
+    height: 70px;
+}
+
+.rating p
+{
+    font-size: 20px;
+}
+
+article p
+{
+    margin-bottom: .5em;
+}
+
+.scale1,
+.scale2,
+.scale3,
+.scale4
+{
+    float: left;
+    height: 30px;
+    margin-right: 1em;
+}
+
+.mark
+{
+    float: left;
+    font-size: 30px;
+}
+
+.scale1
+{
+    width: 72%;
+    background: linear-gradient(to right, #0f0, #fff);
+    border: 1px solid #0f0;
+}
+
+.scale2
+{
+    width: 80%;
+    background: linear-gradient(to right, #0f0, #fff);
+    border: 1px solid #0f0;
+}
+
+.scale3
+{
+    width: 32%;
+    background: linear-gradient(to right, #f00, #fff);
+    border: 1px solid #f00;
+}
+
+.scale4
+{
+    width: 48%;
+    background: linear-gradient(to right, #ff0, #fff);
+    border: 1px solid #ff0;
+}
+
+.descending:checked ~ article .rating-1
+{
+    -webkit-order: 2;
+    -ms-order: 2;
+    order: 2;
+}
+
+.descending:checked ~ article .rating-2
+{
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+}
+
+.descending:checked ~ article .rating-3
+{
+    -webkit-order: 4;
+    -ms-order: 4;
+    order: 4;
+}
+
+.descending:checked ~ article .rating-4
+{
+    -webkit-order: 3;
+    -ms-order: 3;
+    order: 3;
+}
+
+footer span
+{
+    display: block;
+    padding: 0 0 20px;
+    font-size: 24px;
+}
+
+footer hr
+{
+    margin: 20px 0;
+}
+
+footer .corp
+{
+    float: left;
+    margin-left: 2%;
+}
+
+footer .addr
+{
+    float: right;
+    margin-right: 2%;
+}
