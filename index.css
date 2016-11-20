@@ -79,17 +79,17 @@ header h1
     background: #bbb;
 }
 
-.container > input
+.content > input
 {
     display: none;
 }
 
-.container > input:checked ~ main article
+.content > input:checked ~ main article
 {
     opacity: .4;
 }
 
-.container > input:checked ~ main article .dog-info
+.content > input:checked ~ main article .dog-info
 {
     opacity: 0;
 }
