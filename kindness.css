@@ -1,0 +1,155 @@
+.kindness-filter h2
+{
+    color: #f00;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.kindness-filter label,
+.kindness-filter input
+{
+    cursor: pointer;
+}
+
+.rank
+{
+    display: flex;
+    width: 100%;
+}
+
+.ratio
+{
+    flex: 1 0 auto;
+    text-align: right;
+}
+
+.scale
+{
+    flex: 0 0 auto;
+    height: 20px;
+    width: 200px;
+    margin: 4px;
+    background: #008000;
+}
+
+.kitten-type
+{
+    width: 100%;
+    font-size: 150%;
+    vertical-align: bottom;
+}
+
+.kitten-type header
+{
+    margin: 5px;
+}
+
+input[id='sort-dir']:checked ~ .rating
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.kitten-type[class='kitten-type 10-mark']
+{
+    order: 1;
+}
+
+.kitten-type[class='kitten-type 9-mark']
+{
+    order: 2;
+}
+
+.kitten-type[class='kitten-type 9-mark'] .rank .scale
+{
+    background: #008040;
+    width: 180px;
+}
+
+.kitten-type[class='kitten-type 8-mark']
+{
+    order: 3;
+}
+
+.kitten-type[class='kitten-type 8-mark'] .rank .scale
+{
+    background: #ecdf3c;
+    width: 160px;
+}
+
+.kitten-type[class='kitten-type 7-mark']
+{
+    order: 4;
+}
+
+.kitten-type[class='kitten-type 7-mark'] .rank .scale
+{
+    background: #d7d700;
+    width: 140px;
+}
+
+.kitten-type[class='kitten-type 6-mark']
+{
+    order: 5;
+}
+
+.kitten-type[class='kitten-type 6-mark'] .rank .scale
+{
+    background: #9f9f00;
+    width: 120px;
+}
+
+.kitten-type[class='kitten-type 5-mark']
+{
+    order: 6;
+}
+
+.kitten-type[class='kitten-type 5-mark'] .rank .scale
+{
+    background: #939300;
+    width: 100px;
+}
+
+.kitten-type[class='kitten-type 4-mark']
+{
+    order: 7;
+}
+
+.kitten-type[class='kitten-type 4-mark'] .rank .scale
+{
+    background: #f00;
+    width: 80px;
+}
+
+.kitten-type[class='kitten-type 3-mark']
+{
+    order: 8;
+}
+
+.kitten-type[class='kitten-type 3-mark'] .rank .scale
+{
+    background: #f33;
+    width: 60px;
+}
+
+.kitten-type[class='kitten-type 2-mark']
+{
+    order: 9;
+}
+
+.kitten-type[class='kitten-type 2-mark'] .rank .scale
+{
+    background: #c60000;
+    width: 40px;
+}
+
+.kitten-type[class='kitten-type 1-mark']
+{
+    order: 10;
+}
+
+.kitten-type[class='kitten-type 1-mark'] .rank .scale
+{
+    background: #800000;
+    width: 20px;
+}
