@@ -294,3 +294,73 @@ footer .addr
     float: right;
     margin-right: 2%;
 }
+
+.grid-checker:checked ~ main
+{
+    display: grid;
+    grid-template-columns: 20% 55% 20%;
+    grid-template-rows: 550px auto;
+    grid-template-areas: 'a b c' 'a b e';
+}
+
+.grid-checker:checked ~ main nav
+{
+    grid-area: a;
+    width: 100%;
+}
+
+.grid-checker:checked ~ main section
+{
+    grid-area: b;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 'x y y' 'k l m' 'g g h' 'z z z';
+}
+
+.grid-checker:checked ~ main aside
+{
+    grid-area: c;
+    width: 100%;
+}
+
+.grid-checker:checked ~ main .first-cat
+{
+    grid-area: x;
+}
+
+.grid-checker:checked ~ main .second-cat
+{
+    grid-area: y;
+}
+
+.grid-checker:checked ~ main .third-cat
+{
+    grid-area: k;
+}
+
+.grid-checker:checked ~ main .fourth-cat
+{
+    grid-area: l;
+}
+
+.grid-checker:checked ~ main .fifth-cat
+{
+    grid-area: m;
+}
+
+.grid-checker:checked ~ main .sixth-cat
+{
+    grid-area: g;
+}
+
+.grid-checker:checked ~ main .seventh-cat
+{
+    grid-area: h;
+}
+
+.grid-checker:checked ~ main .eighth-cat
+{
+    grid-area: z;
+}
