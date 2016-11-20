@@ -23,9 +23,9 @@ input[id='siam']:checked ~ .content-panel main .siam
 
 input[id='abissian']:checked ~ .content-panel main .abissian .kitten-label,
 input[id='britan']:checked ~ .content-panel main .britan .kitten-label,
-input[id='russian-blue']:checked ~ .content-panel\
-main .russian-blue .kitten-label,
-input[id='siam']:checked ~ .content-panel main .siam .kitten-label
+input[id='siam']:checked ~ .content-panel main .siam .kitten-label,
+input[id='russian-blue']:checked ~.content-panel
+main .russian-blue .kitten-label,\A
 {
     display: block;
 }
