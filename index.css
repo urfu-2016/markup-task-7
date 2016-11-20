@@ -1,0 +1,222 @@
+html,
+body
+{
+    margin: 0;
+    width: 100%;
+}
+
+.cat-house
+{
+    display: flex;
+    flex-direction: column;
+    background: #aaa;
+}
+
+.cat-house__name
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    height: 80px;
+}
+
+.cat-house__content
+{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 10px;
+
+}
+
+.cat-house__content input[type='radio']
+{
+    display: none;
+}
+
+.cat-type,
+.cat-rate
+{
+    background: #aab;
+    flex-basis: 15%;
+}
+
+.cat-type__item
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 55px;
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    border-bottom: 2px solid #fbc;
+    cursor: pointer;
+}
+
+.cat-items
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 60%;
+}
+
+.cat-item
+{
+    position: relative;
+    flex-basis: 32%;
+    height: 300px;
+}
+
+.cat-item__info
+{
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    color: #fff;
+    font-size: 25px;
+    height: 40px;
+    background: #000;
+    opacity: .5;
+    z-index: 1;
+}
+
+.cat-item__img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.middle-block
+{
+    flex-basis: 64%;
+}
+
+.big-block
+{
+    flex-basis: 96%;
+}
+
+.cat-rate__name
+{
+    font-size: 25px;
+    letter-spacing: 7px;
+    margin: 0 0 15px;
+    color: red;
+}
+
+.cat-rate > input,
+.cat-rate > label
+{
+    float: right;
+}
+
+.cat-rate__items
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.cat-rate__item
+{
+    font-size: 20px;
+    margin-top: 15px;
+    border-bottom: 2px solid #fbc;
+    height: 55px;
+}
+
+.cat-rate__item__info
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.cat-rate__gradient
+{
+    width: 80%;
+    background: linear-gradient(to right, red , blue);
+}
+
+footer.cat-house__contacts
+{
+    flex-basis: 10%;
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    align-items: center;
+    font-size: 25px;
+    border-top: 2px solid #fbc;
+}
+
+.cat-rate__gradient-4
+{
+    width: 40%;
+}
+
+.cat-rate__gradient-7
+{
+    width: 60%;
+}
+
+.cat-rate__gradient-8
+{
+    width: 70%;
+}
+
+.cat-rate__gradient-10
+{
+    width: 80%;
+}
+
+.cat-type__item:hover
+{
+    background: #aac;
+}
+
+.cat-item:hover > .cat-item__info
+{
+    display: block;
+}
+
+input[id='abyssinian']:checked ~ .cat-items > :not(.cat-item__abyssinian)
+{
+    opacity: .6;
+}
+
+input[id='british']:checked ~ .cat-items > :not(.cat-item__british)
+{
+    opacity: .6;
+}
+
+input[id='russian']:checked ~ .cat-items > :not(.cat-item__russian)
+{
+    opacity: .6;
+}
+
+input[id='siamese']:checked ~ .cat-items > :not(.cat-item__siamese)
+{
+    opacity: .6;
+}
+
+.cat-rate > input:checked ~ .cat-rate__items > .rate4
+{
+    order: 4;
+}
+
+.cat-rate > input:checked ~ .cat-rate__items > .rate7
+{
+    order: 3;
+}
+
+.cat-rate > input:checked ~ .cat-rate__items > .rate8
+{
+    order: 2;
+}
+
+.cat-rate > input:checked ~ .cat-rate__items > .rate10
+{
+    order: 1;
+}
