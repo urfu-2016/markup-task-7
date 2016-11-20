@@ -1,0 +1,216 @@
+body
+{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+header
+{
+    text-align: center;
+}
+
+label
+{
+    display: block;
+    float: left;
+}
+
+h2
+{
+    color: red;
+}
+
+footer
+{
+    background-color: #d3d3d3;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+hr
+{
+    margin: 0 0 10px;
+    border: 1px solid black;
+}
+
+.breed
+{
+    align-content: stretch;
+}
+
+.breed hr
+{
+    border: 1px solid gray;
+    margin: 0;
+}
+
+.breed div
+{
+    width: 100%;
+    word-wrap: break-word;
+    text-align: center;
+}
+
+.breed label
+{
+    padding: 20% 0;
+    width: 100%;
+}
+
+.content,
+.breed,
+.rating,
+.cats,
+.breed-and-content
+{
+    display: flex;
+}
+
+.breed,
+.rating
+{
+    word-wrap: break-word;
+    width: 20%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: #d3d3d3;
+}
+
+.breed-and-content
+{
+    float: left;
+    margin-bottom: 50px;
+    width: 80%;
+}
+
+.content
+{
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    margin-left: 3%;
+}
+
+.rating
+{
+    float: right;
+    width: 20%;
+}
+
+.rating div
+{
+    padding-left: 5%;
+    height: auto;
+}
+
+.rating div img
+{
+    width: 60%;
+    height: auto;
+}
+
+.rating .british img
+{
+    width: 50%;
+}
+
+.rating .siam img
+{
+    width: 20%;
+}
+
+.description
+{
+    position: absolute;
+    bottom: 50px;
+    margin-right: 20%;
+    text-align: center;
+    background-color: #000;
+    padding: 25px;
+    opacity: .7;
+    display: none;
+    color: #fff;
+}
+
+.cats div:hover div
+{
+    display: block;
+}
+
+.address
+{
+    text-align: right;
+    float: right;
+}
+
+.cats div img
+{
+    width: 100%;
+}
+
+.cats > div
+{
+    position: relative;
+    margin-right: 3%;
+    margin-bottom: 3%;
+}
+
+.count
+{
+    margin-left: 10%;
+    font-weight: bold;
+}
+
+input:checked ~ .abissin
+{
+    order: 2;
+}
+
+input:checked ~ .british
+{
+    order: 3;
+}
+
+input:checked ~ .russian
+{
+    order: 1;
+}
+
+input:checked ~ .siam
+{
+    order: 4;
+}
+
+input.abiss:checked ~ .breed .abiss,
+input.brit:checked ~ .breed .brit,
+input.russ:checked ~ .breed .russ,
+input.sia:checked ~ .breed .sia
+{
+    background-color: gray;
+}
+
+input.abiss:checked ~ .content .cats > div:not(.abyssinian)
+{
+    opacity: .3;
+}
+
+input.brit:checked ~ .content .cats > div:not(.british)
+{
+    opacity: .3;
+}
+
+input.russ:checked ~ .content .cats > div:not(.russian)
+{
+    opacity: .3;
+}
+
+input.sia:checked ~ .content .cats > div:not(.siamese)
+{
+    opacity: .3;
+}
+
+.input-breed
+{
+    display: none;
+}

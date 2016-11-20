@@ -1,8 +1,103 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <title>Бабуленькины котятки</title>
+    </head>
+    <body>
+        <header>
+            <h1>Бабуленькины котятки</h1>
+        </header>
+        <div class="breed-and-content">
+            <input class="input-breed abiss" id="abiss" type="radio" name="view">
+            <input class="input-breed brit" id="brit" type="radio" name="view">
+            <input class="input-breed russ" id="russ" type="radio" name="view">
+            <input class="input-breed sia" id="sia" type="radio" name="view">
+            <div class="breed">
+                <div class="abiss"><label for="abiss">Абиссинская</label></div>
+                <hr>
+                <div class="brit"><label for="brit">Британская</label></div>
+                <hr>
+                <div class="russ"><label for="russ">Русская голубая</label></div>
+                <hr>
+                <div class="sia"><label for="sia">Сиамская</label></div>
+                <hr>
+            </div>
+            <div class="content">
+                <div class="cats">
+                    <div class="cat1 abyssinian">
+                        <img src="images/cat1.jpg" alt="cat1" title="cat1">
+                        <div class="description">Гоша, 4 года</div>
+                    </div>
+                    <div class="cat2 abyssinian">
+                        <img src="images/cat2.jpg" alt="cat2" title="cat2">
+                        <div class="description">Васька, 5 лет</div>
+                    </div>
+                </div>
+                <div class="cats">
+                    <div class="cat3 british">
+                        <img src="images/cat3.jpg" alt="cat3" title="cat3">
+                        <div class="description">Мурка и Гуся, 2 и 3 года</div>
+                    </div>
+                    <div class="cat4 russian">
+                        <img src="images/cat4.jpg" alt="cat4" title="cat4">
+                        <div class="description">Жмурка и Пуся, 5 лет и 1 год</div>
+                    </div>
+                    <div class="cat5 british">
+                        <img src="images/cat5.jpg" alt="cat5" title="cat5">
+                        <div class="description">Кеша, 3 года</div>
+                    </div>
+                </div>
+                <div class="cats">
+                    <div class="cat6 siamese">
+                        <img src="images/cat6.jpg" alt="cat6" title="cat6">
+                        <div class="description">Пашка, 2 года</div>
+                    </div>
+                    <div class="cat7 russian">
+                        <img src="images/cat7.jpg" alt="cat7" title="cat7">
+                        <div class="description">Вадим, 1 год</div>
+                    </div>
+                </div>
+                <div class="cats">
+                    <div class="cat8 siamese">
+                        <img src="images/cat8.jpg" alt="cat8" title="cat8">
+                        <div class="description">Пётр, 5 мес.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rating">
+            <div><h2>РЕЙТИНГ</h2></div>
+            <label for="descending">по убыванию</label>
+            <input class="descending" id="descending" type="checkbox" name="view">
+            <div class="abissin">
+                <div>Абиссинская</div>
+                <img src="images/1.jpg" alt="Абиссинская рейтинг">
+                <span class="count">9</span>
+            </div>
+            <div class="british">
+                <div>Британская</div>
+                <img src="images/2.jpg" alt="Британская рейтинг">
+                <span class="count">8</span>
+            </div>
+            <div class="russian">
+                <div>Русская голубая</div>
+                <img src="images/1.jpg" alt="Русская голубая рейтинг">
+                <span class="count">10</span>
+            </div>
+            <div class="siam">
+                <div>Сиамская</div>
+                <img src="images/3.jpg" alt="Сиамская рейтинг">
+                <span class="count">4</span>
+            </div>
+        </div>
+        <footer>
+            <hr>
+            <span class="copyright">(c) ООО Бабуленькины котятки, 2016</span>
+            <span class="address">
+                <a href="https://www.google.ru/maps/search/котовая">Наш адрес: улица Котовая, д. 5</a>
+            </span>
+        </footer>
+    </body>
 </html>
