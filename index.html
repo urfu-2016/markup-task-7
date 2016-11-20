@@ -5,118 +5,126 @@
     <title>Бабуленькины котятки</title>
     <link rel="stylesheet" type="text/css" href="index.css">
 </head>
-<body class="body-flex">
+<body class="body-with-footer">
 
 <header class="main-header">
     <h2 class="header-title">Бабуленькины котятки</h2>
 </header>
 
-<input class="hidden-input non-selected" type="radio" name="cat-category" id="none-category" checked>
-<input class="hidden-input category1-selected" type="radio" name="cat-category" id="category1">
-<input class="hidden-input category2-selected" type="radio" name="cat-category" id="category2">
-<input class="hidden-input category3-selected" type="radio" name="cat-category" id="category3">
-<input class="hidden-input category4-selected" type="radio" name="cat-category" id="category4">
+<div class="body-flex">
+    <input class="hidden-input non-selected" type="radio" name="cat-category" id="none-category" checked>
+    <input class="hidden-input category1-selected" type="radio" name="cat-category" id="category1">
+    <input class="hidden-input category2-selected" type="radio" name="cat-category" id="category2">
+    <input class="hidden-input category3-selected" type="radio" name="cat-category" id="category3">
+    <input class="hidden-input category4-selected" type="radio" name="cat-category" id="category4">
 
-<nav class="navigator-block main-element">
-    <ul class="menu">
-        <li><label for="category1" class="menu-item category1">Абиссинская</label></li>
-        <li><label for="category2" class="menu-item category2">Британская</label></li>
-        <li><label for="category3" class="menu-item category3">Русская голубая</label></li>
-        <li><label for="category4" class="menu-item category4">Сиамская</label></li>
-        <li><label for="none-category" class="menu-item">Сбросить</label></li>
-    </ul>
-</nav>
+    <nav class="navigator-block main-element">
+        <ul class="menu">
+            <li><label for="category1" class="menu-item category1">Абиссинская</label></li>
+            <li><label for="category2" class="menu-item category2">Британская</label></li>
+            <li><label for="category3" class="menu-item category3">Русская голубая</label></li>
+            <li><label for="category4" class="menu-item category4">Сиамская</label></li>
+            <li><label for="none-category" class="menu-item">Сбросить</label></li>
+        </ul>
+    </nav>
 
-<main class="images-block main-element">
-    <div class="img-small photo-box cat-category1">
-        <img class="photo" src="img/abissinskaya1.jpg" alt="Киса">
-        <p class="hint">Песчинка, 5 месяцев</p>
-        <div class="modal"></div>
-    </div>
-
-    <div class="img-long photo-box cat-category2">
-        <img class="photo" src="img/britanskaya2.jpg" alt="Киса">
-        <p class="hint">Ария, 2 месяца</p>
-        <div class="modal"></div>
-    </div>
-
-    <div class="img-small photo-box cat-category3">
-        <img class="photo" src="img/russkaya_golubaya1.jpg" alt="Киса">
-        <p class="hint">Пепел, 3 года</p>
-        <div class="modal"></div>
-    </div>
-
-    <div class="img-small photo-box cat-category1">
-        <img class="photo" src="img/abissinska2.jpg" alt="Киса">
-        <p class="hint">Янтарь, 5 лет</p>
-        <div class="modal"></div>
-    </div>
-
-    <div class="img-small photo-box cat-category4">
-        <img class="photo" src="img/siamskaya1.jpg" alt="Киса">
-        <p class="hint">Сэйра, 8 лет</p>
-        <div class="modal"></div>
-    </div>
-
-    <div class="img-long photo-box cat-category3">
-        <img class="photo" src="img/russkaya_golubaya2.jpg" alt="Киса">
-        <p class="hint">Серый, 9 лет</p>
-        <div class="modal"></div>
-    </div>
-
-    <div class="img-small photo-box cat-category2">
-        <img class="photo" src="img/britanskaya1.jpg" alt="Киса">
-        <p class="hint">Тай, 5 месяцев</p>
-        <div class="modal"></div>
-    </div>
-
-    <div class="img-longest photo-box cat-category4">
-        <img class="photo" src="img/siamskaya2.jpg" alt="Киса">
-        <p class="hint">Лапушка, 2 года</p>
-        <div class="modal"></div>
-    </div>
-</main>
-
-<aside class="info-block main-element">
-    <h2 class="title-2">Рейтинг</h2>
-
-    <input type="checkbox" class="sort-on" id="sorting">
-    <p>По убыванию</p>
-
-    <div class="rating-categories">
-        <div class="rating-category1">
-            <h3 class="rating-title-item">Абиссинская</h3>
-            <div class="rating">
-                <div class="rating-bar"></div>
-                <p>10</p>
-            </div>
+    <main class="images-block main-element">
+        <div class="img-small photo-box cat-category1">
+            <img class="photo" src="img/abissinskaya1.jpg" alt="Киса">
+            <p class="hint">Песчинка, 5 месяцев</p>
+            <div class="modal"></div>
         </div>
 
-        <div class="rating-category2">
-            <h3 class="rating-title-item">Британская</h3>
-            <div class="rating">
-                <div class="rating-bar rating-status-5"></div>
-                <p>5</p>
-            </div>
+        <div class="img-long photo-box cat-category2">
+            <img class="photo" src="img/britanskaya2.jpg" alt="Киса">
+            <p class="hint">Ария, 2 месяца</p>
+            <div class="modal"></div>
         </div>
 
-        <div class="rating-category3">
-            <h3 class="rating-title-item">Русская голубая</h3>
-            <div class="rating">
-                <div class="rating-bar rating-status-3"></div>
-                <p>3</p>
-            </div>
+        <div class="img-small photo-box cat-category3">
+            <img class="photo" src="img/russkaya_golubaya1.jpg" alt="Киса">
+            <p class="hint">Пепел, 3 года</p>
+            <div class="modal"></div>
         </div>
 
-        <div class="rating-category4">
-            <h3 class="rating-title-item">Сиамская</h3>
-            <div class="rating">
-                <div class="rating-bar rating-status-7"></div>
-                <p>7</p>
+        <div class="img-small photo-box cat-category1">
+            <img class="photo" src="img/abissinska2.jpg" alt="Киса">
+            <p class="hint">Янтарь, 5 лет</p>
+            <div class="modal"></div>
+        </div>
+
+        <div class="img-small photo-box cat-category4">
+            <img class="photo" src="img/siamskaya1.jpg" alt="Киса">
+            <p class="hint">Сэйра, 8 лет</p>
+            <div class="modal"></div>
+        </div>
+
+        <div class="img-long photo-box cat-category3">
+            <img class="photo" src="img/russkaya_golubaya2.jpg" alt="Киса">
+            <p class="hint">Серый, 9 лет</p>
+            <div class="modal"></div>
+        </div>
+
+        <div class="img-small photo-box cat-category2">
+            <img class="photo" src="img/britanskaya1.jpg" alt="Киса">
+            <p class="hint">Тай, 5 месяцев</p>
+            <div class="modal"></div>
+        </div>
+
+        <div class="img-longest photo-box cat-category4">
+            <img class="photo" src="img/siamskaya2.jpg" alt="Киса">
+            <p class="hint">Лапушка, 2 года</p>
+            <div class="modal"></div>
+        </div>
+    </main>
+
+    <aside class="info-block main-element">
+        <h2 class="title-2">Рейтинг</h2>
+
+        <input type="checkbox" class="sort-on" id="sorting">
+        <p>По убыванию</p>
+
+        <div class="rating-categories">
+            <div class="rating-category1">
+                <h3 class="rating-title-item">Абиссинская</h3>
+                <div class="rating">
+                    <div class="rating-bar"></div>
+                    <p>10</p>
+                </div>
+            </div>
+
+            <div class="rating-category2">
+                <h3 class="rating-title-item">Британская</h3>
+                <div class="rating">
+                    <div class="rating-bar rating-status-5"></div>
+                    <p>5</p>
+                </div>
+            </div>
+
+            <div class="rating-category3">
+                <h3 class="rating-title-item">Русская голубая</h3>
+                <div class="rating">
+                    <div class="rating-bar rating-status-3"></div>
+                    <p>3</p>
+                </div>
+            </div>
+
+            <div class="rating-category4">
+                <h3 class="rating-title-item">Сиамская</h3>
+                <div class="rating">
+                    <div class="rating-bar rating-status-7"></div>
+                    <p>7</p>
+                </div>
             </div>
         </div>
-    </div>
-</aside>
+    </aside>
+</div>
+
+<footer class="footer">
+    <p>
+        Design by <a class="link" href="https://github.com/TrefilovAnd">TrefiAnd</a>
+    </p>
+</footer>
 
 </body>
 </html>
