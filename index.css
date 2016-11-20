@@ -14,36 +14,19 @@ body
 .change-layout:checked ~ .container
 {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 100%;
 }
 
 .change-layout:not(:checked) ~ .container
 {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .container
 {
     padding: 0 10px 0 20px;
     min-height: 100%;
-}
-
-.change-layout:checked ~ .container header
-{
-    grid-column: span 3;
-}
-
-.change-layout:not(:checked) ~ .container header
-{
-    flex: 0 0 100%;
-}
-
-header h1
-{
-    text-align: center;
-    margin: 0;
-    padding: 21px;
 }
 
 .change-layout:not(:checked) ~ .container aside
@@ -55,6 +38,28 @@ header h1
 {
     background: #d4d4d4;
     font-size: 1.2em;
+}
+
+header h1
+{
+    text-align: center;
+    margin: 0;
+    padding: 21px;
+}
+
+.change-layout:not(:checked) ~ .container .content
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: auto;
+}
+
+.change-layout:checked ~ .container .content
+{
+    grid-row: 2 / 3;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    margin-bottom: auto;
 }
 
 .breed label
@@ -314,13 +319,6 @@ article:hover .dog-info
 .change-layout:checked ~ .container footer
 {
     align-self: end;
-    grid-column: span 3;
-}
-
-.change-layout:not(:checked) ~ .container footer
-{
-    flex: 0 0 100%;
-    align-self: flex-end;
 }
 
 footer
@@ -342,9 +340,7 @@ footer:before
 
 address
 {
-    text-align: right;
     color: #44f;
-    display: inline-block;
     float: right;
     font-style: normal;
 }
@@ -356,11 +352,6 @@ address
     .change-layout:not(:checked) ~ .container .ratings
     {
         flex: 0 0 100%;
-    }
-
-    .change-layout:checked ~ .container
-    {
-        grid-template-columns: 100%;
     }
 
     .change-layout:checked ~ .container .breed,
