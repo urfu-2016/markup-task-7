@@ -1,31 +1,28 @@
 body
 {
     background-color: #ebebeb;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 header
 {
     text-align: center;
-    font-size: 2rem;
-    font-family: sans-serif;
+    font: 2rem sans-serif;
 }
 
 .shop
 {
     display: flex;
     margin: auto;
-    min-width: 960px;
 }
 
 main
 {
-    align-content: stretch;
     display: flex;
     flex-basis: 60%;
     flex-wrap: wrap;
-    min-height: 100%;
-    align-items: stretch;
-    margin-top: -6px;
 }
 
 .species
@@ -38,13 +35,6 @@ main
     font: 1.5rem sans-serif;
 }
 
-.species::after
-{
-    content: '';
-    display: flex;
-    border-bottom: 1px #fff solid;
-}
-
 .species:hover
 {
     background-color: #5a5a5a;
@@ -53,10 +43,11 @@ main
 .cat
 {
     height: 360px;
-    margin: .5%;
+    margin: 0 .5% .5%;
     overflow: hidden;
     position: relative;
     opacity: .3;
+    z-index: -1;
 }
 
 .description
@@ -66,7 +57,7 @@ main
 
 footer
 {
-    width: 100%;
+    width: 99%;
     margin-top: 40px;
     border-top: 1px #7c7c7c solid;
 }
@@ -74,13 +65,13 @@ footer
 .left-menu
 {
     flex-basis: 20%;
+    min-height: 74vh;
     background-color: #d9d9d9;
 }
 
 .left-menu label span
 {
     margin: 1em;
-    overflow: hidden;
 }
 
 .right-menu
@@ -95,26 +86,26 @@ footer
 
 }
 
-.russian-blue1,
-.russian-blue2,
-.british1,
-.british2
+main div:nth-of-type(8n + 1),
+main div:nth-of-type(8n + 3),
+main div:nth-of-type(8n + 5),
+main div:nth-of-type(8n + 7)
 {
     width: 32%;
 }
 
-.siamese1
+main div:nth-of-type(8n + 4)
 {
     width: 33%;
 }
 
-.abyssinian1,
-.abyssinian2
+main div:nth-of-type(8n + 2),
+main div:nth-of-type(8n + 6)
 {
     width: 66%;
 }
 
-.abyssinian3
+main div:nth-of-type(8n + 8)
 {
     width: 100%;
 }
@@ -142,13 +133,14 @@ footer
     display: block;
 }
 
-input[id='abyssinian']:checked ~ .shop main [class^='cat ab'],
-input[id='british']:checked ~ .shop main [class^='cat br'],
-input[id='russian-blue']:checked ~ .shop main [class^='cat ru'],
-input[id='siamese']:checked ~ .shop main [class^='cat si'],
+input[id='abyssinian']:checked ~ .shop main [class^='cat abyssinian'],
+input[id='british']:checked ~ .shop main [class^='cat british'],
+input[id='russian-blue']:checked ~ .shop main [class^='cat russian-blue'],
+input[id='siamese']:checked ~ .shop main [class^='cat siamese'],
 input[id='all']:checked ~ .shop main [class^='cat']
 {
     opacity: 1;
+    z-index: 0;
 }
 
 input[id='abyssinian']:checked ~ .shop .left-menu label:nth-of-type(1),
@@ -179,7 +171,7 @@ footer p
 .view-rating
 {
     float: left;
-    margin-top: 15px;
+    height: 25px;
 }
 
 .right-menu h2
@@ -218,17 +210,13 @@ input[id='lower']:checked ~ section label:nth-of-type(3)
 .count-rating
 {
     float: right;
+    margin-top: 3px;
 }
 
 .breed
 {
     width: 90%;
     margin: auto;
-}
-
-.view-rating
-{
-    height: 25px;
 }
 
 .rating10 .view-rating
@@ -351,10 +339,24 @@ input[id='lower']:checked ~ .rating1
     order: 10;
 }
 
+input:first-child
+{
+    position: absolute;
+    margin: 5px;
+}
+
+label[for='grid-enable']
+{
+    position: absolute;
+    margin: 1px 5px 5px 20px;
+}
+
 input[id='grid-enable']:checked ~ .shop
 {
     display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
+    min-width: 960px;
+    margin: initial;
+    grid-template-columns: 20% 60% 20%;
     grid-template-rows: auto 100%;
     grid-template-areas: 'l m r'
         'l m j';
@@ -368,6 +370,7 @@ input[id='grid-enable']:checked ~ .shop .left-menu
 input[id='grid-enable']:checked ~ .shop main
 {
     grid-area: m;
+    width: 100%;
     display: grid;
     grid-template-columns: 5px calc(33.33% - 7px) 5px calc(33.33% - 7px)
         5px calc(33.33% - 7px) 5px;
@@ -383,42 +386,42 @@ input[id='grid-enable']:checked ~ .shop main div
     width: 100%;
 }
 
-input[id='grid-enable']:checked ~ .shop main .russian-blue1
+input[id='grid-enable']:checked ~ .shop main div:nth-of-type(8n + 1)
 {
     grid-area: 1 / 2 / 1 / 2;
 }
 
-input[id='grid-enable']:checked ~ .shop main .abyssinian1
+input[id='grid-enable']:checked ~ .shop main div:nth-of-type(8n + 2)
 {
     grid-area: 1 / 4 / 1 / 7;
 }
 
-input[id='grid-enable']:checked ~ .shop main .british1
+input[id='grid-enable']:checked ~ .shop main div:nth-of-type(8n + 3)
 {
     grid-area: 2 / 2 / 2 / 2;
 }
 
-input[id='grid-enable']:checked ~ .shop main .siamese1
+input[id='grid-enable']:checked ~ .shop main div:nth-of-type(8n + 4)
 {
     grid-area: 2 / 4 / 2 / 4;
 }
 
-input[id='grid-enable']:checked ~ .shop main .russian-blue2
+input[id='grid-enable']:checked ~ .shop main div:nth-of-type(8n + 5)
 {
     grid-area: 2 / 6 / 2 / 7;
 }
 
-input[id='grid-enable']:checked ~ .shop main .abyssinian2
+input[id='grid-enable']:checked ~ .shop main div:nth-of-type(8n + 6)
 {
     grid-area: 3 / 2 / 3 / 5;
 }
 
-input[id='grid-enable']:checked ~ .shop main .british2
+input[id='grid-enable']:checked ~ .shop main div:nth-of-type(8n + 7)
 {
     grid-area: 3 / 6 / 3 / 7;
 }
 
-input[id='grid-enable']:checked ~ .shop main .abyssinian3
+input[id='grid-enable']:checked ~ .shop main div:nth-of-type(8n + 8)
 {
     grid-area: 4 / 2 / 4 / 7;
 }
