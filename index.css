@@ -7,16 +7,31 @@ html
     padding: 0;
 }
 
-body 
+body
 {
-    /*height: 100%;*/
+    min-height: 100%;
     background: #ccc;
     font-family: 'Roboto', sans-serif;
+}
+
+.body 
+{
     display: flex;
     flex-direction: column;
 }
 
+input[type='checkbox'][id='grid-check']:checked ~ .body 
+{
+    display: grid;
+    grid-template-rows: 50px auto 50px;
+}
+
 .breed-check
+{
+    display: none;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .breed-check
 {
     display: none;
 }
@@ -28,9 +43,28 @@ body
     display: flex;
     flex-grow: 1;
     flex-direction: column;
+    align-self: stretch;
+  
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .breeds
+{
+    border: 1px solid #000;
+    background: #aaa;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-self: stretch;
 }
 
 .breeds label
+{
+    border-bottom: 1px solid #000;
+    padding: 15px;
+    cursor: pointer;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .breeds label
 {
     border-bottom: 1px solid #000;
     padding: 15px;
@@ -54,14 +88,24 @@ input[type='checkbox'].breed-check:nth-of-type(4):checked
     background: #bbb;
 }
 
+
 input[type='checkbox'].breed-check:checked ~ section div.cat-img .black
 {
     background: rgba(0,0,0,.5);
-    height: 98%;
+    height: calc(100% - 5px);
     left: 1px;
     z-index: 4;
     position: relative;
-    bottom: 205px;
+    bottom: calc(100%);
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body input[type='checkbox'].breed-check:checked ~ section div.cat-img .black
+{ 
+    height: calc(100% - 5px);
+    width: 100%;
+    left: 1px;
+    top: 0;
+    position: absolute;
 }
 
 input[type='checkbox'][id='Main-Coon'].breed-check:checked  
@@ -84,13 +128,29 @@ input[type='checkbox'][id='Ragamuffin'].breed-check:checked
     flex-grow: 1;
     flex-wrap: wrap;
     flex-direction: row;
-    align-content: space-around;
+    align-self: stretch;  
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-photos
+{ 
+    grid-area: p;  
+    width: 100%;
+    display: grid;
+    margin: 0;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto;
+    grid-gap: 20px 20px;
+    grid-template-areas: "cat1 cat2 cat2"
+                                   "cat3 cat4 cat5"
+                                   "cat6 cat6 cat7"
+                                   "cat8 cat8 cat8";
+    align-content: start;
 }
 
 .cat-img img
 {
     width: 100%;
-    height: 200px;
+    height: calc(100% - 5px);
     border: 1px solid #000;
 }
 
@@ -118,10 +178,16 @@ input[type='checkbox'][id='Ragamuffin'].breed-check:checked
 
 .cat-img
 {
-    overflow: hidden;
     padding: 0 1% 1%;
     flex: 1 0 31%;
     position: relative;
+}
+
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img
+{ 
+    padding: 0;
+    align-items: start; 
 }
 
 .cat-img:nth-of-type(8n+2),
@@ -135,22 +201,86 @@ input[type='checkbox'][id='Ragamuffin'].breed-check:checked
     flex: 3 0 98%;
 }
 
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+1)
+{ 
+    display: block;
+    grid-area: cat1;  
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+2)
+{ 
+    display: block;
+    grid-area: cat2;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+3)
+{ 
+    grid-area: cat3;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+4)
+{ 
+    grid-area: cat4;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+5)
+{ 
+    grid-area: cat5;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+6)
+{ 
+    grid-area: cat6;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+7)
+{ 
+    grid-area: cat7;
+    
+}
+input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+8)
+{ 
+    grid-area: cat8;
+}
+
 .rating
 {
     border: 1px solid #000;
     padding: 10px;
+    display: flex;
     flex-grow: 1;
     flex-direction: column;
     background: #aaa;
     align-self: flex-start;
 }
 
+input[type='checkbox'][id='grid-check']:checked ~ .body .rating
+{ 
+    grid-area: r;  
+    border: 1px solid #000;
+    padding: 10px;
+    background: #aaa;
+    display: grid;
+    align-content: start;
+
+}
+
 .content
 {
     margin: 20px 0;
     display: flex;
+    flex: 1;
     flex-direction: row;
-    align-items: stretch;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .content
+{ 
+    display: grid;
+    grid-template-areas: "b p r";
+    grid-template-columns: 1fr 70% 1fr;
+    grid-gap: 10px;
+    grid-template-rows: auto;
+    align-items: start;
 }
 
 header
@@ -172,9 +302,25 @@ footer
     background: #aaa;
 }
 
+input[type='checkbox'][id='grid-check']:checked ~ .body footer
+{ 
+    grid-row-start: 3;
+    grid-row-end: 4;
+    border-top: 1px solid #000;
+    padding: 20px;
+    background: #aaa;
+}
+
 .rating-wrapper
 {
     display: flex;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .rating-wrapper
+{ 
+    display: grid;
+    grid-template-columns: 4fr  1fr;
+    grid-gap: 10px 15px;
 }
 
 .rating-line
@@ -197,6 +343,7 @@ footer
     background: #f12;
 }
 
+
 .rating-5 .rating-line
 {
     width: 50%;
@@ -213,11 +360,6 @@ footer
 {
     width: 100%;
     background: #0f2;
-}
-
-.rating
-{
-    display: flex;
 }
 
 .rating input[type='checkbox']:checked ~ .rating-2
@@ -239,3 +381,35 @@ footer
 {
     order: 0;
 }
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .rating input[type='checkbox']:checked ~ .rating-2
+{ 
+     grid-row: 7 / 7;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .rating input[type='checkbox']:checked ~ .rating-5
+{ 
+    grid-row: 6 / 6;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .rating input[type='checkbox']:checked ~ .rating-8
+{ 
+    grid-row: 5 / 5;
+}
+
+input[type='checkbox'][id='grid-check']:checked ~ .body .rating input[type='checkbox']:checked ~ .rating-10
+{ 
+    grid-row: 4 / 4;
+}
+
+
+
+
+
+
+
+
+
+
+
+
