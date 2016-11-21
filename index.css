@@ -48,7 +48,7 @@ span
 
 .breed
 {
-    width: 100%;
+    width: 80%;
     height: 40px;
     background-color: #a9a9a9;
     margin: 5px;
@@ -78,24 +78,24 @@ span
     align-content: space-around;
 }
 
-.sort-ratings:checked .rating10
-{
-    order: -1;
-}
-
-.sort-ratings:checked .rating9
-{
-    order: 0;
-}
-
-.sort-ratings:checked .rating8
+.sort-ratings:checked ~ .rating10
 {
     order: 1;
 }
 
-.sort-ratings:checked .rating4
+.sort-ratings:checked ~ .rating9
 {
     order: 2;
+}
+
+.sort-ratings:checked ~ .rating8
+{
+    order: 3;
+}
+
+.sort-ratings:checked ~ .rating4
+{
+    order: 4;
 }
 
 .rating-9
@@ -124,4 +124,11 @@ span
     height: 20px;
     background: linear-gradient(to left, #fefcea, #800080);
     width: 80%;
+}
+
+.ratings-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
