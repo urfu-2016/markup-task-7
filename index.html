@@ -2,7 +2,119 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>мяу</title>
+    <link rel="stylesheet" href="index.css" type="text/css">
 </head>
 <body>
+<header>
+    <h1>
+        Бабуленькины котятки
+    </h1>
+</header>
+<main>
+    <input class="curl" type="checkbox" id="curl">
+    <input class="brit" type="checkbox" id="brit">
+    <input class="rus-blue" type="checkbox" id="rus-blue">
+    <input class="korat" type="checkbox" id="korat">
+    <nav>
+        <label class="curl" for="curl">
+            <div>Американский керл</div>
+        </label>
+        <hr>
+        <label class="brit" for="brit">
+            <div>Британская</div>
+        </label>
+        <hr>
+        <label class="rus-blue" for="rus-blue">
+            <div>Русская голубая</div>
+        </label>
+        <hr>
+        <label class="korat" for="korat">
+            <div>Корат</div>
+        </label>
+        <hr>
+    </nav>
+    <div class="photos">
+        <div class="line">
+            <div data-title="Толик, 5 мес" class="brit cell-1-3">
+                <img src="cats/cat1.jpg" alt="кот">
+            </div>
+            <div data-title="Васька, 3мес" class="rus-blue cell-2-3">
+                <img src="cats/cat2.jpg" alt="кот">
+            </div>
+        </div>
+        <div class="line">
+            <div  data-title="Муся, 1год" class="curl cell-1-3">
+                <img src="cats/cat3.jpg" alt="кот">
+            </div>
+            <div data-title="Зоя, 5 мес" class="korat cell-1-3">
+                <img src="cats/cat4.jpg" alt="кот">
+            </div>
+            <div data-title="Тузя, 2 мес" class="brit cell-1-3">
+                <img src="cats/cat5.jpg" alt="кот">
+            </div>
+        </div>
+        <div class="line">
+            <div data-title="Томат, 3 года" class="rus-blue cell-2-3">
+                <img src="cats/cat6.jpg" alt="кот">
+            </div>
+            <div data-title="Мура, 5 мес" class="curl cell-1-3">
+                <img src="cats/cat7.jpg" alt="кот">
+            </div>
+        </div>
+        <div class="line">
+            <div data-title="Мурзик, 3 года" class="korat cell-1">
+                <img src="cats/cat8.jpg" alt="кот">
+            </div>
+        </div>
+    </div>
+    <aside class="rating">
+        <input type="checkbox" id="order">
+        <h2>
+            РЕЙТИНГ
+        </h2>
+        <div class="order">
+            <div>по убыванию</div>
+            <label for="order"><div></div></label>
+        </div>
+        <div class="curl">
+            Американский керл
+            <div class="rating-color">
+                <div class="curl"></div>
+                <div>9</div>
+            </div>
+        </div>
+        <div class="brit">
+            Британская
+            <div class="rating-color">
+                <div class="brit"></div>
+                <div>7</div>
+            </div>
+        </div>
+        <div class="korat">
+            Корат
+            <div class="rating-color">
+                <div class="korat"></div>
+                <div>10</div>
+            </div>
+        </div>
+        <div class="rus-blue">
+            Русская голубая
+            <div class="rating-color">
+                <div class="rus-blue"></div>
+                <div>4</div>
+            </div>
+        </div>
+    </aside>
+</main>
+<hr>
+<footer>
+    <div>
+        ООО Бабуленькины котятки, 2016
+    </div>
+    <div class="address">
+        Наш адрес ул. Котовая, 5
+    </div>
+</footer>
 </body>
 </html>
