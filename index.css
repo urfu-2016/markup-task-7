@@ -1,0 +1,58 @@
+body
+{
+    background-color: #b5b8b1;
+    display: flex;
+}
+
+.cats
+{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+
+.images
+{
+    background-color: #808080;
+    height: 300px;
+}
+
+.first_line
+{
+    height: 300px;
+}
+
+.cat_breed
+{
+    white-space: nowrap;
+    background-color: #808080;
+    float: left;
+    text-align: center;
+}
+
+.text
+{
+    margin: 10px;
+}
+
+.rating
+{
+    background-color: #808080;
+    float: right;
+}
+
+.description
+{
+    display: none;
+}
+
+.images:hover ~ .description:nth-child(1)
+{
+    display: block;
+}
+
+input.abcat:checked ~ .cats .abcatimg
+{
+    opacity: .5;
+}
