@@ -24,6 +24,7 @@ main
     grid-column-end: nav-end;
     text-align: center;
     padding: 2px;
+    height: 100%;
 }
 
 .breed-category
@@ -304,5 +305,4 @@ main
     display: block;
     color: white;
     text-align: color;
-    
 }
