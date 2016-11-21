@@ -1,0 +1,247 @@
+body
+{
+    min-width: 600px;
+    background-color: #e6e6e6;
+}
+
+footer,
+main
+{
+    display: flex;
+    justify-content: space-between;
+}
+
+footer
+{
+    align-items: flex-end;
+}
+
+main
+{
+    align-items: flex-start;
+}
+
+h1
+{
+    text-align: center;
+    font-size: 45px;
+}
+
+h2
+{
+    font-size: 25px;
+    font-weight: 300;
+    color: #c00;
+    margin: 5px 0 0 5px;
+}
+
+nav
+{
+    align-self: stretch;
+}
+
+nav,
+aside
+{
+    background-color: #d7d7d7;
+    font-size: 1.5em;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.photos
+{
+    width: 70%;
+}
+
+aside
+{
+    display: flex;
+    flex-direction: column;
+}
+
+input
+{
+    display: none;
+}
+
+nav label div
+{
+    cursor: pointer;
+    padding: 10px;
+}
+
+aside .order,
+aside .brit,
+aside .curl,
+aside .rus-blue,
+aside .korat
+{
+    padding: 10px;
+}
+
+input:checked ~ .photos .line div
+{
+    -webkit-filter: opacity(.3);
+}
+
+nav hr
+{
+    margin: 0;
+}
+
+input.curl:checked ~ .photos  .line .curl,
+input.brit:checked ~ .photos  .line .brit,
+input.rus-blue:checked ~ .photos  .line .rus-blue,
+input.korat:checked ~ .photos  .line .korat
+{
+    -webkit-filter: opacity(1);
+}
+
+input.curl:checked ~ nav .curl div,
+input.brit:checked ~ nav .brit div,
+input.rus-blue:checked ~ nav .rus-blue div,
+input.korat:checked ~ nav .korat div
+{
+    background-color: gray;
+    color: white;
+}
+
+.photos *,
+.photos *:after,
+.photos *:before
+.line *,
+.line *:after,
+.line *:before
+{
+    box-sizing: border-box;
+}
+
+.photos .line
+{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.line div
+{
+    padding-left: 10px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+
+.cell-1-3
+{
+    width: 33.33%;
+}
+
+.cell-2-3
+{
+    width: 66.66%;
+}
+
+.cell-1
+{
+    width: 100%;
+}
+
+.line div:hover::after
+{ 
+    position: absolute;
+    content: attr(data-title);
+    z-index: 6;
+    bottom: 10%;
+    font-size: 30px;
+    color: white;
+    padding: 15px 10px;
+    background: rgba(151, 153, 151, .7);
+}
+
+img
+{
+    width: 100%;
+}
+
+.rating-color
+{
+    height: 20px;
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rating-color .curl
+{
+    background: linear-gradient(to right, #090, #fff);
+    width: 100px;
+}
+
+.rating-color .korat
+{
+    background: linear-gradient(to right, #090, #fff);
+    width: 120px;
+}
+
+.rating-color .brit
+{
+    background: linear-gradient(to right, #ff0, #fff);
+    width: 80px;
+}
+
+.rating-color .rus-blue
+{
+    background: linear-gradient(to right, #f00, #fff);
+    width: 50px;
+}
+
+.rating input:checked ~ .curl
+{
+    order: 2;
+}
+
+.rating input:checked ~ .korat
+{
+    order: 1;
+}
+
+.rating input:checked ~ .brit
+{
+    order: 3;
+}
+
+.rating input:checked ~ .rus-blue
+{
+    order: 4;
+}
+
+.rating input:checked ~ .order label div
+{
+    background-color: gray;
+}
+
+.order
+{
+    display: flex;
+    align-items: baseline;
+    justify-content: flex-end;
+}
+
+.order div
+{
+    font-size: .7em;
+    margin-left: 5px;
+}
+
+.order label div
+{
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+.address
+{
+    color: #007399;
+}
