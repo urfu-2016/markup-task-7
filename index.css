@@ -106,10 +106,10 @@ header h1
     opacity: 1;
 }
 
-.select-pug:checked ~ .breed .pug-label,
-.select-dalmatin:checked ~ .breed .dalmatin-label,
-.select-terrier:checked ~ .breed .terrier-label,
-.select-toy-terrier:checked ~ .breed .toy-terrier-label
+.select-pug:checked ~ .breed label[for='select-pug'],
+.select-dalmatin:checked ~ .breed label[for='select-dalmatin'],
+.select-terrier:checked ~ .breed label[for='select-terrier'],
+.select-toy-terrier:checked ~ .breed label[for='select-toy-terrier']
 {
     background: #555;
     color: #fff;
@@ -137,7 +137,8 @@ main
 main article
 {
     position: relative;
-    padding: 0 2px;
+    overflow: hidden;
+    padding: 2px 4px;
     box-sizing: border-box;
     -webkit-transition: opacity .2s;
     -moz-transition: opacity .2s;
@@ -178,13 +179,16 @@ main article
 
 article img
 {
+    object-fit: cover;
+    object-position: 50% 0;
     width: 100%;
+    height: 300px;
 }
 
 .dog-info
 {
     position: absolute;
-    left: 2px;
+    left: 4px;
     bottom: 30px;
     padding: 16px 8px;
     background: rgba(0, 0, 0, .6);
@@ -273,11 +277,49 @@ article:hover .dog-info
     order: 1;
 }
 
+.rating-10 .rating:before,
+.rating-9 .rating:before,
+.rating-8 .rating:before
+{
+    background: linear-gradient(to right, #0f0, #fff);
+    border: 1px solid #0f0;
+}
+
+.rating-7 .rating:before,
+.rating-6 .rating:before,
+.rating-5 .rating:before
+{
+    background: linear-gradient(to right, #ff0, #fff);
+    border: 1px solid #ff0;
+}
+
+.rating-4 .rating:before,
+.rating-3 .rating:before,
+.rating-2 .rating:before,
+.rating-1 .rating:before
+{
+    background: linear-gradient(to right, #f00, #fff);
+    border: 1px solid #f00;
+}
+
+.rating-10
+{
+    order: 1;
+}
+
 .rating-10 .rating:before
 {
     width: 80%;
-    background: linear-gradient(to right, #0f0, #fff);
-    border: 1px solid #0f0;
+}
+
+.rating-9
+{
+    order: 2;
+}
+
+.rating-9 .rating:before
+{
+    width: 72%;
 }
 
 .rating-8
@@ -288,20 +330,16 @@ article:hover .dog-info
 .rating-8 .rating:before
 {
     width: 64%;
-    background: linear-gradient(to right, #0f0, #fff);
-    border: 1px solid #0f0;
 }
 
-.rating-3
+.rating-7
 {
-    order: 8;
+    order: 4;
 }
 
-.rating-3 .rating:before
+.rating-7 .rating:before
 {
-    width: 24%;
-    background: linear-gradient(to right, #f00, #fff);
-    border: 1px solid #f00;
+    width: 56%;
 }
 
 .rating-6
@@ -312,8 +350,56 @@ article:hover .dog-info
 .rating-6 .rating:before
 {
     width: 48%;
-    background: linear-gradient(to right, #ff0, #fff);
-    border: 1px solid #ff0;
+}
+
+.rating-5
+{
+    order: 6;
+}
+
+.rating-5 .rating:before
+{
+    width: 40%;
+}
+
+.rating-4
+{
+    order: 7;
+}
+
+.rating-4 .rating:before
+{
+    width: 32%;
+}
+
+.rating-3
+{
+    order: 8;
+}
+
+.rating-3 .rating:before
+{
+    width: 24%;
+}
+
+.rating-2
+{
+    order: 9;
+}
+
+.rating-2 .rating:before
+{
+    width: 16%;
+}
+
+.rating-1
+{
+    order: 10;
+}
+
+.rating-1 .rating:before
+{
+    width: 8%;
 }
 
 .change-layout:checked ~ .container footer
