@@ -7,13 +7,14 @@ html
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    margin: auto;
     justify-content: center;
+    max-width: 950px;
 }
 .name
 {
     position: relative;
 }
+
 .name:hover::after
 {
     content: attr(data-title);
@@ -23,16 +24,17 @@ html
     background: #a9a9a9;
     height: 20%;
     align-content: center;
+    opacity: .7;
 }
 
-input
+.left input
 {
     visibility: hidden;
 }
 
 span
 {
-    margin-left: 40px;
+    margin-left: 20px;
     margin-top: 15px;
     text-transform: uppercase;
 }
@@ -41,43 +43,85 @@ span
 {
     display: flex;
     flex-direction: column;
-}
-
-label:hover
-{
-    color: black;
+    background-color: #dcdcdc;
 }
 
 .breed
 {
-    width: 20%;
+    width: 100%;
     height: 40px;
     background-color: #a9a9a9;
-    border: 1px #a9a9a9;
     margin: 5px;
-}
-
-.ashera1,
-.pers1,
-.ashera2,
-.ashera3,
-.abis
-{
-    flex-basis: 33%;
-}
-
-.brit1,
-.pers2
-{
-    flex-basis: 66%;
-}
-
-.brit2
-{
-    flex-basis: 100%;
+    padding-left: 30px;
 }
 
 .footer
 {
+    position: fixed;
+    background-color: #a9a9a9;
+    width: 100%;
+    bottom: 0;
     order: 4;
+}
+
+.rating
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #DCDCDC;
+}
+
+.main
+{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+}
+
+.sort-ratings:checked .rating10
+{
+    order: -1;
+}
+
+.sort-ratings:checked .rating9
+{
+    order: 0;
+}
+
+.sort-ratings:checked .rating8
+{
+    order: 1;
+}
+
+.sort-ratings:checked .rating4
+{
+    order: 2;
+}
+
+.rating-9
+{
+    height: 20px;
+    background: linear-gradient(to left, #fefcea, #f1da36);
+    width: 90%;
+}
+
+.rating-10
+{
+    height: 20px;
+    background: linear-gradient(to left, #fefcea, #008000);
+    width: 100%;
+}
+
+.rating-4
+{
+    height: 20px;
+    background: linear-gradient(to left, #fefcea, #ff0000);
+    width: 40%;
+}
+
+.rating-8
+{
+    height: 20px;
+    background: linear-gradient(to left, #fefcea, #800080);
+    width: 80%;
 }
