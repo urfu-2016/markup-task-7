@@ -146,7 +146,7 @@ input.korat:checked ~ nav .korat
 .line div:hover::after
 {
     position: absolute;
-    content: attr(data-title);
+    content: attr(title);
     z-index: 6;
     bottom: 10%;
     font-size: 30px;
