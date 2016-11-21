@@ -10,7 +10,7 @@ main
     grid-template-columns: 1fr 3fr;
     grid-template-areas: 'nav content';
     padding: 2px;
-    background: blue;
+    background: rgb(230, 230, 230);
 }
 
 .breed-category-radio
@@ -18,15 +18,21 @@ main
     display: none;
 }
 
-.breed-category
+.breed-labels
 {
     grid-column-start: nav-start;
     grid-column-end: nav-end;
     text-align: center;
+    padding: 2px;
+}
+
+.breed-category
+{
+    display: block;
     width: 100%;
     height: 50px;
-    background: red;
-    padding: 2px;
+    background: rgb(200, 200, 200);
+    border-bottom: 1px solid black;
 }
 
 .breed-category:hover
@@ -40,7 +46,7 @@ main
 }
 
 .breed-category-radio[title='thai']:checked ~ .cards-grid-template .card:not(
-    [title='thai'])
+[title='thai'])
 {
     opacity: .6;
 }
@@ -49,7 +55,7 @@ main
 {
     grid-row: auto;
     padding: 2px;
-    background: black;
+    background: rgb(200, 200, 200);
 }
 
 .cards-grid-template
@@ -74,6 +80,7 @@ main
 {
     height: 250px;
     padding: 2px;
+    position: relative;
 }
 
 .cards-grid-template > :nth-child(8n+1)
@@ -161,6 +168,7 @@ main
 
 .rating-sort
 {
+    display: inline-block;
     order: 2;
 }
 
@@ -287,8 +295,14 @@ main
     display: none;
 }
 
-.card:hover + .card-info
+.card:hover > .card-info
 {
+    position: absolute;
+    top: 150px;
+    width: 100%;
+    background: rgba(50, 50, 50, .5);
     display: block;
+    color: white;
+    text-align: color;
     
 }
