@@ -265,7 +265,7 @@ input[id='siamese']:checked ~ .categories label[for='siamese']
     align-self: flex-start;
     justify-content: flex-end;
     flex-wrap: wrap;
-    background: #ddd;
+    background: #ссс;
     width: calc(20% - 2rem);
     margin: 0 2rem 0 0;
     padding: 0;
