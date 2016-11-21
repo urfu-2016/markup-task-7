@@ -1,5 +1,17 @@
+body
+{
+    position: relative;
+    min-height : 100%;
+}
+
+html
+{
+    height: 100%;
+}
+
 .grid
 {
+    padding-bottom: 50px;
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
@@ -305,4 +317,13 @@ main
     display: block;
     color: white;
     text-align: color;
+}
+
+footer
+{
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
 }
