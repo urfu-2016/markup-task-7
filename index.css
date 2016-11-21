@@ -1,0 +1,164 @@
+html,
+body
+{
+    width: 100%;
+    min-width: 1000px;
+    margin: 0;
+    padding: 0;
+}
+
+.cat-radio
+{
+    display: none;
+}
+
+.big:checked ~ .cat-images .content .row > .cat-block:not(.big),
+.siamese:checked ~ .cat-images .content .row > .cat-block:not(.siamese),
+.russian:checked ~ .cat-images .content .row > .cat-block:not(.russian)
+{
+    opacity: .4;
+}
+
+.selections .cat-label
+{
+    display: block;
+    text-align: center;
+    line-height: 65px;
+}
+
+.selections .cat-label:hover
+{
+    background: #dadae3;
+}
+
+.header
+{
+    text-align: center;
+}
+
+.rating-header
+{
+    font-weight: bold;
+}
+
+.footer
+{
+    margin-top: 10px;
+    background-color: #d3d3d3;
+    display: flex;
+    justify-content: space-between;
+}
+
+.row,
+.cat-images
+{
+    display: flex;
+}
+
+.cat-rating
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.menu
+{
+    align-self: flex-start;
+    flex: 1 6 20%;
+    order: 2;
+    margin: 5px 25px 5px 5px;
+    padding: 25px;
+}
+
+.menu,
+.selections
+{
+    background-color: #d3d3d3;
+    min-width: 100px;
+}
+
+.content
+{
+    flex: 3 0 60%;
+    order: 2;
+    margin: 5px;
+}
+
+.rating-line
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex: 1 0;
+}
+
+.rating-line-name
+{
+    width: 100%;
+}
+
+.rate-line
+{
+    height: 10px;
+}
+
+.rating-8
+{
+    width: 50%;
+}
+
+.rating-9
+{
+    width: 60%;
+}
+
+.rating-10
+{
+    width: 70%;
+}
+
+.green-rating
+{
+    background-color: #80e5a6;
+}
+
+.yellow-rating
+{
+    background-color: #fd0;
+}
+
+.cat-sort:checked ~ .cat-rating .rate-russian-div
+{
+    order: 1;
+}
+
+.cat-sort:checked ~ .cat-rating .rate-siamese-div
+{
+    order: 2;
+}
+
+.cat-sort:checked ~ .cat-rating .rate-big-div
+{
+    order: 3;
+}
+
+.big:checked ~ .cat-images .selections .cat-label[for='big'],
+.russian:checked ~ .cat-images .selections .cat-label[for='russian'],
+.siamese:checked ~ .cat-images .selections .cat-label[for='siamese']
+{
+    background: #add8e6;
+}
+
+.cat-description
+{
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background: #d3d3d3;
+}
+
+.cat-block:hover > .cat-description
+{
+    visibility: visible;
+    opacity: 1;
+}
