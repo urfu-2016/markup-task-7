@@ -1,16 +1,13 @@
-*
-{
-    margin: 0;
-    padding: 0;
-}
-
 html,
 body
 {
+    margin: 0;
+    padding: 0;
     height: 100%;
     background-color: #ebebeb;
     min-width: 1300px;
 }
+
 .wrapper
 {
     display: flex;
@@ -31,7 +28,7 @@ body
 
 .address
 {
-    color: #0000ff;
+    color: #00f;
 }
 
 .layout
@@ -63,103 +60,103 @@ body
 
 .cat-gallery div div
 {
-    margin: 0 6px 0;
+    margin: 0 6px;
 }
 
 .line:nth-child(4n-3) div:nth-child(1)
 {
     flex-basis: 256px;
-    background: url("images/1.jpg"), center, no-repeat;
+    background: url('images/1.jpg'), center, no-repeat;
     background-size: cover;
 }
 
 .line:nth-child(4n-3) div:nth-child(1):hover::after
 {
-    content: "Гоша, 4 года";
+    content: 'Гоша, 4 года';
 }
 
 .line:nth-child(4n-3) div:nth-child(2)
 {
     flex-basis: 512px;
-    background: url("images/2.jpg"), center, no-repeat;
+    background: url('images/2.jpg'), center, no-repeat;
     background-size: cover;
 }
 
 .line:nth-child(4n-3) div:nth-child(2):hover::after
 {
-    content: "Макс, 5 лет";
+    content: 'Макс, 5 лет';
 }
 
 .line:nth-child(4n-2) div:nth-child(1)
 {
     flex-basis: 256px;
-    background: url("images/3.jpg"), center, no-repeat;
+    background: url('images/3.jpg'), center, no-repeat;
     background-size: cover;
 }
 
 .line:nth-child(4n-2) div:nth-child(1):hover::after
 {
-    content: "Сёма, 3 года";
+    content: 'Сёма, 3 года';
 }
 
 .line:nth-child(4n-2) div:nth-child(2)
 {
     flex-basis: 250px;
-    background: url("images/4.jpg"), center, no-repeat;
+    background: url('images/4.jpg'), center, no-repeat;
     background-size: cover;
 }
 
 .line:nth-child(4n-2) div:nth-child(2):hover::after
 {
-    content: "Саня, 7 лет";
+    content: 'Саня, 7 лет';
 }
 
 .line:nth-child(4n-2) div:nth-child(3)
 {
     flex-basis: 250px;
-    background: url("images/5.jpg"), center, no-repeat;
+    background: url('images/5.jpg'), center, no-repeat;
     background-size: cover;
 }
 
 .line:nth-child(4n-2) div:nth-child(3):hover::after
 {
-    content: "Кеша, 3 года";
+    content: 'Кеша, 3 года';
 }
 
 .line:nth-child(4n-1) div:nth-child(1)
 {
     flex-basis: 514px;
-    background: url("images/6.jpg"), center, no-repeat;
+    background: url('images/6.jpg'), center, no-repeat;
     background-size: cover;
 }
 
 .line:nth-child(4n-1) div:nth-child(1):hover::after
 {
-    content: "Тёма, 6 лет";
+    content: 'Тёма, 6 лет';
 }
 
 .line:nth-child(4n-1) div:nth-child(2)
 {
     flex-basis: 248px;
-    background: url("images/7.jpg"), center, no-repeat;
+    background: url('images/7.jpg'), center, no-repeat;
     background-size: cover;
 }
 
 .line:nth-child(4n-1) div:nth-child(2):hover::after
 {
-    content: "Рома, 9 лет";
+    content: 'Рома, 9 лет';
 }
 
 .line:nth-child(4n) div:nth-child(1)
 {
     width: 100%;
-    background: url("images/8.jpg"), center, no-repeat;
+    background: url('images/8.jpg'), center, no-repeat;
     background-size: cover;
 }
 
 .line:nth-child(4n) div:nth-child(1):hover::after
 {
-    content: "Саня, 4 года";
+    content: 'Саня, 4 года';
 }
 
 .line:nth-child(4n)
@@ -173,7 +170,7 @@ body
     align-self: flex-start;
     width: 245px;
     margin: 0 20px 0 5px;
-    padding: 5px 10px 10px 10px;
+    padding: 5px 10px 10px;
 }
 
 .cat-breed
@@ -204,21 +201,21 @@ body
     cursor: pointer;
 }
 
-#select-abyssinian:checked ~ .cat-gallery .line:nth-child(1) .photo,
-#select-british:checked ~ .cat-gallery .line:nth-child(2) .photo,
-#select-blue:checked ~ .cat-gallery .line:nth-child(3) .photo,
-#select-siamese:checked ~ .cat-gallery .line:nth-child(4) .photo
+.select-abyssinian:checked ~ .cat-gallery .line:nth-child(1) .photo,
+.select-british:checked ~ .cat-gallery .line:nth-child(2) .photo,
+.select-blue:checked ~ .cat-gallery .line:nth-child(3) .photo,
+.select-siamese:checked ~ .cat-gallery .line:nth-child(4) .photo
 {
-    opacity: 0.3;
+    opacity: .3;
 }
 
-#select-abyssinian:checked ~ .cat-breed label[for="select-abyssinian"] .select-breed,
-#select-british:checked ~ .cat-breed label[for="select-british"] .select-breed,
-#select-blue:checked ~ .cat-breed label[for="select-blue"] .select-breed,
-#select-siamese:checked ~ .cat-breed label[for="select-siamese"] .select-breed
+#select-abyssinian:checked ~ .cat-breed label:nth-child(1) .select-breed,
+#select-british:checked ~ .cat-breed label:nth-child(2) .select-breed,
+#select-blue:checked ~ .cat-breed label:nth-child(3) .select-breed,
+#select-siamese:checked ~ .cat-breed label:nth-child(4) .select-breed
 {
     background-color: #5a5a5a;
-    color: #ffffff;
+    color: #fff;
 }
 
 .footer
@@ -246,8 +243,8 @@ body
 
 .photo:hover::after
 {
-    content: "";
-    color: #ffffff;
+    content: '';
+    color: #fff;
     font-family: Tahoma, sans-serif;
     font-size: 25px;
     display: flex;
@@ -256,7 +253,7 @@ body
     width: 200px;
     height: 70px;
     margin-top: 195px;
-    background-color: rgba(0,0,0,0.37)
+    background-color: rgba(0,0,0,.37);
 }
 
 .rating-title
@@ -311,7 +308,7 @@ label
 
 .rating-diagram-high
 {
-    background: linear-gradient(to right, #01e86e, #ffffff);
+    background: linear-gradient(to right, #01e86e, #fff);
     border-left: 1px solid #01b053;
     border-right: 1px solid #cacccb;
     width: 150px;
@@ -319,7 +316,7 @@ label
 
 .rating-diagram-medium
 {
-    background: linear-gradient(to right, #fff601, #ffffff);
+    background: linear-gradient(to right, #fff601, #fff);
     border-left: 1px solid #b2ac01;
     border-right: 1px solid #cacccb;
     width: 131px;
@@ -327,7 +324,7 @@ label
 
 .rating-diagram-low
 {
-    background: linear-gradient(to right, #e80802, #ffffff);
+    background: linear-gradient(to right, #e80802, #fff);
     border-left: 1px solid #b10400;
     border-right: 1px solid #cacccb;
     width: 64px;
@@ -347,7 +344,7 @@ label
 .rating-diagram-low::before,
 .rating-diagram-low::after
 {
-    content: "";
+    content: '';
     display: block;
     margin: 0;
     height: 1px;
@@ -413,17 +410,17 @@ label
     width: 66px;
 }
 
-#descending:checked ~ .cat-rating-info .breed-rating:nth-child(1)
+.descending:checked ~ .cat-rating-info .breed-rating:nth-child(1)
 {
     order: 1;
 }
 
-#descending:checked ~ .cat-rating-info .breed-rating:nth-child(2)
+.descending:checked ~ .cat-rating-info .breed-rating:nth-child(2)
 {
     order: 2;
 }
 
-#descending:checked ~ .cat-rating-info .breed-rating:nth-child(4)
+.descending:checked ~ .cat-rating-info .breed-rating:nth-child(4)
 {
     order: 3;
 }
