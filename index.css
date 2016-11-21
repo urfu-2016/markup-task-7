@@ -8,7 +8,7 @@ main
 {
     display: grid;
     grid-template-columns: 1fr 3fr;
-    grid-template-areas: "nav content";
+    grid-template-areas: 'nav content';
     padding: 2px;
     background: blue;
 }
@@ -39,9 +39,10 @@ main
     background: blue;
 }
 
-.breed-category-radio[title='thai']:checked ~ .cards-grid-template .card:not([title='thai'])
+.breed-category-radio[title='thai']:checked ~ 
+.cards-grid-template .card:not([title='thai'])
 {
-    opacity: 0.6;
+    opacity: .6;
 }
 
 .rating
@@ -57,10 +58,10 @@ main
     grid-column-end: content-end;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "first second second"
-                         "third fourth fifth"
-                         "sixth sixth seventh"
-                         "eighth eighth eighth";
+    grid-template-areas: 'first second second'
+        'third fourth fifth'
+        'sixth sixth seventh'
+        'eighth eighth eighth';
 }
 
 .card-image
@@ -133,8 +134,8 @@ main
 {
     display: grid;
     grid-template-columns: auto 50px;
-    grid-template-areas: "title title"
-                         "bar value";
+    grid-template-areas: 'title title'
+        'bar value';
     order: 50;
 }
 
