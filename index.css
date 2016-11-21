@@ -1,0 +1,270 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    display: flex;
+    height: 100%;
+    margin: 0;
+    background: rgba(240, 248, 255, .2);
+    flex-direction: column;
+}
+
+.content
+{
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.wrapper header,
+.wrapper footer
+{
+    flex: 0 0 auto;
+}
+
+header
+{
+    text-align: center;
+    vertical-align: middle;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright
+{
+    margin-left: 150px;
+}
+
+footer address
+{
+    margin-right: 150px;
+}
+
+.menu,
+.rating
+{
+    flex-basis: 200px;
+}
+
+.photos-cats
+{
+    flex-basis: 650px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.photos-cats span,
+input.abyssinian:checked ~ .photos-cats .abyssinian span,
+input.british:checked ~ .photos-cats .british span,
+input.russian-blue:checked ~ .photos-cats .russian-blue span,
+input.siamese:checked ~ .photos-cats .siamese span
+{
+    display: none;
+}
+
+.small-img:hover span,
+.average-img:hover span,
+.big-img:hover span
+{
+    display: inline;
+}
+
+.small-img,
+.average-img,
+.big-img
+{
+    height: 250px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.small-img
+{
+    width: 200px;
+}
+
+.average-img
+{
+    width: 410px;
+}
+
+.big-img
+{
+
+    width: 620px;
+}
+
+img
+{
+    width: 100%;
+}
+
+.photos-cats span
+{
+    font: 16px Arial;
+    color: #fff;
+    position: absolute;
+    padding: 15px;
+    bottom: 30px;
+    filter: opacity(100%);
+    background: rgba(0, 0, 0, .4);
+}
+
+input.abyssinian,
+input.british,
+input.russian-blue,
+input.siamese
+{
+    display: none;
+}
+
+.menu
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #f5f5f5;
+}
+
+.menu label
+{
+    display: flex;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 100%;
+    list-style: none;
+    box-shadow: 0 5px 4px -4px rgba(0, 0, 0, .2);
+}
+
+input.abyssinian:checked ~ .photos-cats .abyssinian,
+input.british:checked ~ .photos-cats .british,
+input.russian-blue:checked ~ .photos-cats .russian-blue,
+input.siamese:checked ~ .photos-cats .siamese
+{
+    filter: opacity(50%);
+}
+
+input.abyssinian:checked ~ .menu .abyssinian,
+input.british:checked ~ .menu .british,
+input.russian-blue:checked ~ .menu .russian-blue,
+input.siamese:checked ~ .menu .siamese
+{
+    box-shadow: 0 0 4px #000;
+    background: rgba(0, 0, 0, .4);
+}
+
+.rating
+{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    background: #f5f5f5;
+    margin-left: -10px;
+}
+
+.rating h1
+{
+    margin: 0;
+    padding-left: 10px;
+    color: #8b008b;
+}
+
+.rating p
+{
+    margin-top: 0;
+}
+
+.rating label
+{
+    margin-left: 60px;
+}
+
+.rating .decrease
+{
+    margin-top: -15px;
+    margin-left: 180px;
+}
+
+.cat-breed1,
+.cat-breed2,
+.cat-breed3,
+.cat-breed4
+{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    padding-left: 10px;
+    justify-content: space-between;
+}
+
+.decrease:checked ~ .cat-breed4
+{
+    order: 1;
+}
+
+.decrease:checked ~ .cat-breed2
+{
+    order: 2;
+}
+
+.decrease:checked ~ .cat-breed1
+{
+    order: 3;
+}
+
+.decrease:checked ~ .cat-breed3
+{
+    order: 4;
+}
+
+.rating4,
+.rating8,
+.rating9,
+.rating10
+{
+    height: 15px;
+    margin-top: 20px;
+    margin-left: 0;
+    position: absolute;
+    background: linear-gradient(to right, #add8e6, #f5fffa);
+}
+
+.grade
+{
+    margin-top: 20px;
+    margin-right: 10px;
+}
+
+.rating4
+{
+    width: 40px;
+}
+
+.rating8
+{
+    width: 80px;
+}
+
+.rating9
+{
+    width: 90px;
+}
+
+.rating10
+{
+    width: 100px;
+}
