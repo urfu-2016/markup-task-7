@@ -1,0 +1,197 @@
+.main-header
+{
+    text-align: center;
+}
+
+main
+{
+    display: flex;
+}
+
+body
+{
+    background-color: #d5d5d5;
+}
+
+.items
+{
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 8px;
+}
+
+.item
+{
+    margin: 0;
+    height: 300px;
+    border: 8px solid #d5d5d5;
+    box-sizing: border-box;
+}
+
+.cat-one,
+.cat-three,
+.cat-four,
+.cat-five,
+.cat-seven
+{
+    flex-basis: 33.3%;
+}
+
+.cat-two,
+.cat-six
+{
+    flex-basis: 66.6%;
+}
+
+.picture
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.cat-info
+{
+    display: none;
+    text-align: center;
+}
+
+.race
+{
+    background-color: #aaa;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    margin: 8px 0;
+}
+
+.race-input
+{
+    display: none;
+}
+
+.race-block
+{
+    display: block;
+    border-bottom: solid #808080 2px;
+    text-align: center;
+    padding: 10px 0;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+.race-block:hover
+{
+    background-color: #808080;
+}
+
+input[id='siam']:checked ~ .race label[for='siam'],
+input[id='brit']:checked ~ .race label[for='brit'],
+input[id='angora']:checked ~ .race label[for='angora'],
+input[id='maine-coon']:checked ~ .race label[for='maine-coon']
+{
+    background-color: #808080;
+}
+
+input[id='siam']:checked ~ .items .siam,
+input[id='brit']:checked ~ .items .brit,
+input[id='angora']:checked ~ .items .angora,
+input[id='maine-coon']:checked ~ .items .maine-coon
+{
+    opacity: .5;
+}
+
+.rating-header
+{
+    text-align: center;
+    margin: 10px 0;
+}
+
+.rating
+{
+    width: 25%;
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    background-color: #aaa;
+    margin-top: 8px;
+    padding: 10px;
+}
+
+.race-name
+{
+    width: 100%;
+    margin: 10px 0 0;
+}
+
+.value-five
+{
+    width: 40%;
+    background: linear-gradient(to right, #e6221c, #fff);
+}
+
+.value-eight
+{
+    width: 70%;
+    background: linear-gradient(to right, #e6e638, #fff);
+}
+
+.value-nine
+{
+    width: 80%;
+    background: linear-gradient(to right, #67a917, #fff);
+}
+
+.value-ten
+{
+    width: 90%;
+    background: linear-gradient(to right, #67a917, #fff);
+}
+
+.item-rating
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rating-value
+{
+    height: 20px;
+}
+
+input[id='rating-order']:checked ~ .rating-nine
+{
+    order: 1;
+}
+
+input[id='rating-order']:checked ~ .rating-eight
+{
+    order: 2;
+}
+
+input[id='rating-order']:checked ~ .rating-ten
+{
+    order: 0;
+}
+
+input[id='rating-order']:checked ~ .rating-five
+{
+    order: 5;
+}
+
+footer
+{
+    display: flex;
+    margin-top: 8px;
+    border-top: solid #808080;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.company-address
+{
+    color: #6495ed;
+    margin-top: 20px;
+}
