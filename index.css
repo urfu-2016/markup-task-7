@@ -209,10 +209,10 @@ body
     opacity: .3;
 }
 
-#select-abyssinian:checked ~ .cat-breed label:nth-child(1) .select-breed,
-#select-british:checked ~ .cat-breed label:nth-child(2) .select-breed,
-#select-blue:checked ~ .cat-breed label:nth-child(3) .select-breed,
-#select-siamese:checked ~ .cat-breed label:nth-child(4) .select-breed
+.select-abyssinian:checked ~ .cat-breed label:nth-child(1) .select-breed,
+.select-british:checked ~ .cat-breed label:nth-child(2) .select-breed,
+.select-blue:checked ~ .cat-breed label:nth-child(3) .select-breed,
+.select-siamese:checked ~ .cat-breed label:nth-child(4) .select-breed
 {
     background-color: #5a5a5a;
     color: #fff;
