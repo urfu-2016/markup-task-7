@@ -127,7 +127,7 @@ img
     width: 100%;
 }
 
-p.cat1,
+div.cat1,
 div.cat2,
 div.cat3,
 div.cat4,
@@ -136,9 +136,23 @@ div.cat6,
 div.cat7,
 div.cat8
 {
-    visibility: hidden;
-    opacity: 0;
+    display: none;
+}
+
+img.cat1:hover ~ div.cat1,
+img.cat2:hover ~ div.cat2,
+img.cat3:hover ~ div.cat3,
+img.cat4:hover ~ div.cat4,
+img.cat5:hover ~ div.cat5,
+img.cat6:hover ~ div.cat6,
+img.cat7:hover ~ div.cat7,
+img.cat8:hover ~ div.cat8
+{
+    opacity: 1;
+    display: block;
     position: absolute;
+    width: 150px;
+    border: 1px solid #000;
 }
 
 .rating-header
@@ -208,4 +222,11 @@ div.cat8
     display: flex;
     justify-content: space-between;
     margin: 10px 30px;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #000;
 }
