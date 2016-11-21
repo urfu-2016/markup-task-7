@@ -1,0 +1,83 @@
+html
+{
+    background-color: #d3d3d3;
+}
+.foto
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: auto;
+    justify-content: center;
+}
+.name
+{
+    position: relative;
+}
+.name:hover::after
+{
+    content: attr(data-title);
+    position: absolute;
+    left: 0;
+    bottom: 20%;
+    background: #a9a9a9;
+    height: 20%;
+    align-content: center;
+}
+
+input
+{
+    visibility: hidden;
+}
+
+span
+{
+    margin-left: 40px;
+    margin-top: 15px;
+    text-transform: uppercase;
+}
+
+.left
+{
+    display: flex;
+    flex-direction: column;
+}
+
+label:hover
+{
+    color: black;
+}
+
+.breed
+{
+    width: 20%;
+    height: 40px;
+    background-color: #a9a9a9;
+    border: 1px #a9a9a9;
+    margin: 5px;
+}
+
+.ashera1,
+.pers1,
+.ashera2,
+.ashera3,
+.abis
+{
+    flex-basis: 33%;
+}
+
+.brit1,
+.pers2
+{
+    flex-basis: 66%;
+}
+
+.brit2
+{
+    flex-basis: 100%;
+}
+
+.footer
+{
+    order: 4;
+}
