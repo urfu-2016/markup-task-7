@@ -2,7 +2,168 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Бабуленькины котятки</title>
 </head>
 <body>
+    <div class="content-wrapper">
+        <main>
+            <input type="checkbox" name="breed" id="breed-1"
+                   class="hidden breed-checkbox breed-1-checkbox">
+            <input type="checkbox" name="breed" id="breed-2"
+                   class="hidden breed-checkbox breed-2-checkbox">
+            <input type="checkbox" name="breed" id="breed-3"
+                   class="hidden breed-checkbox breed-3-checkbox">
+            <input type="checkbox" name="breed" id="breed-4"
+                   class="hidden breed-checkbox breed-4-checkbox">
+            <input type="checkbox" name="breed" id="breed-5"
+                   class="hidden breed-checkbox breed-5-checkbox">
+            <input type="checkbox" name="rating-order" id="rating-order" class="hidden rating-order">
+            <aside class="filters">
+                <a class="logo" href="#">Granny's <span>Cats</span></a>
+                <div class="content-container">
+                    <label class="checkbox-label-dark-bg" for="breed-1">Абиссинская</label>
+                    <label class="checkbox-label-dark-bg" for="breed-2">Бенгальская</label>
+                    <label class="checkbox-label-dark-bg" for="breed-3">Бурмилла</label>
+                    <label class="checkbox-label-dark-bg" for="breed-4">Аравийский мау</label>
+                    <label class="checkbox-label-dark-bg" for="breed-5">Скоттиш-фолд</label>
+                </div>
+            </aside>
+            <section class="entries-section">
+                <h1>Каталог котеек</h1>
+                <div class="content-container">
+                    <article class="entry breed-1-entry">
+                        <div class="image-container">
+                            <img src="img/entry-img-1.jpg" alt="Абиссинская"
+                                 title="Абиссинская">
+                        </div>
+                        <div class="entry-title">
+                            <h3>Еврасик</h3>
+                            <div class="age">9 месяцев</div>
+                        </div>
+                    </article>
+                    <article class="entry breed-2-entry">
+                        <div class="image-container">
+                            <img src="img/entry-img-2.jpg" alt="Бенгальская"
+                                 title="Бенгальская">
+                        </div>
+                        <div class="entry-title">
+                            <h3>Леопольд</h3>
+                            <div class="age">2 года</div>
+                        </div>
+                    </article>
+                    <article class="entry breed-3-entry">
+                        <div class="image-container">
+                            <img src="img/entry-img-3.jpg" alt="Бурмилла"
+                                 title="Бурмилла">
+                        </div>
+                        <div class="entry-title">
+                            <h3>Снежок</h3>
+                            <div class="age">1 год</div>
+                        </div>
+                    </article>
+                    <article class="entry breed-1-entry">
+                        <div class="image-container">
+                            <img src="img/entry-img-4.jpg" alt="Абиссинская"
+                                 title="Абиссинская">
+                        </div>
+                        <div class="entry-title">
+                            <h3>Лайма</h3>
+                            <div class="age">1,5 года</div>
+                        </div>
+                    </article>
+                    <article class="entry breed-4-entry">
+                        <div class="image-container">
+                            <img src="img/entry-img-5.jpg" alt="Аравийский мау"
+                                 title="Аравийский мау">
+                        </div>
+                        <div class="entry-title">
+                            <h3>Варвара</h3>
+                            <div class="age">2 года</div>
+                        </div>
+                    </article>
+                    <article class="entry breed-5-entry">
+                        <div class="image-container">
+                            <img src="img/entry-img-6.jpg" alt="Скоттиш-фолд"
+                                 title="Скоттиш-фолд">
+                        </div>
+                        <div class="entry-title">
+                            <h3>Веня</h3>
+                            <div class="age">1 год</div>
+                        </div>
+                    </article>
+                    <article class="entry breed-2-entry">
+                        <div class="image-container">
+                            <img src="img/entry-img-7.jpg" alt="Бенгальская"
+                                 title="Бенгальская">
+                        </div>
+                        <div class="entry-title">
+                            <h3>Дебби</h3>
+                            <div class="age">11 месяцев</div>
+                        </div>
+                    </article>
+                    <article class="entry breed-3-entry">
+                        <div class="image-container">
+                            <img src="img/entry-img-8.jpg" alt="Бурмилла"
+                                 title="Бурмилла">
+                        </div>
+                        <div class="entry-title">
+                            <h3>Изабель</h3>
+                            <div class="age">1 год</div>
+                        </div>
+                    </article>
+                 </div>
+            </section>
+            <aside class="rating-section">
+                <h5>Рейтинг</h5>
+                <div class="content-container">
+                    <label for="rating-order" class="checkbox-label">По убыванию</label>
+                    <div class="rating-item rating-value-7">
+                        <span class="rating-value-digit">7</span>
+                        <h6>Бенгальская</h6>
+                        <div class="rating-line">
+                            <div class="rating-value"></div>
+                        </div>
+                    </div>
+                    <div class="rating-item rating-value-10">
+                        <span class="rating-value-digit">10</span>
+                        <h6>Бурмилла</h6>
+                        <div class="rating-line">
+                            <div class="rating-value"></div>
+                        </div>
+                    </div>
+                    <div class="rating-item rating-value-8">
+                        <span class="rating-value-digit">8</span>
+                        <h6>Аравийский мау</h6>
+                        <div class="rating-line">
+                            <div class="rating-value"></div>
+                        </div>
+                    </div>
+                    <div class="rating-item rating-value-4">
+                        <span class="rating-value-digit">4</span>
+                        <h6>Скоттиш-фолд</h6>
+                        <div class="rating-line">
+                            <div class="rating-value"></div>
+                        </div>
+                    </div>
+                    <div class="rating-item rating-value-6">
+                        <span class="rating-value-digit">6</span>
+                        <h6>Абиссинская</h6>
+                        <div class="rating-line">
+                            <div class="rating-value"></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <div class="footer-location">
+                Наш адрес: улица Котовая, д.5
+            </div>
+            <div class="footer-copyright">
+                &copy; ООО Бабуленькины котятки, 2016
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
