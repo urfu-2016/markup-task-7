@@ -39,8 +39,8 @@ main
     background: blue;
 }
 
-.breed-category-radio[title='thai']:checked ~ 
-.cards-grid-template .card:not([title='thai'])
+.breed-category-radio[title='thai']:checked ~ .cards-grid-template .card:not(
+    [title='thai'])
 {
     opacity: .6;
 }
@@ -280,4 +280,15 @@ main
 .rating-sort:checked ~ .rating-info[title='1']
 {
     order: 12;
+}
+
+.card-info
+{
+    display: none;
+}
+
+.card:hover + .card-info
+{
+    display: block;
+    
 }
