@@ -1,0 +1,69 @@
+main
+{
+    display: flex;
+}
+
+header
+{
+    font-size: 35px;
+    text-align: center;
+}
+
+footer
+{
+    display: flex;
+}
+
+.cat
+{
+    display: flex;
+    position: relative;
+    height: 200px;
+    align-items: center;
+}
+
+nav
+{
+    background-color: #bbb;
+    flex-basis: 200px;
+}
+
+ul
+{
+    display: flex;
+    flex-direction: column;
+}
+
+div p
+{
+    width: 190px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.advertisment
+{
+    display: flex;
+    flex: 1 1 50%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.first-cat
+{
+    flex: 1 30%;
+}
+
+.second-cat
+{
+    flex: 1 50%;
+}
+
+.third-cat
+{
+    flex: 1 65%;
+}
+
+
+
