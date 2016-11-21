@@ -1,79 +1,32 @@
-body
-{
-    display: flex;
-    flex-flow: row wrap;
-    background: #ebebeb;
-}
-
-header,
-main,
-footer
-{
-    flex: 1 100%;
-}
-
-/* Header styles */
-
-header
-{
-    height: 7rem;
-    text-align: center;
-
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
-}
-
-header p
-{
-    font-size: 2rem;
-}
-
-/* Footer styles */
-
-footer
-{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-
-    padding: 1rem 10px;
-    border-top: 2px solid #aca6a6;
-    font-size: 1.5rem;
-}
-
-footer p
-{
-    margin: 0;
-    padding: 0;
-}
-
-/* Main section styles */
-
-main
-{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-}
-
-main nav,
-main .rating
-{
-    flex: 2 2 0;
-    max-width: 300px;
-}
-
-main .container
-{
-    flex: 1 1 50%;
-    max-width: 60%;
-}
-
-main > input
+.layout
 {
     display: none;
+}
+
+.layout:checked ~ .to-grid
+{
+    display: none;
+}
+
+.layout:not(:checked) ~ .to-flex
+{
+    display: none;
+}
+
+.to-grid,
+.to-flex
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.4em;
+    cursor: pointer;
+    user-select: none;
+}
+
+html
+{
+    background: #ebebeb;
 }
 
 /* Navigation styles */
