@@ -1,0 +1,210 @@
+html
+{
+    background-color: #e6e9ee;
+}
+
+header
+{
+    position: relative;
+    left: 400px;
+    font-family: sans-serif;
+}
+
+.wraper
+{
+    display: flex;
+    width: 1080px;
+}
+
+.navigation,
+.rating
+{
+    background-color: #d5d8dd;
+    padding: 5px;
+    flex-basis: 200px;
+    margin: 5px;
+}
+
+.content
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 625px;
+}
+
+.cart:hover .description
+{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.cart
+{
+    margin: 5px;
+    position: relative;
+}
+
+img
+{
+    height: 150px;
+}
+
+img.size1
+{
+    width: 200px;
+}
+
+img.size2
+{
+    width: 410px;
+}
+
+img.size3
+{
+    width: 620px;
+}
+
+.description
+{
+    display: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    z-index: 10;
+    background-color: rgba(81, 81, 81, .5);
+    width: 100px;
+    height: 50px;
+    font-size: 15px;
+    color: white;
+}
+
+.rating
+{
+    align-self: flex-start;
+}
+
+.info
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.info div
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.info div h5
+{
+    flex-basis: 100%;
+}
+
+.gradient
+{
+    height: 20px;
+    border: 1px solid #9e9e9e;
+}
+
+.sort:checked ~ .info .value1
+{
+    order: 5;
+}
+
+.sort:checked ~ .info .value2
+{
+    order: 4;
+}
+
+.sort:checked ~ .info .value3
+{
+    order: 3;
+}
+
+.sort:checked ~ .info .value4
+{
+    order: 2;
+}
+
+.sort:checked ~ .info .value5
+{
+    order: 1;
+}
+
+.value1 .gradient
+{
+    width: 40px;
+    background: linear-gradient(to right, #b22222, rgba(255, 0, 0, 0));
+}
+
+.value2 .gradient
+{
+    width: 80px;
+    background: linear-gradient(to right, #e2a528, rgba(255, 0, 0, 0));
+}
+
+.value3 .gradient
+{
+    width: 120px;
+    background: linear-gradient(to right, #dada00, rgba(255, 0, 0, 0));
+}
+
+.value4 .gradient
+{
+    width: 160px;
+    background: linear-gradient(to right, #009c32, rgba(255, 0, 0, 0));
+}
+
+.value5 .gradient
+{
+    width: 200px;
+    background: linear-gradient(to right, #46cc00, rgba(255, 0, 0, 0));
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    width: 1080px;
+    height: 50px;
+    border-top: 1px solid #000;
+    margin-top: 10px;
+}
+
+label[class^='cat']
+{
+    display: block;
+    height: 50px;
+    font-size: 25px;
+    text-align: center;
+    padding: 5px;
+    border-bottom: 2px solid #000;
+}
+
+input[class^='cat']
+{
+    display: none;
+}
+
+input[class='cat1']:checked ~ .navigation .cat1,
+input[class='cat2']:checked ~ .navigation .cat2,
+input[class='cat3']:checked ~ .navigation .cat3
+{
+    background-color: #696969;
+}
+
+input[class='cat1']:checked ~ .content img,
+input[class='cat2']:checked ~ .content img,
+input[class='cat3']:checked ~ .content img
+{
+    opacity: .5;
+}
+
+input[class='cat1']:checked ~ .content .cat1,
+input[class='cat2']:checked ~ .content .cat2,
+input[class='cat3']:checked ~ .content .cat3
+{
+    opacity: 1;
+}
