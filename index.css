@@ -110,7 +110,7 @@ input[id='siamese']:checked ~ .cats > .siamese > img
 {
     position: relative;
     overflow: hidden;
-    margin: 0 0.5% 12px;
+    margin: 0 .5% 12px;
 }
 
 .info
