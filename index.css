@@ -19,7 +19,7 @@ html
 
 .name:hover::after
 {
-    content: attr(data-title);
+    content: attr(datatitle);
     position: absolute;
     left: 0;
     bottom: 20%;
