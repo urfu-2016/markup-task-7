@@ -1,0 +1,76 @@
+.layout:not(:checked) ~ .body
+{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.layout:not(:checked) ~ .body header,
+.layout:not(:checked) ~ .body main,
+.layout:not(:checked) ~ .body footer
+{
+    flex: 1 100%;
+}
+
+/* Header styles */
+
+.layout:not(:checked) ~ .body header
+{
+    height: 7rem;
+    text-align: center;
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout:not(:checked) ~ .body header p
+{
+    font-size: 2rem;
+}
+
+/* Footer styles */
+
+.layout:not(:checked) ~ .body footer
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+
+    padding: 1rem 10px;
+    border-top: 2px solid #aca6a6;
+    font-size: 1.5rem;
+}
+
+.layout:not(:checked) ~ .body footer p
+{
+    margin: 0;
+    padding: 0;
+}
+
+/* Main section styles */
+
+.layout:not(:checked) ~ .body main
+{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.layout:not(:checked) ~ .body main nav,
+.layout:not(:checked) ~ .body main .rating
+{
+    flex: 2 2 0;
+    max-width: 300px;
+}
+
+.layout:not(:checked) ~ .body main .container
+{
+    flex: 1 1 50%;
+    max-width: 63%;
+}
+
+.layout:not(:checked) ~ .body main > input
+{
+    display: none;
+}

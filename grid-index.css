@@ -1,0 +1,114 @@
+.body
+{
+    width: 98%;
+}
+
+.layout:checked ~ .body
+{
+    display: grid;
+    grid-template-areas: 'h'
+        'm'
+        'f';
+}
+
+.layout:checked ~ .body header
+{
+    grid-area: h;
+}
+
+.layout:checked ~ .body main
+{
+    grid-area: m;
+}
+
+.layout:checked ~ .body footer
+{
+    grid-area: f;
+}
+
+/* Header styles */
+
+.layout:checked ~ .body header
+{
+    height: 7rem;
+    text-align: center;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout:checked ~ .body header p
+{
+    font-size: 2rem;
+}
+
+/* Footer styles */
+
+.layout:checked ~ .body footer
+{
+    display: grid;
+    grid-template-areas: 'a b';
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+
+    padding: 1rem 10px;
+    border-top: 2px solid #aca6a6;
+    font-size: 1.5rem;
+}
+
+.layout:checked ~ .body footer p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.layout:checked ~ .body footer p:first-child
+{
+    grid-area: a;
+}
+
+.layout:checked ~ .body footer p:last-child
+{
+    grid-area: b;
+    text-align: right;
+}
+
+/* Main section styles */
+
+.layout:checked ~ .body main
+{
+    display: grid;
+    grid-template-areas: 'n c a';
+    grid-template-columns: 18% 64% 18%;
+    justify-content: space-around;
+}
+
+.layout:checked ~ .body main nav
+{
+    grid-area: n;
+    justify-self: center;
+}
+
+.layout:checked ~ .body main .rating
+{
+    grid-area: a;
+}
+
+.layout:checked ~ .body main nav,
+.layout:checked ~ .body main .rating
+{
+    width: 100%;
+    max-width: 300px;
+}
+
+.layout:checked ~ .body main .container
+{
+    justify-self: center;
+    grid-area: c;
+}
+
+.layout:checked ~ .body main > input
+{
+    display: none;
+}
