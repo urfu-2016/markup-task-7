@@ -244,3 +244,123 @@ input.cat4:checked ~ .category > label[for='cat4']
     background-color: #5a5a5a;
     color: #fff;
 }
+
+/* Grid */
+
+.switch:checked ~ .content .cats
+{
+    display: grid;
+    grid-template-areas: 'a a b b b b'
+        'c c d d e e'
+        'f f f f g g'
+        'h h h h h h';
+}
+
+.switch:checked ~ .content .cat:nth-child(1)
+{
+    grid-area: a;
+}
+
+.switch:checked ~ .content .cat:nth-child(2)
+{
+    grid-area: b;
+}
+
+.switch:checked ~ .content .cat:nth-child(3)
+{
+    grid-area: c;
+}
+
+.switch:checked ~ .content .cat:nth-child(4)
+{
+    grid-area: d;
+}
+
+.switch:checked ~ .content .cat:nth-child(5)
+{
+    grid-area: e;
+}
+
+.switch:checked ~ .content .cat:nth-child(6)
+{
+    grid-area: f;
+}
+
+.switch:checked ~ .content .cat:nth-child(7)
+{
+    grid-area: g;
+}
+
+.switch:checked ~ .content .cat:nth-child(8)
+{
+    grid-area: h;
+}
+
+.switch:checked ~ .content .category
+{
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background-color: #d9d9d9;
+}
+
+.switch:checked ~ .content
+{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+.switch:checked ~ .content .order:checked ~ .ratings-wrap
+{
+    display: grid;
+}
+
+.switch:checked ~ .content .rating
+{
+    display: grid;
+    grid-template-areas: 'a a a a a' 'b b b b c';
+}
+
+.switch:checked ~ .content .rating-description
+{
+    grid-area: a;
+}
+
+.switch:checked ~ .content .rating-line
+{
+    grid-area: b;
+}
+
+.switch:checked ~ .content .rating span
+{
+    grid-area: c;
+}
+
+.switch:checked ~ .content .rating-line-4
+{
+    width: 40%;
+}
+
+.switch:checked ~ .content .rating-line-8
+{
+    width: 80%;
+}
+
+.switch:checked ~ .content .rating-line-9
+{
+    width: 90%;
+}
+
+.switch:checked ~ .content .rating-line-10
+{
+    width: 100%;
+}
+
+.switch + label:before
+{
+    content: 'Use grid';
+}
+
+.switch:checked + label:before
+{
+    content: 'Use flex';
+}
