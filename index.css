@@ -127,15 +127,16 @@ nav label
 {
     display: flex;
     flex-flow: row wrap;
+    margin-top: -5px;
 }
 
 article
 {
     box-sizing: border-box;
-    flex: 2 30%;
+    flex: 2 33.33%;
     min-width: 200px;
     height: 300px;
-    margin: 5px;
+    border: 5px solid #ebebeb;
 
     display: flex;
     align-items: center;
@@ -171,7 +172,11 @@ article p
     transition: .2s ease-in-out;
 }
 
-article:hover p
+input.cat1:checked ~ .container article.cat1:hover p,
+input.cat2:checked ~ .container article.cat2:hover p,
+input.cat3:checked ~ .container article.cat3:hover p,
+input.cat4:checked ~ .container article.cat4:hover p,
+input.all:checked ~ .container article:hover p
 {
     display: block;
     opacity: .8;
@@ -179,27 +184,15 @@ article:hover p
 
 .two-column
 {
-    flex: 1 66%;
+    flex: 1 66.66%;
 }
 
 /* Categories styles */
 
-.cat1:checked ~ .container article:not(.cat1)
-{
-    opacity: .3;
-}
-
-.cat2:checked ~ .container article:not(.cat2)
-{
-    opacity: .3;
-}
-
-.cat3:checked ~ .container article:not(.cat3)
-{
-    opacity: .3;
-}
-
-.cat4:checked ~ .container article:not(.cat4)
+input.cat1:checked ~ .container article:not(.cat1),
+input.cat2:checked ~ .container article:not(.cat2),
+input.cat3:checked ~ .container article:not(.cat3),
+input.cat4:checked ~ .container article:not(.cat4)
 {
     opacity: .3;
 }
@@ -312,6 +305,11 @@ article:hover p
     {
         flex: 1 1 100%;
         max-width: unset;
+    }
+
+    main .container
+    {
+        margin: 0;
     }
 }
 
