@@ -65,10 +65,12 @@ input
     display: none;
 }
 
-nav label div
+nav label
 {
     cursor: pointer;
-    padding: 10px;
+    margin: 10px;
+    height: 50px;
+    width: 150px
 }
 
 aside .order,
@@ -98,12 +100,12 @@ input.korat:checked ~ div div .korat
     opacity: 1;
 }
 
-input.curl:checked ~ nav .curl div,
-input.brit:checked ~ nav .brit div,
-input.rus-blue:checked ~ nav .rus-blue div,
-input.korat:checked ~ nav .korat div
+input.curl:checked ~ nav .curl,
+input.brit:checked ~ nav .brit,
+input.rus-blue:checked ~ nav .rus-blue,
+input.korat:checked ~ nav .korat
 {
-    background-color: gray;
+    background: gray;
     color: white;
 }
 
@@ -210,7 +212,7 @@ img
     order: 4;
 }
 
-.rating input:checked ~ .order label div
+.rating input:checked ~ .order label
 {
     background-color: gray;
 }
@@ -228,12 +230,14 @@ img
     margin-left: 5px;
 }
 
-.order label div
+.order label
 {
     width: 10px;
     height: 10px;
     border: 1px solid #000;
     cursor: pointer;
+    content: " ";
+    margin-left: 5px;
 }
 
 .address
