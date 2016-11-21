@@ -45,7 +45,7 @@ div p
 .advertisment
 {
     display: flex;
-    flex: 1 1 50%;
+    flex: 1 1 30%;
     justify-content: space-between;
     flex-wrap: wrap;
 }
@@ -57,11 +57,11 @@ div p
 
 .second-cat
 {
-    flex: 1 50%;
+    flex: 1 40%;
 }
 
 .third-cat
 {
-    flex: 1 65%;
+    flex: 1 35%;
 }
 
