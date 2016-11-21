@@ -2,7 +2,100 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Hello, markup-7</title>
 </head>
 <body>
+    <main>
+        <input id="Grumpy" type="radio" name="filter" value="Grumpy">
+        <input id="Sphynx" type="radio" name="filter" value="Sphynx">
+        <input id="Scottish-Fold" type="radio" name="filter" value="Scottish-Fold">
+        <input id="Savanna" type="radio" name="filter" value="Savanna">
+        <article class="filter">
+            <label for="Grumpy">Grumpy</label>
+            <label for="Sphynx">Sphynx</label>
+            <label for="Scottish-Fold">Scottish-Fold</label>
+            <label for="Savanna">Savanna</label>
+        </article>
+        <article class="gallery">
+            <section class="first">
+                <img src="cats/Grumpy.jpg" alt="Grumpy">
+                <div>
+                    <p>Grumpy Cat, 9 years</p>
+                </div>
+            </section>
+            <section class="second">
+                <img src="cats/Sphynx.jpg" alt="Sphynx">
+                <div>
+                    <p>Sphynx Cat, 11 years</p>
+                </div>
+            </section>
+            <section class="third">
+                <img src="cats/Scottish-Fold.jpg" alt="Scottish-Fold">
+                <div>
+                    <p>Scottish-Fold Cat, 4 years</p>
+                </div>
+            </section>
+            <section class="fourth">
+                <img src="cats/Fat_Sphynx.jpg" alt="Fat-Sphynx">
+                <div>
+                    <p>Fat Sphynx Cat, 7 years</p>
+                </div>
+            </section>
+            <section class="fifth">
+                <img src="cats/Grumpy_with_flower.jpg" alt="Grumpy_with_flower">
+                <div>
+                    <p>Grumpy Cat, 9 years</p>
+                </div>
+            </section>
+            <section class="sixth">
+                <img src="cats/Scottish-Fold-2.jpg" alt="Scottish-Fold-2">
+                <div>
+                    <p>Scottish-Fold Cat, 2 years</p>
+                </div>
+            </section>
+            <section class="seventh">
+                <img src="cats/Savanna.jpg" alt="Savanna">
+                <div>
+                    <p>Savanna Cat, 4 years</p>
+                </div>
+            </section>
+            <section class="eighth">
+                <img src="cats/Savanna-2.jpg" alt="Savanna-2">
+                <div>
+                    <p>Savanna Cat, 3 years</p>
+                </div>
+            </section> 
+        </article>
+        <aside>
+            <header>
+                Rating:
+            </header>
+            <input id="sort" type="checkbox" name="sort">
+            <label for="sort">Sort By Descending</label>
+            <section>
+                <article class="Grumpy-rating">
+                    <h4>Grumpy:</h4>
+                    <meter value="40" max="100" low="30" high="70">4/10</meter>
+                    <hr>
+                </article>
+                <article class="Sphynx-rating">
+                    <h4>Sphynx:</h4>
+                    <meter value="10" max="100" low="30" high="70">1/10</meter>
+                    <hr>
+                </article>
+                <article class="Scottish-Fold-rating">
+                    <h4>Scottish-Fold:</h4>
+                    <meter value="90" max="100" low="30" high="70">9/10</meter>
+                    <hr>
+                </article>
+                <article class="Savanna-rating">
+                    <h4>Savanna:</h4>
+                    <meter value="60" max="100" low="30" high="70">6/10</meter>
+                    <hr>
+                </article>
+            </section>
+        </aside>
+    </main>
 </body>
 </html>
