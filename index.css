@@ -82,7 +82,7 @@ aside .korat
 
 input:checked ~ .photos .line div
 {
-    -webkit-filter: opacity(.3);
+    opacity: .3;
 }
 
 nav hr
@@ -90,12 +90,12 @@ nav hr
     margin: 0;
 }
 
-input.curl:checked ~ .photos  .line .curl,
-input.brit:checked ~ .photos  .line .brit,
-input.rus-blue:checked ~ .photos  .line .rus-blue,
-input.korat:checked ~ .photos  .line .korat
+input.curl:checked ~ div  div .curl,
+input.brit:checked ~ div div .brit,
+input.rus-blue:checked ~ div div .rus-blue,
+input.korat:checked ~ div div .korat
 {
-    -webkit-filter: opacity(1);
+    opacity: 1;
 }
 
 input.curl:checked ~ nav .curl div,
@@ -107,12 +107,7 @@ input.korat:checked ~ nav .korat div
     color: white;
 }
 
-.photos *,
-.photos *:after,
-.photos *:before
-.line *,
-.line *:after,
-.line *:before
+.line div
 {
     box-sizing: border-box;
 }
@@ -147,7 +142,7 @@ input.korat:checked ~ nav .korat div
 }
 
 .line div:hover::after
-{ 
+{
     position: absolute;
     content: attr(data-title);
     z-index: 6;
@@ -244,4 +239,9 @@ img
 .address
 {
     color: #007399;
+}
+
+label:focus
+{
+    border: 2px solid red;
 }
