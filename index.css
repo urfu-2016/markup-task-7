@@ -45,7 +45,7 @@ header
 
 .cats
 {
-    flex: 0 0 59%;
+    flex: 0 0 60%;
     display: flex;
     flex-wrap: wrap;
     align-self: flex-start;
