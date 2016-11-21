@@ -1,0 +1,259 @@
+html,
+body
+{
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ebebeb;
+    height: 100%;
+}
+
+.page-wrap
+{
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+
+.page-wrap:after
+{
+    content: '';
+    display: block;
+    height: 60px;
+}
+
+footer
+{
+    border-top: 1px solid #000;
+    padding: 10px;
+}
+
+address
+{
+    float: right;
+    color: #00f;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+header
+{
+    text-align: center;
+    font-size: 2em;
+}
+
+.cats
+{
+    display: grid;
+    grid-template-areas: 'a a b b b b' 'c c d d e e' 'f f f f g g' 'h h h h h h';
+}
+
+.cat-wrapper
+{
+    position: relative;
+    margin: auto;
+    width: calc(100% - 5px);
+}
+
+.cat-wrapper > img
+{
+    width: 100%;
+}
+
+.description
+{
+    position: absolute;
+    padding: 10px;
+    opacity: 0;
+    left: 0;
+    bottom: 20px;
+}
+
+.cat:hover .description
+{
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .5);
+    color: #fff;
+}
+
+.cat:nth-child(1)
+{
+    grid-area: a;
+}
+
+.cat:nth-child(2)
+{
+    grid-area: b;
+}
+.cat:nth-child(3)
+{
+    grid-area: c;
+}
+.cat:nth-child(4)
+{
+    grid-area: d;
+}
+.cat:nth-child(5)
+{
+    grid-area: e;
+}
+.cat:nth-child(6)
+{
+    grid-area: f;
+}
+.cat:nth-child(7)
+{
+    grid-area: g;
+}
+.cat:nth-child(8)
+{
+    grid-area: h;
+}
+
+.category
+{
+    grid-column: 1;
+    grid-row: 1 / 3;
+    background-color: #d9d9d9;
+}
+
+.category > label
+{
+    display: block;
+    padding: 10px;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.category > label:hover
+{
+    background-color: #5a5a5a;
+    color: #fff;
+    cursor: pointer;
+}
+
+.content
+{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    min-height: 80%;
+    margin-bottom: auto;
+}
+
+.ratings
+{
+    background-color: #d9d9d9;
+}
+
+.order:checked ~ .ratings-wrap
+{
+    display: grid;
+}
+
+.gradient-red
+{
+    background-image: linear-gradient(to right, #f00, #fff);
+}
+
+.gradient-green
+{
+    background-image: linear-gradient(to right, #0f0, #fff);
+}
+
+.gradient-yellow
+{
+    background-image: linear-gradient(to right, #ff0, #fff);
+}
+
+.rating-4
+{
+    order: 7;
+}
+
+.rating-8
+{
+    order: 3;
+}
+
+.rating-9
+{
+    order: 2;
+}
+
+.rating-10
+{
+    order: 1;
+}
+
+.rating
+{
+    display: grid;
+    grid-template-areas: 'a a a a a' 'b b b b c';
+}
+
+.rating-description
+{
+    /*flex: 0 0 100%;*/
+    grid-area: a;
+}
+
+.rating-line
+{
+    /*flex: 0 0 90%;*/
+    grid-area: b;
+    height: 20px;
+}
+
+.rating span
+{
+    /*flex: 0 0 10%;*/
+    grid-area: c;
+    align-self: flex-end;
+    text-align: right;
+}
+
+.rating-line-4
+{
+    width: 40%;
+}
+
+.rating-line-8
+{
+    width: 80%;
+}
+
+.rating-line-9
+{
+    width: 90%;
+}
+
+.rating-line-10
+{
+    width: 100%;
+}
+
+.cats > .cat
+{
+    pointer-events: none;
+    opacity: .5;
+}
+
+input.all:checked ~ .cats > .cat,
+input.cat1:checked ~ .cats > .cat1,
+input.cat2:checked ~ .cats > .cat2,
+input.cat3:checked ~ .cats > .cat3,
+input.cat4:checked ~ .cats > .cat4
+{
+    pointer-events: initial;
+    opacity: 1;
+}
+
+input.all:checked ~ .category > label[for='all'],
+input.cat1:checked ~ .category > label[for='cat1'],
+input.cat2:checked ~ .category > label[for='cat2'],
+input.cat3:checked ~ .category > label[for='cat3'],
+input.cat4:checked ~ .category > label[for='cat4']
+{
+    background-color: #5a5a5a;
+    color: #fff;
+}
