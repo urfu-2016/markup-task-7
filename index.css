@@ -46,7 +46,7 @@ main
     background-color: #fccc7a;
 }
 
-.gallery input
+.input
 {
     display: none;
 }
@@ -78,7 +78,7 @@ main
     font-weight: 600;
 }
 
-.cell:hover > div
+.cell:hover > .description
 {
     display: block;
     top: 200px;
@@ -124,24 +124,84 @@ main
     width: 852px;
 }
 
-.type1:checked ~ .row .cell:not(.breed1)
+.type1:checked ~ .gallery .row .cell:not(.breed1)
 {
     opacity: .5;
+    transition: opacity 1s;
 }
 
-.type2:checked ~ .row .cell:not(.breed2)
+.type1:checked ~ .gallery .row .cell:not(.breed1) .description
 {
-    opacity: .5;
+    display: none;
 }
 
-.type3:checked ~ .row .cell:not(.breed3)
+.type1:checked ~ .navigation .abissian
 {
-    opacity: .5;
+    background-color: #eeb046;
+    text-shadow: 0 0 2px #3b170b;
 }
 
-.type4:checked ~ .row .cell:not(.breed4)
+.type2:checked ~ .gallery .row .cell:not(.breed2)
 {
     opacity: .5;
+    transition: opacity 1s;
+}
+
+.type2:checked ~ .gallery .row .cell:not(.breed2) .description
+{
+    display: none;
+}
+
+.type2:checked ~ .navigation .britain
+{
+    background-color: #eeb046;
+    text-shadow: 0 0 2px #3b170b;
+}
+
+.type3:checked ~ .gallery .row .cell:not(.breed3)
+{
+    opacity: .5;
+    transition: opacity 1s;
+}
+
+.type3:checked ~ .gallery .row .cell:not(.breed3) .description
+{
+    display: none;
+}
+
+.type3:checked ~ .navigation .rusblue
+{
+    background-color: #eeb046;
+    text-shadow: 0 0 2px #3b170b;
+}
+
+.type4:checked ~ .gallery .row .cell:not(.breed4)
+{
+    opacity: .5;
+    transition: opacity 1s;
+}
+
+.type4:checked ~ .gallery .row .cell:not(.breed4) .description
+{
+    display: none;
+}
+
+.type4:checked ~ .navigation .siam
+{
+    background-color: #eeb046;
+    text-shadow: 0 0 2px #3b170b;
+}
+
+.typeAll:checked ~ .gallery .row .cell
+{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.typeAll:checked ~ .navigation .all
+{
+    background-color: #eeb046;
+    text-shadow: 0 0 2px #3b170b;
 }
 
 /*Рейтинг*/
@@ -160,44 +220,36 @@ main
     margin: 10px 0;
 }
 
-.scale .four
+.count
 {
-    display: inline-block;
-    width: 40px;
+    margin-right: 4px;
     height: 15px;
     border: .5px solid grey;
-    background: linear-gradient(to right, #df0101, white);
-    margin-right: 4px;
+    display: inline-block;
+}
+
+.scale .four
+{
+    width: 40px;
+    background: linear-gradient(to right, #df0101, #fff);
 }
 
 .scale .eight
 {
-    display: inline-block;
     width: 80px;
-    height: 15px;
-    border: .5px solid grey;
-    background: linear-gradient(to right, yellow, white);
-    margin-right: 4px;
+    background: linear-gradient(to right, #f7ef01, #fff);
 }
 
 .scale .nine
 {
-    display: inline-block;
     width: 90px;
-    height: 15px;
-    border: .5px solid grey;
-    background: linear-gradient(to right, #04b404, white);
-    margin-right: 4px;
+    background: linear-gradient(to right, #04b404, #fff);
 }
 
 .scale .ten
 {
-    display: inline-block;
     width: 100px;
-    height: 15px;
-    border: .5px solid grey;
-    background: linear-gradient(to right, #04b404, white);
-    margin-right: 4px;
+    background: linear-gradient(to right, #04b404, #fff);
 }
 
 input:checked ~ .first
