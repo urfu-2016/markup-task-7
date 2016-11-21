@@ -2,6 +2,7 @@ html
 {
     background-color: #d3d3d3;
 }
+
 .foto
 {
     display: flex;
@@ -10,6 +11,7 @@ html
     justify-content: center;
     max-width: 950px;
 }
+
 .name
 {
     position: relative;
@@ -68,7 +70,7 @@ span
 {
     display: flex;
     flex-direction: column;
-    background-color: #DCDCDC;
+    background-color: #dcdcdc;
 }
 
 .main
@@ -115,7 +117,7 @@ span
 .rating-4
 {
     height: 20px;
-    background: linear-gradient(to left, #fefcea, #ff0000);
+    background: linear-gradient(to left, #fefcea, #f00);
     width: 40%;
 }
 
@@ -126,7 +128,7 @@ span
     width: 80%;
 }
 
-.ratings-container
+.ratings
 {
     display: flex;
     flex-wrap: wrap;
