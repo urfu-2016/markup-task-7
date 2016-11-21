@@ -90,7 +90,7 @@ nav hr
     margin: 0;
 }
 
-input.curl:checked ~ div  div .curl,
+input.curl:checked ~ div div .curl,
 input.brit:checked ~ div div .brit,
 input.rus-blue:checked ~ div div .rus-blue,
 input.korat:checked ~ div div .korat
