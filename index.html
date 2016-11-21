@@ -2,7 +2,106 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Киски</title>
+    <link href="https://fonts.googleapis.com/css?family=Kurale" rel="stylesheet">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+
+<header>
+    Бабуленькины котятки
+    <img
+        src="images/label.jpg"
+        width="110"
+        alt="label"
+    >
+</header>
+
+<main>
+    <input type="checkbox" name="white" id="white" class="species">
+    <input type="checkbox" name="little" id="little" class="species">
+    <input type="checkbox" name="striped" id="striped" class="species">
+    <input type="checkbox" name="ginger" id="ginger" class="species">
+
+    <div class="first-column">
+        <label for="white">Беленькие</label>
+        <label for="little">Маленькие</label>
+        <label for="striped">Полосатые</label>
+        <label for="ginger">Рыженькие</label>
+    </div>
+
+    <div class="second-column">
+
+        <div class="cat-third">
+            <img class="image white" src="images/Пират.jpg" alt="Пират">
+            <p class="description">Пират, 7 лет</p>
+        </div>
+        <div class="cat-half">
+            <img class="image ginger" src="images/Хома.jpg" alt="Хома">
+            <p class="description">Хома, 2 года</p>
+        </div>
+
+        <div class="cat-third">
+            <img class="image striped" src="images/Камилла.jpg" alt="Камилла">
+            <p class="description">Камилла, 3 года</p>
+        </div>
+        <div class="cat-third">
+            <img class="image white" src="images/Бендер.jpg" alt="Бендер">
+            <p class="description">Бендер, 1 год</p>
+        </div>
+        <div class="cat-third">
+            <img class="image ginger" src="images/Апельсин.jpg" alt="Апельсин">
+            <p class="description">Апельсин, 4 года</p>
+        </div>
+
+        <div class="cat-half">
+            <img class="image little" src="images/Сестрички.jpg" alt="Дон">
+            <p class="description">Сестрички, 3 месяца</p>
+        </div>
+        <div class="cat-third">
+            <img class="image white" src="images/Кабачок.jpg" alt="Кабачок">
+            <p class="description">Кабачок, 1 год</p>
+        </div>
+
+        <div class="cat-full">
+            <img class="image striped" src="images/Рыся.jpg" alt="Рыся">
+            <p class="description">Рыся, 3 года</p>
+        </div>
+
+    </div>
+
+    <div class="third-column">
+        <h2 class="rating-header">Рейтинг</h2>
+
+        <input type="checkbox" name="rating" id="rating">
+        <label for="rating">По убыванию</label>
+
+        <div class="rating5-8">
+            <div class="rating-name">Беленькие</div>
+            <div class="scale"></div>
+            <div class="rating-grade">6</div>
+        </div>
+        <div class="rating9-10">
+            <div class="rating-name">Маленькие</div>
+            <div class="scale"></div>
+            <div class="rating-grade">10</div>
+        </div>
+        <div class="rating1-4">
+            <div class="rating-name">Полосатые</div>
+            <div class="scale"></div>
+            <div class="rating-grade">4</div>
+        </div>
+        <div class="rating9-10">
+            <div class="rating-name">Рыженькие</div>
+            <div class="scale"></div>
+            <div class="rating-grade">9</div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    &copy; ООО Бабуленькины котятки
+</footer>
+
 </body>
 </html>
