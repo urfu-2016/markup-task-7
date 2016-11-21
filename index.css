@@ -1,0 +1,266 @@
+body
+{
+    background-color: #ddd;
+}
+
+.breed-button
+{
+    display: none;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+nav
+{
+    font: 1.4em sans-serif;
+    padding: 3px;
+}
+
+nav hr
+{
+    background-color: black;
+    border: 1px solid;
+    margin: 0;
+}
+
+label
+{
+    display: block;
+    cursor: pointer;
+    margin: 0;
+}
+
+label:hover
+{
+    background-color: #fff;
+}
+
+section
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    padding: 0;
+}
+
+article
+{
+    position: relative;
+}
+
+article img
+{
+    flex-grow: 2;
+    height: 300px;
+
+}
+
+.small-pic
+{
+    flex-grow: 1;
+    max-width: 33%;
+}
+
+.small-pic img
+{
+    margin: 1.5% 3%;
+    width: 94%;
+}
+
+.middle-pic
+{
+    flex-grow: 2;
+    max-width: 66%;
+}
+
+.middle-pic img
+{
+    margin: .75% 1.5%;
+    width: 97%;
+}
+
+.large-pic
+{
+    max-width: 99%;
+    flex-grow: 3;
+}
+
+.large-pic img
+{
+    width: 98%;
+    margin: .5% 1%;
+}
+
+.name
+{
+    position: absolute;
+    z-index: 1;
+    top: 220px;
+    left: 0;
+    background-color: #222;
+    opacity: .7;
+    color: #fff;
+    padding: 5px;
+    font: 1.5em sans-serif;
+    display: none;
+}
+
+.small-pic .name
+{
+    left: 3%;
+}
+
+.middle-pic .name
+{
+    left: 1.5%;
+}
+
+.large-pic .name
+{
+    left: 1%;
+}
+
+img:hover + .name
+{
+    display: block;
+}
+
+aside
+{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3px;
+    font: 1.8em monospace;
+
+}
+
+aside header
+{
+    font-size: 1.1em;
+    color: #700;
+}
+
+aside .rating
+{
+    text-align: left;
+    position: relative;
+}
+
+aside .rating-line
+{
+    display: inline-block;
+    height: 10px;
+    border: 2px solid;
+}
+
+.rating .score
+{
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+
+}
+
+aside .s10
+{
+    width: 100px;
+}
+
+aside .s8
+{
+    width: 80px;
+}
+
+aside .s6
+{
+    width: 60px;
+}
+
+aside .s4
+{
+    width: 40px;
+}
+
+aside .green
+{
+    background-color: green;
+}
+
+aside .yellow
+{
+    background-color: yellow;
+}
+
+aside .red
+{
+    background-color: red;
+}
+
+.order-rating:checked ~ .or1
+{
+    order: 1;
+}
+
+.order-rating:checked ~ .or2
+{
+    order: 2;
+}
+
+.order-rating:checked ~ .or3
+{
+    order: 3;
+}
+
+.order-rating:checked ~ .or4
+{
+    order: 4;
+}
+
+nav,
+aside
+{
+    background-color: #aaa;
+}
+
+.button-siam:checked ~ nav .siam,
+.button-cartoon:checked ~ nav .cartoon,
+.button-manul:checked ~ nav .manul,
+.button-scot:checked ~ nav .scot
+{
+    background-color: #222;
+    color: #eee;
+}
+
+.button-siam:checked ~ section img:not(.siam),
+.button-cartoon:checked ~ section img:not(.cartoon),
+.button-manul:checked ~ section img:not(.manul),
+.button-scot:checked ~ section img:not(.scot)
+{
+    opacity: .5;
+}
+
+footer
+{
+    position: relative;
+    padding: 0;
+}
+
+footer span
+{
+    margin: 0;
+    padding: 0;
+}
+
+footer address
+{
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
