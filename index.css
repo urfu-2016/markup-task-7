@@ -70,7 +70,7 @@ nav label
     cursor: pointer;
     margin: 10px;
     height: 50px;
-    width: 150px
+    width: 150px;
 }
 
 aside .order,
@@ -236,7 +236,7 @@ img
     height: 10px;
     border: 1px solid #000;
     cursor: pointer;
-    content: " ";
+    content: ' ';
     margin-left: 5px;
 }
 
