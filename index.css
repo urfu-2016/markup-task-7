@@ -10,14 +10,17 @@ h1
 
 main
 {
-    display: flex;
+    display: inline-flex;
     justify-content: space-around;
 }
 
-.galery
+.gallery
 {
-    width: 60%;
+    width: 50%;
+    height: 850px;
+    display: inline-flex;
     flex-wrap: wrap;
+    align-content: space-between;
 }
 
 .menu
@@ -70,26 +73,26 @@ main
     background: #d2ca90;
 }
 
-.galery img.cat1,
-.galery img.cat2,
-.galery img.cat3,
-.galery img.cat4,
-.galery img.cat5,
-.galery img.cat6,
-.galery img.cat7,
-.galery img.cat8
+.gallery img.cat1,
+.gallery img.cat2,
+.gallery img.cat3,
+.gallery img.cat4,
+.gallery img.cat5,
+.gallery img.cat6,
+.gallery img.cat7,
+.gallery img.cat8
 {
     opacity: .7;
 }
 
-.american-input:checked ~ .galery img.cat1,
-.american-input:checked ~ .galery img.cat4,
-.bengal-input:checked ~ .galery img.cat3,
-.asher-input:checked ~ .galery img.cat2,
-.asher-input:checked ~ .galery img.cat5,
-.kuril-input:checked ~ .galery img.cat6,
-.munchkin-input:checked ~ .galery img.cat7,
-.munchkin-input:checked ~ .galery img.cat8
+.american-input:checked ~ .gallery img.cat1,
+.american-input:checked ~ .gallery img.cat4,
+.bengal-input:checked ~ .gallery img.cat3,
+.asher-input:checked ~ .gallery img.cat2,
+.asher-input:checked ~ .gallery img.cat5,
+.kuril-input:checked ~ .gallery img.cat6,
+.munchkin-input:checked ~ .gallery img.cat7,
+.munchkin-input:checked ~ .gallery img.cat8
 {
     opacity: 1;
 }
@@ -107,52 +110,64 @@ img
     height: 200px;
 }
 
-.cat1,
-.cat3,
-.cat4,
-.cat5,
-.cat7
+.block1,
+.block2,
+.block3,
+.block4
 {
-    width: 33%;
-}
-
-.cat2,
-.cat6
-{
-    width: 66%;
-}
-
-.cat8
-{
+    display: inline-flex;
     width: 100%;
+    justify-content: space-between;
 }
 
 div.cat1,
-div.cat2,
 div.cat3,
 div.cat4,
 div.cat5,
-div.cat6,
-div.cat7,
+div.cat7
+{
+    position: relative;
+    width: 30%;
+    overflow: hidden;
+}
+
+div.cat2,
+div.cat6
+{
+    position: relative;
+    width: 65%;
+    overflow: hidden;
+}
+
 div.cat8
+{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.description
 {
     display: none;
 }
 
-img.cat1:hover ~ div.cat1,
-img.cat2:hover ~ div.cat2,
-img.cat3:hover ~ div.cat3,
-img.cat4:hover ~ div.cat4,
-img.cat5:hover ~ div.cat5,
-img.cat6:hover ~ div.cat6,
-img.cat7:hover ~ div.cat7,
-img.cat8:hover ~ div.cat8
+div.cat1:hover > .description,
+div.cat2:hover > .description,
+div.cat3:hover > .description,
+div.cat4:hover > .description,
+div.cat5:hover > .description,
+div.cat6:hover > .description,
+div.cat7:hover > .description,
+div.cat8:hover > .description
 {
-    opacity: 1;
+    width: 200px;
+    height: 20px;
     display: block;
     position: absolute;
-    width: 150px;
-    border: 1px solid #000;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(0,0,0,.7);
+    color: #fff;
 }
 
 .rating-header
@@ -160,6 +175,11 @@ img.cat8:hover ~ div.cat8
     font: 20pt sans-serif;
     text-align: center;
     color: #f00;
+}
+
+.rating-div
+{
+    padding: 20px;
 }
 
 .sort:checked ~ .rating-div
@@ -170,7 +190,7 @@ img.cat8:hover ~ div.cat8
 
 .increase
 {
-    margin: 25px;
+    margin: 20px;
 }
 
 .american-rating,
@@ -208,20 +228,10 @@ img.cat8:hover ~ div.cat8
     background: linear-gradient(to right, #0f0, #ffe4e1);
 }
 
-.american-cats > p,
-.asher-cats > p,
-.bengal-cats > p,
-.kuril-cats > p,
-.munchkin-cats > p
-{
-    margin: 10px 25px;
-}
-
 .rating-block
 {
     display: flex;
     justify-content: space-between;
-    margin: 10px 30px;
 }
 
 footer
