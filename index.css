@@ -20,9 +20,6 @@ body
     width: 100%;
     height: 56px;
     background-color: #3f51b5;
-    position: absolute;
-    top: 0;
-    right: 0;
     vertical-align: middle;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .5);
 }
@@ -31,6 +28,7 @@ body
 {
     color: white;
     text-align: center;
+    margin: 8px;
 }
 
 .body-flex
@@ -41,10 +39,10 @@ body
 
 .main-element
 {
-    margin: 70px 8px;
+    margin: 16px 8px;
 }
 
-.navigator-block
+.navigator
 {
     min-width: 200px;
     border-radius: 5px;
@@ -56,7 +54,6 @@ body
     list-style-type: none;
     margin-bottom: 30px;
     padding: 0;
-    background-color: transparent;
 }
 
 .menu-item
@@ -78,9 +75,8 @@ body
     background-color: #ff9100;
 }
 
-.images-block
+.images
 {
-    background-color: transparent;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -141,7 +137,7 @@ body
     position: relative;
 }
 
-.info-block
+.info
 {
     min-width: 200px;
     width: 200px;
@@ -154,34 +150,34 @@ body
     align-items: center;
 }
 
-.category1-selected:checked ~ .navigator-block .category1,
-.category2-selected:checked ~ .navigator-block .category2,
-.category3-selected:checked ~ .navigator-block .category3,
-.category4-selected:checked ~ .navigator-block .category4
+.category1-selected:checked ~ .navigator .category1,
+.category2-selected:checked ~ .navigator .category2,
+.category3-selected:checked ~ .navigator .category3,
+.category4-selected:checked ~ .navigator .category4
 {
     background-color: #ff9100;
 }
 
-.category1-selected:checked ~ .images-block .cat-category1,
-.category2-selected:checked ~ .images-block .cat-category2,
-.category3-selected:checked ~ .images-block .cat-category3,
-.category4-selected:checked ~ .images-block .cat-category4
+.category1-selected:checked ~ .images .cat-category1,
+.category2-selected:checked ~ .images .cat-category2,
+.category3-selected:checked ~ .images .cat-category3,
+.category4-selected:checked ~ .images .cat-category4
 {
     box-shadow: 0 0 20px rgba(0, 0, 0, .5);
 }
 
-.category1-selected:checked ~ .images-block .cat-category1 .modal,
-.category2-selected:checked ~ .images-block .cat-category2 .modal,
-.category3-selected:checked ~ .images-block .cat-category3 .modal,
-.category4-selected:checked ~ .images-block .cat-category4 .modal,
-.non-selected:checked ~ .images-block .modal
+.category1-selected:checked ~ .images .cat-category1 .modal,
+.category2-selected:checked ~ .images .cat-category2 .modal,
+.category3-selected:checked ~ .images .cat-category3 .modal,
+.category4-selected:checked ~ .images .cat-category4 .modal,
+.non-selected:checked ~ .images .modal
 {
     width: 0;
     height: 0;
     top: 0;
 }
 
-.title-2
+.rating-title
 {
     width: 100%;
 }
@@ -192,22 +188,22 @@ body
     flex-direction: column;
 }
 
-.sort-on:checked ~ .rating-categories .rating-category1
+.sort-toggle:checked ~ .rating-categories .rating-category1
 {
     order: 1;
 }
 
-.sort-on:checked ~ .rating-categories .rating-category2
+.sort-toggle:checked ~ .rating-categories .rating-category2
 {
     order: 3;
 }
 
-.sort-on:checked ~ .rating-categories .rating-category3
+.sort-toggle:checked ~ .rating-categories .rating-category3
 {
     order: 4;
 }
 
-.sort-on:checked ~ .rating-categories .rating-category4
+.sort-toggle:checked ~ .rating-categories .rating-category4
 {
     order: 2;
 }
@@ -227,13 +223,6 @@ body
     background: linear-gradient(to right, #fff, #4caf50);
 }
 
-.rating-status-1
-{
-    width: 15px;
-    background: linear-gradient(to right, #fff, #f44336);
-}
-
-.rating-status-2
 {
     width: 30px;
     background: linear-gradient(to right, #fff, #f44336);
@@ -245,21 +234,9 @@ body
     background: linear-gradient(to right, #fff, #f44336);
 }
 
-.rating-status-4
-{
-    width: 60px;
-    background: linear-gradient(to right, #fff, #f44336);
-}
-
 .rating-status-5
 {
     width: 75px;
-    background: linear-gradient(to right, #fff, #ffeb3b);
-}
-
-.rating-status-6
-{
-    width: 90px;
     background: linear-gradient(to right, #fff, #ffeb3b);
 }
 
@@ -267,18 +244,6 @@ body
 {
     width: 105px;
     background: linear-gradient(to right, #fff, #8bc34a);
-}
-
-.rating-status-8
-{
-    width: 120px;
-    background: linear-gradient(to right, #fff, #8bc34a);
-}
-
-.rating-status-9
-{
-    width: 135px;
-    background-color: #4caf50;
 }
 
 .footer
