@@ -1,8 +1,91 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <title>Бабуленькины котятки</title>
     <meta charset="utf-8">
+    <meta name="author" content="Artemy Chernykh">
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <main>
+        <input type="radio" name="breed" class="breed-button button-siam" id="breed-siam">
+        <input type="radio" name="breed" class="breed-button button-cartoon" id="breed-cartoon">
+        <input type="radio" name="breed" class="breed-button button-manul" id="breed-manul">
+        <input type="radio" name="breed" class="breed-button button-scot" id="breed-scot">
+        <nav>
+            <label for="breed-siam" class="siam">Сиамская</label><hr>
+            <label for="breed-cartoon" class="cartoon">Мультяшная</label><hr>
+            <label for="breed-manul" class="manul">Манул</label><hr>
+            <label for="breed-scot" class="scot">Шотландская вислоухая</label><hr>
+        </nav>
+        <section>
+            <br>
+            <article class="middle-pic">
+                <img src="cats/manul.jpg" alt="манул" class="manul">
+                <div class="name">Инокентий, 3 года</div>
+            </article>
+            <article class="small-pic">
+                <img src="cats/s3.jpg" alt="сиамский кот" class="siam">
+                <div class="name">Гоша, 2 года</div>
+            </article>
+            <article class="small-pic">
+                <img src="cats/m2.jpg" alt="Леопольд" class="cartoon">
+                <div class="name">Леопольд, 41 год</div>
+            </article>
+            <article class="small-pic">
+                <img src="cats/m3.jpg" alt="Том" class="cartoon">
+                <div class="name">Том, 76 лет</div>
+            </article>
+            <article class="small-pic">
+                <img src="cats/s1.jpg" alt="Сиамский 2" class="siam">
+                <div class="name">Сима, 2 месяца</div>
+            </article>
+            <article class="small-pic">
+                <img src="cats/manul2.jpg" alt="Манул2" class="manul">
+                <div class="name">Маня, 2 года</div>
+            </article>
+            <article class="middle-pic">
+                <img src="cats/scot.jpg" alt="Шотландский" class="scot">
+                <div class="name">Скотти, 1.2 года</div>
+            </article>
+            <article class="large-pic">
+                <img src="cats/Saimonscat.jpg" alt="кот Саймона" class="cartoon">
+                <div class="name">Кот Саймона, 4года</div>
+            </article>
+        </section>
+
+        <aside>
+            <header>РЕЙТИНГ</header>
+            по убыванию <input type="checkbox" id="rat" class="order-rating">
+            <div class="rating or2">
+                Сиамская
+                <br>
+                <div class="rating-line green s8"></div>
+                <div class="score">8</div>
+            </div>
+            <div class="rating or4">
+                Мультяшная
+                <br>
+                <div class="rating-line red s4"></div>
+                <div class="score">4</div>
+            </div>
+            <div class="rating or1">
+                Манул
+                <br>
+                <div class="rating-line green s10"></div>
+                <div class="score">10</div>
+            </div>
+            <div class="rating or3">
+                Шотландская вислоухая
+                <br>
+                <div class="rating-line yellow s6"></div><div class="score">6</div>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <hr>
+        <span>OOO Бабуленькины котейки, 2016</span>
+        <address>ул. Котовая д.5</address>
+    </footer>
 </body>
 </html>
