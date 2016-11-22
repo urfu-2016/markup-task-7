@@ -254,13 +254,13 @@ input.cat4:checked ~ .container article:not(.cat4)
 
 @media (max-width: 799px)
 {
-    main nav
+    .layout:not(:checked) ~ .body main nav
     {
         flex: 1 1 100%;
         max-width: unset;
     }
 
-    main .container
+    .layout:not(:checked) ~ .body main .container
     {
         margin: 0;
     }
@@ -268,8 +268,8 @@ input.cat4:checked ~ .container article:not(.cat4)
 
 @media (max-width: 560px)
 {
-    main .rating,
-    main .container
+    .layout:not(:checked) ~ .body main .rating,
+    .layout:not(:checked) ~ .body main .container
     {
         flex: 1 1 100%;
         max-width: unset;
