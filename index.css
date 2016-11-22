@@ -1,0 +1,255 @@
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #dcdcdc;
+    font-family: Geneva, sans-serif;
+}
+
+h1
+{
+    text-align: center;
+}
+
+main
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    min-height: 1000px;
+    min-width: 1200px;
+    justify-content: center;
+}
+
+.inputs
+{
+    display: none;
+}
+
+.type_selectors
+{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 15%;
+    background-color: #bebebe;
+    min-width: 120px;
+}
+
+.label
+{
+    display: block;
+    font-size: 20px;
+    height: 40px;
+    padding-top: 20px;
+    padding-left: 16px;
+    border-bottom: 1px solid #d3d3d3;
+    
+}
+
+.cats
+{
+    display: flex;
+    flex-basis: 60%;
+    flex-wrap: wrap;
+    max-width: 780px;
+    min-width: 780px;
+    margin: 0 .5% .5%;
+}
+
+.cat
+{
+    display: flex;
+    margin: 0 1% 1%;
+    height: 290px;
+    border-collapse: collapse;
+    overflow: hidden;
+    max-width: 34%;
+    margin-right: .5%;
+    margin-bottom: 1%;
+}
+
+.imageOfCat
+{
+    width: 100%;
+    height: 100%;
+}
+
+.cats .cat:nth-child(4n + 2)
+{
+    max-width: 64.7%;
+}
+
+.cats .cat:nth-child(8n)
+{
+    max-width: 98.1%;
+}
+
+.desc
+{
+    display: none;
+}
+
+.label:hover
+{
+    background-color: #d3d3d3;
+}
+
+input[id='all']:checked ~ .type_selectors label[id='allL'],
+input[id='abys']:checked ~ .type_selectors label[id='abysL'],
+input[id='brit']:checked ~ .type_selectors label[id='britL'],
+input[id='rus']:checked ~ .type_selectors label[id='rusL'],
+input[id='siam']:checked ~ .type_selectors label[id='siamL']
+{
+    background-color: #848484;
+    color: #fff;
+}
+
+input[id='all']:not(:checked) ~ [id='abys']:not(:checked) ~ .cats .abys,
+input[id='all']:not(:checked) ~ [id='brit']:not(:checked) ~ .cats .brit,
+input[id='all']:not(:checked) ~ [id='rus']:not(:checked) ~ .cats .rus,
+input[id='all']:not(:checked) ~ [id='siam']:not(:checked) ~ .cats .siam
+{
+    opacity: .2;
+}
+
+input[id='all']:not(:checked) ~ [id='abys']:checked ~ .cats .abys:hover .desc,
+input[id='all']:not(:checked) ~ [id='brit']:checked ~ .cats .brit:hover .desc,
+input[id='all']:not(:checked) ~ [id='rus']:checked ~ .cats .rus:hover .desc,
+input[id='all']:not(:checked) ~ [id='siam']:checked ~ .cats .siam:hover .desc,
+input[id='all']:checked ~ .cats .cat:hover .desc
+{
+    display: inline-flex;
+    margin-top: 220px;
+    width: 150px;
+    position: absolute;
+    color: #fff;
+    font-size: 18px;
+    font-weight: bold;
+    background: rgba(0, 0, 0, .6);
+    padding: 10px;
+}
+
+.rating
+{
+    flex-basis: 20%;
+    display: flex;
+    background-color: #bebebe;
+    padding: 10px 0;
+    align-self: flex-start;
+    flex-direction: column;
+}
+
+.position
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    font-size: 23px;
+    margin: 20px 15px 15px;
+    margin-bottom: 0;
+}
+
+.position p
+{
+    width: 100%;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.count
+{
+    display: flex;
+    height: 20px;
+    border: 1px solid #000;
+    margin-right: 5px;
+}
+
+.c10
+{
+    width: 84%;
+    background: linear-gradient(to right, #01df74, #fff);
+    border: 1px solid #01df74;
+}
+
+.c9
+{
+    width: 77%;
+    background: linear-gradient(to right, #00cd66, #fff);
+    border: 1px solid #00cd66;
+}
+
+.c8
+{
+    width: 66%;
+    background: linear-gradient(to right, #f7fe2e, #fff);
+    border: 1px solid #f7fe2e;
+}
+
+.c4
+{
+    width: 23%;
+    background: linear-gradient(to right, #c50400, #fff);
+    border: 1px solid #c50400;
+}
+
+.rating h2
+{
+    text-align: left;
+    color: #f00;
+    margin: 10px;
+}
+
+label[id='rating_label']
+{
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+}
+
+label[id='rating_label']:hover
+{
+    cursor: pointer;
+    color: #0004bf;
+}
+
+input[id='rating_input']
+{
+    display: none;
+}
+
+input[id='rating_input']:checked ~ label[id='rating_label']
+{
+    color: #c50400;
+}
+
+input[id='rating_input']:checked ~ .position.fourth
+{
+    order: 3;
+}
+
+input[id='rating_input']:checked ~ .position.third
+{
+    order: 2;
+}
+
+input[id='rating_input']:checked ~ .position.second
+{
+    order: 1;
+}
+
+footer
+{
+    display: flex;
+    width: 100%;
+    font: 15px Geneva, sans-serif;
+    margin-top: 60px;
+    align-self: flex-end;
+    justify-content: space-between;
+    padding: 15px;
+    border-top: 2px #6e6e6e solid;
+}
+
+address
+{
+    color: #0101df;
+}
