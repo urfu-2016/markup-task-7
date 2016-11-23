@@ -2,19 +2,21 @@ body
 {
     min-width: 600px;
     background-color: #e6e6e6;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-footer,
+.footer,
 main
 {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
+    flex: 1;
 }
 
-main
-{
-    align-items: flex-start;
-}
 
 h1
 {
@@ -41,7 +43,7 @@ aside
     background-color: #d7d7d7;
     font-size: 1.5em;
     flex-grow: 1;
-    margin: 0 20px;
+    margin: 0 5px;
 }
 
 .photos
@@ -71,10 +73,7 @@ nav div
 }
 
 aside .order,
-aside .brit,
-aside .curl,
-aside .rus-blue,
-aside .korat
+aside .breed
 {
     padding: 10px;
 }
@@ -87,6 +86,11 @@ input:checked ~ .photos .line div
 nav hr
 {
     margin: 0;
+}
+
+nav
+{
+    margin-bottom: 10px;
 }
 
 input.curl:checked ~ div div .curl,
@@ -106,23 +110,21 @@ input.korat:checked ~ nav .korat
     color: white;
 }
 
-.line div
-{
-    box-sizing: border-box;
-}
-
 .photos .line
 {
     display: flex;
-    margin-bottom: 5px;
 }
 
 .line div
 {
-    padding-left: 10px;
-    overflow: hidden;
+    box-sizing: border-box;
     display: block;
     position: relative;
+    overflow: hidden;
+    border-top: 0;
+    border-right: 5px solid transparent;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
 }
 
 .cell-1-3
@@ -140,7 +142,11 @@ input.korat:checked ~ nav .korat
     width: 100%;
 }
 
-.line div:hover::after
+input:not(:checked) + input:not(:checked) + input:not(:checked) + input:not(:checked) ~ div .line div:hover::after,
+.curl:checked ~ div .curl:hover::after,
+.rus-blue:checked ~ div .rus-blue:hover::after,
+.korat:checked ~ div .korat:hover::after,
+.brit:checked ~ div .brit:hover::after
 {
     position: absolute;
     content: attr(title);
@@ -154,6 +160,7 @@ input.korat:checked ~ nav .korat
 
 img
 {
+    object-fit: fill;
     width: 100%;
 }
 
@@ -165,51 +172,51 @@ img
     justify-content: space-between;
 }
 
-.rating-color .curl
+.nine .curl
+{
+    background: linear-gradient(to right, #090, #fff);
+    width: 90px;
+}
+
+.ten .korat
 {
     background: linear-gradient(to right, #090, #fff);
     width: 100px;
 }
 
-.rating-color .korat
-{
-    background: linear-gradient(to right, #090, #fff);
-    width: 120px;
-}
-
-.rating-color .brit
+.seven .brit
 {
     background: linear-gradient(to right, #ff0, #fff);
-    width: 80px;
+    width: 70px;
 }
 
-.rating-color .rus-blue
+.four .rus-blue
 {
     background: linear-gradient(to right, #f00, #fff);
-    width: 50px;
+    width: 40px;
 }
 
-.rating input:checked ~ .curl
+.rating input:checked ~ .nine
 {
     order: 2;
 }
 
-.rating input:checked ~ .korat
+.rating input:checked ~ .ten
 {
     order: 1;
 }
 
-.rating input:checked ~ .brit
-{
-    order: 3;
-}
-
-.rating input:checked ~ .rus-blue
+.rating input:checked ~ .seven
 {
     order: 4;
 }
 
-.rating input:checked ~ .order label
+.rating input:checked ~ .four
+{
+    order: 7;
+}
+
+.rating input:checked ~ .order label.checkbox
 {
     background-color: gray;
 }
@@ -227,7 +234,7 @@ img
     margin-left: 5px;
 }
 
-.order label
+.order > label.checkbox
 {
     width: 10px;
     height: 10px;
@@ -240,9 +247,4 @@ img
 .address
 {
     color: #007399;
-}
-
-label:focus
-{
-    border: 2px solid red;
 }
