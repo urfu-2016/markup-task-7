@@ -53,6 +53,7 @@ nav > label
     display: inline-block;
     padding: 15%;
     letter-spacing: -.5px;
+    width: 70%;
 }
 
 nav > hr
@@ -206,22 +207,44 @@ aside .bar > div
     border: 1px solid #aaa;
 }
 
+aside .r1 .bar > div
+{
+    width: 20px;
+}
+
+aside .r2 .bar > div
+{
+    width: 40px;
+}
+
+aside .r3 .bar > div
+{
+    width: 60px;
+}
+
 aside .r4 .bar > div
 {
     width: 80px;
-    background: linear-gradient(90deg, #cc0006, #fff);
+}
+
+aside .r5 .bar > div
+{
+    width: 100px;
+}
+
+aside .r6 .bar > div
+{
+    width: 120px;
+}
+
+aside .r7 .bar > div
+{
+    width: 140px;
 }
 
 aside .r8 .bar > div
 {
     width: 160px;
-    background: linear-gradient(90deg, #ff0, #fff);
-}
-
-aside .r9 .bar > div,
-aside .r10 .bar > div
-{
-    background: linear-gradient(90deg, #26cc6b, #fff);
 }
 
 aside .r9 .bar > div
@@ -232,6 +255,28 @@ aside .r9 .bar > div
 aside .r10 .bar > div
 {
     width: 200px;
+}
+
+aside .r1 .bar > div,
+aside .r2 .bar > div,
+aside .r3 .bar > div,
+aside .r4 .bar > div
+{
+    background: linear-gradient(90deg, #cc0006, #fff);
+}
+
+aside .r5 .bar > div,
+aside .r6 .bar > div,
+aside .r7 .bar > div,
+aside .r8 .bar > div
+{
+    background: linear-gradient(90deg, #ff0, #fff);
+}
+
+aside .r9 .bar > div,
+aside .r10 .bar > div
+{
+    background: linear-gradient(90deg, #26cc6b, #fff);
 }
 
 footer
@@ -270,10 +315,10 @@ footer > div:nth-of-type(2) > a
     pointer-events: none;
 }
 
-.category.abis:checked ~ nav .abis,
-.category.brit:checked ~ nav .brit,
-.category.rus:checked ~ nav .rus,
-.category.siam:checked ~ nav .siam
+.category.abis:checked ~ main nav .abis,
+.category.brit:checked ~ main nav .brit,
+.category.rus:checked ~ main nav .rus,
+.category.siam:checked ~ main nav .siam
 {
     background-color: #555;
     color: #fff;
@@ -292,20 +337,50 @@ footer > div:nth-of-type(2) > a
 
 aside > input:checked ~ .r10
 {
-    grid-row: 3 / 4;
+    order: 1;
 }
 
 aside > input:checked ~ .r9
 {
-    grid-row: 4 / 5;
+    order: 2;
 }
 
 aside > input:checked ~ .r8
 {
-    grid-row: 5 / 6;
+    order: 3;
+}
+
+aside > input:checked ~ .r7
+{
+    order: 4;
+}
+
+aside > input:checked ~ .r6
+{
+    order: 5;
+}
+
+aside > input:checked ~ .r5
+{
+    order: 6;
 }
 
 aside > input:checked ~ .r4
 {
-    grid-row: 6 / 7;
+    order: 7;
+}
+
+aside > input:checked ~ .r3
+{
+    order: 8;
+}
+
+aside > input:checked ~ .r2
+{
+    order: 9;
+}
+
+aside > input:checked ~ .r1
+{
+    order: 10;
 }
