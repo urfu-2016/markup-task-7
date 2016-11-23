@@ -54,22 +54,22 @@ footer
     background: linear-gradient(to right, #ffd600, #fff);
 }
 
-.sort:checked ~ .first
+.sort:checked ~ .first-profession
 {
     order: 3;
 }
 
-.sort:checked ~ .second
+.sort:checked ~ .second-profession
 {
     order: 1;
 }
 
-.sort:checked ~ .third
+.sort:checked ~ .third-profession
 {
     order: 2;
 }
 
-.address
+address
 {
     color: #1533ad;
 }
@@ -103,6 +103,8 @@ footer
     background-color: #dcdcdc;
     margin: 0 20px;
     flex-basis: 200px;
+    min-width: 100px;
+    min-height: 450px;
 }
 
 .category
@@ -121,17 +123,17 @@ footer
     background-color: #c2c2c2;
 }
 
-.cat1
+.cat-size1
 {
     flex: 1 30%;
 }
 
-.cat2
+.cat-size2
 {
     flex: 1 60%;
 }
 
-.cat3
+.cat-size3
 {
     flex: 1 100%;
 }
@@ -146,10 +148,15 @@ footer
     margin: 8px;
 }
 
+.rating label
+{
+    width: 80%;
+}
+
 .card img
 {
-    min-width: 100%;
     min-height: 100%;
+    min-width: 100%;
     zoom: 1%;
 }
 
@@ -202,4 +209,15 @@ label
 .slogger:checked ~ .lazy-cat
 {
     opacity: .5;
+}
+
+.normal:checked ~ .lazy-cat:hover p,
+.normal:checked ~ .slogger-cat:hover p,
+.lazy:checked ~ .normal-cat:hover p,
+.lazy:checked ~ .slogger-cat:hover p,
+.slogger:checked ~ .normal-cat:hover p,
+.slogger:checked ~ .lazy-cat:hover p
+{
+
+    display: none;
 }
