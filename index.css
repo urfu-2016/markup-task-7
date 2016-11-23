@@ -125,9 +125,16 @@ input[id='siamese']:checked ~ .cats > .siamese > img
     font-size: 30px;
 }
 
-.one-column:hover > .info,
-.two-column:hover > .info,
-.three-column:hover > .info
+.category:checked ~ .cats > figure:hover > .info
+{
+    display: none;
+}
+
+input[id='abyssinian']:checked ~ .cats > .abyssinian:hover > .info,
+input[id='british']:checked ~ .cats > .british:hover > .info,
+input[id='russian']:checked ~ .cats > .russian:hover > .info,
+input[id='siamese']:checked ~ .cats > .siamese:hover > .info,
+.cats > figure:hover > .info
 {
     display: block;
 }
