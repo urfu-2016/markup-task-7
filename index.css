@@ -18,16 +18,14 @@ header h1
 main
 {
     justify-content: center;
-    margin-bottom: 15px;
+    margin: 15px;
 }
 
 main,
+footer,
 .button-choice,
 .content,
-.cat,
-.rating,
-.rating-info,
-.value
+.cat
 {
     display: flex;
 }
@@ -40,12 +38,9 @@ main,
 
 .button-choice
 {
+    flex: 0 0 20%;
     flex-direction: column;
-    width: 200px;
     background-color: #dfdef1;
-    min-width: 120px;
-    margin: 10px;
-    flex-basis: 220px;
 }
 
 .label
@@ -59,9 +54,10 @@ main,
 
 .content
 {
+    min-width: 300px;
+    flex: 0 0 60%;
     flex-wrap: wrap;
-    flex-basis: 60%;
-    margin-top: 6px;
+    margin: 0 5px;
 }
 
 .img-cat
@@ -72,6 +68,7 @@ main,
 
 .cat
 {
+    position: relative;
     margin: 4px;
     border-collapse: collapse;
     max-height: 35%;
@@ -114,11 +111,13 @@ input[id='all']:not(:checked) ~ [id='other']:not(:checked) ~ .content .other
     opacity: .4;
 }
 
-.cat:hover .about
+input[id='ben']:checked ~ .content .ben:hover .about,
+input[id='sav']:checked ~ .content .sav:hover .about,
+input[id='other']:checked ~ .content.other:hover .about,
+input[id='all']:checked ~ .content .cat:hover .about
 {
     display: inline-flex;
     position: absolute;
-    width: 200px;
     color: #000;
     font-size: 19px;
     background: rgba(255, 255, 255, .6);
@@ -127,53 +126,30 @@ input[id='all']:not(:checked) ~ [id='other']:not(:checked) ~ .content .other
 
 .rating
 {
+    flex: 0 0 20%;
+    align-self: flex-start;
     background: #dfdef1;
-    flex-basis: 250px;
     flex-direction: column;
     align-content: flex-start;
-    margin: 5px;
 }
 
 .rating-info
 {
-    flex-wrap: wrap;
     align-content: center;
     font-size: 20px;
-    margin: 5px 0 5px 10px;
+    margin: 10px;
 }
 
 .rating-info p
 {
-    width: 100%;
-    margin: 0;
+    margin: 5px;
+    padding: 0;
 }
 
-.value
+.rating-info div
 {
-    height: 20px;
-    border: 1px solid #000;
-    margin-right: 5px;
-}
-
-.value-10
-{
-    width: 85%;
-    background: linear-gradient(to right, #01df74, #fff);
-    border: 1px solid #01df74;
-}
-
-.value-8
-{
-    width: 65%;
-    background: linear-gradient(to right, #f7fe2e, #fff);
-    border: 1px solid #f7fe2e;
-}
-
-.value-4
-{
-    width: 25%;
-    background: linear-gradient(to right, #c50400, #fff);
-    border: 1px solid #c50400;
+    padding-top: 5px;
+    flex: 0 0 100%;
 }
 
 .rating h2
@@ -185,7 +161,6 @@ input[id='all']:not(:checked) ~ [id='other']:not(:checked) ~ .content .other
 
 label[id='rating-label']
 {
-    display: flex;
     font-size: 20px;
     justify-content: left;
     margin: 0 10px;
@@ -194,36 +169,161 @@ label[id='rating-label']
 label[id='rating-label']:hover
 {
     cursor: pointer;
-    color: #fff;
 }
 
-input[id='rating-input']:checked ~ label[id='rating-label']
+input[id='rating-input']:checked ~ .rating-info
 {
-    color: #c5231c;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-input[id='rating-input']:checked ~ .rating-info.second
+.value
+{
+    height: 20px;
+}
+
+.value:before
+{
+    height: 100%;
+    float: left;
+    content: '';
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+.value-10 .value:before,
+.value-9 .value:before,
+.value-8 .value:before
+{
+    background: linear-gradient(to right, #01df74, #fff);
+    border: 1px solid #01df74;
+}
+
+.value-7 .value:before,
+.value-6 .value:before,
+.value-5 .value:before
+{
+    background: linear-gradient(to right, #f7fe2e, #fff);
+    border: 1px solid #f7fe2e;
+}
+
+.value-4 .value:before,
+.value-3 .value:before,
+.value-2 .value:before,
+.value-1 .value:before
+{
+    width: 25%;
+    background: linear-gradient(to right, #c50400, #fff);
+    border: 1px solid #c50400;
+}
+
+.value-10
 {
     order: 1;
 }
 
-input[id='rating-input']:checked ~ .rating-info.third
+.value-10 .value:before
+{
+    width: 85%;
+}
+
+.value-9
 {
     order: 2;
 }
 
-input[id='rating-input']:checked ~ .rating-info.fourth
+.value-9 .value:before
+{
+    width: 75%;
+}
+
+.value-8
 {
     order: 3;
 }
 
+.value-8 .value:before
+{
+    width: 65%;
+}
+
+.value-7
+{
+    order: 4;
+}
+
+.value-7 .value:before
+{
+    width: 55%;
+}
+
+.value-6
+{
+    order: 5;
+}
+
+.value-6 .value:before
+{
+    width: 45%;
+}
+
+.value-5
+{
+    order: 6;
+}
+
+.value-5 .value:before
+{
+    width: 40%;
+}
+
+.value-4
+{
+    order: 7;
+}
+
+.value-4 .value:before
+{
+    width: 35%;
+}
+
+.value-3
+{
+    order: 8;
+}
+
+.value-3 .value:before
+{
+    width: 25%;
+}
+
+.value-2
+{
+    order: 9;
+}
+
+.value-2 .value:before
+{
+    width: 15%;
+}
+
+.value-1
+{
+    order: 10;
+}
+
+.value-1 .value:before
+{
+    width: 5%;
+}
+
 footer
 {
-    display: flex;
+    height: 50px;
     font-size: 15px;
     align-self: flex-end;
     justify-content: space-between;
-    padding: 15px;
+    padding: 5px 5px 5px 15px;
     border-top: 2px #6e6e6e solid;
 }
 
