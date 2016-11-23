@@ -8,65 +8,69 @@
 <body>
     <div class="wrapper">
         <h1 class="header">Бабуленькины котятки</h1>
-
-        <input type="radio" class="cat-radio big" name="cat-category" id="big">
-        <input type="radio" class="cat-radio russian" name="cat-category" id="russian">
-        <input type="radio" class="cat-radio siamese" name="cat-category" id="siamese">
-
-        <div class="cat-images">
+        <input type="checkbox" class="cat-checkbox big" name="cat-category" id="big">
+        <input type="checkbox" class="cat-checkbox russian" name="cat-category" id="russian">
+        <input type="checkbox" class="cat-checkbox siamese" name="cat-category" id="siamese">
+        <div class="cat-imgs">
             <main class="content">
                 <div class="row">
-                    <div class="cat-block siamese">
-                        <p class="cat-description">Сиамская киса, 3 годика</p>
-                        <img src="images/cat-1.png" alt="Кошка 1" title="Сиамская кошечка">
+                    <div class="cat-div col-1 siamese">
+                        <p class="descr">Сиамская киса, 3 годика</p>
+                        <img src="images/cat-1.png"
+                             alt="Кошка, Сиамская, 3" title="Сиамская кошечка">
                     </div>
-                    <div class="cat-block russian">
-                        <p class="cat-description">Русская серая, 3 годика</p>
-                        <img src="images/cat-2.png" alt="Серая 1" title="Серая кошечка">
+                    <div class="cat-div col-2 russian">
+                        <p class="descr">Русская серая, 3 годика</p>
+                        <img src="images/cat-2.png"
+                             alt="Кошка, Русская, 3" title="Серая кошечка">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="cat-block siamese">
-                        <p class="cat-description">
+                    <div class="cat-div col-1 siamese">
+                        <p class="descr">
                             Сиамская киса с темными лапками, 6 годиков
                         </p>
-                        <img src="images/cat-3.png" alt="Кошка 2" title="Сиамская, темная">
+                        <img src="images/cat-3.png"
+                             alt="Кошка, Сиамская, 6" title="Сиамская, темная">
                     </div>
-                    <div class="cat-block siamese">
-                        <p class="cat-description">
+                    <div class="cat-div col-1 siamese">
+                        <p class="descr">
                             Похожа на русскую, но сиамская, 0.2 годика
                         </p>
-                        <img src="images/cat-4.png" alt="Кошка 2" title="Русская серая">
+                        <img src="images/cat-4.png"
+                             alt="Кошка, Сиамская? 0.2" title="Русская серая">
                     </div>
-                    <div class="cat-block siamese">
-                        <p class="cat-description">Сиамский кошак, 10 годов</p>
-                        <img src="images/cat-5.png" alt="Кошка 3" title="Грустный кот">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="cat-block russian">
-                        <p class="cat-description">Истинно русский кот, 5 годов</p>
-                        <img src="images/cat-6.png" alt="Кот 1" title="Грациозный кот">
-                    </div>
-                    <div class="cat-block siamese">
-                        <p class="cat-description">Сиамский КОТ! 7 годиков</p>
-                        <img src="images/cat-7.png" alt="Кот 2" title="Сиамский котик">
+                    <div class="cat-div col-1 siamese">
+                        <p class="descr">Сиамский кошак, 10 годов</p>
+                        <img src="images/cat-5.png"
+                             alt="Кошак, Сиамский, 10" title="Грустный кот">
                     </div>
                 </div>
                 <div class="row">
-                    <div class="cat-block big">
-                        <p class="cat-description">Коты, оптом, недорого, в сумме 1 год</p>
-                        <img src="images/cat-8.png" alt="Котэ" title="ОптОвые коты">
+                    <div class="cat-div col-2 russian">
+                        <p class="descr">Истинно русский кот, 5 годов</p>
+                        <img src="images/cat-6.png"
+                             alt="Кот, Русский, 5" title="Грациозный кот">
+                    </div>
+                    <div class="cat-div col-1 siamese">
+                        <p class="descr">Сиамский КОТ! 7 годиков</p>
+                        <img src="images/cat-7.png"
+                             alt="Кот, Сиамский, 7" title="Сиамский котик">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="cat-div col-3 big">
+                        <p class="descr">Коты, оптом, недорого, в сумме 1 год</p>
+                        <img src="images/cat-8.png"
+                             alt="Много котэ" title="ОптОвые коты">
                     </div>
                 </div>
             </main>
-
             <nav class="selections">
                 <label class="cat-label" for="big">Оптом</label>
                 <label class="cat-label" for="russian">Русская</label>
                 <label class="cat-label" for="siamese">Сиамская</label>
             </nav>
-
             <aside class="menu">
                 <p class="rating-header">Рейтинг</p>
                 <input type="checkbox" class="cat-sort" name="cat-sort" id="cat-sort">
@@ -84,13 +88,12 @@
                     </div>
                     <div class="rate-siamese-div rating-line">
                         <p class="rating-line-name">Сиамская</p>
-                        <div class="green-rating rate-line rating-9"></div>
+                        <div class="orange-rating rate-line rating-9"></div>
                         <span class="rating-value">9</span>
                     </div>
                 </div>
             </aside>
         </div>
-
         <footer class="footer">
             <div class="copyright">
                 &copy; OOO Бабуленькины котятки, 2016
