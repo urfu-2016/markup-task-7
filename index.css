@@ -10,15 +10,12 @@ html
 
 body
 {
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     margin: 0;
-}
-
-main
-{
     position: relative;
     background: #eee;
-    min-height: 100%;
+    overflow: auto;
 }
 
 .main-header
@@ -305,9 +302,49 @@ label[for='check-order']
     width: 100%;
 }
 
-input[id='check-order']:checked ~ .rating-item:nth-of-type(2)
+input[id='check-order']:checked ~ .rating-9
 {
-    order: 0;
+    order: 2;
+}
+
+input[id='check-order']:checked ~ .rating-8
+{
+    order: 3;
+}
+
+input[id='check-order']:checked ~ .rating-7
+{
+    order: 4;
+}
+
+input[id='check-order']:checked ~ .rating-6
+{
+    order: 5;
+}
+
+input[id='check-order']:checked ~ .rating-5
+{
+    order: 6;
+}
+
+input[id='check-order']:checked ~ .rating-4
+{
+    order: 7;
+}
+
+input[id='check-order']:checked ~ .rating-3
+{
+    order: 8;
+}
+
+input[id='check-order']:checked ~ .rating-2
+{
+    order: 9;
+}
+
+input[id='check-order']:checked ~ .rating-1
+{
+    order: 10;
 }
 
 .rating-name
@@ -326,70 +363,77 @@ input[id='check-order']:checked ~ .rating-item:nth-of-type(2)
     height: 20px;
 }
 
-.rating-1
+.rating-1 .rating-line
 {
     width: 30%;
 }
 
-.rating-2
+.rating-2 .rating-line
 {
     width: 35%;
 }
 
-.rating-3
+.rating-3 .rating-line
 {
     width: 40%;
 }
 
-.rating-4
+.rating-4 .rating-line
 {
     width: 45%;
 }
 
-.rating-5
+.rating-1 .rating-line,
+.rating-2 .rating-line,
+.rating-3 .rating-line,
+.rating-4 .rating-line
+{
+    border: 1px solid #c07020;
+    background: linear-gradient(to right, #cd7f32, #fff);
+}
+
+.rating-5 .rating-line
 {
     width: 50%;
 }
 
-.rating-6
+.rating-6 .rating-line
 {
     width: 55%;
 }
 
-.rating-7
+.rating-7 .rating-line
 {
     width: 60%;
 }
 
-.rating-8
-{
-    width: 65%;
-}
-
-.rating-9
-{
-    width: 70%;
-}
-
-.rating-10
-{
-    width: 75%;
-}
-
-.gold
-{
-    border: 1px solid #a8760b;
-    background: linear-gradient(to right, #c8961b, #fff);
-}
-
-.silver
+.rating-5 .rating-line,
+.rating-6 .rating-line,
+.rating-7 .rating-line
 {
     border: 1px solid #909090;
     background: linear-gradient(to right, #b0b0b0, #fff);
 }
 
-.bronze
+.rating-8 .rating-line
 {
-    border: 1px solid #c07020;
-    background: linear-gradient(to right, #cd7f32, #fff);
+    width: 65%;
+}
+
+.rating-9 .rating-line
+{
+    width: 70%;
+}
+
+.rating-10 .rating-line
+{
+    width: 75%;
+}
+
+.rating-8 .rating-line,
+.rating-9 .rating-line,
+.rating-10 .rating-line
+{
+    border: 1px solid #a8760b;
+    background: linear-gradient(to right, #c8961b, #fff);
 }
