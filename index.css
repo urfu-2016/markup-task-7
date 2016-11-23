@@ -141,10 +141,7 @@ input.korat:checked ~ nav .korat
     width: 100%;
 }
 
-input:not(:checked)
- + input:not(:checked)
- + input:not(:checked)
- + input:not(:checked) ~ div .line div:hover::after,
+input:not(:checked) + input:not(:checked) + input:not(:checked) + input:not(:checked) ~ div .line div:hover::after,
 .curl:checked ~ div .curl:hover::after,
 .rus-blue:checked ~ div .rus-blue:hover::after,
 .korat:checked ~ div .korat:hover::after,
