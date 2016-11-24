@@ -133,10 +133,10 @@ main div:nth-of-type(8n + 8)
     display: block;
 }
 
-input[id='abyssinian']:checked ~ .shop main [class^='cat abyssinian'],
-input[id='british']:checked ~ .shop main [class^='cat british'],
-input[id='russian-blue']:checked ~ .shop main [class^='cat russian-blue'],
-input[id='siamese']:checked ~ .shop main [class^='cat siamese'],
+input[id='abyssinian']:checked ~ .shop main .abyssinian,
+input[id='british']:checked ~ .shop main .british,
+input[id='russian-blue']:checked ~ .shop main .russian-blue,
+input[id='siamese']:checked ~ .shop main .siamese,
 input[id='all']:checked ~ .shop main [class^='cat']
 {
     opacity: 1;
