@@ -1,16 +1,3 @@
-.layout:not(:checked) ~ .body
-{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.layout:not(:checked) ~ .body header,
-.layout:not(:checked) ~ .body main,
-.layout:not(:checked) ~ .body footer
-{
-    flex: 1 100%;
-}
-
 /* Header styles */
 
 .layout:not(:checked) ~ .body header
