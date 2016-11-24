@@ -3,6 +3,23 @@ body
     background-color: #ddd;
 }
 
+header
+{
+    text-transform: uppercase;
+}
+
+.main-header
+{
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.aside-header
+{
+    color: red;
+}
+
 p
 {
     margin: 0;
@@ -10,19 +27,25 @@ p
 }
 
 main,
+article,
 .gallery,
 .filter,
-aside,
-aside > section,
-aside > section > article,
 footer
 {
     display: flex;
 }
 
+main
+{
+    display: flex;
+    justify-content: space-between;
+}
+
 article > section
 {
     position: relative;
+    padding-top: 2px;
+    padding-bottom: 2px;
 }
 
 article > section > div
@@ -41,27 +64,72 @@ article > section:hover div
     display: block;
 }
 
-label
+.filter-label
 {
     flex-basis: 100%;
     font-size: 30px;
     height: 50px;
     cursor: pointer;
+    padding: 3% 0;
+}
+
+label[for='Scottish-Fold'],
+label[for='Sphynx']
+{
     border-top: 1px solid gray;
 }
 
 label[for='Savanna']
 {
+    border-top: 1px solid gray;
     border-bottom: 1px solid gray;
+}
+
+.filter-input:checked ~ article section
+{
+    opacity: .3;
+}
+
+.filter-input:checked ~ article section div
+{
+    opacity: 0;
+}
+
+input[id='Grumpy']:checked ~ article .grumpy,
+input[id='Sphynx']:checked ~ article .sphynx,
+input[id='Scottish-Fold']:checked ~ article .scottish-fold,
+input[id='Savanna']:checked ~ article .savanna,
+input[id='Grumpy']:checked ~ article .grumpy:hover div,
+input[id='Sphynx']:checked ~ article .sphynx:hover div,
+input[id='Scottish-Fold']:checked ~ article .scottish-fold:hover div,
+input[id='Savanna']:checked ~ article .savanna:hover div
+{
+    opacity: 1;
+}
+
+input[id='Grumpy']:checked ~ .filter label[for='Grumpy'],
+input[id='Sphynx']:checked ~ .filter label[for='Sphynx'],
+input[id='Scottish-Fold']:checked ~ .filter label[for='Scottish-Fold'],
+input[id='Savanna']:checked ~ .filter label[for='Savanna']
+{
+    background: #555;
+    color: #fff;
+}
+
+label[for='sort']
+{
+    margin-left: 10px;
 }
 
 img
 {
+    object-fit: cover;
+    object-position: 0 0;
     width: 100%;
     height: 100%;
 }
 
-input[type='radio']
+.filter-input[type='checkbox']
 {
     display: none;
 }
@@ -86,34 +154,6 @@ input[type='radio']
     flex-basis: 100%;
 }
 
-input[value='Grumpy']:checked ~ .gallery .second,
-input[value='Grumpy']:checked ~ .gallery .third,
-input[value='Grumpy']:checked ~ .gallery .fourth,
-input[value='Grumpy']:checked ~ .gallery .sixth,
-input[value='Grumpy']:checked ~ .gallery .seventh,
-input[value='Grumpy']:checked ~ .gallery .eighth,
-input[value='Sphynx']:checked ~ .gallery .first,
-input[value='Sphynx']:checked ~ .gallery .third,
-input[value='Sphynx']:checked ~ .gallery .fifth,
-input[value='Sphynx']:checked ~ .gallery .sixth,
-input[value='Sphynx']:checked ~ .gallery .seventh,
-input[value='Sphynx']:checked ~ .gallery .eighth,
-input[value='Scottish-Fold']:checked ~ .gallery .second,
-input[value='Scottish-Fold']:checked ~ .gallery .first,
-input[value='Scottish-Fold']:checked ~ .gallery .fourth,
-input[value='Scottish-Fold']:checked ~ .gallery .fifth,
-input[value='Scottish-Fold']:checked ~ .gallery .seventh,
-input[value='Scottish-Fold']:checked ~ .gallery .eighth,
-input[value='Savanna']:checked ~ .gallery .first,
-input[value='Savanna']:checked ~ .gallery .third,
-input[value='Savanna']:checked ~ .gallery .fifth,
-input[value='Savanna']:checked ~ .gallery .sixth,
-input[value='Savanna']:checked ~ .gallery .second,
-input[value='Savanna']:checked ~ .gallery .fourth
-{
-    opacity: .5;
-}
-
 .gallery
 {
     flex-basis: 50%;
@@ -129,29 +169,6 @@ input[value='Savanna']:checked ~ .gallery .fourth
     background-color: #d0d0d0;
 }
 
-aside
-{
-    flex-basis: 25%;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: space-between;
-    margin: 4px;
-}
-
-aside > section
-{
-    flex-basis: 100%;
-    flex-wrap: wrap;
-    align-content: flex-start;
-    justify-content: space-between;
-}
-
-aside > section > article
-{
-    flex-basis: 100%;
-    flex-wrap: wrap;
-}
-
 header
 {
     width: 100%;
@@ -159,42 +176,101 @@ header
     font-size: 30px;
 }
 
-h4
+aside
 {
-    flex-basis: 100%;
+    align-self: flex-start;
+    flex-basis: 23%;
+    background-color: #d0d0d0;
 }
 
-meter
+aside article
 {
-    flex-basis: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-input[name='sort']:checked ~ section .Grumpy-rating
+.rating-Grumpy,
+.rating-Sphynx,
+.rating-Scottish-Fold,
+.rating-Savanna
+{
+    flex-basis: 100%;
+    display: block;
+    margin: 5%;
+    height: 70px;
+}
+
+.meter1,
+.meter2,
+.meter3,
+.meter4
+{
+    float: left;
+    height: 27px;
+    margin-right: 1em;
+}
+
+.mark
+{
+    float: left;
+    font-size: 30px;
+}
+
+.meter1
+{
+    width: 72%;
+    background: linear-gradient(to right, green, #fff);
+    border: 1px solid black;
+}
+
+.meter2
+{
+    width: 65%;
+    background: linear-gradient(to right, yellow, #fff);
+    border: 1px solid black;
+}
+
+.meter3
+{
+    width: 80%;
+    background: linear-gradient(to right, green, #fff);
+    border: 1px solid black;
+}
+
+.meter4
+{
+    width: 28%;
+    background: linear-gradient(to right, red, #fff);
+    border: 1px solid black;
+}
+
+input[id='sort']:checked ~ article .rating-Grumpy
+{
+    -webkit-order: 2;
+    -ms-order: 2;
+    order: 2;
+}
+
+input[id='sort']:checked ~ article .rating-Sphynx
 {
     -webkit-order: 3;
     -ms-order: 3;
     order: 3;
 }
 
-input[name='sort']:checked ~ section .Sphynx-rating
-{
-    -webkit-order: 4;
-    -ms-order: 4;
-    order: 4;
-}
-
-input[name='sort']:checked ~ section .Scottish-Fold-rating
+input[id='sort']:checked ~ article .rating-Scottish-Fold
 {
     -webkit-order: 1;
     -ms-order: 1;
     order: 1;
 }
 
-input[name='sort']:checked ~ section .Savanna-rating
+input[id='sort']:checked ~ article .rating-Savanna
 {
-    -webkit-order: 2;
-    -ms-order: 2;
-    order: 2;
+    -webkit-order: 4;
+    -ms-order: 4;
+    order: 4;
 }
 
 footer > span
