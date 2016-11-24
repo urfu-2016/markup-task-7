@@ -9,37 +9,39 @@ body
 .cat-div.col-1
 {
     overflow: hidden;
-    flex: 0 0 33.3%;
+    flex: 0 0 33.33%;
+}
+
+.cat-div > img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
 }
 
 .cat-div.col-2
 {
     overflow: hidden;
-    flex: 0 0 66.6%;
+    flex: 0 0 66%;
 }
 
 .cat-div.col-3
 {
     overflow: hidden;
-    flex: 0 0 99.9%;
-}
-
-.row
-{
-    width: 100%;
+    flex: 0 0 100%;
 }
 
 .cat-checkbox,
-.big:checked ~ .cat-imgs .content .row > .cat-div:not(.big) .descr,
-.siamese:checked ~ .cat-imgs .content .row > .cat-div:not(.siamese) .descr,
-.russian:checked ~ .cat-imgs .content .row > .cat-div:not(.russian) .descr
+.big:checked ~ .cat-imgs .content > .cat-div:not(.big) .descr,
+.siamese:checked ~ .cat-imgs .content > .cat-div:not(.siamese) .descr,
+.russian:checked ~ .cat-imgs .content > .cat-div:not(.russian) .descr
 {
     display: none;
 }
 
-.big:checked ~ .cat-imgs .content .row > .cat-div:not(.big),
-.siamese:checked ~ .cat-imgs .content .row > .cat-div:not(.siamese),
-.russian:checked ~ .cat-imgs .content .row > .cat-div:not(.russian)
+.big:checked ~ .cat-imgs .content > .cat-div:not(.big),
+.siamese:checked ~ .cat-imgs .content > .cat-div:not(.siamese),
+.russian:checked ~ .cat-imgs .content > .cat-div:not(.russian)
 {
     opacity: .4;
 }
@@ -77,7 +79,6 @@ body
     align-items: center;
 }
 
-.row,
 .cat-imgs
 {
     display: flex;
@@ -107,7 +108,9 @@ body
 
 .content
 {
+    display: flex;
     flex: 0 0 60%;
+    flex-flow: row wrap;
     order: 2;
     margin: 5px;
 }
@@ -205,3 +208,89 @@ img
 {
     width: 100%;
 }
+
+.view-type
+{
+    display: none;
+}
+
+.view-type-label
+{
+    border: 1px solid #000;
+}
+
+.view-type-label:hover
+{
+    color: #fff;
+    background-color: #000;
+}
+
+.view-type ~ .view-type-label:after
+{
+    content: 'Flex';
+}
+
+.view-type:checked ~ .view-type-label:after
+{
+    content: 'Grid';
+}
+
+/* Grid */
+.view-type:checked ~ .cat-imgs
+{
+    display: grid;
+    grid-template-columns: 200px calc(100vw - 460px) 200px;
+}
+
+.sm-1
+{
+    grid-area: s1;
+}
+
+.sm-2
+{
+    grid-area: s2;
+}
+
+.sm-3
+{
+    grid-area: s3;
+}
+
+.sm-4
+{
+    grid-area: s4;
+}
+
+.sm-5
+{
+    grid-area: s5;
+}
+
+.md-1
+{
+    grid-area: m1;
+}
+
+.md-2
+{
+    grid-area: m2;
+}
+
+.lg-1
+{
+    grid-area: l1;
+}
+
+.view-type:checked ~ .cat-imgs .content
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-template-areas: "s1 m1 m1"
+                         "s2 s3 s4"
+                         "m2 m2 s5"
+                         "l1 l1 l1";
+}
+
