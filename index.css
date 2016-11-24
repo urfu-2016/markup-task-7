@@ -126,6 +126,8 @@ article
     overflow: hidden;
 
     position: relative;
+
+    transition: .3s;
 }
 
 /* Article styles */
@@ -171,20 +173,13 @@ input.all:checked ~ .container article:hover p
     opacity: .8;
 }
 
-input.cat1:checked ~ .container article.cat1,
-input.cat2:checked ~ .container article.cat2,
-input.cat3:checked ~ .container article.cat3,
-input.cat4:checked ~ .container article.cat4
-{
-    box-shadow: 0 0 10px rgba(0,0,0,.5);
-}
-
 input.cat1:checked ~ .container article:not(.cat1),
 input.cat2:checked ~ .container article:not(.cat2),
 input.cat3:checked ~ .container article:not(.cat3),
 input.cat4:checked ~ .container article:not(.cat4)
 {
-    opacity: .3;
+    opacity: .1;
+    transform: scale(.9);
 }
 
 /* Rating styles */
