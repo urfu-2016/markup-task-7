@@ -14,18 +14,17 @@ header
 
 main
 {
-    height: 100%;
     display: flex;
     justify-content: space-around;
     align-items: stretch;
 }
 
-main > input
+.checkbox-cat
 {
     display: none;
 }
 
-.button
+.kind-cat
 {
     display: block;
     font-size: 24px;
@@ -45,45 +44,33 @@ aside
     width: 20%;
 }
 
-.button:hover
+.kind-cat:hover
 {
     background-color: #999;
 }
 
-.input-1:checked ~ nav .button-1,
-.input-2:checked ~ nav .button-2,
-.input-3:checked ~ nav .button-3,
-.input-4:checked ~ nav .button-4
+.input-1:checked ~ nav .kind-1,
+.input-2:checked ~ nav .kind-2,
+.input-3:checked ~ nav .kind-3,
+.input-4:checked ~ nav .kind-4
 {
     background-color: #777;
 }
 
-.input-1:checked ~ section .second-cat img,
-.input-1:checked ~ section .third-cat img,
-.input-1:checked ~ section .fourth-cat img,
-.input-1:checked ~ section .sixth-cat img,
-.input-1:checked ~ section .seventh-cat img,
-.input-1:checked ~ section .eighth-cat img,
-.input-2:checked ~ section .first-cat img,
-.input-2:checked ~ section .third-cat img,
-.input-2:checked ~ section .fourth-cat img,
-.input-2:checked ~ section .fifth-cat img,
-.input-2:checked ~ section .sixth-cat img,
-.input-2:checked ~ section .seventh-cat img,
-.input-3:checked ~ section .first-cat img,
-.input-3:checked ~ section .second-cat img,
-.input-3:checked ~ section .third-cat img,
-.input-3:checked ~ section .fifth-cat img,
-.input-3:checked ~ section .seventh-cat img,
-.input-3:checked ~ section .eighth-cat img,
-.input-4:checked ~ section .first-cat img,
-.input-4:checked ~ section .second-cat img,
-.input-4:checked ~ section .fourth-cat img,
-.input-4:checked ~ section .fifth-cat img,
-.input-4:checked ~ section .sixth-cat img,
-.input-4:checked ~ section .eighth-cat img
+.input-1:checked ~ section .cat:not(.mein-kun) img,
+.input-2:checked ~ section .cat:not(.oriental) img,
+.input-3:checked ~ section .cat:not(.somali) img,
+.input-4:checked ~ section .cat:not(.ociket) img
 {
     opacity: .6;
+}
+
+.input-1:checked ~ section .mein-kun img,
+.input-2:checked ~ section .oriental img,
+.input-3:checked ~ section .somali img,
+.input-4:checked ~ section .ociket img
+{
+    background-color: rgba(255,255,255,1);
 }
 
 section
@@ -95,7 +82,7 @@ section
     width: 55%;
 }
 
-section article
+.cat
 {
     position: relative;
     padding: 3px 0;
@@ -107,13 +94,12 @@ section article
     height: 100%;
 }
 
-.explanation
+.cat-name
 {
     font-size: 24px;
     position: absolute;
-    top: 70%;
+    bottom: 20%;
     left: 0;
-    height: 35px;
     padding: 10px;
     color: #fff;
     background-color: #000;
@@ -121,8 +107,8 @@ section article
     transition: .3s;
 }
 
-.cat img:hover ~ .explanation,
-.explanation:hover
+.cat img:hover ~ .cat-name,
+.cat-name:hover
 {
     opacity: .5;
 }
@@ -174,7 +160,7 @@ aside label
     font-size: 18px;
 }
 
-aside article
+.ratings
 {
     width: 100%;
     display: flex;
@@ -192,10 +178,6 @@ aside article
 .rating p
 {
     font-size: 20px;
-}
-
-article p
-{
     margin-bottom: .5em;
 }
 
@@ -217,54 +199,54 @@ article p
 
 .scale1
 {
-    width: 72%;
+    width: 63%;
     background: linear-gradient(to right, #0f0, #fff);
     border: 1px solid #0f0;
 }
 
 .scale2
 {
-    width: 80%;
+    width: 70%;
     background: linear-gradient(to right, #0f0, #fff);
     border: 1px solid #0f0;
 }
 
 .scale3
 {
-    width: 32%;
+    width: 28%;
     background: linear-gradient(to right, #f00, #fff);
     border: 1px solid #f00;
 }
 
 .scale4
 {
-    width: 48%;
+    width: 42%;
     background: linear-gradient(to right, #ff0, #fff);
     border: 1px solid #ff0;
 }
 
-.descending:checked ~ article .rating-1
+.descending:checked ~ .ratings .rating-1
 {
     -webkit-order: 2;
     -ms-order: 2;
     order: 2;
 }
 
-.descending:checked ~ article .rating-2
+.descending:checked ~ .ratings .rating-2
 {
     -webkit-order: 1;
     -ms-order: 1;
     order: 1;
 }
 
-.descending:checked ~ article .rating-3
+.descending:checked ~ .ratings .rating-3
 {
     -webkit-order: 4;
     -ms-order: 4;
     order: 4;
 }
 
-.descending:checked ~ article .rating-4
+.descending:checked ~ .ratings .rating-4
 {
     -webkit-order: 3;
     -ms-order: 3;
