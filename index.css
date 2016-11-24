@@ -147,7 +147,7 @@ input.cat2:checked ~ .container article.cat2,
 input.cat3:checked ~ .container article.cat3,
 input.cat4:checked ~ .container article.cat4
 {
-    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    box-shadow: 0 0 10px rgba(0,0,0,.5);
 }
 
 input.cat1:checked ~ .container article:not(.cat1),
