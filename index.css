@@ -3,6 +3,7 @@ body
 {
     margin: 0;
     width: 100%;
+    height: 100%;
 }
 
 .cat-house
@@ -10,6 +11,8 @@ body
     display: flex;
     flex-direction: column;
     background: #aaa;
+    min-height: 100%;
+    overflow: scroll;
 }
 
 .cat-house__name
@@ -19,13 +22,15 @@ body
     align-items: center;
     font-size: 25px;
     height: 80px;
+    flex-basis: 10%;
 }
 
 .cat-house__content
 {
     display: flex;
     justify-content: space-around;
-    margin-bottom: 10px;
+    margin-bottom: auto;
+    flex-basis: 80%;
 
 }
 
@@ -37,8 +42,14 @@ body
 .cat-type,
 .cat-rate
 {
-    background: #aab;
+    background: rgba(53, 51, 51, .45);
     flex-basis: 15%;
+    border: 1px solid #fbc;
+}
+
+.cat-rate
+{
+    align-self: flex-start;
 }
 
 .cat-type__item
@@ -50,7 +61,7 @@ body
     width: 100%;
     font-size: 20px;
     text-align: center;
-    border-bottom: 2px solid #fbc;
+    border-bottom: 1px solid #fbc;
     cursor: pointer;
 }
 
@@ -59,13 +70,17 @@ body
     display: flex;
     flex-wrap: wrap;
     flex-basis: 60%;
+    margin-top: -10px;
 }
 
 .cat-item
 {
     position: relative;
-    flex-basis: 32%;
+    flex-basis: 33.3%;
     height: 300px;
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 0 3px;
 }
 
 .cat-item__info
@@ -88,14 +103,14 @@ body
     height: 100%;
 }
 
-.middle-block
+.cat-item--middle-block
 {
-    flex-basis: 64%;
+    flex-basis: 66.6%;
 }
 
-.big-block
+.cat-item--big-block
 {
-    flex-basis: 96%;
+    flex-basis: 99.9%;
 }
 
 .cat-rate__name
@@ -103,7 +118,7 @@ body
     font-size: 25px;
     letter-spacing: 7px;
     margin: 0 0 15px;
-    color: red;
+    color: #fda;
 }
 
 .cat-rate > input,
@@ -122,9 +137,8 @@ body
 .cat-rate__item
 {
     font-size: 20px;
-    margin-top: 15px;
-    border-bottom: 2px solid #fbc;
-    height: 55px;
+    border-bottom: 1px solid #fbc;
+    padding: 15px 0;
 }
 
 .cat-rate__item__info
@@ -132,6 +146,7 @@ body
     display: flex;
     justify-content: space-between;
     width: 100%;
+    margin-top: 5px;
 }
 
 .cat-rate__gradient
@@ -146,6 +161,7 @@ footer.cat-house__contacts
     display: flex;
     justify-content: space-between;
     height: 100px;
+    margin-top: 30px;
     align-items: center;
     font-size: 25px;
     border-top: 2px solid #fbc;
@@ -183,22 +199,30 @@ footer.cat-house__contacts
 
 input[id='abyssinian']:checked ~ .cat-items > :not(.cat-item__abyssinian)
 {
-    opacity: .6;
+    opacity: .3;
+}
+
+input[id='abyssinian']:checked ~ .cat-type > .abyssinian-checked,
+input[id='british']:checked ~ .cat-type > .british-checked,
+input[id='russian']:checked ~ .cat-type > .russian-checked,
+input[id='siamese']:checked ~ .cat-type > .siamese-checked
+{
+    background: #aaa;
 }
 
 input[id='british']:checked ~ .cat-items > :not(.cat-item__british)
 {
-    opacity: .6;
+    opacity: .3;
 }
 
 input[id='russian']:checked ~ .cat-items > :not(.cat-item__russian)
 {
-    opacity: .6;
+    opacity: .3;
 }
 
 input[id='siamese']:checked ~ .cat-items > :not(.cat-item__siamese)
 {
-    opacity: .6;
+    opacity: .3;
 }
 
 .cat-rate > input:checked ~ .cat-rate__items > .rate4
