@@ -236,6 +236,7 @@ img
 }
 
 /* Grid */
+
 .view-type:checked ~ .cat-imgs
 {
     display: grid;
@@ -288,9 +289,8 @@ img
     width: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto;
-    grid-template-areas: "s1 m1 m1"
-                         "s2 s3 s4"
-                         "m2 m2 s5"
-                         "l1 l1 l1";
+    grid-template-areas: 's1 m1 m1'
+        's2 s3 s4'
+        'm2 m2 s5'
+        'l1 l1 l1';
 }
-
