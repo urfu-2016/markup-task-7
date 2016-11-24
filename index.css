@@ -1,15 +1,16 @@
-html
-{
-    height: 100%;
-}
-
 body
 {
     display: flex;
     height: 100%;
     margin: 0;
-    background: rgba(240, 248, 255, .2);
     flex-direction: column;
+}
+
+.wpapper
+{
+    width: 1100px;
+    margin: 0 auto;
+    background: rgba(220, 220, 220, .7);
 }
 
 .content
@@ -41,12 +42,12 @@ footer
 
 .copyright
 {
-    margin-left: 150px;
+    margin-left: 50px;
 }
 
 footer address
 {
-    margin-right: 150px;
+    margin-right: 50px;
 }
 
 .menu,
@@ -72,13 +73,6 @@ input.siamese:checked ~ .photos-cats .siamese span
     display: none;
 }
 
-.small-img:hover span,
-.average-img:hover span,
-.big-img:hover span
-{
-    display: inline;
-}
-
 .small-img,
 .average-img,
 .big-img
@@ -87,6 +81,14 @@ input.siamese:checked ~ .photos-cats .siamese span
     margin-right: 10px;
     margin-bottom: 10px;
     position: relative;
+}
+
+.small-img:hover span,
+.average-img:hover span,
+.big-img:hover span
+{
+    display: inline;
+    position: absolute;
 }
 
 .small-img
@@ -114,7 +116,7 @@ img
 {
     font: 16px Arial;
     color: #fff;
-    position: absolute;
+    left: 0;
     padding: 15px;
     bottom: 30px;
     filter: opacity(100%);
@@ -133,7 +135,6 @@ input.siamese
 {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background: #f5f5f5;
 }
 
@@ -143,10 +144,10 @@ input.siamese
     padding: 0;
     margin: 0;
     align-items: center;
-    justify-content: center;
     height: 50px;
     width: 100%;
     list-style: none;
+    text-indent: 10px;
     box-shadow: 0 5px 4px -4px rgba(0, 0, 0, .2);
 }
 
@@ -190,7 +191,7 @@ input.siamese:checked ~ .menu .siamese
 
 .rating label
 {
-    margin-left: 60px;
+    margin-left: 80px;
 }
 
 .rating .decrease
@@ -207,28 +208,30 @@ input.siamese:checked ~ .menu .siamese
     display: flex;
     flex-direction: row;
     position: relative;
-    padding-left: 10px;
+    left: 10px;
+    height: 65px;
+    top: 10px;
     justify-content: space-between;
 }
 
 .decrease:checked ~ .cat-breed4
 {
-    order: 1;
+    order: 4;
 }
 
 .decrease:checked ~ .cat-breed2
 {
-    order: 2;
+    order: 3;
 }
 
 .decrease:checked ~ .cat-breed1
 {
-    order: 3;
+    order: 2;
 }
 
 .decrease:checked ~ .cat-breed3
 {
-    order: 4;
+    order: 1;
 }
 
 .rating4,
@@ -236,35 +239,40 @@ input.siamese:checked ~ .menu .siamese
 .rating9,
 .rating10
 {
-    height: 15px;
-    margin-top: 20px;
-    margin-left: 0;
+    height: 20px;
+    top: 25px;
+    left: 0;
     position: absolute;
-    background: linear-gradient(to right, #add8e6, #f5fffa);
 }
 
 .grade
 {
     margin-top: 20px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .rating4
 {
     width: 40px;
+    background: linear-gradient(to right, #b22222, #fff);
 }
 
 .rating8
 {
     width: 80px;
+    background: linear-gradient(to right, #ffd700, #fff);
+
 }
 
 .rating9
 {
     width: 90px;
+    background: linear-gradient(to right, #228b22, #fff);
+
 }
 
 .rating10
 {
     width: 100px;
+    background: linear-gradient(to right, #228b22, #fff);
 }
