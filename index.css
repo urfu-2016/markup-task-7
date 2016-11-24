@@ -10,6 +10,7 @@
 html
 {
     position: absolute;
+    width: 100%;
     min-height: 100%;
 }
 
@@ -25,7 +26,7 @@ header
     font: 3.25em Karton, serif;
 }
 
-main
+input[id='flex']:checked ~ main
 {
     display: flex;
     justify-content: space-between;
@@ -41,20 +42,20 @@ main
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
 }
 
-.first-column
+input[id='flex']:checked ~ main .first-column
 {
     width: 20%;
     flex-direction: column;
 }
 
-.second-column
+input[id='flex']:checked ~ main .second-column
 {
     width: 60%;
     margin: 0 10px;
     padding: 5px;
 }
 
-.third-column
+input[id='flex']:checked ~ main .third-column
 {
     width: 20%;
     padding: 10px;
@@ -65,8 +66,8 @@ main
 {
     text-align: center;
     font-size: 1.3em;
+    line-height: 50px;
     box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .25);
-    padding: 10px;
 }
 
 .species
@@ -101,26 +102,30 @@ input[id='ginger']:checked ~ .second-column .ginger
     opacity: 1;
 }
 
-.cat-third,
-.cat-half,
-.cat-full
+.cat
 {
     padding: 5px;
     box-sizing: border-box;
     position: relative;
+    max-height: 250px;
 }
 
-.cat-third
+input[id='flex']:checked ~ main .cat:nth-of-type(8n+1),
+input[id='flex']:checked ~ main .cat:nth-of-type(8n+3),
+input[id='flex']:checked ~ main .cat:nth-of-type(8n+4),
+input[id='flex']:checked ~ main .cat:nth-of-type(8n+5),
+input[id='flex']:checked ~ main .cat:nth-of-type(8n+7)
 {
     width: 33.33%;
 }
 
-.cat-half
+input[id='flex']:checked ~ main .cat:nth-of-type(8n+2),
+input[id='flex']:checked ~ main .cat:nth-of-type(8n+6)
 {
     width: 66.66%;
 }
 
-.cat-full
+input[id='flex']:checked ~ main .cat:nth-of-type(8n+8)
 {
     width: 100%;
 }
@@ -200,14 +205,14 @@ input[id='rating']
 {
     width: 14px;
     height: 14px;
-    margin: 6px 0 4px;
+    margin: 5px 0;
     cursor: pointer;
 }
 
 input[id='rating'] + label
 {
     padding-left: 4px;
-    margin: 0 0 10px;
+    margin-bottom: 10px;
 }
 
 input[id='rating'] + label:hover
@@ -240,4 +245,50 @@ footer
     width: 100%;
     padding: 10px;
     box-sizing: border-box;
+}
+
+/*Grid*/
+
+input[id='grid']:checked ~ main
+{
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: auto auto;
+    padding-bottom: 5%;
+}
+
+input[id='grid']:checked ~ main .first-column
+{
+    grid-row: span 2;
+    display: grid;
+    grid-template-rows: 50px 50px 50px 50px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+}
+
+input[id='grid']:checked ~ main .second-column
+{
+    grid-row: span 2;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-template-rows: 250px 250px 250px 250px;
+    margin: 0 10px;
+    padding: 5px;
+}
+
+input[id='grid']:checked ~ main .third-column
+{
+    box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    padding: 10px;
+}
+
+input[id='grid']:checked ~ main .second-column .cat:nth-of-type(8n+2),
+input[id='grid']:checked ~ main .second-column .cat:nth-of-type(8n+6)
+{
+    grid-column: span 2;
+}
+
+input[id='grid']:checked ~ main .second-column .cat:nth-of-type(8n+8)
+{
+    grid-column: span 3;
 }
