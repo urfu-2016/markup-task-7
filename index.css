@@ -153,7 +153,7 @@ label
 {
     display: flex;
     padding-right: 10px;
-    justify-content: space-between;
+    justify-content:space-between;
     width:180px;
 }
 
@@ -187,9 +187,9 @@ label
 }
 
 .sort:checked ~ .type1
- {
-     order: 2;
- }
+{
+    order: 2;
+}
 
 .sort:checked ~ .type2
 {
