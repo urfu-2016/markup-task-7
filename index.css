@@ -67,7 +67,6 @@ nav
     margin: 0 5px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     width: 930px;
     min-width: 930px;
 }
@@ -77,33 +76,32 @@ nav
     align-self: flex-start;
     display: flex;
     background: #bcbfbd;
-    flex-direction: column;
-    align-content: flex-start;
+    flex-wrap: wrap;
     flex-basis: 300px;
     margin: 5px;
 }
 
-.rating > h1
+.rating h1
 {
     text-transform: uppercase;
     color: #c21717;
     font: 20px normal, Arial, sans-serif;
-    margin: 3px 5px ;
+    margin: 3px 5px;
+    width: 100%;
 }
 
-.rating > div
+.order-checkbox-label
 {
+    font-size: 12px;
+    align-self: center;
+}
+
+.rating-info
+{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-end;
     margin: 5px;
-}
-
-.order-checkbox
-{
-    align-self: flex-start;
-    margin-top: -15px;
-    margin-left: 100px;
 }
 
 .rating-name
@@ -117,66 +115,66 @@ nav
     margin: 5px;
 }
 
-.rating-some
+.rating-value
 {
     height: 10px;
 }
 
-input[value='10'] + .rating-info .rating-some
+input[value='10'] + .rating-info .rating-value
 {
     width: 100%;
     background: linear-gradient(to left, #fff, #28bf30 50%);
 }
 
-input[value='9'] + .rating-info .rating-some
+input[value='9'] + .rating-info .rating-value
 {
     width: 90%;
     background: linear-gradient(to left, #fff, #28bf30 50%);
 }
 
-input[value='8'] + .rating-info .rating-some
+input[value='8'] + .rating-info .rating-value
 {
     width: 80%;
     background: linear-gradient(to left, #fff, #ffff48 50%);
 }
 
-input[value='7'] + .rating-info .rating-some
+input[value='7'] + .rating-info .rating-value
 {
     width: 70%;
     background: linear-gradient(to left, #fff, #ffff48 50%);
 }
 
-input[value='6'] + .rating-info .rating-some
+input[value='6'] + .rating-info .rating-value
 {
     width: 60%;
     background: linear-gradient(to left, #fff, #ffff48 50%);
 }
 
-input[value='5'] + .rating-info .rating-some
+input[value='5'] + .rating-info .rating-value
 {
     width: 50%;
     background: linear-gradient(to left, #fff, #ffff48 50%);
 }
 
-input[value='4'] + .rating-info .rating-some
+input[value='4'] + .rating-info .rating-value
 {
     width: 40%;
     background: linear-gradient(to left, #fff, #f00 50%);
 }
 
-input[value='3'] + .rating-info .rating-some
+input[value='3'] + .rating-info .rating-value
 {
     width: 30%;
     background: linear-gradient(to left, #fff, #f00 50%);
 }
 
-input[value='2'] + .rating-info .rating-some
+input[value='2'] + .rating-info .rating-value
 {
     width: 20%;
     background: linear-gradient(to left, #fff, #f00 50%);
 }
 
-input[value='1'] + .rating-info .rating-some
+input[value='1'] + .rating-info .rating-value
 {
     width: 10%;
     background: linear-gradient(to left, #fff, #f00 50%);
@@ -237,6 +235,8 @@ input[value='1'] + .rating-info .rating-some
     height: 250px;
     overflow: hidden;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .cat-info
@@ -251,7 +251,7 @@ input[value='1'] + .rating-info .rating-some
     font: 20px normal, Arial, sans-serif;
 }
 
-.cat-plate:hover > .cat-info
+.cat-plate:hover .cat-info
 {
     display: block;
 }
@@ -263,27 +263,25 @@ input[class|='cat-checkbox']
     display: none;
 }
 
-.img2 > img,
-.img3 > img
+.img2-wrapper img,
+.img3-wrapper img
 {
-    position: relative;
-    min-width: 100%;
-    max-width: 100%;
+    width: 100%;
 }
 
-.img1 > img
+.img1-wrapper img
 {
     height: 100%;
 }
 
-.img1
+.img1-wrapper
 {
     flex-basis: 300px;
     border: 5px solid #e5e5ec;
     background: #69ba6d;
 }
 
-.img2
+.img2-wrapper
 {
     flex-basis: 610px;
     border: 5px solid #e5e5ec;
@@ -291,21 +289,11 @@ input[class|='cat-checkbox']
 
 }
 
-.img3
+.img3-wrapper
 {
     flex-basis: 920px;
     border: 5px solid #e5e5ec;
     background: #6193ba;
-}
-
-.img2 > img
-{
-    top: -50px;
-}
-
-.img3 > img
-{
-    top: -150px;
 }
 
 input[class|='cat-checkbox']:checked ~ .cat-album > .cat-plate

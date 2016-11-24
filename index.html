@@ -11,14 +11,10 @@
         Бабуленькины котятки
     </header>
     <main>
-        <input type="checkbox" id="type1"
-               class="cat-checkbox-type1">
-        <input type="checkbox" id="type2"
-               class="cat-checkbox-type2">
-        <input type="checkbox" id="type3"
-               class="cat-checkbox-type3">
-        <input type="checkbox" id="type4"
-               class="cat-checkbox-type4">
+        <input type="checkbox" id="type1" class="cat-checkbox-type1">
+        <input type="checkbox" id="type2" class="cat-checkbox-type2">
+        <input type="checkbox" id="type3" class="cat-checkbox-type3">
+        <input type="checkbox" id="type4" class="cat-checkbox-type4">
         <nav>
             <label class="cat-nav nav-type1" for="type1">
                 Абиссинская
@@ -34,49 +30,49 @@
             </label>
         </nav>
         <div class="cat-album">
-            <div class="cat-plate img1 type1">
+            <div class="cat-plate img1-wrapper type1">
                 <img src="images/cat1.jpg" alt="cat1">
                 <div class="cat-info">
                     Вася, 3 года
                 </div>
             </div>
-            <div class="cat-plate img2 type2">
+            <div class="cat-plate img2-wrapper type2">
                 <img src="images/cat2.jpg" alt="cat2">
                 <div class="cat-info">
                     Киса, 1 год
                 </div>
             </div>
-            <div class="cat-plate img1 type3">
+            <div class="cat-plate img1-wrapper type3">
                 <img src="images/cat3.jpg" alt="cat3">
                 <div class="cat-info">
                     Мурзик, 1.5 года
                 </div>
             </div>
-            <div class="cat-plate img1 type1">
+            <div class="cat-plate img1-wrapper type1">
                 <img src="images/cat4.jpg" alt="cat4">
                 <div class="cat-info">
                     Тигр, 4 года
                 </div>
             </div>
-            <div class="cat-plate img1 type2">
+            <div class="cat-plate img1-wrapper type2">
                 <img src="images/cat5.jpg" alt="cat5">
                 <div class="cat-info">
                     Киря, 6 месяцев
                 </div>
             </div>
-            <div class="cat-plate img2 type2">
+            <div class="cat-plate img2-wrapper type2">
                 <img src="images/cat2.jpg" alt="cat2">
                 <div class="cat-info">
                     Киса, 1 год
                 </div>
             </div>
-            <div class="cat-plate img1 type1">
+            <div class="cat-plate img1-wrapper type1">
                 <img src="images/cat4.jpg" alt="cat4">
                 <div class="cat-info">
                     Тигр, 4 года
                 </div>
             </div>
-            <div class="cat-plate img3 type4">
+            <div class="cat-plate img3-wrapper type4">
                 <img src="images/cat8.jpg" alt="cat8">
                 <div class="cat-info">
                     Пантера, 1 год
@@ -86,15 +82,15 @@
         </div>
         <div class="rating">
             <h1>Рейтинг</h1>
-            <label for="desc-checkbox">По убыванию</label>
             <input type="checkbox" id="desc-checkbox" class="order-checkbox">
+            <label for="desc-checkbox" class="order-checkbox-label">По убыванию</label>
             <input type="text" value="9" id="first-val">
             <div class="rating-info">
                 <div class="rating-name">
                     Абиссинская
                 </div>
                 <div class="rating-scale">
-                    <div class="rating-some"></div>
+                    <div class="rating-value"></div>
                 </div>
                 <label for="first-val">9</label>
             </div>
@@ -104,7 +100,7 @@
                     Британская
                 </div>
                 <div class="rating-scale">
-                    <div class="rating-some"></div>
+                    <div class="rating-value"></div>
                 </div>
                 <label for="second-val">8</label>
             </div>
@@ -114,7 +110,7 @@
                     Русская голубая
                 </div>
                 <div class="rating-scale">
-                    <div class="rating-some"></div>
+                    <div class="rating-value"></div>
                 </div>
                 <label for="third-val">10</label>
             </div>
@@ -124,7 +120,7 @@
                     Сиамская
                 </div>
                 <div class="rating-scale">
-                    <div class="rating-some"></div>
+                    <div class="rating-value"></div>
                 </div>
                 <label for="forth-val">4</label>
             </div>
