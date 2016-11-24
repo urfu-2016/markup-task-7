@@ -3,7 +3,7 @@ body
     background: #c0c0c0;
 }
 
-h1
+header
 {
     text-align: center;
 }
@@ -30,11 +30,7 @@ main
     margin: 0 1%;
 }
 
-.american,
-.asher,
-.bengal,
-.kuril,
-.munchkin
+.cat
 {
     display: inline-block;
     width: 100%;
@@ -46,20 +42,12 @@ main
 
 }
 
-.american:hover,
-.asher:hover,
-.bengal:hover,
-.kuril:hover,
-.munchkin:hover
+.cat:hover
 {
     background: wheat;
 }
 
-.american-input,
-.asher-input,
-.bengal-input,
-.kuril-input,
-.munchkin-input
+.input-breed
 {
     display: none;
 }
@@ -70,34 +58,34 @@ main
 .kuril-input:checked ~ .menu .kuril,
 .munchkin-input:checked ~ .menu .munchkin
 {
-    background: #d2ca90;
+    background: #000;
+    color: #fff;
 }
 
-.gallery img.cat1,
-.gallery img.cat2,
-.gallery img.cat3,
-.gallery img.cat4,
-.gallery img.cat5,
-.gallery img.cat6,
-.gallery img.cat7,
-.gallery img.cat8
+.picture-cat
 {
     opacity: .7;
 }
 
-.american-input:checked ~ .gallery img.cat1,
-.american-input:checked ~ .gallery img.cat4,
-.bengal-input:checked ~ .gallery img.cat3,
-.asher-input:checked ~ .gallery img.cat2,
-.asher-input:checked ~ .gallery img.cat5,
-.kuril-input:checked ~ .gallery img.cat6,
-.munchkin-input:checked ~ .gallery img.cat7,
-.munchkin-input:checked ~ .gallery img.cat8
+.american-input:checked ~ .gallery .american-cat,
+.bengal-input:checked ~ .gallery .bengal-cat,
+.asher-input:checked ~ .gallery .asher-cat,
+.kuril-input:checked ~ .gallery .kuril-cat,
+.munchkin-input:checked ~ .gallery .munchkin-cat
 {
     opacity: 1;
 }
 
-.rating
+.american-input:checked ~ .gallery .american-description span,
+.bengal-input:checked ~ .gallery .bengal-description span,
+.asher-input:checked ~ .gallery .asher-description span,
+.kuril-input:checked ~ .gallery .kuril-description span,
+.munchkin-input:checked ~ .gallery .munchkin-description span
+{
+    display: block;
+}
+
+.rating-aside
 {
     align-self: flex-start;
     width: 18%;
@@ -120,26 +108,21 @@ img
     justify-content: space-between;
 }
 
-div.cat1,
-div.cat3,
-div.cat4,
-div.cat5,
-div.cat7
+.block-width-30
 {
     position: relative;
     width: 30%;
     overflow: hidden;
 }
 
-div.cat2,
-div.cat6
+.block-width-65
 {
     position: relative;
     width: 65%;
     overflow: hidden;
 }
 
-div.cat8
+.block-width-100
 {
     position: relative;
     width: 100%;
@@ -151,17 +134,15 @@ div.cat8
     display: none;
 }
 
-div.cat1:hover > .description,
-div.cat2:hover > .description,
-div.cat3:hover > .description,
-div.cat4:hover > .description,
-div.cat5:hover > .description,
-div.cat6:hover > .description,
-div.cat7:hover > .description,
-div.cat8:hover > .description
+span
+{
+    font-weight: 800;
+    display: none;
+}
+
+.block-picture:hover > .description
 {
     width: 200px;
-    height: 20px;
     display: block;
     position: absolute;
     bottom: 20px;
@@ -193,11 +174,7 @@ div.cat8:hover > .description
     margin: 20px;
 }
 
-.american-rating,
-.asher-rating,
-.bengal-rating,
-.kuril-rating,
-.munchkin-rating
+.rating-scale
 {
     height: 10px;
     border: 2px solid #000;
@@ -232,6 +209,11 @@ div.cat8:hover > .description
 {
     display: flex;
     justify-content: space-between;
+}
+
+.addr
+{
+    color: #00f;
 }
 
 footer

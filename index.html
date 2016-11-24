@@ -6,63 +6,79 @@
     <link href="index.css" rel="stylesheet">
 </head>
 <body>
-    <h1>Бабуленькины котятки</h1>
+    <header><h1>Бабуленькины котятки</h1></header>
     <main>
-        <input class="american-input" type="checkbox" checked id="american">
-        <input class="asher-input" type="checkbox" checked id="asher">
-        <input class="bengal-input" type="checkbox" checked id="bengal">
-        <input class="kuril-input" type="checkbox" checked id="kuril">
-        <input class="munchkin-input" type="checkbox" checked id="munchkin">
-        <div class="menu">
-            <label for="american" class="american">Американский керл</label>
-            <label for="asher" class="asher">Ашера</label>
-            <label for="bengal" class="bengal">Бенгальская</label>
-            <label for="kuril" class="kuril">Курильский бобтейл</label>
-            <label for="munchkin" class="munchkin">Манчкин</label>
-        </div>
-        <div class="gallery">
+        <input class="american-input input-breed" type="checkbox" checked id="american">
+        <input class="asher-input input-breed" type="checkbox" checked id="asher">
+        <input class="bengal-input input-breed" type="checkbox" checked id="bengal">
+        <input class="kuril-input input-breed" type="checkbox" checked id="kuril">
+        <input class="munchkin-input input-breed" type="checkbox" checked id="munchkin">
+        <nav class="menu">
+            <label for="american" class="american cat">Американский керл</label>
+            <label for="asher" class="asher cat">Ашера</label>
+            <label for="bengal" class="bengal cat">Бенгальская</label>
+            <label for="kuril" class="kuril cat">Курильский бобтейл</label>
+            <label for="munchkin" class="munchkin cat">Манчкин</label>
+        </nav>
+        <section class="gallery">
             <div class="block1">
-                <div class="cat1">
-                    <img class="cat1" src="image/1.jpg" alt="котёнок1">
-                    <div class="description">Миша, 4 месяца</div>
+                <div class="block-width-30 block-picture">
+                    <img class="american-cat picture-cat" src="image/1.jpg" alt="котёнок1">
+                    <div class="description american-description">Миша, 4 месяца
+                        <span>Американский керл</span>
+                    </div>
                 </div>
-                <div class="cat2">
-                    <img class="cat2" src="image/2.jpg" alt="котёнок2">
-                    <div class="description">Лёша, Паша, Лёлик, 1 год</div>
+                <div class="block-width-65 block-picture">
+                    <img class="asher-cat picture-cat" src="image/2.jpg" alt="котёнок2">
+                    <div class="description asher-description">Лёша, Паша, Лёлик, 1 год
+                        <span>Ашера</span>
+                    </div>
                 </div>
             </div>
             <div class="block2">
-                <div class="cat3">
-                    <img class="cat3" src="image/3.jpg" alt="котёнок3">
-                    <div class="description">Андрей, 5 месяцев</div>
+                <div class="block-width-30 block-picture">
+                    <img class="bengal-cat picture-cat" src="image/3.jpg" alt="котёнок3">
+                    <div class="description bengal-description">Алиса, 5 месяцев
+                        <span>Бенгальская</span>
+                    </div>
                 </div>
-                <div class="cat4">
-                    <img class="cat4" src="image/4.jpg" alt="котёнок4">
-                    <div class="description">Гоша, 4 месяца</div>
+                <div class="block-width-30 block-picture">
+                    <img class="american-cat picture-cat" src="image/4.jpg" alt="котёнок4">
+                    <div class="description american-description">Гоша, 4 месяца
+                        <span>Американский керл</span>
+                    </div>
                 </div>
-                <div class="cat5">
-                    <img class="cat5" src="image/5.jpg" alt="котёнок5">
-                    <div class="description">Артём, 6 месяцев</div>
+                <div class="block-width-30 block-picture">
+                    <img class="asher-cat picture-cat" src="image/5.jpg" alt="котёнок5">
+                    <div class="description asher-description">Артём, 6 месяцев
+                        <span>Ашера</span>
+                    </div>
                 </div>
             </div>
             <div class="block3">
-                <div class="cat6">
-                    <img class="cat6" src="image/6.jpg" alt="котёнок6">
-                    <div class="description">Семён, 7 месяцев</div>
+                <div class="block-width-65 block-picture">
+                    <img class="kuril-cat picture-cat" src="image/6.jpg" alt="котёнок6">
+                    <div class="description kuril-description">Семён, 7 месяцев
+                        <span>Курильский бобтейл</span>
+                    </div>
                 </div>
-                <div class="cat7">
-                    <img class="cat7" src="image/7.jpg" alt="котёнок6">
-                    <div class="description">Пушистики, 4 месяца</div>
+                <div class="block-width-30 block-picture">
+                    <img class="munchkin-cat picture-cat" src="image/7.jpg" alt="котёнок6">
+                    <div class="description munchkin-description">Пушистики, 4 месяца
+                        <span>Манчкины</span>
+                    </div>
                 </div>
             </div>
             <div class="block4">
-                <div class="cat8">
-                    <img class="cat8" src="image/8.jpg" alt="котёнок6">
-                    <div class="description">Илья, Вася, Боря, 8 месяцев</div>
+                <div class="block-width-100 block-picture">
+                    <img class="munchkin-cat picture-cat" src="image/8.jpg" alt="котёнок6">
+                    <div class="description munchkin-description">Илья, Вася, Боря, 8 месяцев
+                        <span>Манчкины</span>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="rating">
+        </section>
+        <aside class="rating-aside">
             <p class="rating-header">Рейтинг</p>
             <label class="increase" for="sort">По возврастанию</label>
             <input type="checkbox" class="sort" id="sort">
@@ -70,40 +86,40 @@
                 <div class="american-cats">
                     <p>Американский керл</p>
                     <div class="rating-block">
-                        <div class="american-rating"></div>
+                        <div class="american-rating rating-scale"></div>
                         <div class="notetion-rating">8</div>
                     </div>
                 </div>
                 <div class="munchkin-cats">
                     <p>Манчкин</p>
                     <div class="rating-block">
-                        <div class="munchkin-rating"></div>
+                        <div class="munchkin-rating rating-scale"></div>
                         <div class="notetion-rating">8</div>
                     </div>
                 </div>
                 <div class="kuril-cats">
                     <p>Курильский бобтейл</p>
                     <div class="rating-block">
-                        <div class="kuril-rating"></div>
+                        <div class="kuril-rating rating-scale"></div>
                         <div class="notetion-rating">7</div>
                     </div>
                 </div>
                 <div class="bengal-cats">
                     <p>Бенгальская</p>
                     <div class="rating-block">
-                        <div class="bengal-rating"></div>
+                        <div class="bengal-rating rating-scale"></div>
                         <div class="notetion-rating">5</div>
                     </div>
                 </div>
                 <div class="asher-cats">
                     <p>Ашера</p>
                     <div class="rating-block">
-                        <div class="asher-rating"></div>
+                        <div class="asher-rating rating-scale"></div>
                         <div class="notetion-rating">4</div>
                     </div>
                 </div>
             </div>
-        </div>
+        </aside>
     </main>
     <footer>
         <p>© ООО Бабуленькины котятки 2015</p>
