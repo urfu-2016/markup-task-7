@@ -3,9 +3,20 @@ html
     background-color: #f5f5f5;
 }
 
-footer
+body
 {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    min-height: 100%;
+    margin: 0;
+}
+
+.organization
+{
+    display: flex;
+    flex: 0 20%;
     justify-content: space-between;
     font: 20px arial;
     padding: 10px;
@@ -69,9 +80,11 @@ footer
     order: 2;
 }
 
-address
+.place
 {
+    display: flex;
     color: #1533ad;
+    align-items: center;
 }
 
 .rating
@@ -79,7 +92,7 @@ address
     display: flex;
     flex-flow: row wrap;
     align-self: flex-start;
-    flex-basis: 200px;
+    flex-basis: 190px;
     margin: 0 20px;
     background-color: #dcdcdc;
     padding-left: 10px;
@@ -104,7 +117,6 @@ address
     margin: 0 20px;
     flex-basis: 200px;
     min-width: 100px;
-    min-height: 450px;
 }
 
 .category
@@ -155,6 +167,7 @@ address
 
 .card img
 {
+    object-fit: cover;
     min-height: 100%;
     min-width: 100%;
     zoom: 1%;
@@ -177,7 +190,7 @@ address
     display: block;
 }
 
-label
+.choose
 {
     cursor: pointer;
     width: 100%;
@@ -199,6 +212,7 @@ label
 .container
 {
     display: flex;
+    flex: 1 70%;
 }
 
 .normal:checked ~ .lazy-cat,
