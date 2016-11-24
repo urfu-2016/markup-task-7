@@ -6,14 +6,7 @@ body
 
 body
 {
-    background-color: #eaeaea;
-    font: 1.5em Verdana, Geneva, sans-serif;
-    display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: 'h'
-        'm'
-        '.'
-        'f';
+    margin: 0;
 }
 
 label,
@@ -22,10 +15,54 @@ input
     cursor: pointer;
 }
 
+.mode
+{
+    position: absolute;
+    top: 0;
+}
+
+input.mode:checked ~ label.mode
+{
+    background-color: #555;
+    color: #fff;
+}
+
+.content-grid
+{
+    min-height: 100%;
+    background-color: #eaeaea;
+    font: 1.5em Verdana, Geneva, sans-serif;
+}
+
+input.mode:not(:checked) ~ .content-grid
+{
+    display: flex;
+    flex-direction: column;
+}
+
+input.mode:checked ~ .content-grid
+{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 'h'
+        'm'
+        '.'
+        'f';
+}
+
+input.mode:not(:checked) ~ .content-grid > div
+{
+    margin: auto;
+}
+
 header
 {
+    margin: 10%;
+}
+
+input.mode:checked ~ .content-grid header
+{
     grid-area: h;
-    margin: 50px;
 }
 
 h1
@@ -35,7 +72,13 @@ h1
     text-align: center;
 }
 
-main
+input.mode:not(:checked) ~ .content-grid main
+{
+    display: flex;
+    justify-self: flex-start;
+}
+
+input.mode:checked ~ .content-grid main
 {
     grid-area: m;
     display: grid;
@@ -50,7 +93,13 @@ aside
     background-color: #ddd;
 }
 
-nav
+input.mode:not(:checked) ~ .content-grid nav,
+input.mode:not(:checked) ~ .content-grid aside
+{
+    flex-shrink: 0;
+}
+
+input.mode:checked ~ .content-grid nav
 {
     grid-area: n;
 }
@@ -63,7 +112,14 @@ nav > label
     width: 70%;
 }
 
-section
+input.mode:not(:checked) ~ .content-grid section
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+input.mode:checked ~ .content-grid section
 {
     display: grid;
     grid-area: i;
@@ -76,34 +132,65 @@ section > article
     background-color: #fff;
 }
 
-section > article:nth-of-type(8n + 1),
-section > article:nth-of-type(8n + 3)
+input.mode:not(:checked) ~ .content-grid section > article
+{
+    margin: 2% 1% 0;
+}
+
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(1),
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(2)
+{
+    margin-top: 0;
+}
+
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(8n + 1),
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(8n + 3),
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(8n + 4),
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(8n + 5),
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(8n + 7)
+{
+    width: 31%;
+}
+
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(8n + 2),
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(8n + 6)
+{
+    width: 64%;
+}
+
+input.mode:not(:checked) ~ .content-grid section > article:nth-of-type(8n)
+{
+    width: 97%;
+}
+
+input.mode:checked ~ .content-grid section > article:nth-of-type(8n + 1),
+input.mode:checked ~ .content-grid section > article:nth-of-type(8n + 3)
 {
     grid-column: 1 / 2;
 }
 
-section > article:nth-of-type(8n + 2)
+input.mode:checked ~ .content-grid section > article:nth-of-type(8n + 2)
 {
     grid-column: 2 / 4;
 }
 
-section > article:nth-of-type(8n + 4)
+input.mode:checked ~ .content-grid section > article:nth-of-type(8n + 4)
 {
     grid-column: 2 / 3;
 }
 
-section > article:nth-of-type(8n + 5),
-section > article:nth-of-type(8n + 7)
+input.mode:checked ~ .content-grid section > article:nth-of-type(8n + 5),
+input.mode:checked ~ .content-grid section > article:nth-of-type(8n + 7)
 {
     grid-column: 3 / 4;
 }
 
-section > article:nth-of-type(8n + 6)
+input.mode:checked ~ .content-grid section > article:nth-of-type(8n + 6)
 {
     grid-column: 1 / 3;
 }
 
-section > article:nth-of-type(8n)
+input.mode:checked ~ .content-grid section > article:nth-of-type(8n)
 {
     grid-column: 1 / 4;
 }
@@ -123,48 +210,86 @@ section > article > h2
     font-size: 1em;
 }
 
-img
-{
-    width: 100%;
-}
-
 section > article:hover h2
 {
     display: block;
 }
 
+img
+{
+    width: 100%;
+}
+
 aside
+{
+    padding: 0 3%;
+}
+
+input.mode:not(:checked) ~ .content-grid aside
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-self: start;
+    flex-shrink: 1;
+    justify-content: flex-end;
+}
+
+input.mode:checked ~ .content-grid aside
 {
     grid-area: a;
     display: grid;
     grid-template-columns: .9fr .1fr;
-    padding: 0 20px;
     grid-gap: 15px;
 }
 
 aside > h2
 {
-    grid-column: 1 / 4;
     font: small-caps 500 1.5em sans-serif;
     text-transform: uppercase;
     color: #cb0000;
 }
 
+input.mode:not(:checked) ~ .content-grid aside > h2
+{
+    flex-basis: 100%;
+}
+
+input.mode:checked ~ .content-grid aside > h2
+{
+    grid-column: 1 / 3;
+}
+
 aside > label
 {
     display: inline-block;
-    grid-column: 1 / 2;
     direction: rtl;
+    align-self: center;
 }
 
-aside > input
+input.mode:checked ~ .content-grid aside > label
+{
+    grid-column: 1 / 2;
+}
+
+input.mode:checked ~ .content-grid aside > input
 {
     grid-column: 2 / 3;
 }
 
 aside > article
 {
-    display: grid;
+    margin: 4% 0;
+}
+
+input.mode:not(:checked) ~ .content-grid aside > article
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input.mode:checked ~ .content-grid aside > article
+{
     grid-column: 1 / 3;
 }
 
@@ -176,22 +301,51 @@ aside > article:last-of-type
 aside .rating
 {
     font-weight: 600;
-    grid-column: 2 / 3;
+    display: inline-block;
     direction: rtl;
+}
+
+input.mode:not(:checked) ~ .content-grid aside .rating
+{
+    flex-grow: 1;
+}
+
+input.mode:checked ~ .content-grid aside .rating
+{
+    grid-column: 2 / 3;
 }
 
 aside .name
 {
-    grid-column: 1 / 3;
     font-weight: 500;
     margin: 0;
 }
 
+input.mode:checked ~ .content-grid aside .name
+{
+    grid-column: 1 / 3;
+}
+
+input.mode:not(:checked) ~ .content-grid aside .rating-bar
+{
+    display: flex;
+}
+
+input.mode:checked ~ .content-grid aside .rating-bar
+{
+    display: grid;
+}
+
 aside .bar
 {
-    grid-column: 1 / 2;
     width: 200px;
     height: 25px;
+    display: inline-block;
+}
+
+input.mode:checked ~ .content-grid aside .bar
+{
+    grid-column: 1 / 2;
 }
 
 aside .bar > div
@@ -274,25 +428,39 @@ aside .r10 .bar > div
 
 footer
 {
-    grid-area: f;
-    display: grid;
-    grid-template-areas: 'cop . addr';
     border-top: 1px solid #888;
     padding: 20px;
     margin-top: 30px;
     font-size: .7em;
-    align-self: end;
 }
 
-footer > div:nth-of-type(1)
+input.mode:not(:checked) ~ .content-grid footer
+{
+    display: flex;
+    justify-content: space-between;
+    justify-self: flex-end;
+}
+
+input.mode:checked ~ .content-grid footer
+{
+    grid-area: f;
+    display: grid;
+    grid-template-areas: 'cop . addr';
+}
+
+input.mode:checked ~ .content-grid footer > div:nth-of-type(1)
 {
     grid-area: cop;
 }
 
 footer > div:nth-of-type(2)
 {
-    grid-area: addr;
     direction: rtl;
+}
+
+input.mode:checked ~ .content-grid footer > div:nth-of-type(2)
+{
+    grid-area: addr;
 }
 
 footer > div:nth-of-type(2) > a
