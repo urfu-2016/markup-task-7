@@ -57,10 +57,7 @@ aside
     background-color: #777;
 }
 
-.input-1:checked ~ section .cat:not(.mein-kun) img,
-.input-2:checked ~ section .cat:not(.oriental) img,
-.input-3:checked ~ section .cat:not(.somali) img,
-.input-4:checked ~ section .cat:not(.ociket) img
+.checkbox-cat:checked ~ section .cat img
 {
     opacity: .6;
 }
@@ -70,7 +67,7 @@ aside
 .input-3:checked ~ section .somali img,
 .input-4:checked ~ section .ociket img
 {
-    background-color: rgba(255,255,255,1);
+    opacity: 1;
 }
 
 section
