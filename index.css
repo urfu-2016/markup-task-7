@@ -153,8 +153,8 @@ label
 {
     display: flex;
     padding-right: 10px;
-    justify-content:space-between;
-    width:180px;
+    justify-content: space-between;
+    width: 180px;
 }
 
 .rating h2
