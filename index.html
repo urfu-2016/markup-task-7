@@ -11,54 +11,74 @@
 </header>
 <main>
     <nav>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-        </ul>
+        <div class="kind"><label for="funny"></label>Funny</div>
+        <div class="kind"><label for="serious"></label>Serious</div>
+        <div class="kind"><label for="sad"></label>Sad</div>
     </nav>
     <section class="advertisment">
-        <section class="cat first-cat">
+        <input type="radio" class="funny" id="funny" name="1">
+        <input type="radio" class="sad" id="sad" name="1">
+        <input type="radio" class="serious" id="serious" name="1">
+        <section class="cat first-cat serious">
             <img src="cat1.jpg" alt="cat" width="200" height="200">
             <p>Cat</p>
         </section>
-        <section class="cat second-cat">
+        <section class="cat first-cat funny">
             <img src="cat2.jpg" alt="cat" width="200" height="200">
             <p>Cat</p>
         </section>
-        <section class="cat first-cat">
+        <section class="cat first-cat sad">
             <img src="cat3.jpg" alt="cat" width="200" height="200">
             <p>Cat</p>
         </section>
-        <section class="cat third-cat">
+        <section class="cat third-cat serious">
             <img src="cat4.jpg" alt="cat" width="200" height="200">
             <p>Cat</p>
         </section>
-        <section class="cat first-cat">
+        <section class="cat first-cat funny">
             <img src="cat5.jpg" alt="cat" width="200" height="200">
             <p>Cat</p>
         </section>
-        <section class="cat second-cat">
-            <img src="cat6.jpg" alt="cat" width="200" height="200">
-            <p>Cat</p>
-        </section>
-        <section class="cat third-cat">
+        <section class="cat third-cat sad">
             <img src="cat8.jpg" alt="cat" width="200" height="200">
             <p>Cat</p>
         </section>
+        <section class="cat second-cat sad">
+            <img src="cat9.jpg" alt="cat" width="200" height="200">
+            <p>Cat</p>
+        </section>
+        <section class="cat third-cat funny">
+            <img src="cat6.jpg" alt="cat" width="200" height="200">
+            <p>Cat</p>
+        </section>
+        <section class="cat second-cat funny">
+            <img src="cat10.jpg" alt="cat" width="200" height="200">
+            <p>Cat</p>
+        </section>
     </section>
-    <aside>
-        <h1>rating</h1>
-        <div class="section1">
-            <p>1</p>
+    <aside class="rating">
+        <h1>Rating</h1>
+        <label for="sort"><input type="checkbox" id="sort" name="sort">Sort</label>
+        <div class="block block1">
+            <h2>Funny</h2>
+            <div class="section1">
+                <span>2</span>
+            </div>
         </div>
-        <div class="section1">
-            <p>2</p>
+        <div class="block block2">
+            <h2>Serious</h2>
+            <div class="section2">
+                <span>5</span>
+            </div>
         </div>
-        <div class="section1">
-            <p>3</p>
+        <div class="block block3">
+            <h2>Very sad</h2>
+            <div class="section3">
+                <span>3</span>
+            </div>
         </div>
     </aside>
 </main>
-<footer>Kitten</footer>
+<footer>Cat footer, 2016</footer>
 </body>
 </html>
