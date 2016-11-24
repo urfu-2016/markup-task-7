@@ -2,7 +2,103 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Hello, markup-7</title>
 </head>
 <body>
+    <header class="main-header">grandma's kittens</header>
+    <main>
+        <input class="filter-input" id="Grumpy" type="checkbox" value="Grumpy">
+        <input class="filter-input" id="Sphynx" type="checkbox" value="Sphynx">
+        <input class="filter-input" id="Scottish-Fold" type="checkbox" value="Scottish-Fold">
+        <input class="filter-input" id="Savanna" type="checkbox" value="Savanna">
+        <article class="filter">
+            <label class="filter-label" for="Grumpy">Grumpy</label>
+            <label class="filter-label" for="Sphynx">Sphynx</label>
+            <label class="filter-label" for="Scottish-Fold">Scottish-Fold</label>
+            <label class="filter-label" for="Savanna">Savanna</label>
+        </article>
+        <article class="gallery">
+            <section class="first grumpy">
+                <img title="Grumpy Cat, 9 years" src="cats/Grumpy.jpg" alt="Grumpy">
+                <div>
+                    <p>Grumpy Cat, 9 years</p>
+                </div>
+            </section>
+            <section class="second sphynx">
+                <img title="Sphynx Cat, 11 years" src="cats/Sphynx.jpg" alt="Sphynx">
+                <div>
+                    <p>Sphynx Cat, 11 years</p>
+                </div>
+            </section>
+            <section class="third scottish-fold">
+                <img title="Scottish-Fold Cat, 4 years" src="cats/Scottish-Fold.jpg" alt="Scottish-Fold">
+                <div>
+                    <p>Scottish-Fold Cat, 4 years</p>
+                </div>
+            </section>
+            <section class="fourth sphynx">
+                <img title="Fat Sphynx Cat, 7 years" src="cats/Fat_Sphynx.jpg" alt="Fat-Sphynx">
+                <div>
+                    <p>Fat Sphynx Cat, 7 years</p>
+                </div>
+            </section>
+            <section class="fifth grumpy">
+                <img title="Grumpy Cat, 9 years" src="cats/Grumpy_with_flower.jpg" alt="Grumpy_with_flower">
+                <div>
+                    <p>Grumpy Cat, 9 years</p>
+                </div>
+            </section>
+            <section class="sixth scottish-fold">
+                <img title="Scottish-Fold Cat, 2 years" src="cats/Scottish-Fold-2.jpg" alt="Scottish-Fold-2">
+                <div>
+                    <p>Scottish-Fold Cat, 2 years</p>
+                </div>
+            </section>
+            <section class="seventh savanna">
+                <img title="Savanna Cat, 4 years" src="cats/Savanna.jpg" alt="Savanna">
+                <div>
+                    <p>Savanna Cat, 4 years</p>
+                </div>
+            </section>
+            <section class="eighth savanna">
+                <img title="Savanna Cat, 3 years" src="cats/Savanna-2.jpg" alt="Savanna-2">
+                <div>
+                    <p>Savanna Cat, 3 years</p>
+                </div>
+            </section> 
+        </article>
+        <aside>
+            <header class="aside-header">rating</header>
+            <label for="sort">sort by descending</label>
+            <input type="checkbox" id="sort">
+            <article>
+                <div class="rating-Grumpy">
+                    <p>Grumpy</p>
+                    <div class="meter1"></div>
+                    <div class="mark">9</div>
+                </div>
+                <div class="rating-Sphynx">
+                    <p>Sphynx</p>
+                    <div class="meter2"></div>
+                    <div class="mark">8</div>
+                </div>
+                <div class="rating-Scottish-Fold">
+                    <p>Scottish-Fold</p>
+                    <div class="meter3"></div>
+                    <div class="mark">10</div>
+                </div>
+                <div class="rating-Savanna">
+                    <p>Savanna</p>
+                    <div class="meter4"></div>
+                    <div class="mark">4</div>
+                </div>
+            </article>
+        </aside>
+    </main>
+    <footer>
+        <span class="copyright">&copy; Worthless comp.</span>
+        <span class="reference">Find us in the middle of nowhere.</span>
+    </footer>
 </body>
 </html>
