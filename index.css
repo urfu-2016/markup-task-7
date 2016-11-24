@@ -1,0 +1,309 @@
+html,
+body
+{
+    height: 100%;
+}
+
+.body
+{
+    position: relative;
+    min-height: 100%;
+}
+
+.layout
+{
+    display: none;
+}
+
+.layout:checked ~ .to-grid
+{
+    display: none;
+}
+
+.layout:not(:checked) ~ .to-flex
+{
+    display: none;
+}
+
+.to-grid,
+.to-flex
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 1.4em;
+    cursor: pointer;
+    user-select: none;
+    z-index: 1;
+}
+
+html
+{
+    background: #ebebeb;
+}
+
+main
+{
+    min-height: 100%;
+    padding-bottom: 60px;
+}
+
+footer
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+/* Navigation styles */
+
+nav
+{
+    background: #d9d9d9;
+}
+
+nav ul
+{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav li
+{
+    display: block;
+    width: 100%;
+    height: 80px;
+}
+
+nav li:hover
+{
+    background: #7a7a7a;
+}
+
+nav label
+{
+    font-size: 1.5em;
+    box-sizing: border-box;
+
+    display: flex;
+    flex-flow: row wrap;
+
+    justify-content: flex-start;
+    align-items: center;
+
+    border-bottom: 1px solid #000;
+    cursor: pointer;
+    padding: 0 10px;
+
+    width: 100%;
+    height: 100%;
+}
+
+/* Container styles */
+
+.container
+{
+    display: flex;
+    flex-flow: row wrap;
+    margin-top: -5px;
+}
+
+article
+{
+    box-sizing: border-box;
+    flex: 2 33.33%;
+    min-width: 200px;
+    height: 300px;
+    border: 5px solid #ebebeb;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+
+    position: relative;
+
+    transition: .3s;
+}
+
+/* Article styles */
+
+article img
+{
+    position: absolute;
+    top: 50%;
+    display: block;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    zoom: 1%;
+}
+
+article p
+{
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    background: #000;
+    opacity: 0;
+    color: #fff;
+    padding: 10px;
+    transition: .2s ease-in-out;
+}
+
+.two-column
+{
+    flex: 1 66.66%;
+}
+
+/* Categories styles */
+
+input.cat1:checked ~ .container article.cat1:hover p,
+input.cat2:checked ~ .container article.cat2:hover p,
+input.cat3:checked ~ .container article.cat3:hover p,
+input.cat4:checked ~ .container article.cat4:hover p,
+input.all:checked ~ .container article:hover p
+{
+    display: block;
+    opacity: .8;
+}
+
+input.cat1:checked ~ .container article:not(.cat1),
+input.cat2:checked ~ .container article:not(.cat2),
+input.cat3:checked ~ .container article:not(.cat3),
+input.cat4:checked ~ .container article:not(.cat4)
+{
+    opacity: .1;
+    transform: scale(.9);
+}
+
+/* Rating styles */
+
+.rating
+{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    padding: 0 5px 10px;
+}
+
+.rating h2
+{
+    flex: 1 1 100%;
+    height: 2em;
+}
+
+.rating label
+{
+    flex: 1 2 50%;
+}
+
+.rating input
+{
+    flex: 1 1 0;
+}
+
+.desc:checked ~ .first
+{
+    order: 1;
+}
+
+.desc:checked ~ .second
+{
+    order: 2;
+}
+
+.desc:checked ~ .third
+{
+    order: 3;
+}
+
+.desc:checked ~ .fourth
+{
+    order: 4;
+}
+
+.rating .entry
+{
+    flex: 1 1 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.entry h3
+{
+    flex: 1 1 100%;
+}
+
+.entry .graphical
+{
+    flex: 1 1 70%;
+    max-width: 70%;
+    height: 20px;
+}
+
+.first .graphical span
+{
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background: linear-gradient(to right, #398235 0%,#fff 100%);
+}
+
+.second .graphical span
+{
+    display: block;
+    width: 90%;
+    height: 100%;
+
+    background: linear-gradient(to right, #149600 0%,#fff 100%);
+}
+
+.third .graphical span
+{
+    display: block;
+    width: 80%;
+    height: 100%;
+
+    background: linear-gradient(to right, #f4ef55 0%,#fff 100%);
+}
+
+.fourth .graphical span
+{
+    display: block;
+    width: 40%;
+    height: 100%;
+
+    background: linear-gradient(to right, #fc1e1e 0%,#fff 100%);
+}
+
+@media (max-width: 799px)
+{
+    .layout:not(:checked) ~ .body main nav
+    {
+        flex: 1 1 100%;
+        max-width: unset;
+    }
+
+    .layout:not(:checked) ~ .body main .container
+    {
+        margin: 0;
+    }
+}
+
+@media (max-width: 560px)
+{
+    .layout:not(:checked) ~ .body main .rating,
+    .layout:not(:checked) ~ .body main .container
+    {
+        flex: 1 1 100%;
+        max-width: unset;
+    }
+}

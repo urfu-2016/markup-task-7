@@ -2,7 +2,114 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Flex/Grid</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="flex-index.css">
+    <link rel="stylesheet" href="grid-index.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <input class="layout" id="layout" type="checkbox">
+    <label class="to-grid" for="layout">To grid</label>
+    <label class="to-flex" for="layout">To flex</label>
+    <div class="body">
+        <header><p>Бабуленькины котятки</p></header>
+        <main>
+            <nav>
+                <ul>
+                    <li><label for="all"><span>Все породы</span></label></li>
+                    <li><label for="cat1"><span>Абисинская</span></label></li>
+                    <li><label for="cat2"><span>Британская</span></label></li>
+                    <li><label for="cat3"><span>Русская голубая</span></label></li>
+                    <li><label for="cat4"><span>Сиамская</span></label></li>
+                </ul>
+            </nav>
+            <input name="category" type="radio" id="cat1" class="cat1">
+            <input name="category" type="radio" id="cat2" class="cat2">
+            <input name="category" type="radio" id="cat3" class="cat3">
+            <input name="category" type="radio" id="cat4" class="cat4">
+            <input name="category" type="radio" id="all" class="all" checked>
+            <div class="container">
+                <article class="cat1">
+                    <img src="images/01.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="two-column cat1">
+                    <img src="images/02.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="cat1">
+                    <img src="images/03.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="cat4">
+                    <img src="images/04.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="cat4">
+                    <img src="images/05.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="two-column cat2">
+                    <img src="images/06.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="cat2">
+                    <img src="images/07.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="cat2">
+                    <img src="images/08.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="two-column cat3">
+                    <img src="images/09.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="two-column cat3">
+                    <img src="images/10.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="cat3">
+                    <img src="images/11.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+                <article class="cat4">
+                    <img src="images/12.jpg" alt="tmp">
+                    <p>Some description</p>
+                </article>
+            </div>
+            <aside class="rating">
+                <h2>Рейтинг</h2>
+                <label for="desc">По убыванию</label>
+                <input class="desc" id="desc" type="checkbox">
+                <div class="entry second">
+                    <h3>Category</h3>
+                    <span class="graphical"><span></span></span>
+                    <span>9</span>
+                </div>
+                <div class="entry third">
+                    <h3>Category</h3>
+                    <span class="graphical"><span></span></span>
+                    <span>8</span>
+                </div>
+                <div class="entry first">
+                    <h3>Category</h3>
+                    <span class="graphical"><span></span></span>
+                    <span>10</span>
+                </div>
+                <div class="entry fourth">
+                    <h3>Category</h3>
+                    <span class="graphical"><span></span></span>
+                    <span>4</span>
+                </div>
+            </aside>
+        </main>
+        <footer>
+            <p>&copy; ООО Бабуленькины котятки, 2016</p>
+            <p>Some text here</p>
+        </footer>
+    </div>
 </body>
 </html>

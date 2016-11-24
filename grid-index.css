@@ -1,0 +1,82 @@
+.layout:checked ~ .body
+{
+    /*width: 98%;*/
+}
+
+/* Header styles */
+
+.layout:checked ~ .body header
+{
+    height: 7rem;
+    text-align: center;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.layout:checked ~ .body header p
+{
+    font-size: 2rem;
+}
+
+/* Footer styles */
+
+.layout:checked ~ .body footer
+{
+    display: grid;
+    grid-template-areas: 'a b';
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+
+    padding: 1rem 10px;
+    border-top: 2px solid #aca6a6;
+    font-size: 1.5rem;
+}
+
+.layout:checked ~ .body footer p
+{
+    margin: 0;
+    padding: 0;
+}
+
+.layout:checked ~ .body footer p:first-child
+{
+    grid-area: a;
+}
+
+.layout:checked ~ .body footer p:last-child
+{
+    grid-area: b;
+    text-align: right;
+}
+
+/* Main section styles */
+
+.layout:checked ~ .body main
+{
+    display: grid;
+    grid-template-areas: 'n c a';
+    grid-template-columns: 20% 60% 20%;
+    justify-content: space-around;
+}
+
+.layout:checked ~ .body main nav
+{
+    grid-area: n;
+}
+
+.layout:checked ~ .body main .rating
+{
+    grid-area: a;
+}
+
+.layout:checked ~ .body main .container
+{
+    grid-area: c;
+}
+
+.layout:checked ~ .body main > input
+{
+    display: none;
+}
