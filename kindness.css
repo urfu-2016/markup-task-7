@@ -29,7 +29,7 @@
     height: 20px;
     width: 200px;
     margin: 4px;
-    background: #008000;
+    background: linear-gradient(to right, #008000 , #fefcea);
 }
 
 .kitten-type
@@ -60,9 +60,14 @@ input[id='sort-dir']:checked ~ .rating
     order: 2;
 }
 
+.scale
+{
+    border: 1px solid #000;
+}
+
 .kitten-type[class='kitten-type 9-mark'] .rank .scale
 {
-    background: #008040;
+    background: linear-gradient(to right, #008000 , #fefcea);
     width: 180px;
 }
 
@@ -73,7 +78,7 @@ input[id='sort-dir']:checked ~ .rating
 
 .kitten-type[class='kitten-type 8-mark'] .rank .scale
 {
-    background: #ecdf3c;
+    background: linear-gradient(to right, #ecdf3c , #fefcea);
     width: 160px;
 }
 
@@ -84,7 +89,7 @@ input[id='sort-dir']:checked ~ .rating
 
 .kitten-type[class='kitten-type 7-mark'] .rank .scale
 {
-    background: #d7d700;
+    background: linear-gradient(to right, #d7d700 , #fefcea);
     width: 140px;
 }
 
@@ -95,7 +100,7 @@ input[id='sort-dir']:checked ~ .rating
 
 .kitten-type[class='kitten-type 6-mark'] .rank .scale
 {
-    background: #9f9f00;
+    background: linear-gradient(to right, #9f9f00 , #fefcea);
     width: 120px;
 }
 
@@ -106,7 +111,7 @@ input[id='sort-dir']:checked ~ .rating
 
 .kitten-type[class='kitten-type 5-mark'] .rank .scale
 {
-    background: #939300;
+    background: linear-gradient(to right, #939300 , #fefcea);
     width: 100px;
 }
 
@@ -117,7 +122,7 @@ input[id='sort-dir']:checked ~ .rating
 
 .kitten-type[class='kitten-type 4-mark'] .rank .scale
 {
-    background: #f00;
+    background: linear-gradient(to right, #f00 , #fefcea);
     width: 80px;
 }
 
@@ -128,7 +133,7 @@ input[id='sort-dir']:checked ~ .rating
 
 .kitten-type[class='kitten-type 3-mark'] .rank .scale
 {
-    background: #f33;
+    background: linear-gradient(to right, #f33 , #fefcea);
     width: 60px;
 }
 
@@ -139,7 +144,7 @@ input[id='sort-dir']:checked ~ .rating
 
 .kitten-type[class='kitten-type 2-mark'] .rank .scale
 {
-    background: #c60000;
+    background: linear-gradient(to right, #c60000, #fefcea);
     width: 40px;
 }
 
@@ -150,6 +155,6 @@ input[id='sort-dir']:checked ~ .rating
 
 .kitten-type[class='kitten-type 1-mark'] .rank .scale
 {
-    background: #800000;
+    background: linear-gradient(to right, #800000, #fefcea);
     width: 20px;
 }

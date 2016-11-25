@@ -3,36 +3,36 @@ input[name='kind']
     display: none;
 }
 
-input[name='kind']:checked ~ .content-panel main .kitten
+input[name='kind']:checked ~ main .kitten
 {
     opacity: .3;
 }
 
-input[name='kind']:checked ~ .content-panel main .kitten .kitten-label
+input[name='kind']:checked ~ main .kitten .kitten-label
 {
     display: none;
 }
 
-input[id='abissian']:checked ~ .content-panel main .abissian,
-input[id='britan']:checked ~ .content-panel main .britan,
-input[id='rus-blue']:checked ~ .content-panel main .rus-blue,
-input[id='siam']:checked ~ .content-panel main .siam
+input[id='abissian']:checked ~ main .abissian,
+input[id='britan']:checked ~ main .britan,
+input[id='rus-blue']:checked ~ main .rus-blue,
+input[id='siam']:checked ~ main .siam
 {
     opacity: 1;
 }
 
-input[id='abissian']:checked ~ .content-panel main .abissian .kitten-label,
-input[id='britan']:checked ~ .content-panel main .britan .kitten-label,
-input[id='siam']:checked ~ .content-panel main .siam .kitten-label,
-input[id='rus-blue']:checked ~ .content-panel main .rus-blue .kitten-label
+input[id='abissian']:checked ~ main .abissian .kitten-label,
+input[id='britan']:checked ~ main .britan .kitten-label,
+input[id='siam']:checked ~ main .siam .kitten-label,
+input[id='rus-blue']:checked ~ main .rus-blue .kitten-label
 {
     display: block;
 }
 
-input[id='abissian']:checked ~ .content-panel .type-filter .abissian,
-input[id='britan']:checked ~ .content-panel .type-filter .britan,
-input[id='rus-blue']:checked ~ .content-panel .type-filter .rus-blue,
-input[id='siam']:checked ~ .content-panel .type-filter .siam
+input[id='abissian']:checked ~ .type-filter .abissian,
+input[id='britan']:checked ~ .type-filter .britan,
+input[id='rus-blue']:checked ~ .type-filter .rus-blue,
+input[id='siam']:checked ~ .type-filter .siam
 {
     background: #808080;
     color: #fff;
