@@ -2,7 +2,99 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Бабуленькины Котятки</title>
 </head>
 <body>
+    <section class="cat-house">
+        <header class="cat-house__name">Бабуленькины Котятки</header>
+        <main class="cat-house__content">
+            <input type="radio" name="cat-type" id="abyssinian">
+            <input type="radio" name="cat-type" id="british">
+            <input type="radio" name="cat-type" id="russian">
+            <input type="radio" name="cat-type" id="siamese">
+            <section class="cat-type">
+                <label for="abyssinian" class="cat-type__item abyssinian-checked">Абиссинская</label>
+                <label for="british" class="cat-type__item british-checked">Британская</label>
+                <label for="russian" class="cat-type__item russian-checked">Русская голубая</label>
+                <label for="siamese" class="cat-type__item siamese-checked">Сиамская</label>
+            </section>
+            <section class="cat-items">
+                <section title="Карточка котика" class="cat-item cat-item__british">
+                    <img src="img/catSmall1.jpg" class="cat-item__img" alt="cat">
+                    <div class="cat-item__info">Гоша, 3 года</div>
+                </section>
+                <section title="Карточка котика" class="cat-item cat-item--middle-block cat-item__british">
+                    <img src="img/catMid1.jpg" class="cat-item__img" alt="cat">
+                    <div class="cat-item__info">Петя, 1 год</div>
+                </section>
+                <section title="Карточка котика" class="cat-item cat-item__russian">
+                    <img src="img/catSmall2.jpg" class="cat-item__img" alt="cat">
+                    <div class="cat-item__info">Вася, 4 года</div>
+                </section>
+                <section title="Карточка котика" class="cat-item cat-item__abyssinian">
+                    <img src="img/catSmall3.jpg" class="cat-item__img" alt="cat">
+                    <div class="cat-item__info">Марго, 10 лет</div>
+                </section>
+                <section title="Карточка котика" class="cat-item cat-item__siamese">
+                    <img src="img/catSmall4.jpg" class="cat-item__img" alt="cat">
+                    <div class="cat-item__info">Кеша, 3 года</div>
+                </section>
+                <section title="Карточка котика" class="cat-item cat-item--middle-block cat-item__abyssinian">
+                    <img src="img/catMid2.jpg" class="cat-item__img" alt="cat">
+                    <div class="cat-item__info">Вова, 2 года</div>
+                </section>
+                <section title="Карточка котика" class="cat-item cat-item__siamese">
+                    <img src="img/catSmall5.jpg" class="cat-item__img" alt="cat">
+                    <div class="cat-item__info">Роза, 6 лет</div>
+                </section>
+                <section title="Карточка котика" class="cat-item cat-item--big-block cat-item__russian">
+                    <img src="img/catBig.jpg" class="cat-item__img" alt="cat">
+                    <div class="cat-item__info">Даша, 5 лет</div>
+                </section>
+            </section>
+            <section class="cat-rate">
+                <h2 class="cat-rate__name">Рейтинг</h2>
+                <input type="checkbox" name="rate" id="cat-rate">
+                <label for="cat-rate">По убыванию</label>
+                <section class="cat-rate__items">
+                    <section class="cat-rate__item rate-abyssinian rate7">
+                        <div class="cat-rate__item__name">Абиссинская</div>
+                        <section class="cat-rate__item__info">
+                            <div class="cat-rate__gradient cat-rate__gradient-7"></div>
+                            <div class="cat-rate__count">7</div>
+                        </section>
+                    </section>
+                    <section class="cat-rate__item rate-british rate10">
+                        <div class="cat-rate__item__name">Британская</div>
+                        <section class="cat-rate__item__info">
+                            <div class="cat-rate__gradient"></div>
+                            <div class="cat-rate__count">10</div>
+                        </section>
+                    </section>
+                    <section class="cat-rate__item rate-russian rate8">
+                        <div class="cat-rate__item__name">Русская голубая</div>
+                        <section class="cat-rate__item__info">
+                            <div class="cat-rate__gradient cat-rate__gradient-8"></div>
+                            <div class="cat-rate__count">8</div>
+                        </section>
+                    </section>
+                    <section class="cat-rate__item rate-siamese rate4">
+                        <div class="cat-rate__item__name">Сиамская</div>
+                        <section class="cat-rate__item__info">
+                            <div class="cat-rate__gradient cat-rate__gradient-4"></div>
+                            <div class="cat-rate__count">4</div>
+                        </section>
+                    </section>
+                </section>
+            </section>
+        </main>
+        <footer class="cat-house__contacts">
+            <div class="cat-house__owner">&#169; ООО Бабуленькины котятки, 2015</div>
+            <div class="cat-house__address">
+                <address>Наш адрес: Котовая, д5</address>
+            </div>
+        </footer>
+    </section>
 </body>
 </html>
