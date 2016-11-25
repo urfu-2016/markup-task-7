@@ -1,0 +1,281 @@
+body
+{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    background: #ddd;
+}
+
+.main 
+{
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.header
+{
+    flex: 0 0 70px;
+}
+
+.header h1
+{
+    text-align: center;
+    font-size: 50px;
+    margin: 10px 0;
+}
+
+.footer
+{
+    display: flex;
+    flex: 0 0 70px;
+    border-top: solid 1px;
+    justify-content: space-between;
+    font-size: 20px;
+    align-items: center;
+}
+
+.organization,
+address
+{
+    margin: 0 20px;
+}
+
+.content
+{
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.content > input
+{
+    display: none;
+}
+
+.cat-breeds
+{
+    display: flex;
+    flex-direction: column;
+    flex: 0 0 200px;
+    background: #ccc;
+    margin: 5px 10px;
+    padding: 0;
+}
+
+.cat-breeds label
+{
+
+    display: flex;
+    margin: 1px 0;
+    border-bottom: solid 1px;
+    padding: 0 10px;
+    align-items: center;
+    flex: 0 0 50px;
+}
+
+.cat-photos
+{
+    display: flex;
+    flex: 0 0 600px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5px 0;
+}
+
+.photo
+{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+}
+
+.photo img
+{
+    max-height: 100%;
+    max-width: 100%;
+}
+
+.photo:nth-child(8n+1),
+.photo:nth-child(8n+7)
+{
+    flex-basis: calc(33% - 10px);
+}
+
+.photo:nth-child(8n+2),
+.photo:nth-child(8n+6)
+{
+    flex-basis: calc(66% - 10px);
+}
+
+.photo:nth-child(8n+3),
+.photo:nth-child(8n+4),
+.photo:nth-child(8n+5)
+{
+    flex-basis: calc(33% - 10px);
+}
+
+.photo:nth-child(8n+8)
+{
+    flex-basis: 100%;
+}
+
+.photo figcaption
+{
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    background: rgba(0,0,0,.4);
+    color: #fff;
+    padding: 0 10px;
+    align-self: flex-start;
+}
+
+.content > input:not(:checked) ~ .cat-photos .photo:hover figcaption
+{
+    display: block;
+}
+
+.content > input:checked ~ .cat-photos .photo:hover figcaption
+{
+    display: none;
+}
+
+input[id='abyssinian']:checked ~ .cat-photos .abyssinian:hover figcaption,
+input[id='british']:checked ~ .cat-photos .british:hover figcaption,
+input[id='russian-blue']:checked ~ .cat-photos .russian-blue:hover figcaption,
+input[id='siamese']:checked ~ .cat-photos .siamese:hover figcaption
+{
+    display: block;
+}
+
+.content > input:checked ~ .cat-photos .photo
+{
+    opacity: .5;
+}
+
+input[id='abyssinian']:checked ~ .cat-photos .abyssinian,
+input[id='british']:checked ~ .cat-photos .british,
+input[id='russian-blue']:checked ~ .cat-photos .russian-blue,
+input[id='siamese']:checked ~ .cat-photos .siamese
+{
+    opacity: 1;
+}
+
+input[id='abyssinian']:checked ~ .cat-breeds .abyssinian,
+input[id='british']:checked ~ .cat-breeds .british,
+input[id='russian-blue']:checked ~ .cat-breeds .russian-blue,
+input[id='siamese']:checked ~ .cat-breeds .siamese,
+.cat-breeds label:hover
+{
+    background: #555;
+    color: #fff;
+}
+
+.rating
+{
+    background: #ccc;
+    margin: 5px 10px;
+    align-self: flex-start;
+    flex: 0 0 200px;
+}
+
+.rating-items
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.rating-item
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    font-size: 20px;
+}
+
+.value
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.rating h2
+{
+    margin: 0;
+    color: #f00;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+.rating-item h3
+{
+    font-weight: normal;
+    margin: 5px 0;
+}
+
+.rating-item span
+{
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.rating > input:checked ~ .rating-items .rating-10
+{
+    order: 1;
+}
+
+.rating > input:checked ~ .rating-items .rating-9
+{
+    order: 2;
+}
+
+.rating > input:checked ~ .rating-items .rating-8
+{
+    order: 3;
+}
+
+.rating > input:checked ~ .rating-items .rating-4
+{
+    order: 7;
+}
+
+.rating-bar
+{
+    height: 1em;
+}
+
+.rating-10 .rating-bar
+{
+    width: 100px;
+    background: linear-gradient(to right, #078600, #fff);
+}
+
+.rating-9 .rating-bar
+{
+    width: 90px;
+    background: linear-gradient(to right, #9fee00, #fff);
+}
+
+.rating-8 .rating-bar
+{
+    width: 80px;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.rating-4 .rating-bar
+{
+    width: 40px;
+    background: linear-gradient(to right, #f00, #fff);
+}
