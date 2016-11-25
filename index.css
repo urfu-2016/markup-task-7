@@ -4,14 +4,12 @@ html
     margin: 0;
     padding: 0;
     font-family: arial, sans-serif;
-    height: 100%;
 }
 
 body
 {
     flex-direction: column;
     display: flex;
-    height: auto;
 }
 
 .main-header
@@ -57,7 +55,6 @@ main .breeds-nav ul
 .main-content .row
 {
     flex: 1 0 15em;
-
     display: flex;
     margin: 5px 0;
     justify-content: space-between;
@@ -211,10 +208,10 @@ address
     background: #999;
 }
 
-.nav-input[id='breed1']:checked ~ .main-content .abiss,
-.nav-input[id='breed2']:checked ~ .main-content .brit,
-.nav-input[id='breed3']:checked ~ .main-content .russ,
-.nav-input[id='breed4']:checked ~ .main-content .siam
+.nav-input[id='breed1']:checked ~ .main-content .abissian,
+.nav-input[id='breed2']:checked ~ .main-content .british,
+.nav-input[id='breed3']:checked ~ .main-content .russian,
+.nav-input[id='breed4']:checked ~ .main-content .siamese
 {
     opacity: .5;
 }
