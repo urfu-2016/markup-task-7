@@ -1,0 +1,432 @@
+
+body
+{
+    width: 100%;
+    margin: auto;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ebebeb;
+}
+
+header
+{
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+}
+
+main
+{
+    display: flex;
+    min-height: calc(100vh - 260px);
+    padding: 0 20px 20px;
+}
+
+nav
+{
+    display: flex;
+    flex-direction: column;
+    background: #d9d9d9;
+}
+
+aside
+{
+    display: flex;
+    align-self: flex-start;
+    flex-direction: column;
+    padding: 10px;
+    background: #d9d9d9;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-top: 1px solid #5a5a5a;
+}
+
+.right-footer
+{
+    color: #000fff;
+}
+
+aside h1
+{
+    text-transform: uppercase;
+    font-weight: 100;
+    margin: 0;
+    color: #f00;
+}
+
+aside,
+nav
+{
+    white-space: nowrap;
+}
+
+.label-sort
+{
+    align-self: flex-end;
+    background: url(Images/checkbox_no.png) no-repeat 100px;
+    background-size: 20px;
+    padding-right: 20px;
+}
+
+.show-sort
+{
+    display: none;
+}
+
+.value
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.show-sort:checked ~ .label-sort
+{
+    background: url(Images/checkbox_yes.png) no-repeat 100px;
+}
+
+.show-sort:checked ~ .value > .value1
+{
+    order: 6;
+}
+
+.show-sort:checked ~ .value > .value2
+{
+    order: 4;
+}
+
+.show-sort:checked ~ .value > .value3
+{
+    order: 2;
+}
+
+.show-sort:checked ~ .value > .value4
+{
+    order: 3;
+}
+
+.show-sort:checked ~ .value > .value5
+{
+    order: 1;
+}
+
+.show-sort:checked ~ .value > .value6
+{
+    order: 5;
+}
+
+.value1,
+.value2,
+.value3,
+.value4,
+.value5,
+.value6
+{
+    display: block;
+    font-size: 20px;
+}
+
+.scale
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.values-cats
+{
+    width: 20px;
+    margin-left: 5px;
+    text-align: center;
+}
+
+.scale1,
+.scale2,
+.scale3,
+.scale4,
+.scale5,
+.scale6
+{
+    height: 15px;
+    width: 100%;
+}
+
+.scale1
+{
+    width: 40%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scale2
+{
+    width: 70%;
+    background: linear-gradient(to right, #fff608, #fff);
+}
+
+.scale3
+{
+    width: 90%;
+    background: linear-gradient(to right, #04e86f, #fff);
+}
+
+.scale4
+{
+    width: 80%;
+    background: linear-gradient(to right, #fff608, #fff);
+}
+
+.scale5
+{
+    width: 100%;
+    background: linear-gradient(to right, #04e86f, #fff);
+}
+
+.scale6
+{
+    width: 60%;
+    background: linear-gradient(to right, #fa5, #fff);
+}
+
+.list
+{
+    padding: 20px 10px;
+    font-size: 20px;
+    border-bottom: 1px solid #ebebeb;
+    background: #d9d9d9;
+}
+
+.close-list
+{
+    flex-shrink: 0;
+}
+
+.photo-cat
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    -o-object-fit: cover;
+}
+
+.images
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 10px;
+}
+
+.images-block1,
+.images-block2,
+.images-block3,
+.images-block4
+{
+    display: grid;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-rows: 300px;
+}
+
+.images-block1
+{
+    grid-template-areas: 'a b b';
+}
+
+.images-block2
+{
+    grid-template-areas: 'c d e';
+}
+
+.images-block3
+{
+    grid-template-areas: 'f f g';
+}
+
+.images-block4
+{
+    grid-template-areas: 'h h h';
+}
+
+.cat1,
+.cat2,
+.cat3,
+.cat4,
+.cat5,
+.cat6,
+.cat7,
+.cat8,
+.cat9,
+.cat10
+{
+    margin: 0 5px 10px;
+}
+
+.cat1
+{
+    grid-area: a;
+}
+
+.cat2
+{
+    grid-area: b;
+}
+
+.cat3
+{
+    grid-area: c;
+}
+
+.cat4
+{
+    grid-area: d;
+}
+
+.cat5
+{
+    grid-area: e;
+}
+
+.cat6
+{
+    grid-area: f;
+}
+
+.cat7
+{
+    grid-area: g;
+}
+
+.cat8
+{
+    grid-area: h;
+}
+
+.cat9
+{
+    grid-area: a;
+}
+
+.cat10
+{
+    grid-area: b;
+}
+
+.name
+{
+    display: none;
+    width: 100%;
+    padding: 5px 0;
+    background: rgba(0,0,0,.3);
+    color: #fff;
+    text-align: center;
+    vertical-align: middle;
+    position: relative;
+    bottom: 40px;
+}
+
+.cat1:hover .name,
+.cat2:hover .name,
+.cat3:hover .name,
+.cat4:hover .name,
+.cat5:hover .name,
+.cat6:hover .name,
+.cat7:hover .name,
+.cat8:hover .name,
+.cat9:hover .name,
+.cat10:hover .name
+{
+    display: block;
+}
+
+.checkbox-list1,
+.checkbox-list2,
+.checkbox-list3,
+.checkbox-list4,
+.checkbox-list5,
+.checkbox-list6
+{
+    display: none;
+}
+
+.checkbox-list1:checked ~ .images > .images-block1 > .cat1,
+.checkbox-list1:checked ~ .images > .images-block1 > .cat2,
+.checkbox-list1:checked ~ .images > .images-block2 > .cat3,
+.checkbox-list1:checked ~ .images > .images-block2 > .cat4,
+.checkbox-list1:checked ~ .images > .images-block3 > .cat7,
+.checkbox-list1:checked ~ .images > .images-block4 > .cat8,
+.checkbox-list1:checked ~ .images > .images-block1 > .cat9,
+.checkbox-list1:checked ~ .images > .images-block1 > .cat10,
+.checkbox-list2:checked ~ .images > .images-block1 > .cat1,
+.checkbox-list2:checked ~ .images > .images-block1 > .cat2,
+.checkbox-list2:checked ~ .images > .images-block2 > .cat3,
+.checkbox-list2:checked ~ .images > .images-block2 > .cat5,
+.checkbox-list2:checked ~ .images > .images-block3 > .cat6,
+.checkbox-list2:checked ~ .images > .images-block3 > .cat7,
+.checkbox-list2:checked ~ .images > .images-block4 > .cat8,
+.checkbox-list3:checked ~ .images > .images-block1 > .cat2,
+.checkbox-list3:checked ~ .images > .images-block2 > .cat3,
+.checkbox-list3:checked ~ .images > .images-block2 > .cat4,
+.checkbox-list3:checked ~ .images > .images-block2 > .cat5,
+.checkbox-list3:checked ~ .images > .images-block3 > .cat6,
+.checkbox-list3:checked ~ .images > .images-block3 > .cat7,
+.checkbox-list3:checked ~ .images > .images-block4 > .cat8,
+.checkbox-list3:checked ~ .images > .images-block1 > .cat10,
+.checkbox-list4:checked ~ .images > .images-block1 > .cat1,
+.checkbox-list4:checked ~ .images > .images-block2 > .cat3,
+.checkbox-list4:checked ~ .images > .images-block2 > .cat4,
+.checkbox-list4:checked ~ .images > .images-block2 > .cat5,
+.checkbox-list4:checked ~ .images > .images-block3 > .cat6,
+.checkbox-list4:checked ~ .images > .images-block3 > .cat7,
+.checkbox-list4:checked ~ .images > .images-block4 > .cat8,
+.checkbox-list4:checked ~ .images > .images-block1 > .cat9,
+.checkbox-list4:checked ~ .images > .images-block1 > .cat10,
+.checkbox-list5:checked ~ .images > .images-block1 > .cat1,
+.checkbox-list5:checked ~ .images > .images-block1 > .cat2,
+.checkbox-list5:checked ~ .images > .images-block2 > .cat4,
+.checkbox-list5:checked ~ .images > .images-block2 > .cat5,
+.checkbox-list5:checked ~ .images > .images-block3 > .cat6,
+.checkbox-list5:checked ~ .images > .images-block3 > .cat7,
+.checkbox-list5:checked ~ .images > .images-block4 > .cat8,
+.checkbox-list5:checked ~ .images > .images-block1 > .cat9,
+.checkbox-list5:checked ~ .images > .images-block1 > .cat10,
+.checkbox-list6:checked ~ .images > .images-block1 > .cat1,
+.checkbox-list6:checked ~ .images > .images-block1 > .cat2,
+.checkbox-list6:checked ~ .images > .images-block2 > .cat3,
+.checkbox-list6:checked ~ .images > .images-block2 > .cat4,
+.checkbox-list6:checked ~ .images > .images-block2 > .cat5,
+.checkbox-list6:checked ~ .images > .images-block3 > .cat6,
+.checkbox-list6:checked ~ .images > .images-block4 > .cat8,
+.checkbox-list6:checked ~ .images > .images-block1 > .cat9,
+.checkbox-list6:checked ~ .images > .images-block1 > .cat10
+{
+    opacity: .5;
+}
+
+.checkbox-list1:checked ~ nav > .l1,
+.checkbox-list2:checked ~ nav > .l2,
+.checkbox-list3:checked ~ nav > .l3,
+.checkbox-list4:checked ~ nav > .l4,
+.checkbox-list5:checked ~ nav > .l5,
+.checkbox-list6:checked ~ nav > .l6
+{
+    background: #5a5a5a;
+    color: #d9d9d9;
+}
+
+.checkbox-list1:checked ~ .images > .blocks > .cats > .name,
+.checkbox-list2:checked ~ .images > .blocks > .cats > .name,
+.checkbox-list3:checked ~ .images > .blocks > .cats > .name,
+.checkbox-list4:checked ~ .images > .blocks > .cats > .name,
+.checkbox-list5:checked ~ .images > .blocks > .cats > .name,
+.checkbox-list6:checked ~ .images > .blocks > .cats > .name
+{
+    opacity: 0;
+}
