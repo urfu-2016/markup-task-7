@@ -68,6 +68,7 @@ input.mode:checked ~ .content-grid header
 h1
 {
     margin: 0;
+    
     font: 700 2em sans-serif;
     text-align: center;
 }
