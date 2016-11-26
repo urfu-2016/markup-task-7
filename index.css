@@ -1,6 +1,14 @@
+html
+{
+    height: 100%;
+}
+
 body
 {
     background: #d3d3d3;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 header
@@ -9,13 +17,22 @@ header
     font-size: 2em;
 }
 
+.content
+{
+    flex: 1;
+}
+
 main
 {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     padding-bottom: 30px;
-    border-bottom: solid 1px;
+}
+
+main .species label:hover
+{
+    background: #999;
 }
 
 .species,
@@ -31,8 +48,8 @@ main
 .cats
 {
     display: flex;
-    width: 60%;
     flex-wrap: wrap;
+    width: 60%;
     justify-content: center;
 }
 
@@ -46,6 +63,7 @@ main > input
     font-size: 2em;
     padding-bottom: 30px;
     border-bottom: solid 1px;
+    cursor: pointer;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -109,7 +127,7 @@ main > input
 .cat-image .description
 {
     position: absolute;
-    top: 70%;
+    bottom: 15%;
     background: rgba(0, 0, 0, .5);
     display: none;
     padding: 0 15px;
@@ -118,7 +136,7 @@ main > input
 
 .cat-image:hover .description
 {
-    display: flex;
+    display: block;
 }
 
 .bengal:checked ~ .cats .bengal,
@@ -129,9 +147,22 @@ main > input
     opacity: 1;
 }
 
+.bengal:checked ~ .cats .bengal:hover .description,
+.britain:checked ~ .cats .britain:hover .description,
+.egypt:checked ~ .cats .egypt:hover .description,
+.persid:checked ~ .cats .persid:hover .description
+{
+    display: block;
+}
+
 main > input:checked ~ .cats div
 {
     opacity: .4;
+}
+
+main > input:checked ~ .cats .cat-image:hover .description
+{
+    display: none;
 }
 
 .rating-column
@@ -178,32 +209,22 @@ main > input:checked ~ .cats div
     user-select: none;
 }
 
-.britain-rating,
-.bengal-rating,
-.egypt-rating,
-.persid-rating
-{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.rating-column .rating-down:checked ~ .bengal-rating
+.rating-column .rating-down:checked ~ .ten-rating
 {
     order: 0;
 }
 
-.rating-column .rating-down:checked ~ .egypt-rating
+.rating-column .rating-down:checked ~ .seven-rating
 {
     order: 1;
 }
 
-.rating-column .rating-down:checked ~ .britain-rating
+.rating-column .rating-down:checked ~ .five-rating
 {
     order: 2;
 }
 
-.rating-column .rating-down:checked ~ .persid-rating
+.rating-column .rating-down:checked ~ .four-rating
 {
     order: 3;
 }
@@ -215,39 +236,35 @@ main > input:checked ~ .cats div
     justify-content: space-between;
 }
 
-.rating-column .ten-rating
+.rating-wrapper .rating-image
+{
+    border: solid 1px;
+    margin-bottom: 20px;
+    height: 20px;
+}
+
+.rating-wrapper .ten-rating
 {
     width: 80%;
     background: linear-gradient(to right, #008000 0, #fff 100%);
-    border: solid 1px;
-    display: inline-block;
-    margin-bottom: 20px;
 }
 
-.rating-column .five-rating
+.rating-wrapper .five-rating
 {
     width: 40%;
     background: linear-gradient(to right, #ff0 0, #fff 100%);
-    border: solid 1px;
-    display: inline-block;
-    margin-bottom: 20px;
 }
 
-.rating-column .seven-rating
+.rating-wrapper .seven-rating
 {
     width: 60%;
     background: linear-gradient(to right, #90ee90 0, #fff 100%);
-    border: solid 1px;
-    display: inline-block;
-    margin-bottom: 20px;
 }
 
-.rating-column .four-rating
+.rating-wrapper .four-rating
 {
     width: 30%;
     background: linear-gradient(to right, #eb0c0c 0, #fff 100%);
-    border: solid 1px;
-    margin-bottom: 20px;
 }
 
 .rating-column .mark
@@ -256,12 +273,113 @@ main > input:checked ~ .cats div
     font-weight: bold;
 }
 
-footer .copyright
+footer
 {
-    float: left;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    border-top: solid 1px;
 }
 
-footer .address
+footer .copyright
 {
-    float: right;
+    margin: 20px 0;
+}
+
+footer address
+{
+    margin: 20px 0;
+    font-style: normal;
+}
+
+/*задание на звездочку*/
+
+.grid:checked ~ header
+{
+    display: grid;
+}
+
+.grid:checked ~ main
+{
+    display: grid;
+    grid-template-columns: 19% 60% 21%;
+}
+
+.grid:checked ~ main .species
+{
+    grid-column: 1;
+}
+
+.grid:checked ~ main .cats
+{
+    width: 100%;
+    display: grid;
+    grid-column: 2;
+    grid-template-columns: 32% 10px 32% 10px 32%;
+    grid-template-rows: 300px 10px 300px 10px 300px 10px 300px;
+}
+
+.grid:checked ~ main .rating-column
+{
+    grid-column: 3;
+}
+
+.grid:checked ~ main .cats .cat-image
+{
+    width: 100%;
+    margin: 0;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(1)
+{
+    grid-column: 1;
+    grid-row: 1;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(2)
+{
+    grid-column: 3 / 6;
+    grid-row: 1;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(3)
+{
+    grid-column: 1;
+    grid-row: 3;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(4)
+{
+    grid-column: 3;
+    grid-row: 3;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(5)
+{
+    grid-column: 5;
+    grid-row: 3;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(6)
+{
+    grid-column: 1 / 4;
+    grid-row: 5;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(7)
+{
+    grid-column: 5;
+    grid-row: 5;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(8)
+{
+    grid-column: 1 / 6;
+    grid-row: 7;
+}
+
+.grid:checked ~ footer
+{
+    display: grid;
+    grid-template-areas: 'a b';
 }
