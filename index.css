@@ -5,15 +5,29 @@ body
     position: relative;
     display: flex;
     flex-direction: column;
-    min-height: 100vh;
+    min-height: 98vh;
 }
 
-.footer,
+footer
+{
+    
+    display: flex;
+    justify-content: space-between;
+    flex:0;
+    bottom: 0;
+    border-top: 1px solid gray;
+    padding-top: 5px;
+}
+
 main
 {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+}
+
+.before-footer
+{
     flex: 1;
 }
 
@@ -21,6 +35,7 @@ h1
 {
     text-align: center;
     font-size: 45px;
+    margin-top: 0;
 }
 
 h2
@@ -34,6 +49,11 @@ h2
 nav
 {
     align-self: stretch;
+}
+
+nav div
+{
+    border-bottom: 1px solid gray;
 }
 
 nav,
@@ -61,7 +81,7 @@ input
     display: none;
 }
 
-nav label
+label
 {
     cursor: pointer;
 }
@@ -77,25 +97,15 @@ aside .breed
     padding: 10px;
 }
 
-input:checked ~ .photos .line div
+input:checked ~ .photos div
 {
     opacity: .3;
 }
 
-nav hr
-{
-    margin: 0;
-}
-
-nav
-{
-    margin-bottom: 10px;
-}
-
-input.curl:checked ~ div div .curl,
-input.brit:checked ~ div div .brit,
-input.rus-blue:checked ~ div div .rus-blue,
-input.korat:checked ~ div div .korat
+input.curl:checked ~ .photos .curl,
+input.brit:checked ~ .photos .brit,
+input.rus-blue:checked ~ .photos .rus-blue,
+input.korat:checked ~ .photos .korat
 {
     opacity: 1;
 }
@@ -109,14 +119,17 @@ input.korat:checked ~ nav .korat
     color: white;
 }
 
-.photos .line
+.photos
 {
     display: flex;
+    flex-wrap: wrap;
 }
 
-.line div
+.photos div
 {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     display: block;
     position: relative;
     overflow: hidden;
@@ -124,6 +137,11 @@ input.korat:checked ~ nav .korat
     border-right: 5px solid transparent;
     border-bottom: 5px solid transparent;
     border-left: 5px solid transparent;
+}
+
+.photos div:last-child
+{
+    border-bottom: 0;
 }
 
 .cell-1-3
@@ -141,24 +159,32 @@ input.korat:checked ~ nav .korat
     width: 100%;
 }
 
-input:not(
-:checked) + input:not(
-    :checked) + input:not(
-        :checked) + input:not(
-            :checked) ~ div .line div:hover::after,
-.curl:checked ~ div .curl:hover::after,
-.rus-blue:checked ~ div .rus-blue:hover::after,
-.korat:checked ~ div .korat:hover::after,
-.brit:checked ~ div .brit:hover::after
+div.name
 {
-    position: absolute;
-    content: attr(title);
-    z-index: 6;
+    display: none;
     bottom: 10%;
+    position: absolute;
     font-size: 30px;
     color: white;
     padding: 15px 10px;
     background: rgba(151, 153, 151, .7);
+}
+
+input:checked ~ .photos .name
+{
+    display: none;
+}
+
+img:hover ~ .name,
+.name:hover,
+.curl:checked ~ div .curl:hover .name,
+.rus-blue:checked ~ div .rus-blue:hover .name,
+.korat:checked ~ div .korat:hover .name,
+.brit:checked ~ div .brit:hover .name
+{
+    display: block;
+    z-index: 6;
+    opacity: 1;
 }
 
 img
@@ -178,24 +204,28 @@ img
 .nine .curl
 {
     background: linear-gradient(to right, #090, #fff);
+    border: 1px solid #090;
     width: 90px;
 }
 
 .ten .korat
 {
     background: linear-gradient(to right, #090, #fff);
+    border: 1px solid #090;
     width: 100px;
 }
 
 .seven .brit
 {
     background: linear-gradient(to right, #ff0, #fff);
+    border: 1px solid #ff0;
     width: 70px;
 }
 
 .four .rus-blue
 {
     background: linear-gradient(to right, #f00, #fff);
+    border: 1px solid #f00;
     width: 40px;
 }
 
