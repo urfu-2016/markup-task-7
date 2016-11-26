@@ -189,39 +189,19 @@ input.sia:checked ~ .cats > .siamese:hover div
     display: none;
 }
 
-.cats div:nth-child(8n+1)
-{
-    width: 33%;
-}
-
-.cats div:nth-child(8n+2)
-{
-    width: 66%;
-}
-
-.cats div:nth-child(8n+3)
-{
-    width: 33%;
-}
-
-.cats div:nth-child(8n+4)
-{
-    width: 33%;
-}
-
-.cats div:nth-child(8n+5)
-{
-    width: 33%;
-}
-
-.cats div:nth-child(8n+6)
-{
-    width: 66%;
-}
-
+.cats div:nth-child(8n+1),
+.cats div:nth-child(8n+3),
+.cats div:nth-child(8n+4),
+.cats div:nth-child(8n+5),
 .cats div:nth-child(8n+7)
 {
     width: 33%;
+}
+
+.cats div:nth-child(8n+2),
+.cats div:nth-child(8n+6)
+{
+    width: 66%;
 }
 
 .cats div:nth-child(8n+8)
@@ -232,27 +212,27 @@ input.sia:checked ~ .cats > .siamese:hover div
 .yellow
 {
     padding-left: 60%;
-    background: linear-gradient(to right, yellow, #fff);
+    background: linear-gradient(to right, #ffff00, #fff);
     margin-right: 20%;
 }
 
 .green1
 {
     padding-left: 70%;
-    background: linear-gradient(to right, green, #fff);
+    background: linear-gradient(to right, #00ff7f, #fff);
     margin-right: 10%;
 }
 
 .green2
 {
     padding-left: 75%;
-    background: linear-gradient(to right, green, #fff);
+    background: linear-gradient(to right, #00ff7f, #fff);
     margin-right: 5%;
 }
 
 .red
 {
     padding-left: 50%;
-    background: linear-gradient(to right, red, #fff);
+    background: linear-gradient(to right, #ff0000, #fff);
     margin-right: 30%;
 }
