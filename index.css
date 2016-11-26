@@ -58,10 +58,9 @@ hr
     width: 100%;
 }
 
-.content,
+.cats,
 .breed,
 .rating,
-.cats,
 .breed-and-content
 {
     display: flex;
@@ -70,54 +69,37 @@ hr
 .breed,
 .rating
 {
-    word-wrap: break-word;
-    width: 20%;
+    width: 30%;
     flex-direction: column;
     flex-wrap: wrap;
-    background-color: #d3d3d3;
+    background-color: #c0c0c0;
 }
 
 .breed-and-content
 {
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
     float: left;
-    margin-bottom: 50px;
-    width: 80%;
+    width: 70%;
 }
 
-.content
+.cats
 {
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
-    width: 80%;
-    margin-left: 3%;
+    width: 70%;
 }
 
 .rating
 {
-    float: right;
-    width: 20%;
+    width: 30%;
 }
 
 .rating div
 {
     margin-left: 5%;
     height: auto;
-}
-
-.rating div img
-{
-    width: 60%;
-    height: auto;
-}
-
-.rating .british img
-{
-    width: 50%;
-}
-
-.rating .siam img
-{
-    width: 20%;
 }
 
 .description
@@ -133,11 +115,6 @@ hr
     color: #fff;
 }
 
-.cats div:hover div
-{
-    display: block;
-}
-
 .address
 {
     text-align: right;
@@ -146,14 +123,13 @@ hr
 
 .cats div img
 {
-    width: 100%;
+    height: 250px;
 }
 
 .cats > div
 {
     position: relative;
-    margin-right: 3%;
-    margin-bottom: 3%;
+    overflow: hidden;
 }
 
 .count
@@ -182,6 +158,7 @@ input:checked ~ .siam
     order: 4;
 }
 
+input.all:checked ~ .breed .all,
 input.abiss:checked ~ .breed .abiss,
 input.brit:checked ~ .breed .brit,
 input.russ:checked ~ .breed .russ,
@@ -190,27 +167,92 @@ input.sia:checked ~ .breed .sia
     background-color: gray;
 }
 
-input.abiss:checked ~ .content .cats > div:not(.abyssinian)
+input.abiss:checked ~ .cats > div:not(.abyssinian),
+input.brit:checked ~ .cats > div:not(.british),
+input.russ:checked ~ .cats > div:not(.russian),
+input.sia:checked ~ .cats > div:not(.siamese)
 {
     opacity: .3;
 }
 
-input.brit:checked ~ .content .cats > div:not(.british)
+input.all:checked ~ .cats > div:hover div,
+input.abiss:checked ~ .cats > .abyssinian:hover div,
+input.brit:checked ~ .cats > .british:hover div,
+input.russ:checked ~ .cats > .russian:hover div,
+input.sia:checked ~ .cats > .siamese:hover div
 {
-    opacity: .3;
-}
-
-input.russ:checked ~ .content .cats > div:not(.russian)
-{
-    opacity: .3;
-}
-
-input.sia:checked ~ .content .cats > div:not(.siamese)
-{
-    opacity: .3;
+    display: block;
 }
 
 .input-breed
 {
     display: none;
+}
+
+.cats div:nth-child(8n+1)
+{
+    width: 33%;
+}
+
+.cats div:nth-child(8n+2)
+{
+    width: 66%;
+}
+
+.cats div:nth-child(8n+3)
+{
+    width: 33%;
+}
+
+.cats div:nth-child(8n+4)
+{
+    width: 33%;
+}
+
+.cats div:nth-child(8n+5)
+{
+    width: 33%;
+}
+
+.cats div:nth-child(8n+6)
+{
+    width: 66%;
+}
+
+.cats div:nth-child(8n+7)
+{
+    width: 33%;
+}
+
+.cats div:nth-child(8n+8)
+{
+    width: 100%;
+}
+
+.yellow
+{
+    padding-left: 60%;
+    background: linear-gradient(to right, yellow, #fff);
+    margin-right: 20%;
+}
+
+.green1
+{
+    padding-left: 70%;
+    background: linear-gradient(to right, green, #fff);
+    margin-right: 10%;
+}
+
+.green2
+{
+    padding-left: 75%;
+    background: linear-gradient(to right, green, #fff);
+    margin-right: 5%;
+}
+
+.red
+{
+    padding-left: 50%;
+    background: linear-gradient(to right, red, #fff);
+    margin-right: 30%;
 }
