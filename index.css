@@ -69,7 +69,7 @@ footer,
 .cat
 {
     position: relative;
-    margin: 4px;
+    margin: 0 4px;
     border-collapse: collapse;
     max-height: 35%;
     flex-grow: 1;
@@ -212,7 +212,6 @@ input[id='rating-input']:checked ~ .rating-info
 .value-2 .value:before,
 .value-1 .value:before
 {
-    width: 25%;
     background: linear-gradient(to right, #c50400, #fff);
     border: 1px solid #c50400;
 }
@@ -224,7 +223,7 @@ input[id='rating-input']:checked ~ .rating-info
 
 .value-10 .value:before
 {
-    width: 85%;
+    width: 80%;
 }
 
 .value-9
