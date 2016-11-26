@@ -1,30 +1,17 @@
-body
-{
-    display: flex;
-    height: 100%;
-    margin: 0;
-    flex-direction: column;
-}
-
 .wpapper
 {
-    width: 1100px;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
-    background: rgba(220, 220, 220, .7);
+    width: 1100px;
+    min-height: 100vh;
 }
 
 .content
 {
     display: flex;
-    flex: 1 0 auto;
+    flex: 1;
     justify-content: center;
-    margin-bottom: 20px;
-}
-
-.wrapper header,
-.wrapper footer
-{
-    flex: 0 0 auto;
 }
 
 header
@@ -38,6 +25,14 @@ footer
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-top: 1px solid #111;
+}
+
+.content,
+.wpapper header,
+.wpapper footer
+{
+    background: rgba(220, 220, 220, .7);
 }
 
 .copyright
@@ -62,6 +57,8 @@ footer address
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-content: flex-start;
+    /*align-items: center;*/
 }
 
 .photos-cats span,
@@ -81,6 +78,7 @@ input.siamese:checked ~ .photos-cats .siamese span
     margin-right: 10px;
     margin-bottom: 10px;
     position: relative;
+
 }
 
 .small-img:hover span,
