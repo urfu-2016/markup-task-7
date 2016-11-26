@@ -1,0 +1,314 @@
+body
+{
+    background-color: #ebebeb;
+    width: 1300px;
+    margin: 0 auto;
+    vertical-align: top;
+}
+
+header 
+{
+    font: bold 45px Arial, sans-serif;
+    text-align: center;
+    margin: 50px auto;
+}
+
+footer
+{
+    position: relative;
+    border-top: 1px solid #000;
+    padding: 20px;
+}
+
+footer > a 
+{
+    position: absolute;
+    right: 50px;
+}
+
+h1 
+{
+    color: #f00;
+    font: 30px Arial, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+input[type='radio']
+{
+    display: none;
+}
+
+li,
+ul 
+{
+    padding: 0;
+    margin: 0;
+}
+
+.brit:checked ~ .menu > .menu-button + .britanskaya,
+.rus:checked ~ .menu > .menu-button + .russkaya,
+.siam:checked ~ .menu > .menu-button + .siamskaya,
+.all:checked ~ .menu > .menu-button + .all,
+.abis:checked ~ .menu > .menu-button:first-child
+{
+    background-color: #b9b9b9;
+}
+
+.brit:checked ~ .photos > .photo + :not(.britanskaya) > .close-photo,
+.brit:checked ~ .photos > .photo:first-child > .close-photo,
+.rus:checked ~ .photos > .photo + :not(.russkaya) > .close-photo,
+.rus:checked ~ .photos > .photo:first-child > .close-photo,
+.siam:checked ~ .photos > .photo + :not(.siamskaya) > .close-photo,
+.siam:checked ~ .photos > .photo:first-child > .close-photo,
+.abis:checked ~ .photos > .photo + :not(.abissinskaya) > .close-photo,
+.brit:checked ~ .photos > .britanskaya:hover > .description,
+.rus:checked ~ .photos > .russkaya:hover > .description,
+.siam:checked ~ .photos > .siamskaya:hover > .description,
+.abis:checked ~ .photos > .photo:first-child:hover > .description,
+.abis:checked ~ .photos > .abissinskaya:hover > .description,
+.all:checked ~ .photos > .photo:hover > .description
+{
+    display: block;
+}
+
+.menu-button:hover 
+{
+    background-color: #c9c9c9;
+}
+
+main
+{
+    display: flex;
+    height: 100%;
+}
+
+.close-photo 
+{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .4);
+    top: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.description 
+{
+    position: absolute;
+    background-color: rgba(0, 0, 0, .4);
+    top: 190px;
+    padding: 20px 10px;
+    display: none;
+    color: #fff;
+    font: 16px Arial, sans-serif;
+}
+
+.menu 
+{
+    width: 250px;
+    display: inline-block;
+}
+
+.photo 
+{
+    margin: 6px;
+    position: relative;
+}
+
+.rating
+{
+    
+    background-color: #d9d9d9;
+    width: 250px;
+    height: 100%;
+    padding: 15px;
+}
+
+.sort-rates 
+{
+    direction: rtl;
+    font: 18px Arial, sans-serif;
+    width: 90%;
+    margin-top: 15px;
+}
+
+.sort-rates > .sort-rating 
+{
+    vertical-align: middle;
+}
+
+.rates
+{
+    background-color: #d9d9d9;
+    width: 100%;
+    height: 100%;
+    direction: ltr;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rate-item 
+{
+    font: 20px Arial, sans-serif;
+    width: 100%;
+    padding: 10px 0;
+
+}
+
+.rate-number 
+{
+    float: right;
+}
+
+.rate
+{
+    display: inline-block;
+}
+
+.sort-rating:checked ~ .rates > .ten 
+{
+    order: 1;
+}
+
+.sort-rating:checked ~ .rates > .nine 
+{
+    order: 2;
+}
+
+.sort-rating:checked ~ .rates > .eight 
+{
+    order: 3;
+}
+
+.sort-rating:checked ~ .rates > .four 
+{
+    order: 4;
+}
+
+.sort-rating ~ .rates > .ten 
+{
+    order: 3;
+}
+
+.sort-rating ~ .rates > .nine 
+{
+    order: 1;
+}
+
+.sort-rating ~ .rates > .eight 
+{
+    order: 2;
+}
+
+.sort-rating ~ .rates > .four 
+{
+    order: 4;
+}
+
+.ten > .rate,
+.nine > .rate
+{
+    background: linear-gradient(to right, #0f0, #fff);
+    width: 150px;
+    height: 15px;
+    border: 1px solid #000;
+}
+
+.eight > .rate 
+{
+    background: linear-gradient(to right, #ff0, #fff);
+    width: 120px;
+    height: 15px;
+    border: 1px solid #000;
+}
+
+.four > .rate 
+{
+    background: linear-gradient(to right, #f00, #fff);
+    width: 80px;
+    height: 15px;
+    border: 1px solid #000;
+}
+
+.menu-button 
+{
+    font: 20px Arial, sans-serif;
+    padding: 20px;
+    border-bottom: 1px solid #000;
+    list-style-type: none;
+}
+
+.menu 
+{
+    background-color: #d9d9d9;
+}
+
+.flex-grid:checked ~ main > .flex,
+.flex-grid:not(:checked) ~ main > .grid
+{
+    display: none;
+}
+
+.flex-grid:checked ~ main > .grid
+{
+    display: grid;
+    grid-template-columns: 250px 12px 250px 12px 250px 14px;
+}
+
+.flex-grid:not(:checked) ~ main > .flex
+{
+    width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.first 
+{
+    grid-row: 1;
+    grid-column: 1;
+}
+
+.second 
+{
+    grid-row: 1;
+    grid-column: 3;
+}
+
+.third 
+{
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.forth 
+{
+    grid-row: 2;
+    grid-column: 3;
+}
+
+.fifth 
+{
+    grid-row: 2;
+    grid-column: 5;
+}
+
+.sixth 
+{
+    grid-row: 3;
+    grid-column: 1 4;
+}
+
+.seventh 
+{
+    grid-row: 3;
+    grid-column: 5;
+}
+
+.eighth 
+{
+    grid-row: 4;
+    grid-column: 1 6;
+}
