@@ -1,8 +1,107 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
+
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Granny's Kittens</title>
 </head>
+
 <body>
+    <input type="checkbox" id="grid-check">
+    <label for="grid-check">Grid Layout</label>
+    <section class="body">
+        <header><h1>Granny's Kittens</h1></header>
+
+        <main class="content">
+            <input type="checkbox" name="breed-check" class="breed-check" id="Main-Coon">
+            <input type="checkbox" name="breed-check" class="breed-check" id="Ragdolls">
+            <input type="checkbox" name="breed-check" class="breed-check" id="Siberian">
+            <input type="checkbox" name="breed-check" class="breed-check" id="Ragamuffin">
+            <nav class="breeds">
+                <label for="Main-Coon" class="breed">Main-Coon</label>
+                <label for="Ragdolls" class="breed">Ragdolls</label>
+                <label for="Siberian" class="breed">Siberian</label>
+                <label for="Ragamuffin" class="breed">Ragamuffin</label>
+            </nav>
+            <section class="cat-photos">
+                <div class="cat-img Main-Coon">
+                    <img src="img/cat1.jpg" alt="cat#1">
+                    <h3 class="name">Tigre 2y.</h3>
+                    <div class="black"></div>
+                </div>
+                <div class="cat-img Siberian">
+                    <img src="img/cat2.jpg" alt="cat#2">
+                    <h3 class="name">Butter 7y.</h3>
+                    <div class="black"></div>
+                </div>
+                <div class="cat-img Ragamuffin">
+                    <img src="img/cat3.jpg" alt="cat#3">
+                    <h3 class="name">Charlie 0.5y.</h3>
+                    <div class="black"></div>
+                </div>
+                <div class="cat-img Ragdolls">
+                    <img src="img/cat4.jpg" alt="cat#4">
+                    <h3 class="name">Bengo 1y.</h3>
+                    <div class="black"></div>
+                </div>
+                <div class="cat-img Ragdolls">
+                    <img src="img/cat5.jpg" alt="cat#5">
+                    <h3 class="name">Perdy 3y.</h3>
+                    <div class="black"></div>
+                </div>
+                <div class="cat-img Siberian">
+                    <img src="img/cat6.jpg" alt="cat#6">
+                    <h3 class="name">Kitkat 1y.</h3>
+                    <div class="black"></div>
+                </div>
+                <div class="cat-img Main-Coon">
+                    <img src="img/cat7.jpg" alt="cat#7">
+                    <h3 class="name">Jasper 0.2y.</h3>
+                    <div class="black"></div>
+                </div>
+                <div class="cat-img Ragdolls">
+                    <img src="img/cat8.jpg" alt="cat#8">
+                    <h3 class="name">Mittens 1.1y.</h3>
+                    <div class="black"></div>
+                </div>
+            </section>
+            <aside class="rating">
+                <h1>Rating</h1>
+                <input type="checkbox" id="rating-dsc">
+                <label for="rating-dsc">Descending Order</label>
+                <div class="Main-Coon-rating rating-5">
+                    <h3>Main-Coon</h3>
+                    <div class="rating-wrapper">
+                        <div class="rating-line"></div>
+                        <span>5</span>
+                    </div>
+                </div>
+                <div class="Ragamuffin-rating rating-2">
+                    <h3>Ragamuffin</h3>
+                    <div class="rating-wrapper">
+                        <div class="rating-line"></div>
+                        <span>2</span>
+                    </div>
+                </div>
+                <div class="Ragdoll-rating rating-10">
+                    <h3>Ragdoll</h3>
+                    <div class="rating-wrapper">
+                        <div class="rating-line "></div>
+                        <span>10</span>
+                    </div>
+                </div>
+                <div class="Siberian-rating rating-8">
+                    <h3>Siberian</h3>
+                    <div class="rating-wrapper">
+                        <div class="rating-line"></div>
+                        <span>8</span>
+                    </div>
+                </div>
+            </aside>
+        </main>
+        <footer>Contact us on 020 7010 0800 or email kitty-kittens@gmail.com</footer>
+    </section>
 </body>
+
 </html>
