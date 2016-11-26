@@ -21,7 +21,7 @@ h1
     position: relative;
 }
 
-.name:hover::after
+.content .name:hover::after
 {
     content: attr(title);
     position: absolute;
