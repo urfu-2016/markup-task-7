@@ -123,13 +123,14 @@ hr
 
 .cats div img
 {
-    height: 250px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .cats > div
 {
+    height: 200px;
     position: relative;
-    overflow: hidden;
 }
 
 .count
@@ -212,7 +213,7 @@ input.sia:checked ~ .cats > .siamese:hover div
 .yellow
 {
     padding-left: 60%;
-    background: linear-gradient(to right, #ffff00, #fff);
+    background: linear-gradient(to right, #ff0, #fff);
     margin-right: 20%;
 }
 
@@ -233,6 +234,6 @@ input.sia:checked ~ .cats > .siamese:hover div
 .red
 {
     padding-left: 50%;
-    background: linear-gradient(to right, #ff0000, #fff);
+    background: linear-gradient(to right, #f00, #fff);
     margin-right: 30%;
 }
