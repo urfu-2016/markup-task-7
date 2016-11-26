@@ -123,14 +123,13 @@ hr
 
 .cats div img
 {
-    width: 100%;
-    overflow: hidden;
+    height: 250px;
 }
 
 .cats > div
 {
-    height: 200px;
     position: relative;
+    overflow: hidden;
 }
 
 .count
