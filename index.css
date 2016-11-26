@@ -165,43 +165,43 @@ span
     opacity: .3;
 }
 
-#pers:checked ~ .content div:not(.pers):hover::after,
-#ashera:checked ~ .content div:not(.ashera):hover::after,
-#abis:checked ~ .content div:not(.abis):hover::after,
-#brit:checked ~ .content div:not(.brit):hover::after
+input[id='pers']:checked ~ .content div:not(.pers):hover::after,
+input[id='ashera']:checked ~ .content div:not(.ashera):hover::after,
+input[id='abis'] ~ .content div:not(.abis):hover::after,
+input[id='brit'] ~ .content div:not(.brit):hover::after
 {
     content: '';
 }
 
-#pers:checked ~ .content div:not(.pers),
-#pers:checked ~ .content div:not(.pers),
-#pers:checked ~ .content div:not(.pers)
+input[id='pers']:checked ~ .content div:not(.pers),
+input[id='pers']:checked ~ .content div:not(.pers),
+input[id='pers']:checked ~ .content div:not(.pers)
 {
     opacity: .3;
 }
 
-#ashera:checked ~ .content div:not(.ashera),
-#ashera:checked ~ .content div:not(.ashera),
-#ashera:checked ~ .content div:not(.ashera)
+input[id='ashera']:checked ~ .content div:not(.ashera),
+input[id='ashera']:checked ~ .content div:not(.ashera),
+input[id='ashera']:checked ~ .content div:not(.ashera)
 {
     opacity: .3;
 }
 
-#abis:checked ~ .content div:not(.abis),
-#abis:checked ~ .content div:not(.abis),
-#abis:checked ~ .content div:not(.abis)
+input[id='abis']:checked ~ .content div:not(.abis),
+input[id='abis']:checked ~ .content div:not(.abis),
+input[id='abis']:checked ~ .content div:not(.abis)
 {
     opacity: .3;
 }
 
-#brit:checked ~ .content div:not(.brit),
-#brit:checked ~ .content div:not(.brit),
-#brit:checked ~ .content div:not(.brit)
+input[id='brit']:checked ~ .content div:not(.brit),
+input[id='brit']:checked ~ .content div:not(.brit),
+input[id='brit']:checked ~ .content div:not(.brit)
 {
     opacity: .3;
 }
 
-input[type = "radio"]
+input[type='radio']
 {
     display: none;
 }
