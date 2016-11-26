@@ -3,13 +3,17 @@ html
     background-color: #d3d3d3;
 }
 
-.foto
+h1
+{
+    text-align: center;
+}
+
+.content
 {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
-    max-width: 950px;
 }
 
 .name
@@ -21,17 +25,12 @@ html
 {
     content: attr(title);
     position: absolute;
-    left: 0;
+    left: 20px;
     bottom: 20%;
     background: #a9a9a9;
-    height: 20%;
+    height: 50px;
     align-content: center;
     opacity: .7;
-}
-
-.left input
-{
-    visibility: hidden;
 }
 
 span
@@ -48,22 +47,12 @@ span
     background-color: #dcdcdc;
 }
 
-.breed
-{
-    width: 80%;
-    height: 40px;
-    background-color: #a9a9a9;
-    margin: 5px;
-    padding-left: 30px;
-}
-
 .footer
 {
-    position: fixed;
-    background-color: #a9a9a9;
-    width: 100%;
+    position: relative;
     bottom: 0;
-    order: 4;
+    background-color: rgba(169, 169, 169);
+    width: 100%;
 }
 
 .rating
@@ -133,4 +122,86 @@ span
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    width: 300px;
+}
+
+.label
+{
+    display: flex;
+    width: 300px;
+    height: 50px;
+    position: relative;
+    background: #a9a9a9;
+    box-shadow: inset 0 1px 1px #000, 0 1px 3px rgba(0, 0, 0, .5);
+}
+
+.cat-img:nth-of-type(8n+2),
+.cat-img:nth-of-type(8n+6)
+{
+    flex: 2 0 64%;
+}
+
+.cat-img:nth-of-type(8n)
+{
+    flex: 3 0 98%;
+}
+
+.cat-img
+{
+    padding: 0 1% 1%;
+    flex: 1 0 31%;
+    position: relative;
+}
+
+.cat-img img
+{
+    width: 100%;
+    height: calc(100% - 5px);
+    border: 1px solid #000;
+}
+
+.breed-in:checked ~ .content div
+{
+    opacity: .3;
+}
+
+#pers:checked ~ .content div:not(.pers):hover::after,
+#ashera:checked ~ .content div:not(.ashera):hover::after,
+#abis:checked ~ .content div:not(.abis):hover::after,
+#brit:checked ~ .content div:not(.brit):hover::after
+{
+    content: '';
+}
+
+#pers:checked ~ .content div:not(.pers),
+#pers:checked ~ .content div:not(.pers),
+#pers:checked ~ .content div:not(.pers)
+{
+    opacity: .3;
+}
+
+#ashera:checked ~ .content div:not(.ashera),
+#ashera:checked ~ .content div:not(.ashera),
+#ashera:checked ~ .content div:not(.ashera)
+{
+    opacity: .3;
+}
+
+#abis:checked ~ .content div:not(.abis),
+#abis:checked ~ .content div:not(.abis),
+#abis:checked ~ .content div:not(.abis)
+{
+    opacity: .3;
+}
+
+#brit:checked ~ .content div:not(.brit),
+#brit:checked ~ .content div:not(.brit),
+#brit:checked ~ .content div:not(.brit)
+{
+    opacity: .3;
+}
+
+input[type = "radio"]
+{
+    display: none;
 }
