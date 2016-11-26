@@ -23,6 +23,7 @@ body
 
 .item
 {
+    position: relative;
     margin: 0;
     height: 300px;
     border: 8px solid #d5d5d5;
@@ -51,12 +52,6 @@ body
     object-fit: cover;
 }
 
-.cat-info
-{
-    display: none;
-    text-align: center;
-}
-
 .race
 {
     background-color: #aaa;
@@ -66,24 +61,37 @@ body
     margin: 8px 0;
 }
 
-.race-input
-{
-    display: none;
-}
-
 .race-block
 {
     display: block;
     border-bottom: solid #808080 2px;
     text-align: center;
     padding: 10px 0;
-    -moz-user-select: none;
-    user-select: none;
 }
 
 .race-block:hover
 {
     background-color: #808080;
+}
+
+.race-input
+{
+    display: none;
+}
+
+.cat-info
+{
+    display: none;
+    position: absolute;
+    width: 80%;
+    background: rgba(0, 0, 0, .7);
+    bottom: 3%;
+    color: #fff;
+}
+
+.item:hover .cat-info
+{
+    display: block;
 }
 
 input[id='siam']:checked ~ .race label[for='siam'],
@@ -97,9 +105,23 @@ input[id='maine-coon']:checked ~ .race label[for='maine-coon']
 input[id='siam']:checked ~ .items .siam,
 input[id='brit']:checked ~ .items .brit,
 input[id='angora']:checked ~ .items .angora,
-input[id='maine-coon']:checked ~ .items .maine-coon
+input[id='maine-coon']:checked ~ .items .maine-coon,
+input[id='siam']:checked ~ .items .siam:hover .cat-info,
+input[id='brit']:checked ~ .items .brit:hover .cat-info,
+input[id='angora']:checked ~ .items .angora:hover .cat-info,
+input[id='maine-coon']:checked ~ .items .maine-coon:hover .cat-info
+{
+    opacity: 1;
+}
+
+.race-input:checked ~ .items .item
 {
     opacity: .5;
+}
+
+.race-input:checked ~ .items .item .cat-info
+{
+    opacity: 0;
 }
 
 .rating-header
@@ -112,8 +134,8 @@ input[id='maine-coon']:checked ~ .items .maine-coon
 {
     width: 25%;
     display: flex;
-    align-self: flex-start;
     flex-direction: column;
+    align-self: flex-start;
     background-color: #aaa;
     margin-top: 8px;
     padding: 10px;
@@ -152,8 +174,8 @@ input[id='maine-coon']:checked ~ .items .maine-coon
 .item-rating
 {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .rating-value
@@ -194,4 +216,12 @@ footer
 {
     color: #6495ed;
     margin-top: 20px;
+}
+
+.race-block,
+.rating-order
+{
+    -moz-user-select: none;
+    user-select: none;
+    cursor: pointer;
 }
