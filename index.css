@@ -201,7 +201,10 @@ section > article > h2
     position: absolute;
     left: 0;
     bottom: 10%;
-    padding: 10px;
+    padding: 10px 10%;
+    max-width: 80%;
+    overflow: hidden;
+    white-space: nowrap;
 
     background-color: rgba(0, 0, 0, .2);
 
