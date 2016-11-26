@@ -2,7 +2,109 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="index.css">
+    <title>Бабуленькины котятки</title>
 </head>
 <body>
+<input class="mode" type="checkbox" name="mode" id="mode" hidden>
+<label class="mode" for="mode">Grid</label>
+<div class="content-grid">
+    <input class="category abis" type="checkbox" name="category" id="abis" hidden>
+    <input class="category brit" type="checkbox" name="category" id="brit" hidden>
+    <input class="category rus" type="checkbox" name="category" id="rus" hidden>
+    <input class="category siam" type="checkbox" name="category" id="siam" hidden>
+
+    <header>
+        <h1>Бабуленькины котятки</h1>
+    </header>
+    <main>
+        <nav>
+            <label class="abis" for="abis">Абиссинская</label><hr>
+            <label class="brit" for="brit">Британская</label><hr>
+            <label class="rus" for="rus">Русская голубая</label><hr>
+            <label class="siam" for="siam">Сиамская</label><hr>
+        </nav>
+        <section>
+            <article class="brit">
+                <h2>Гоша, 4 года</h2>
+                <img src="images/f_cat1.jpg" alt="Гоша">
+            </article>
+            <article class="brit">
+                <h2>Unnamed, 3 года</h2>
+                <img src="images/f_cat2.jpg" alt="Unnamed">
+            </article>
+            <article class="siam">
+                <h2>Клэптрэп, 1 год</h2>
+                <img src="images/f_cat3.jpg" alt="Клэптрэп">
+            </article>
+            <article class="rus">
+                <h2>Roadhog, 7 лет</h2>
+                <img src="images/f_cat4.jpg" alt="Roadhog">
+            </article>
+            <article class="rus">
+                <h2>Junkrat, 2 года</h2>
+                <img src="images/f_cat5.png" alt="Junkrat">
+            </article>
+            <article class="brit">
+                <h2>Ринн, 3 года</h2>
+                <img src="images/f_cat2.jpg" alt="Ринн">
+            </article>
+            <article class="siam">
+                <h2>Шепард, 5 лет</h2>
+                <img src="images/f_cat3.jpg" alt="Шепард">
+            </article>
+            <article class="abis">
+                <h2>Кот, 1 год</h2>
+                <img src="images/f_cat7.jpg" alt="Кот">
+            </article>
+        </section>
+        <aside>
+            <h2>Рейтинг</h2>
+            <label for="sort">по убыванию</label>
+            <input type="checkbox" id="sort" name="sort">
+            <article class="r9">
+                <h3 class="name">Абиссинская</h3>
+                <div class="rating-bar">
+                <div class="bar">
+                    <div></div>
+                </div>
+                <div class="rating">9</div>
+                </div>
+            </article>
+            <article class="r8">
+                <h3 class="name">Британская</h3>
+                <div class="rating-bar">
+                <div class="bar">
+                    <div></div>
+                </div>
+                <div class="rating">8</div>
+                </div>
+            </article>
+            <article class="r10">
+                <h3 class="name">Русская голубая</h3>
+                <div class="rating-bar">
+                <div class="bar">
+                    <div></div>
+                </div>
+                <div class="rating">10</div>
+                </div>
+            </article>
+            <article class="r4">
+                <h3 class="name">Сиамская</h3>
+                <div class="rating-bar">
+                <div class="bar">
+                    <div></div>
+                </div>
+                <div class="rating">4</div>
+                </div>
+            </article>
+        </aside>
+    </main>
+    <div></div>
+    <footer>
+        <div>&copy; ООО Бабуленькины котятки, 2016</div>
+        <div><a href="">Наш адрес: улица Котовая, д.5</a></div>
+    </footer>
+</div>
 </body>
 </html>
