@@ -2,7 +2,187 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <link href="filter.css" rel="stylesheet">
+    <link href="kindness.css" rel="stylesheet">
+    <title>Бабуленькины котятки</title>
 </head>
 <body>
+<header>
+    <h1>Бабуленькины котятки</h1>
+</header>
+<div class="content-panel">
+    <input type="checkbox" name="kind" id="abissian">
+    <input type="checkbox" name="kind" id="britan">
+    <input type="checkbox" name="kind" id="rus-blue">
+    <input type="checkbox" name="kind" id="siam">
+    <main>
+        <div class="kitten size-1 abissian">
+            <img
+                src="images/cat1.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="230">
+            <div class="kitten-label">
+                <p>Цезарь, 3 года</p>
+            </div>
+        </div>
+        <div class="kitten size-2 siam">
+            <img
+                src="images/cat2_cr2.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="470">
+            <div class="kitten-label">
+                <p>Чезаре Борджия, 2 года</p>
+            </div>
+        </div>
+        <div class="kitten size-1 rus-blue">
+            <img
+                src="images/cat3.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="230">
+            <div class="kitten-label">
+                <p>Иван IV, 1 год</p>
+            </div>
+        </div>
+        <div class="kitten size-1 rus-blue">
+            <img
+                src="images/cat4.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="230">
+            <div class="kitten-label">
+                <p>Пончик, 1 год</p>
+            </div>
+        </div>
+        <div class="kitten size-1 britan">
+            <img
+                src="images/cat5.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="230">
+            <div class="kitten-label">
+                <p>Заратустра, 4 года</p>
+            </div>
+        </div>
+        <div class="kitten size-2 abissian">
+            <img
+                src="images/cat6_cr2.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="470">
+            <div class="kitten-label">
+                <p>Екатерина, 6 лет</p>
+            </div>
+        </div>
+        <div class="kitten size-1 siam">
+            <img
+                src="images/cat9.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="230">
+            <div class="kitten-label">
+                <p>Линкольн, 3 года</p>
+            </div>
+        </div>
+        <div class="kitten size-3 rus-blue">
+            <img
+                src="images/cat11_cr3.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="710">
+            <div class="kitten-label">
+                <p>Брюс Ли, 2 года</p>
+            </div>
+        </div>
+        <div class="kitten size-1 britan">
+            <img
+                src="images/cat8.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="230">
+            <div class="kitten-label">
+                <p>Рональдиньо, 2 года</p>
+            </div>
+        </div>
+        <div class="kitten size-2 abissian">
+            <img
+                src="images/cat7_cr2.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="470">
+            <div class="kitten-label">
+                <p>Алик, 3 года</p>
+            </div>
+        </div>
+        <div class="kitten size-1 siam">
+            <img
+                src="images/cat10.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="230">
+            <div class="kitten-label">
+                <p>Оззи, 7 месяцев</p>
+            </div>
+        </div>
+        <div class="kitten size-1 britan">
+            <img
+                src="images/cat12.jpg"
+                alt="http://cs.pikabu.ru/images/fun/EPICnickname2.png"
+                width="230">
+            <div class="kitten-label">
+                <p>Рокки, 1 год</p>
+            </div>
+        </div>
+    </main>
+    <aside class="type-filter">
+        <label class="button abissian" for="abissian">
+            Абиссинская
+        </label>
+
+        <label class="button britan" for="britan" >
+            Британская
+        </label>
+
+        <label class="button rus-blue" for="rus-blue">
+            Русская голубая
+        </label>
+
+        <label class="button siam" for="siam">
+            Сиамская
+        </label>
+    </aside>
+    <aside class="kindness-filter">
+        <h2>Рейтинг</h2>
+        <input type="checkbox" id="sort-dir">
+        <label for="sort-dir">по убыванию</label>
+        <div class="rating">
+            <div class="kitten-type 9-mark">
+                <header>Абиссинская</header>
+                <div class="rank">
+                    <div class="scale"></div>
+                    <div class="ratio">9</div>
+                </div>
+            </div>
+            <div class="kitten-type 8-mark">
+                <header>Британская</header>
+                <div class="rank">
+                    <div class="scale"></div>
+                    <div class="ratio">8</div>
+                </div>
+            </div>
+            <div class="kitten-type 10-mark">
+                <header>Русская голубая</header>
+                <div class="rank">
+                    <div class="scale"></div>
+                    <div class="ratio">10</div>
+                </div>
+            </div>
+            <div class="kitten-type 4-mark">
+                <header>Сиамская</header>
+                <div class="rank">
+                    <div class="scale"></div>
+                    <div class="ratio">4</div>
+                </div>
+            </div>
+        </div>
+    </aside>
+</div>
+<footer>
+    <div class="org-info">
+        ООО "Бабуленькины котятки" 2016 г.
+    </div>
+</footer>
 </body>
 </html>

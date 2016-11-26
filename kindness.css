@@ -1,0 +1,160 @@
+.kindness-filter h2
+{
+    color: #f00;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.kindness-filter label,
+.kindness-filter input
+{
+    cursor: pointer;
+}
+
+.rank
+{
+    display: flex;
+    width: 100%;
+}
+
+.ratio
+{
+    flex: 1 0 auto;
+    text-align: right;
+}
+
+.scale
+{
+    flex: 0 0 auto;
+    height: 20px;
+    width: 200px;
+    margin: 4px;
+    background: linear-gradient(to right, #008000 , #fefcea);
+}
+
+.kitten-type
+{
+    width: 100%;
+    font-size: 150%;
+    vertical-align: bottom;
+}
+
+.kitten-type header
+{
+    margin: 5px;
+}
+
+input[id='sort-dir']:checked ~ .rating
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.kitten-type[class='kitten-type 10-mark']
+{
+    order: 1;
+}
+
+.kitten-type[class='kitten-type 9-mark']
+{
+    order: 2;
+}
+
+.scale
+{
+    border: 1px solid #000;
+}
+
+.kitten-type[class='kitten-type 9-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #008000 , #fefcea);
+    width: 180px;
+}
+
+.kitten-type[class='kitten-type 8-mark']
+{
+    order: 3;
+}
+
+.kitten-type[class='kitten-type 8-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #ecdf3c , #fefcea);
+    width: 160px;
+}
+
+.kitten-type[class='kitten-type 7-mark']
+{
+    order: 4;
+}
+
+.kitten-type[class='kitten-type 7-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #d7d700 , #fefcea);
+    width: 140px;
+}
+
+.kitten-type[class='kitten-type 6-mark']
+{
+    order: 5;
+}
+
+.kitten-type[class='kitten-type 6-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #9f9f00 , #fefcea);
+    width: 120px;
+}
+
+.kitten-type[class='kitten-type 5-mark']
+{
+    order: 6;
+}
+
+.kitten-type[class='kitten-type 5-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #939300 , #fefcea);
+    width: 100px;
+}
+
+.kitten-type[class='kitten-type 4-mark']
+{
+    order: 7;
+}
+
+.kitten-type[class='kitten-type 4-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #f00 , #fefcea);
+    width: 80px;
+}
+
+.kitten-type[class='kitten-type 3-mark']
+{
+    order: 8;
+}
+
+.kitten-type[class='kitten-type 3-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #f33 , #fefcea);
+    width: 60px;
+}
+
+.kitten-type[class='kitten-type 2-mark']
+{
+    order: 9;
+}
+
+.kitten-type[class='kitten-type 2-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #c60000, #fefcea);
+    width: 40px;
+}
+
+.kitten-type[class='kitten-type 1-mark']
+{
+    order: 10;
+}
+
+.kitten-type[class='kitten-type 1-mark'] .rank .scale
+{
+    background: linear-gradient(to right, #800000, #fefcea);
+    width: 20px;
+}
