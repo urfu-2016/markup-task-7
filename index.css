@@ -96,7 +96,7 @@ header
 
 .category
 {
-    flex: 0 0 20%;
+    flex: 0 0 18%;
     background-color: #d9d9d9;
 }
 
@@ -117,13 +117,15 @@ header
 .content
 {
     display: flex;
+    justify-content: space-around;
     min-height: 80%;
     margin-bottom: auto;
 }
 
 .ratings
 {
-    flex: 0 0 20%;
+    padding: 1%;
+    flex: 0 0 18%;
     align-self: flex-start;
     background-color: #d9d9d9;
 }
@@ -306,7 +308,12 @@ input.cat4:checked ~ .category > label[for='cat4']
 .switch:checked ~ .content
 {
     display: grid;
-    grid-template-columns: 20% 60% 20%;
+    grid-template-columns: 18% 60% 20%;
+}
+
+.switch:checked ~ .content .ratings
+{
+    padding: 5%;
 }
 
 .switch:checked ~ .content .order:checked ~ .ratings-wrap
