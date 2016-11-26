@@ -1,8 +1,110 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
-</head>
-<body>
-</body>
+    <head>
+        <meta charset="utf-8">
+        <title>Бабуленькины котятки</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+    </head>
+    <body>
+        <div class="page-wrap">
+            <input type="checkbox" id="switch" class="switch">
+            <label for="switch"></label>
+            <header>Бабуленькины котятки</header>
+            <div class="content">
+                <input type="radio" name="cat-category" id="all" class="all" checked>
+                <input type="radio" name="cat-category" id="cat1" class="cat1">
+                <input type="radio" name="cat-category" id="cat2" class="cat2">
+                <input type="radio" name="cat-category" id="cat3" class="cat3">
+                <input type="radio" name="cat-category" id="cat4" class="cat4">
+                <nav class="category">
+                    <label for="all">Все</label>
+                    <label for="cat1">Абиссинская</label>
+                    <label for="cat2">Британская</label>
+                    <label for="cat3">Русская голубая</label>
+                    <label for="cat4">Сиамская</label>
+                </nav>
+                <main class="cats">
+                    <article class="cat cat3">
+                        <div class="cat-wrapper">
+                            <img src="images/cat-image1.jpg" alt="Фото кота Скорпио, 5 лет">
+                            <div class="description">Скорпио, 5 лет</div>
+                        </div>
+                    </article>
+                    <article class="cat cat1">
+                        <div class="cat-wrapper">
+                            <img src="images/cat-image2.jpg" alt="Фото кота Рэйли, 3 года">
+                            <div class="description">Рэйли, 3 года</div>
+                        </div>
+                    </article>
+                    <article class="cat cat4">
+                        <div class="cat-wrapper">
+                            <img src="images/cat-image3.jpg" alt="Фото кота Мерлин, 2 года">
+                            <div class="description">Мерлин, 2 года</div>
+                        </div>
+                    </article>
+                    <article class="cat cat2">
+                        <div class="cat-wrapper">
+                            <img src="images/cat-image4.jpg" alt="Фото кота Берни, 4 года">
+                            <div class="description">Берни, 4 года</div>
+                        </div>
+                    </article>
+                    <article class="cat cat4">
+                        <div class="cat-wrapper">
+                            <img src="images/cat-image5.jpg" alt="Фото кота Винсент, 5 лет">
+                            <div class="description">Винсент, 5 лет</div>
+                        </div>
+                    </article>
+                    <article class="cat cat1">
+                        <div class="cat-wrapper">
+                            <img src="images/cat-image6.jpg" alt="Фото кота Гарри, 2 года">
+                            <div class="description">Гарри, 2 года</div>
+                        </div>
+                    </article>
+                    <article class="cat cat3">
+                        <div class="cat-wrapper">
+                            <img src="images/cat-image7.jpg" alt="Фото кота Зигфрид, 4 года">
+                            <div class="description">Зигфрид, 4 года</div>
+                        </div>
+                    </article>
+                    <article class="cat cat2">
+                        <div class="cat-wrapper">
+                            <img src="images/blini-cat1.jpg" alt="Фото кота Джаз, 6 лет">
+                            <div class="description">Джаз, 6 лет</div>
+                        </div>
+                    </article>
+                </main>
+                <aside class="ratings">
+                    <div>Рейтинг</div>
+                    <input type="checkbox" name="order" id="order" class="order">
+                    <label for="order">По убыванию</label>
+                    <div class="ratings-wrap">
+                        <div class="rating rating-9">
+                            <div class="rating-description">Абиссинская</div>
+                            <div class="rating-line rating-line-9 gradient-green"></div>
+                            <span>9</span>
+                        </div>
+                        <div class="rating rating-8">
+                            <div class="rating-description">Британская</div>
+                            <div class="rating-line rating-line-8 gradient-yellow"></div>
+                            <span>8</span>
+                        </div>
+                        <div class="rating rating-10">
+                            <div class="rating-description">Русская голубая</div>
+                            <div class="rating-line rating-line-10 gradient-green"></div>
+                            <span>10</span>
+                        </div>
+                        <div class="rating rating-4">
+                            <div class="rating-description">Сиамская</div>
+                            <div class="rating-line rating-line-4 gradient-red"></div>
+                            <span>4</span>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <footer>
+            <span>&copy; ООО Бабуленькины котятки, 2015</span>
+            <address>Наш адрес: улица Котовая, д.5</address>
+        </footer>
+    </body>
 </html>
