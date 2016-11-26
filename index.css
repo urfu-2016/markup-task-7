@@ -17,10 +17,11 @@ main
 .gallery
 {
     width: 50%;
-    height: 850px;
+    height: 120%;
     display: inline-flex;
     flex-wrap: wrap;
     align-content: space-between;
+    justify-content: space-between;
 }
 
 .menu
@@ -98,31 +99,26 @@ img
     height: 200px;
 }
 
-.block1,
-.block2,
-.block3,
-.block4
-{
-    display: inline-flex;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.block-width-30
+section > div:nth-child(8n+1),
+section > div:nth-child(8n+3),
+section > div:nth-child(8n+4),
+section > div:nth-child(8n+5),
+section > div:nth-child(8n+7)
 {
     position: relative;
     width: 30%;
     overflow: hidden;
 }
 
-.block-width-65
+section > div:nth-child(8n+2),
+section > div:nth-child(8n+6)
 {
     position: relative;
     width: 65%;
     overflow: hidden;
 }
 
-.block-width-100
+section > div:nth-child(8n)
 {
     position: relative;
     width: 100%;
