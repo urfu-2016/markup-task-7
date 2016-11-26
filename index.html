@@ -6,8 +6,9 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-<input type="checkbox" id="grid-enable">
+<input type="checkbox" class="grid-enable" id="grid-enable">
 <label for="grid-enable">Активировать grid</label>
+<section class="content">
 <header>
     <h1>Бабулькины котятки</h1>
 </header>
@@ -18,44 +19,44 @@
 <input type="radio" checked name="species-choice" id="all">
 <section class="shop">
     <aside class="left-menu">
-        <label for="abyssinian" class="species"><span>Абиссинская</span></label>
-        <label for="british" class="species"><span>Британская</span></label>
-        <label for="russian-blue" class="species"><span>Русская голубая</span></label>
-        <label for="siamese" class="species"><span>Сиамская</span></label>
-        <label for="all" class="species"><span>Все породы</span></label>
+        <label for="abyssinian" class="species">Абиссинская</label>
+        <label for="british" class="species">Британская</label>
+        <label for="russian-blue" class="species">Русская голубая</label>
+        <label for="siamese" class="species">Сиамская</label>
+        <label for="all" class="species">Все породы</label>
     </aside>
     <main>
         <div class="cat russian-blue">
             <img class="cat-foto" src="img/russian-blue1.jpg" title="Русская голубая" alt="Русская голубая">
-            <p>Вася, 3 года</p>
+            <span>Вася, 3 года</span>
         </div>
         <div class="cat abyssinian">
             <img class="cat-foto" src="img/abyssinian1.jpg" title="Абиссинская" alt="Абиссинская">
-            <p>Петя, 2 года</p>
+            <span>Петя, 2 года</span>
         </div>
         <div class="cat british">
             <img class="cat-foto" src="img/british1.JPG" title="Британская" alt="Британская">
-            <p>Шарик, 5 лет</p>
+            <span>Шарик, 5 лет</span>
         </div>
         <div class="cat siamese">
             <img class="cat-foto" src="img/siamese1.jpg" title="Сиамская" alt="Сиамская">
-            <p>Маша, 2 года</p>
+            <span>Маша, 2 года</span>
         </div>
         <div class="cat russian-blue">
             <img class="cat-foto" src="img/russian-blue2.jpg" title="Русская голубая" alt="Русская голубая">
-            <p>Инокентий, 6 лет</p>
+            <span>Инокентий, 6 лет</span>
         </div>
         <div class="cat abyssinian">
             <img class="cat-foto" src="img/abyssinian2.jpg" title="Абиссинская" alt="Абиссинская">
-            <p>Шурфик, 3 года</p>
+            <span>Шурфик, 3 года</span>
         </div>
         <div class="cat british">
             <img class="cat-foto" src="img/british2.jpg" title="Британская" alt="Британская">
-            <p>Альберт, 3 года</p>
+            <span>Альберт, 3 года</span>
         </div>
         <div class="cat abyssinian">
             <img class="cat-foto" src="img/abyssinian3.jpg" title="Абиссинская" alt="Абиссинская">
-            <p>Куся, 3 года</p>
+            <span>Куся, 3 года</span>
         </div>
     </main>
     <aside class="right-menu">
@@ -67,6 +68,7 @@
                                     alt="Not checked"></label>
             <label for="lower"><img class="check" src="img/check.png" title="Checked" alt="Checked"></label>
         </section>
+        <div class="rating">
         <div class="breed rating6">
             <p>Абиссинская</p>
             <div class="view-rating"></div>
@@ -87,11 +89,13 @@
             <div class="view-rating"></div>
             <p class="count-rating">8</p>
         </div>
+        </div>
     </aside>
 </section>
 <footer>
     <p>ООО бабулькены котятки 2015-2016</p>
     <address>Наш адрес: улица Котовая, д.5</address>
 </footer>
+</section>
 </body>
 </html>
