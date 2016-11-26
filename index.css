@@ -18,8 +18,6 @@ main
     flex: 1 0 auto;
 }
 
-/*Навигация*/
-
 .navigation
 {
     display: flex;
@@ -44,7 +42,6 @@ main
 {
     cursor: pointer;
 }
-/*Галерея*/
 
 .gallery
 {
@@ -141,8 +138,6 @@ main
     opacity: 1;
     transition: opacity 1s;
 }
-
-/*Рейтинг*/
 
 .rating
 {
