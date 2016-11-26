@@ -52,6 +52,7 @@ input[type='checkbox'][id='grid-check']:checked ~ .body .breeds
     border: 1px solid #000;
     background: #aaa;
     display: flex;
+    margin-right: 15px;
     flex-grow: 1;
     flex-direction: column;
     align-self: stretch;
@@ -120,6 +121,23 @@ input[type='checkbox'][id='Ragamuffin'].breed-check:checked
     display: none;
 }
 
+input[type='checkbox'].breed-check:checked 
+~ section div.cat-img h3
+{
+    opacity: 0;
+}
+input[type='checkbox'][id='Main-Coon'].breed-check:checked  
+~ section div.cat-img.Main-Coon:hover h3,
+input[type='checkbox'][id='Siberian'].breed-check:checked 
+~ section div.cat-img.Siberian:hover h3,
+input[type='checkbox'][id='Ragdolls'].breed-check:checked 
+~ section div.cat-img.Ragdolls:hover h3,
+input[type='checkbox'][id='Ragamuffin'].breed-check:checked 
+~ section div.cat-img.Ragamuffin:hover:hover h3
+{
+    opacity: 1;
+}
+
 .cat-photos
 {
     margin: 0 10px;
@@ -140,7 +158,8 @@ input[type='checkbox'][id='grid-check']:checked ~ .body .cat-photos
     grid-template-columns: auto auto auto;
     grid-template-rows: auto;
     grid-gap: 20px 20px;
-    grid-template-areas: "cat1 cat2 cat2"
+    grid-template-areas:  
+                                   "cat1 cat2 cat2"
                                    "cat3 cat4 cat5"
                                    "cat6 cat6 cat7"
                                    "cat8 cat8 cat8";
@@ -257,17 +276,14 @@ input[type='checkbox'][id='grid-check']:checked ~ .body .cat-img:nth-of-type(8n+
 input[type='checkbox'][id='grid-check']:checked ~ .body .rating
 { 
     grid-area: r;  
-    border: 1px solid #000;
-    padding: 10px;
-    background: #aaa;
     display: grid;
     align-content: start;
-
+    margin-left: 15px;
 }
 
 .content
 {
-    margin: 20px 0;
+    margin: 35px 0;
     display: flex;
     flex: 1;
     flex-direction: row;
@@ -275,22 +291,23 @@ input[type='checkbox'][id='grid-check']:checked ~ .body .rating
 
 input[type='checkbox'][id='grid-check']:checked ~ .body .content
 { 
+    margin-top: 100px;
     display: grid;
     grid-template-areas: "b p r";
-    grid-template-columns: 1fr 70% 1fr;
+    grid-template-columns: 1fr 800px 1fr;
     grid-gap: 10px;
     grid-template-rows: auto;
     align-items: start;
 }
 
-header
+header h1
 {
     font-size: 40px;
     text-align: center;
     border-bottom: 1px solid #000;
 }
 
-header::first-letter
+header h1::first-letter
 {
     color: #f00;
 }
@@ -401,15 +418,3 @@ input[type='checkbox'][id='grid-check']:checked ~ .body .rating input[type='chec
 { 
     grid-row: 4 / 4;
 }
-
-
-
-
-
-
-
-
-
-
-
-
