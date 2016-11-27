@@ -441,9 +441,6 @@ a.logo
 .rating-value-1 .rating-value
 {
     background-color: #f44336;
-    background-image: -webkit-linear-gradient(to right, #f44336, #ff756b);
-    background-image: -moz-linear-gradient(to right, #f44336, #ff756b);
-    background-image: -o-linear-gradient(to right, #f44336, #ff756b);
     background-image: linear-gradient(to right, #f44336, #ff756b);
     width: 10%;
 }
@@ -451,9 +448,6 @@ a.logo
 .rating-value-2 .rating-value
 {
     background-color: #ff5722;
-    background-image: -webkit-linear-gradient(to right, #ff5722, #ff7245);
-    background-image: -moz-linear-gradient(to right, #ff5722, #ff7245);
-    background-image: -o-linear-gradient(to right, #ff5722, #ff7245);
     background-image: linear-gradient(to right, #ff5722, #ff7245);
     width: 20%;
 }
@@ -461,9 +455,6 @@ a.logo
 .rating-value-3 .rating-value
 {
     background-color: #ff9800;
-    background-image: -webkit-linear-gradient(to right, #ff9800, #ffb445);
-    background-image: -moz-linear-gradient(to right, #ff9800, #ffb445);
-    background-image: -o-linear-gradient(to right, #ff9800, #ffb445);
     background-image: linear-gradient(to right, #ff9800, #ffb445);
     width: 30%;
 }
@@ -471,9 +462,6 @@ a.logo
 .rating-value-4 .rating-value
 {
     background-color: #ffc107;
-    background-image: -webkit-linear-gradient(to right, #ffc107, #ffd450);
-    background-image: -moz-linear-gradient(to right, #ffc107, #ffd450);
-    background-image: -o-linear-gradient(to right, #ffc107, #ffd450);
     background-image: linear-gradient(to right, #ffc107, #ffd450);
     width: 40%;
 }
@@ -481,9 +469,6 @@ a.logo
 .rating-value-5 .rating-value
 {
     background-color: #ffeb3b;
-    background-image: -webkit-linear-gradient(to right, #ffeb3b, #fff06e);
-    background-image: -moz-linear-gradient(to right, #ffeb3b, #fff06e);
-    background-image: -o-linear-gradient(to right, #ffeb3b, #fff06e);
     background-image: linear-gradient(to right, #ffeb3b, #fff06e);
     width: 50%;
 }
@@ -491,9 +476,6 @@ a.logo
 .rating-value-6 .rating-value
 {
     background-color: #d4e622;
-    background-image: -webkit-linear-gradient(to right, #d4e622, #f0ff58);
-    background-image: -moz-linear-gradient(to right, #d4e622, #f0ff58);
-    background-image: -o-linear-gradient(to right, #d4e622, #f0ff58);
     background-image: linear-gradient(to right, #d4e622, #f0ff58);
     width: 60%;
 }
@@ -501,9 +483,6 @@ a.logo
 .rating-value-7 .rating-value
 {
     background-color: #8ad039;
-    background-image: -webkit-linear-gradient(to right, #8ad039, #b1f761);
-    background-image: -moz-linear-gradient(to right, #8ad039, #b1f761);
-    background-image: -o-linear-gradient(to right, #8ad039, #b1f761);
     background-image: linear-gradient(to right, #8ad039, #b1f761);
     width: 70%;
 }
@@ -511,9 +490,6 @@ a.logo
 .rating-value-8 .rating-value
 {
     background-color: #8ad039;
-    background-image: -webkit-linear-gradient(to right, #8ad039, #b1f761);
-    background-image: -moz-linear-gradient(to right, #8ad039, #b1f761);
-    background-image: -o-linear-gradient(to right, #8ad039, #b1f761);
     background-image: linear-gradient(to right, #8ad039, #b1f761);
     width: 80%;
 }
@@ -521,9 +497,6 @@ a.logo
 .rating-value-9 .rating-value
 {
     background-color: #46c73e;
-    background-image: -webkit-linear-gradient(to right, #46c73e, #77fb70);
-    background-image: -moz-linear-gradient(to right, #46c73e, #77fb70);
-    background-image: -o-linear-gradient(to right, #46c73e, #77fb70);
     background-image: linear-gradient(to right, #46c73e, #77fb70);
     width: 90%;
 }
@@ -531,9 +504,6 @@ a.logo
 .rating-value-10 .rating-value
 {
     background-color: #46c73e;
-    background-image: -webkit-linear-gradient(to right, #46c73e, #77fb70);
-    background-image: -moz-linear-gradient(to right, #46c73e, #77fb70);
-    background-image: -o-linear-gradient(to right, #46c73e, #77fb70);
     background-image: linear-gradient(to right, #46c73e, #77fb70);
     width: 100%;
 }
