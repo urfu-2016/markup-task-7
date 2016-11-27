@@ -1,20 +1,33 @@
+html
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
 body
 {
     background-color: #fae291;
     color: #322703;
+    height: 100%;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 header
 {
-    display: flex;
-    justify-content: center;
+    text-align: center;
 }
 
 main
 {
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
     flex: 1 0 auto;
 }
 
@@ -60,12 +73,10 @@ main
 
 .cell
 {
-    display: flex;
     margin: 3px;
     position: relative;
     overflow: hidden;
     height: 250px;
-    align-items: center;
 }
 
 .cell > .description
@@ -76,12 +87,12 @@ main
     padding: 7px 15px;
     font-size: 1.2em;
     font-weight: 600;
+    bottom: 15px;
 }
 
 .cell:hover > .description
 {
     display: block;
-    bottom: 15px;
 }
 
 .catSizeAverage
@@ -103,7 +114,7 @@ main
 {
     min-width: 100%;
     min-height: 100%;
-
+    max-width: 100%;
 }
 
 .type1:checked ~ .gallery .cell:not(.breed1),
@@ -159,6 +170,11 @@ main
     height: 15px;
     border: .5px solid grey;
     display: inline-block;
+}
+
+.scale
+{
+    white-space: nowrap;
 }
 
 .scale .four
