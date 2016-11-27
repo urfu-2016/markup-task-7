@@ -2,7 +2,95 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Бабуленькины котятки</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header>
+        <h1>Бабуленькины котятки</h1>
+    </header>
+<main>
+    <input type="checkbox" name="category" class="category" id="abyssinian" hidden>
+    <input type="checkbox" name="category" class="category" id="british" hidden>
+    <input type="checkbox" name="category" class="category" id="russian" hidden>
+    <input type="checkbox" name="category" class="category" id="siamese" hidden>
+    <nav class="navigation">
+        <label class="abyssinian" for="abyssinian">Абиссинская</label>
+        <label class="british" for="british">Британская</label>
+        <label class="russian" for="russian">Русская голубая</label>
+        <label class="siamese" for="siamese">Сиамская</label>
+    </nav>
+    <section class="cats">
+        <figure class="british">
+            <img src="img1.png" alt="british">
+            <figcaption class="info">Гоша, 4 года</figcaption>
+        </figure>
+        <figure class="british">
+            <img src="img2.png" alt="british">
+            <figcaption class="info">Макс, 4 года</figcaption>
+        </figure>
+        <figure class="abyssinian">
+            <img src="img3.png" alt="abyssinian">
+            <figcaption class="info">Шаня, 1 год</figcaption>
+        </figure>
+        <figure class="siamese">
+            <img src="img4.png" alt="siamese">
+            <figcaption class="info">Мартин, 2 года</figcaption>
+        </figure>
+        <figure class="russian">
+            <img src="img5.png" alt="russian">
+            <figcaption class="info">Пушок, 2 года</figcaption>
+        </figure>
+        <figure class="british">
+            <img src="img2.png" alt="british">
+            <figcaption class="info">Макс, 4 года</figcaption>
+        </figure>
+        <figure class="russian">
+            <img src="img3.png" alt="russian">
+            <figcaption class="info">Леся, 4 месяца</figcaption>
+        </figure>
+        <figure class="siamese">
+            <img src="img6.png" alt="siamese">
+            <figcaption class="info">Лайма, 3 года</figcaption>
+        </figure>
+    </section>
+    <aside class="rating">
+        <h3>Рейтинг</h3>
+        <label for="sort">по убыванию</label>
+        <input type="checkbox" name="rating" id="sort">
+        <div class="rating-nine">
+            Абиссинская
+            <div class="scale">
+                <div class="scale-nine"></div>
+                <div>9</div>
+            </div>
+        </div>
+        <div class="rating-eight">
+            Британская
+            <div class="scale">
+                <div class="scale-eight"></div>
+                <div>8</div>
+            </div>
+        </div>
+        <div class="rating-ten">
+            Русская голубая
+            <div class="scale">
+                <div class="scale-ten"></div>
+                <div>10</div>
+            </div>
+        </div>
+        <div class="rating-four">
+            Сиамская
+            <div class="scale">
+                <div class="scale-four"></div>
+                <div>4</div>
+            </div>
+        </div>
+    </aside>
+</main>
+    <footer>
+        <div>&copy; ООО Бабуленькины котятки, 2016</div>
+        <address>Наш адрес: улица Котовая, д.5</address>
+    </footer>
 </body>
 </html>

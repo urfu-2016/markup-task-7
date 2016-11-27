@@ -1,0 +1,254 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    background: #ebebeb;
+    position: relative;
+    min-height: 100%;
+    margin: 0 25px;
+    font-size: 24px;
+}
+
+header
+{
+    text-align: center;
+}
+
+header > h1
+{
+    height: 140px;
+    font: bold 40px/140px sans-serif;
+    margin: 0;
+}
+
+main
+{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.navigation
+{
+    display: flex;
+    flex-direction: column;
+    background: #d9d9d9;
+    flex-basis: 20%;
+}
+
+.navigation > label
+{
+    padding: 20px 15px;
+    border-bottom: 1px solid #fff;
+    box-shadow: 0 1px #8a8a8a;
+}
+
+.navigation > label:hover
+{
+    cursor: pointer;
+}
+
+input[id='abyssinian']:checked ~ .navigation > .abyssinian,
+input[id='british']:checked ~ .navigation > .british,
+input[id='russian']:checked ~ .navigation > .russian,
+input[id='siamese']:checked ~ .navigation > .siamese,
+.navigation > label:hover
+{
+    background: #5a5a5a;
+    color: #fff;
+}
+
+.category:checked ~ .cats img
+{
+    opacity: .4;
+}
+
+input[id='abyssinian']:checked ~ .cats > .abyssinian > img,
+input[id='british']:checked ~ .cats > .british > img,
+input[id='russian']:checked ~ .cats > .russian > img,
+input[id='siamese']:checked ~ .cats > .siamese > img
+{
+    opacity: 1;
+}
+
+.cats
+{
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 80%;
+    margin: 0 .31%;
+}
+
+.cats img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.cats > figure
+{
+    width: 32.33%;
+    position: relative;
+    overflow: hidden;
+    margin: 1% .5% 0;
+}
+
+.cats > figure:nth-of-type(8n+2),
+.cats > figure:nth-of-type(8n+6)
+{
+    width: 65.66%;
+}
+
+.cats > figure:nth-of-type(8n)
+{
+    width: 99%;
+}
+
+.cats > figure:first-of-type,
+.cats > figure:nth-of-type(2)
+{
+    margin-top: 0;
+}
+
+.info
+{
+    position: absolute;
+    display: none;
+    padding: 14px;
+    width: 70%;
+    bottom: 30px;
+    background: rgba(60, 60, 60, .5);
+    color: #fff;
+    font-size: 1.25em;
+}
+
+.category:checked ~ .cats > figure:hover > .info
+{
+    display: none;
+}
+
+input[id='abyssinian']:checked ~ .cats > .abyssinian:hover > .info,
+input[id='british']:checked ~ .cats > .british:hover > .info,
+input[id='russian']:checked ~ .cats > .russian:hover > .info,
+input[id='siamese']:checked ~ .cats > .siamese:hover > .info,
+.cats > figure:hover > .info
+{
+    display: block;
+}
+
+.rating
+{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    background: #d9d9d9;
+    flex-basis: 25%;
+    padding: 10px 15px;
+}
+
+.rating > h3
+{
+    text-transform: uppercase;
+    color: #f00;
+    margin: 0;
+    font-weight: normal;
+}
+
+.rating > label,
+.rating > input
+{
+    align-self: flex-end;
+}
+
+.rating > label
+{
+    font-size: .75em;
+}
+
+input[id='sort']:checked ~ .rating-four
+{
+    order: 4;
+}
+
+input[id='sort']:checked ~ .rating-eight
+{
+    order: 3;
+}
+
+input[id='sort']:checked ~ .rating-nine
+{
+    order: 2;
+}
+
+input[id='sort']:checked ~ .rating-ten
+{
+    order: 1;
+}
+
+.scale
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+}
+
+.scale > div:first-child
+{
+    height: 15px;
+    margin: auto 0;
+}
+
+.scale > div:last-child
+{
+    font-weight: bold;
+}
+
+.scale-four
+{
+    background: linear-gradient(to right, #f00, #fff);
+    border: 1px solid #f00;
+    width: 30%;
+}
+
+.scale-eight
+{
+    background: linear-gradient(to right, #ff0, #fff);
+    border: 1px solid #ff0;
+    width: 60%;
+}
+
+.scale-nine
+{
+    background: linear-gradient(to right, #02e86e, #fff);
+    border: 1px solid #02e86e;
+    width: 70%;
+}
+
+.scale-ten
+{
+    background: linear-gradient(to right, #02e86e, #fff);
+    border: 1px solid #02e86e;
+    width: 80%;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 10px 30px;
+    margin-top: -100px;
+    border-top: 1px solid #000;
+    font-size: .75em;
+}
+
+address
+{
+    color: #00f;
+}
