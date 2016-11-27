@@ -43,7 +43,7 @@ body
     position: relative;
     margin: 0;
     height: 300px;
-    border: 8px solid #eee;
+    padding: 8px;
     box-sizing: border-box;
 }
 
@@ -83,6 +83,7 @@ body
 
 .race-block
 {
+    cursor: pointer;
     display: block;
     border-bottom: 2px solid #a3a3a3;
     padding: 20px;
