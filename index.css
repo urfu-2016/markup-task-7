@@ -19,7 +19,7 @@ header
 
 .content
 {
-    flex: 1;
+    flex: 1 0 auto;
 }
 
 main
@@ -35,8 +35,7 @@ main .species label:hover
     background: #999;
 }
 
-.species,
-.rating-column
+.species
 {
     background: #a9a9a9;
     display: flex;
@@ -82,8 +81,8 @@ main > input
 {
     position: relative;
     display: flex;
-    height: 300px;
     margin: .5%;
+    height: 300px;
 }
 
 .cats .cat-image:nth-of-type(1),
@@ -101,6 +100,7 @@ main > input
 {
     width: 100%;
     height: 100%;
+    display: block;
     position: absolute;
 }
 
@@ -167,14 +167,15 @@ main > input:checked ~ .cats .cat-image:hover .description
 
 .rating-column
 {
-    position: relative;
+    background: #a9a9a9;
+    flex-grow: 1;
     align-self: flex-start;
-    justify-content: center;
-    text-align: left;
+    display: block;
     padding: 0 10px;
+    text-align: right;
 }
 
-.rating-column h1
+.rating-column h2
 {
     color: #eb0c0c;
     font-size: 2.4em;
@@ -182,6 +183,7 @@ main > input:checked ~ .cats .cat-image:hover .description
     margin-bottom: 20px;
     font-weight: normal;
     text-transform: uppercase;
+    text-align: left;
 }
 
 .rating-column p
@@ -193,38 +195,41 @@ main > input:checked ~ .cats .cat-image:hover .description
 
 .rating-column input.rating-down
 {
-    position: absolute;
-    margin: 52px 0 0 40%;
-    top: 0;
+    right: 0;
 }
 
 .rating-column label.rating-down
 {
-    position: absolute;
-    margin: 50px 0 0 46%;
-    top: 0;
+    right: 0;
     -moz-user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
     user-select: none;
 }
 
-.rating-column .rating-down:checked ~ .ten-rating
+.rating-items
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.rating-column .rating-down:checked ~ .rating-items > .ten-rating
 {
     order: 0;
 }
 
-.rating-column .rating-down:checked ~ .seven-rating
+.rating-column .rating-down:checked ~ .rating-items > .seven-rating
 {
     order: 1;
 }
 
-.rating-column .rating-down:checked ~ .five-rating
+.rating-column .rating-down:checked ~ .rating-items > .five-rating
 {
     order: 2;
 }
 
-.rating-column .rating-down:checked ~ .four-rating
+.rating-column .rating-down:checked ~ .rating-items > .four-rating
 {
     order: 3;
 }
