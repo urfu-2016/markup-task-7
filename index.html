@@ -10,17 +10,17 @@
         <h1>Бабуленькины котятки</h1>        
     </header>
     <main class="container">
+        <input type="radio" class="all" name="slider" id="all" checked="checked">
+        <input type="radio" class="normal" name="slider" id="normal">
+        <input type="radio" class="lazy" name="slider" id="lazy">
+        <input type="radio" class="slogger" name="slider" id="slogger">
         <nav class="menu">
-            <div class="category"><label class="choose" for="all">Все коты</label></div>
-            <div class="category"><label class="choose" for="normal">Обычные</label></div>
-            <div class="category"><label class="choose" for="lazy">Лентяи</label></div>
-            <div class="category"><label class="choose" for="slogger">Трудяги</label></div>
+            <div class="category all-cats"><label class="choose" for="all">Все коты</label></div>
+            <div class="category normal-cats"><label class="choose" for="normal">Обычные</label></div>
+            <div class="category lazy-cats"><label class="choose" for="lazy">Лентяи</label></div>
+            <div class="category slogger-cats"><label class="choose" for="slogger">Трудяги</label></div>
         </nav>
         <section class="cats">
-            <input type="radio" class="all" name="slider" id="all">
-            <input type="radio" class="normal" name="slider" id="normal">
-            <input type="radio" class="lazy" name="slider" id="lazy">
-            <input type="radio" class="slogger" name="slider" id="slogger">
             <article class="card cat-size1 slogger-cat">
                 <img src="images/sherif_cat.jpg" title="Кот-шериф" alt="Кот-шериф" >
                 <p>Шериф</p>

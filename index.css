@@ -9,7 +9,6 @@ body
     flex-direction: column;
     width: 100%;
     position: absolute;
-    min-height: 100%;
     margin: 0;
 }
 
@@ -50,19 +49,19 @@ body
 .rate1
 {
     width: 100px;
-    background: linear-gradient(to right, #008500, #fff);
+    background: linear-gradient(to right, #ff0, #fff);
 }
 
 .rate2
 {
     width: 140px;
-    background: linear-gradient(to right, #ff0, #fff);
+    background: linear-gradient(to right, #008500, #fff);
 }
 
 .rate3
 {
     width: 120px;
-    background: linear-gradient(to right, #ffd600, #fff);
+    background: linear-gradient(to right, #ff0, #fff);
 }
 
 .sort:checked ~ .first-profession
@@ -91,12 +90,12 @@ body
 {
     display: flex;
     flex-flow: row wrap;
-    align-self: flex-start;
     flex-basis: 190px;
     margin: 0 20px;
     background-color: #dcdcdc;
     padding-left: 10px;
     font-family: arial;
+    align-self: flex-start;
 }
 
 .rating h2
@@ -109,6 +108,17 @@ body
 .theme
 {
     text-align: center;
+}
+
+.card:nth-child(5),
+.card:nth-child(6)
+{
+    margin-top: 0;
+}
+
+.card:last-child
+{
+    margin-bottom: 0;
 }
 
 .menu
@@ -137,12 +147,12 @@ body
 
 .cat-size1
 {
-    flex: 1 30%;
+    flex: 1 29%;
 }
 
 .cat-size2
 {
-    flex: 1 60%;
+    flex: 1 62%;
 }
 
 .cat-size3
@@ -196,7 +206,7 @@ body
     width: 100%;
 }
 
-.cats input
+.container input
 {
     display: none;
 }
@@ -215,22 +225,30 @@ body
     flex: 1 70%;
 }
 
-.normal:checked ~ .lazy-cat,
-.normal:checked ~ .slogger-cat,
-.lazy:checked ~ .normal-cat,
-.lazy:checked ~ .slogger-cat,
-.slogger:checked ~ .normal-cat,
-.slogger:checked ~ .lazy-cat
+.all:checked ~ .menu .all-cats,
+.normal:checked ~ .menu .normal-cats,
+.lazy:checked ~ .menu .lazy-cats,
+.slogger:checked ~ .menu .slogger-cats
+{
+    background-color: #c2c2c2;
+}
+
+.normal:checked ~ .cats .lazy-cat,
+.normal:checked ~ .cats .slogger-cat,
+.lazy:checked ~ .cats .normal-cat,
+.lazy:checked ~ .cats .slogger-cat,
+.slogger:checked ~ .cats .normal-cat,
+.slogger:checked ~ .cats .lazy-cat
 {
     opacity: .5;
 }
 
-.normal:checked ~ .lazy-cat:hover p,
-.normal:checked ~ .slogger-cat:hover p,
-.lazy:checked ~ .normal-cat:hover p,
-.lazy:checked ~ .slogger-cat:hover p,
-.slogger:checked ~ .normal-cat:hover p,
-.slogger:checked ~ .lazy-cat:hover p
+.normal:checked ~ .cats .lazy-cat:hover p,
+.normal:checked ~ .cats .slogger-cat:hover p,
+.lazy:checked ~ .cats .normal-cat:hover p,
+.lazy:checked ~ .cats .slogger-cat:hover p,
+.slogger:checked ~ .cats .normal-cat:hover p,
+.slogger:checked ~ .cats .lazy-cat:hover p
 {
 
     display: none;
