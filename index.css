@@ -3,6 +3,12 @@ body
     background: #eee;
 }
 
+html,
+body
+{
+    height: 100%;
+}
+
 header
 {
     font-size: 40px;
@@ -13,6 +19,23 @@ header
 }
 
 main
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+article
+{
+    flex: 1 0 auto;
+}
+
+footer
+{
+    flex: 0 0 auto;
+}
+
+article
 {
     display: flex;
     justify-content: space-around;
@@ -116,13 +139,13 @@ section
 .fifth-cat,
 .seventh-cat
 {
-    flex-basis: 33%;
+    flex-basis: 33.3%;
 }
 
 .second-cat,
 .sixth-cat
 {
-    flex-basis: 66%;
+    flex-basis: 66.6%;
 }
 
 .eighth-cat
@@ -277,9 +300,23 @@ footer .addr
 .grid-checker:checked ~ main
 {
     display: grid;
+    grid-template-columns: 100% 100%;
+    grid-template-rows: auto 90px;
+    grid-template-areas: 'm' 'f';
+}
+
+.grid-checker:checked ~ main article
+{
+    grid-area: m;
+    display: grid;
     grid-template-columns: 20% 55% 20%;
     grid-template-rows: 550px auto;
     grid-template-areas: 'a b c' 'a b e';
+}
+
+.grid-checker:checked ~ main footer
+{
+    grid-area: f;
 }
 
 .grid-checker:checked ~ main nav
