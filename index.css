@@ -10,12 +10,14 @@ main
 
 body
 {
-    background-color: #d5d5d5;
+    background-color: #eee;
+    font-family: sans-serif;
+    min-width: 870px;
 }
 
 .items
 {
-    width: 60%;
+    width: 70%;
     display: flex;
     flex-wrap: wrap;
     margin: 0 8px;
@@ -26,7 +28,7 @@ body
     position: relative;
     margin: 0;
     height: 300px;
-    border: 8px solid #d5d5d5;
+    border: 8px solid #eee;
     box-sizing: border-box;
 }
 
@@ -45,6 +47,11 @@ body
     flex-basis: 66.6%;
 }
 
+.cat-eight
+{
+    flex-basis: 100%;
+}
+
 .picture
 {
     height: 100%;
@@ -54,24 +61,17 @@ body
 
 .race
 {
-    background-color: #aaa;
+    background-color: #d5d5d5;
     width: 15%;
-    display: flex;
-    flex-direction: column;
-    margin: 8px 0;
+    margin: 8px 0 8px 15px;
 }
 
 .race-block
 {
     display: block;
-    border-bottom: solid #808080 2px;
-    text-align: center;
-    padding: 10px 0;
-}
-
-.race-block:hover
-{
-    background-color: #808080;
+    border-bottom: 2px solid #a3a3a3;
+    padding: 20px;
+    font-size: 20px;
 }
 
 .race-input
@@ -84,9 +84,11 @@ body
     display: none;
     position: absolute;
     width: 80%;
-    background: rgba(0, 0, 0, .7);
-    bottom: 3%;
+    background: rgba(0, 0, 0, .4);
+    bottom: 20px;
     color: #fff;
+    font-size: 25px;
+    padding: 10px 0 10px 10px;
 }
 
 .item:hover .cat-info
@@ -97,9 +99,11 @@ body
 input[id='siam']:checked ~ .race label[for='siam'],
 input[id='brit']:checked ~ .race label[for='brit'],
 input[id='angora']:checked ~ .race label[for='angora'],
-input[id='maine-coon']:checked ~ .race label[for='maine-coon']
+input[id='maine-coon']:checked ~ .race label[for='maine-coon'],
+.race-block:hover
 {
-    background-color: #808080;
+    color: #fff;
+    background-color: #555;
 }
 
 input[id='siam']:checked ~ .items .siam,
@@ -126,25 +130,24 @@ input[id='maine-coon']:checked ~ .items .maine-coon:hover .cat-info
 
 .rating-header
 {
-    text-align: center;
-    margin: 10px 0;
+    margin: 0 0 10px;
+    color: #d61e14;
+    font: 30px sans-serif;
 }
 
 .rating
 {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
+    width: 15%;
     align-self: flex-start;
-    background-color: #aaa;
-    margin-top: 8px;
-    padding: 10px;
+    background-color: #d5d5d5;
+    margin: 8px 15px 0 0;
+    padding: 10px 20px 15px 15px;
 }
 
 .race-name
 {
     width: 100%;
-    margin: 10px 0 0;
+    margin: 15px 0 5px;
 }
 
 .value-five
@@ -155,20 +158,25 @@ input[id='maine-coon']:checked ~ .items .maine-coon:hover .cat-info
 
 .value-eight
 {
-    width: 70%;
+    width: 64%;
     background: linear-gradient(to right, #e6e638, #fff);
 }
 
 .value-nine
 {
-    width: 80%;
+    width: 72%;
     background: linear-gradient(to right, #67a917, #fff);
 }
 
 .value-ten
 {
-    width: 90%;
+    width: 80%;
     background: linear-gradient(to right, #67a917, #fff);
+}
+
+.digit-value
+{
+    font-weight: bold;
 }
 
 .item-rating
@@ -178,36 +186,43 @@ input[id='maine-coon']:checked ~ .items .maine-coon:hover .cat-info
     flex-wrap: wrap;
 }
 
+.rating-block
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
 .rating-value
 {
     height: 20px;
 }
 
-input[id='rating-order']:checked ~ .rating-nine
+input[id='rating-order']:checked ~ .rating-block .rating-nine
 {
     order: 1;
 }
 
-input[id='rating-order']:checked ~ .rating-eight
+input[id='rating-order']:checked ~ .rating-block .rating-eight
 {
     order: 2;
 }
 
-input[id='rating-order']:checked ~ .rating-ten
+input[id='rating-order']:checked ~ .rating-block .rating-ten
 {
     order: 0;
 }
 
-input[id='rating-order']:checked ~ .rating-five
+input[id='rating-order']:checked ~ .rating-block .rating-five
 {
     order: 5;
 }
 
-footer
+.footer
 {
     display: flex;
     margin-top: 8px;
-    border-top: solid #808080;
+    border-top: solid #a3a3a3;
     justify-content: space-between;
     padding: 0 20px;
 }
@@ -218,10 +233,23 @@ footer
     margin-top: 20px;
 }
 
+.company-info,
+.company-address
+{
+    font: normal 20px sans-serif;
+}
+
+.rating-order
+{
+    float: right;
+    font-size: 15px;
+}
+
 .race-block,
 .rating-order
 {
+    -webkit-user-select: none;
+    -ms-user-select: none;
     -moz-user-select: none;
     user-select: none;
-    cursor: pointer;
 }
