@@ -77,13 +77,13 @@ main
     opacity: 1;
 }
 
-.american-input:checked ~ .gallery .american-description span,
-.bengal-input:checked ~ .gallery .bengal-description span,
-.asher-input:checked ~ .gallery .asher-description span,
-.kuril-input:checked ~ .gallery .kuril-description span,
-.munchkin-input:checked ~ .gallery .munchkin-description span
+.american-input:not(:checked) ~ .gallery .american-description,
+.bengal-input:not(:checked) ~ .gallery .bengal-description,
+.asher-input:not(:checked) ~ .gallery .asher-description,
+.kuril-input:not(:checked) ~ .gallery .kuril-description,
+.munchkin-input:not(:checked) ~ .gallery .munchkin-description
 {
-    display: block;
+    display: none;
 }
 
 .rating-aside
@@ -133,7 +133,6 @@ section > div:nth-child(8n)
 span
 {
     font-weight: 800;
-    display: none;
 }
 
 .block-picture:hover > .description
@@ -149,7 +148,7 @@ span
 
 .rating-header
 {
-    font: 20pt sans-serif;
+    font: 20px sans-serif;
     text-align: center;
     color: #f00;
 }
