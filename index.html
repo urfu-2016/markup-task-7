@@ -7,10 +7,6 @@
 </head>
 <body class="body-with-footer">
 
-    <header class="main-header">
-        <h1 class="header-title">Бабуленькины котятки</h1>
-    </header>
-
     <div class="body-flex">
         <input class="hidden-input non-selected" type="radio" name="cat-category" id="none-category" checked>
         <input class="hidden-input category1-selected" type="radio" name="cat-category" id="category1">
@@ -18,12 +14,16 @@
         <input class="hidden-input category3-selected" type="radio" name="cat-category" id="category3">
         <input class="hidden-input category4-selected" type="radio" name="cat-category" id="category4">
 
+        <header class="main-header">
+            <h1 class="header-title">Бабуленькины котятки</h1>
+        </header>
+
         <nav class="navigator main-element">
             <ul class="menu">
-                <li><label for="category1" class="menu-item category1">Абиссинская</label></li>
-                <li><label for="category2" class="menu-item category2">Британская</label></li>
-                <li><label for="category3" class="menu-item category3">Русская голубая</label></li>
-                <li><label for="category4" class="menu-item category4">Сиамская</label></li>
+                <li><label for="category1" class="menu-item">Абиссинская</label></li>
+                <li><label for="category2" class="menu-item">Британская</label></li>
+                <li><label for="category3" class="menu-item">Русская голубая</label></li>
+                <li><label for="category4" class="menu-item">Сиамская</label></li>
                 <li><label for="none-category" class="menu-item">Сбросить</label></li>
             </ul>
         </nav>
@@ -32,49 +32,41 @@
             <div class="img-small photo-box">
                 <img class="photo" src="img/abissinskaya1.jpg" alt="Песчинка">
                 <p class="hint">Песчинка, 5 месяцев</p>
-                <div class="block-box"></div>
             </div>
 
             <div class="img-long photo-box">
                 <img class="photo" src="img/britanskaya2.jpg" alt="Ария">
                 <p class="hint">Ария, 2 месяца</p>
-                <div class="block-box"></div>
             </div>
 
             <div class="img-small photo-box">
                 <img class="photo" src="img/russkaya_golubaya1.jpg" alt="Пепел">
                 <p class="hint">Пепел, 3 года</p>
-                <div class="block-box"></div>
             </div>
 
             <div class="img-small photo-box">
                 <img class="photo" src="img/abissinska2.jpg" alt="Янтарь">
                 <p class="hint">Янтарь, 5 лет</p>
-                <div class="block-box"></div>
             </div>
 
             <div class="img-small photo-box">
                 <img class="photo" src="img/siamskaya1.jpg" alt="Сэйра">
                 <p class="hint">Сэйра, 8 лет</p>
-                <div class="block-box"></div>
             </div>
 
             <div class="img-long photo-box">
                 <img class="photo" src="img/russkaya_golubaya2.jpg" alt="Серый">
                 <p class="hint">Серый, 9 лет</p>
-                <div class="block-box"></div>
             </div>
 
             <div class="img-small photo-box">
                 <img class="photo" src="img/britanskaya1.jpg" alt="Тай">
                 <p class="hint">Тай, 5 месяцев</p>
-                <div class="block-box"></div>
             </div>
 
             <div class="img-longest photo-box">
                 <img class="photo" src="img/siamskaya2.jpg" alt="Лапушка">
                 <p class="hint">Лапушка, 2 года</p>
-                <div class="block-box"></div>
             </div>
         </main>
 
@@ -82,7 +74,7 @@
         <h2 class="rating-title">Рейтинг</h2>
 
         <input type="checkbox" class="sort-toggle" id="sorting">
-        По убыванию
+            <label for="sorting">По убыванию</label>
 
         <div class="rating-categories">
             <div class="rating-category1">
