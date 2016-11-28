@@ -18,6 +18,8 @@ main
 {
     width: 50%;
     height: 120%;
+    margin: 0;
+    padding: 0;
     display: inline-flex;
     flex-wrap: wrap;
     align-content: space-between;
@@ -96,7 +98,7 @@ main
 
 img
 {
-    height: 200px;
+    height: 100%;
 }
 
 section > div:nth-child(8n+1),
@@ -108,6 +110,7 @@ section > div:nth-child(8n+7)
     position: relative;
     width: 30%;
     overflow: hidden;
+    margin: 2.5% 0;
 }
 
 section > div:nth-child(8n+2),
@@ -116,6 +119,7 @@ section > div:nth-child(8n+6)
     position: relative;
     width: 65%;
     overflow: hidden;
+    margin: 2.5% 0;
 }
 
 section > div:nth-child(8n)
@@ -123,6 +127,18 @@ section > div:nth-child(8n)
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin: 2.5% 0;
+}
+
+section > div:nth-child(1),
+section > div:nth-child(2)
+{
+    margin: 0 0 2.5% ;
+}
+
+section > div:last-child
+{
+    margin: 2.5% 0 0;
 }
 
 .description
@@ -133,6 +149,11 @@ section > div:nth-child(8n)
 span
 {
     font-weight: 800;
+}
+
+.block-picture
+{
+    height: 200px;
 }
 
 .block-picture:hover > .description
@@ -211,9 +232,20 @@ span
     color: #00f;
 }
 
+.push,
+.footer
+{
+    display: flex;
+    height: 50px;
+    margin: 0;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+}
+
 footer
 {
     display: flex;
+    max-height: 50px;
     justify-content: space-between;
     border-top: 1px solid #000;
 }
