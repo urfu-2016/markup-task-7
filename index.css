@@ -1,10 +1,10 @@
 body
 {
+    min-width: 700px;
     margin: 0;
     padding: 0;
     background: #cdb8fa;
-    font-family: Cambria;
-
+    font-family: Arial, sans-serif;
 }
 
 header h1
@@ -54,7 +54,6 @@ footer,
 
 .content
 {
-    min-width: 300px;
     flex: 0 0 60%;
     flex-wrap: wrap;
     margin: 0 5px;
@@ -113,7 +112,7 @@ input[id='all']:not(:checked) ~ [id='other']:not(:checked) ~ .content .other
 
 input[id='ben']:checked ~ .content .ben:hover .about,
 input[id='sav']:checked ~ .content .sav:hover .about,
-input[id='other']:checked ~ .content.other:hover .about,
+input[id='other']:checked ~ .content .other:hover .about,
 input[id='all']:checked ~ .content .cat:hover .about
 {
     display: inline-flex;
@@ -140,15 +139,9 @@ input[id='all']:checked ~ .content .cat:hover .about
     margin: 10px;
 }
 
-.rating-info p
-{
-    margin: 5px;
-    padding: 0;
-}
-
 .rating-info div
 {
-    padding-top: 5px;
+    padding-top: 10px;
     flex: 0 0 100%;
 }
 
@@ -177,13 +170,14 @@ input[id='rating-input']:checked ~ .rating-info
     flex-wrap: wrap;
 }
 
-.value
+.rating__value
 {
     height: 20px;
 }
 
-.value:before
+.rating__value:before
 {
+    margin-right: 5px;
     height: 100%;
     float: left;
     content: '';
@@ -191,26 +185,26 @@ input[id='rating-input']:checked ~ .rating-info
     display: inline-block;
 }
 
-.value-10 .value:before,
-.value-9 .value:before,
-.value-8 .value:before
+.value-10 .rating__value:before,
+.value-9 .rating__value:before,
+.value-8 .rating__value:before
 {
     background: linear-gradient(to right, #01df74, #fff);
     border: 1px solid #01df74;
 }
 
-.value-7 .value:before,
-.value-6 .value:before,
-.value-5 .value:before
+.value-7 .rating__value:before,
+.value-6 .rating__value:before,
+.value-5 .rating__value:before
 {
     background: linear-gradient(to right, #f7fe2e, #fff);
     border: 1px solid #f7fe2e;
 }
 
-.value-4 .value:before,
-.value-3 .value:before,
-.value-2 .value:before,
-.value-1 .value:before
+.value-4 .rating__value:before,
+.value-3 .rating__value:before,
+.value-2 .rating__value:before,
+.value-1 .rating__value:before
 {
     background: linear-gradient(to right, #c50400, #fff);
     border: 1px solid #c50400;
@@ -221,9 +215,9 @@ input[id='rating-input']:checked ~ .rating-info
     order: 1;
 }
 
-.value-10 .value:before
+.value-10 .rating__value:before
 {
-    width: 80%;
+    width: 76%;
 }
 
 .value-9
@@ -231,9 +225,9 @@ input[id='rating-input']:checked ~ .rating-info
     order: 2;
 }
 
-.value-9 .value:before
+.value-9 .rating__value:before
 {
-    width: 75%;
+    width: 73%;
 }
 
 .value-8
@@ -241,7 +235,7 @@ input[id='rating-input']:checked ~ .rating-info
     order: 3;
 }
 
-.value-8 .value:before
+.value-8 .rating__value:before
 {
     width: 65%;
 }
@@ -251,7 +245,7 @@ input[id='rating-input']:checked ~ .rating-info
     order: 4;
 }
 
-.value-7 .value:before
+.value-7 .rating__value:before
 {
     width: 55%;
 }
@@ -261,7 +255,7 @@ input[id='rating-input']:checked ~ .rating-info
     order: 5;
 }
 
-.value-6 .value:before
+.value-6 .rating__value:before
 {
     width: 45%;
 }
@@ -271,7 +265,7 @@ input[id='rating-input']:checked ~ .rating-info
     order: 6;
 }
 
-.value-5 .value:before
+.value-5 .rating__value:before
 {
     width: 40%;
 }
@@ -281,7 +275,7 @@ input[id='rating-input']:checked ~ .rating-info
     order: 7;
 }
 
-.value-4 .value:before
+.value-4 .rating__value:before
 {
     width: 35%;
 }
@@ -291,7 +285,7 @@ input[id='rating-input']:checked ~ .rating-info
     order: 8;
 }
 
-.value-3 .value:before
+.value-3 .rating__value:before
 {
     width: 25%;
 }
@@ -301,7 +295,7 @@ input[id='rating-input']:checked ~ .rating-info
     order: 9;
 }
 
-.value-2 .value:before
+.value-2 .rating__value:before
 {
     width: 15%;
 }
@@ -311,7 +305,7 @@ input[id='rating-input']:checked ~ .rating-info
     order: 10;
 }
 
-.value-1 .value:before
+.value-1 .rating__value:before
 {
     width: 5%;
 }
@@ -324,10 +318,11 @@ footer
     justify-content: space-between;
     padding: 5px 5px 5px 15px;
     border-top: 2px #6e6e6e solid;
+    margin: auto;
 }
 
-.address
+address
 {
-    font-style: italic;
+    margin-top: 15px;
     color: #1e30c9;
 }
