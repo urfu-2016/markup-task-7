@@ -111,12 +111,23 @@ body
     text-align: center;
 }
 
+.card:nth-child(1),
+.card:nth-child(2)
+{
+    margin-top: 0;
+}
+
+.card:last-child
+{
+    margin-bottom: 0;
+}
+
 .menu
 {
     background-color: #dcdcdc;
     margin: 0 8px;
     flex-basis: 200px;
-    min-width: 150px;
+    min-width: 100px;
 }
 
 .category
@@ -135,35 +146,24 @@ body
     background-color: #c2c2c2;
 }
 
-.line1,
-.line2,
-.line3
+.card:first-child,
+.card:nth-child(3),
+.card:nth-child(4),
+.card:nth-child(5),
+.card:nth-child(7)
 {
-    display: flex;
-    flex-grow: 1;
+    flex: 1 29%;
 }
 
-.line1 .card:nth-child(2),
-.line3 .card:first-child
+.card:nth-child(2),
+.card:nth-child(6)
 {
-    flex: 62%;
+    flex: 1 62%;
 }
 
-.line2 .card,
-.line3 .card:nth-child(2),
-.line1 .card:first-child
+.card:nth-child(8)
 {
-    flex: 29%;
-}
-
-.maket:first-child .card
-{
-    margin-top: 0;
-}
-
-.maket:last-child .card
-{
-    margin-bottom: 0;
+    flex: 1 100%;
 }
 
 .card
@@ -172,7 +172,7 @@ body
     align-items: center;
     position: relative;
     overflow: hidden;
-    height: 230px;
+    height: 250px;
     margin: 8px;
 }
 
