@@ -2,7 +2,95 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Бабуленькины котята</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+<header><h1>Котятки</h1></header>
+<main>
+    <input type="radio" class="input" name="input" id="all" checked>
+    <input type="radio" class="input" name="input" id="ben">
+    <input type="radio" class="input" name="input" id="sav">
+    <input type="radio" class="input" name="input" id="other">
+    <nav class="button-choice">
+        <label class="label" for="all" id="all-label">Все</label>
+        <label class="label" for="ben" id="ben-label">Бенгальская</label>
+        <label class="label" for="sav" id="sav-label">Саванна</label>
+        <label class="label" for="other" id="other-label">Другая</label>
+    </nav>
+    <section class="content">
+        <div class="cat sav horizontal">
+            <div class="about">
+                Власа, 1 год
+            </div>
+            <img src="img/savannah3.jpg" class="img-cat" alt="Власа">
+        </div>
+        <div class="cat ben vertical">
+            <div class="about">
+                Алиса, 2 года
+            </div>
+            <img src="img/ben3.jpg" class="img-cat" alt="Алиса">
+        </div>
+        <div class="cat other vertical">
+            <div class="about">
+                Марсель, 11 месяцев
+            </div>
+            <img src="img/other1.jpg" class="img-cat" alt="Марсель">
+        </div>
+        <div class="cat sav vertical">
+            <div class="about">
+                Багира, 3 года
+            </div>
+            <img src="img/Savannah1.jpg" class="img-cat" alt="Багира">
+        </div>
+        <div class="cat ben vertical">
+            <div class="about">
+                Зерон, 2 месяца
+            </div>
+            <img src="img/ben2.jpg" class="img-cat" alt="Зерон">
+        </div>
+        <div class="cat other vertical">
+            <div class="about">
+                Черный, 3 месяца
+            </div>
+            <img src="img/other2.jpg" class="img-cat" alt="Черный">
+        </div>
+        <div class="cat sav horizontal">
+            <div class="about">
+                Палас, 1,5 месяца
+            </div>
+            <img src="img/Savannah2.jpg" class="img-cat" alt="Палас">
+        </div>
+        <div class="cat ben down">
+            <div class="about">
+                Пятнышко, 4 года
+            </div>
+            <img src="img/ben1.JPG" class="img-cat" alt="Пятнышко">
+        </div>
+    </section>
+    <section class="rating">
+        <h2>Рейтинг</h2>
+        <label id="rating-label" for="rating-input">По убыванию</label>
+        <input type="checkbox" id="rating-input">
+        <div class="rating-info">
+            <div class="value-7">
+                    Бенгальская
+                <div class="rating__value">7</div>
+            </div>
+            <div class="value-4">
+                    Другая
+                <div class="rating__value">4</div>
+            </div>
+            <div class="value-10">
+                    Саванна
+                <div class="rating__value">10</div>
+            </div>
+        </div>
+    </section>
+</main>
+<footer>
+    <p>&copy; ООО Бабуленькины котятки, 2015</p>
+    <address>Наш адрес: улица Котовая, д.5</address >
+</footer>
 </body>
 </html>
