@@ -146,22 +146,27 @@ body
     background-color: #c2c2c2;
 }
 
-.card:first-child,
-.card:nth-child(3),
-.card:nth-child(4),
-.card:nth-child(5),
-.card:nth-child(7)
-{
-    flex: 1 29%;
-}
-
-.card:nth-child(2),
-.card:nth-child(6)
+.card:nth-child(2n)
 {
     flex: 1 62%;
 }
 
-.card:nth-child(8)
+.card:first-child,
+.card:nth-child(3n),
+.card:nth-child(4n),
+.card:nth-child(5n),
+.card:nth-child(7n),
+.card:nth-child(9n)
+{
+    flex: 1 29%;
+}
+
+.card:nth-child(6n)
+{
+    flex: 1 62%;
+}
+
+.card:nth-child(8n)
 {
     flex: 1 100%;
 }
