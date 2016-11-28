@@ -45,24 +45,16 @@ body
     height: 300px;
     padding: 8px;
     box-sizing: border-box;
-}
-
-.cat-one,
-.cat-three,
-.cat-four,
-.cat-five,
-.cat-seven
-{
     flex-basis: 33.3%;
 }
 
-.cat-two,
-.cat-six
+.item:nth-of-type(8n+2),
+.item:nth-of-type(8n+6)
 {
     flex-basis: 66.6%;
 }
 
-.cat-eight
+.item:nth-of-type(8n)
 {
     flex-basis: 100%;
 }
