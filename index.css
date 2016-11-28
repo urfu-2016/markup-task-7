@@ -1,0 +1,263 @@
+.main-header
+{
+    text-align: center;
+}
+
+body,
+html
+{
+    height: 100%;
+    margin: 0;
+}
+
+.content
+{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main
+{
+    display: flex;
+    margin-bottom: auto;
+}
+
+body
+{
+    background-color: #eee;
+    font-family: sans-serif;
+    min-width: 870px;
+}
+
+.items
+{
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 8px;
+}
+
+.item
+{
+    position: relative;
+    margin: 0;
+    height: 300px;
+    padding: 8px;
+    box-sizing: border-box;
+    flex-basis: 33.3%;
+}
+
+.item:nth-of-type(8n+2),
+.item:nth-of-type(8n+6)
+{
+    flex-basis: 66.6%;
+}
+
+.item:nth-of-type(8n)
+{
+    flex-basis: 100%;
+}
+
+.picture
+{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.race
+{
+    background-color: #d5d5d5;
+    width: 15%;
+    margin: 8px 0 8px 15px;
+}
+
+.race-block
+{
+    cursor: pointer;
+    display: block;
+    border-bottom: 2px solid #a3a3a3;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.race-input
+{
+    display: none;
+}
+
+.cat-info
+{
+    display: none;
+    position: absolute;
+    width: 80%;
+    background: rgba(0, 0, 0, .4);
+    bottom: 20px;
+    color: #fff;
+    font-size: 25px;
+    padding: 10px 0 10px 10px;
+}
+
+.item:hover .cat-info
+{
+    display: block;
+}
+
+input[id='siam']:checked ~ .race label[for='siam'],
+input[id='brit']:checked ~ .race label[for='brit'],
+input[id='angora']:checked ~ .race label[for='angora'],
+input[id='maine-coon']:checked ~ .race label[for='maine-coon'],
+.race-block:hover
+{
+    color: #fff;
+    background-color: #555;
+}
+
+input[id='siam']:checked ~ .items .siam,
+input[id='brit']:checked ~ .items .brit,
+input[id='angora']:checked ~ .items .angora,
+input[id='maine-coon']:checked ~ .items .maine-coon,
+input[id='siam']:checked ~ .items .siam:hover .cat-info,
+input[id='brit']:checked ~ .items .brit:hover .cat-info,
+input[id='angora']:checked ~ .items .angora:hover .cat-info,
+input[id='maine-coon']:checked ~ .items .maine-coon:hover .cat-info
+{
+    opacity: 1;
+}
+
+.race-input:checked ~ .items .item
+{
+    opacity: .5;
+}
+
+.race-input:checked ~ .items .item .cat-info
+{
+    opacity: 0;
+}
+
+.rating-header
+{
+    margin: 0 0 10px;
+    color: #d61e14;
+    font: 30px sans-serif;
+}
+
+.rating
+{
+    width: 15%;
+    align-self: flex-start;
+    background-color: #d5d5d5;
+    margin: 8px 15px 0 0;
+    padding: 10px 20px 15px 15px;
+}
+
+.race-name
+{
+    width: 100%;
+    margin: 15px 0 5px;
+}
+
+.value-five
+{
+    width: 40%;
+    background: linear-gradient(to right, #e6221c, #fff);
+}
+
+.value-eight
+{
+    width: 64%;
+    background: linear-gradient(to right, #e6e638, #fff);
+}
+
+.value-nine
+{
+    width: 72%;
+    background: linear-gradient(to right, #67a917, #fff);
+}
+
+.value-ten
+{
+    width: 80%;
+    background: linear-gradient(to right, #67a917, #fff);
+}
+
+.digit-value
+{
+    font-weight: bold;
+}
+
+.item-rating
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.rating-block
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.rating-value
+{
+    height: 20px;
+}
+
+input[id='rating-order']:checked ~ .rating-block .rating-nine
+{
+    order: 1;
+}
+
+input[id='rating-order']:checked ~ .rating-block .rating-eight
+{
+    order: 2;
+}
+
+input[id='rating-order']:checked ~ .rating-block .rating-ten
+{
+    order: 0;
+}
+
+input[id='rating-order']:checked ~ .rating-block .rating-five
+{
+    order: 5;
+}
+
+.footer
+{
+    display: flex;
+    margin-top: 8px;
+    border-top: solid #a3a3a3;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.company-address
+{
+    color: #6495ed;
+    margin-top: 20px;
+}
+
+.company-info,
+.company-address
+{
+    font: normal 20px sans-serif;
+}
+
+.rating-order
+{
+    float: right;
+    font-size: 15px;
+}
+
+.race-block,
+.rating-order
+{
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}

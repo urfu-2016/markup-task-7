@@ -2,7 +2,89 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <title>Котики</title>
 </head>
 <body>
+<div class="content">
+    <h1 class="main-header">Бабуленькины котятки</h1>
+    <main>
+        <input type="checkbox" class="race-input" id="siam" name="race">
+        <input type="checkbox" class="race-input" id="maine-coon" name="race">
+        <input type="checkbox" class="race-input" id="angora" name="race">
+        <input type="checkbox" class="race-input" id="brit" name="race">
+        <nav class="race">
+            <label for="siam" class="race-block">Сиамские</label>
+            <label for="maine-coon" class="race-block">Мейн-Кун</label>
+            <label for="angora" class="race-block">Турецкая ангора</label>
+            <label for="brit" class="race-block">Британские</label>
+        </nav>
+        <section class="items">
+            <figure class="item brit">
+                <img class="picture" src="pictures/1.jpg" alt="Кузя">
+                <figcaption class="cat-info">Кузя, 2 месяца</figcaption>
+            </figure>
+            <figure class="item angora">
+                <img class="picture" src="pictures/2.jpg" alt="Снежинка">
+                <figcaption class="cat-info">Снежинка, 1 год</figcaption>
+            </figure>
+            <figure class="item siam">
+                <img class="picture" src="pictures/3.jpg" alt="Тимоша">
+                <figcaption class="cat-info">Тимоша, 1 месяц</figcaption>
+            </figure>
+            <figure class="item brit">
+                <img class="picture" src="pictures/4.jpg" alt="Боня">
+                <figcaption class="cat-info">Боня, 3 месяца</figcaption>
+            </figure>
+            <figure class="item maine-coon">
+                <img class="picture" src="pictures/5.jpg" alt="Чип и Дейл">
+                <figcaption class="cat-info">Чип и Дейл, 2 месяца</figcaption>
+            </figure>
+            <figure class="item brit">
+                <img class="picture" src="pictures/6.jpg" alt="Тильда">
+                <figcaption class="cat-info">Тильда, 1 год</figcaption>
+            </figure>
+            <figure class="item angora">
+                <img class="picture" src="pictures/7.jpg" alt="Снежок">
+                <figcaption class="cat-info">Снежок, 2 месяца</figcaption>
+            </figure>
+            <figure class="item maine-coon">
+                <img class="picture" src="pictures/8.jpg" alt="Рыжик">
+                <figcaption class="cat-info">Рыжик, 4 месяца</figcaption>
+            </figure>
+        </section>
+        <aside class="rating">
+            <h2 class="rating-header">РЕЙТИНГ</h2>
+            <input type="checkbox" class="rating-order" id="rating-order" name="rating">
+            <label for="rating-order" class="rating-order">По убыванию</label>
+            <div class="rating-block">
+                <div class="rating-nine item-rating">
+                    <p class="race-name">Британские</p>
+                    <div class="value-nine rating-value"></div>
+                    <span class="digit-value">9</span>
+                </div>
+                <div class="rating-five item-rating">
+                    <p class="race-name">Мейн-Кун</p>
+                    <div class="value-five rating-value"></div>
+                    <span class="digit-value">5</span>
+                </div>
+                <div class="rating-eight item-rating">
+                    <p class="race-name">Сиамские</p>
+                    <div class="value-eight rating-value"></div>
+                    <span class="digit-value">8</span>
+                </div>
+                <div class="rating-ten item-rating">
+                    <p class="race-name">Турецкая ангора</p>
+                    <div class="value-ten rating-value"></div>
+                    <span class="digit-value">10</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer">
+        <p class="company-info">&copy; OOO Бабуленькины котятки, 2016</p>
+        <address class="company-address">ул. Котовая, д. 5</address>
+    </footer>
+</div>
 </body>
 </html>
