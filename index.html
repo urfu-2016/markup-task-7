@@ -2,7 +2,89 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <title>Ну, купите котиков!</title>
 </head>
 <body>
+<header>
+    <h1>Бабуленькины котятки</h1>
+</header>
+<div class="wrapper">
+    <main>
+        <input name="choiceCat" type="radio" value="type1" id="type1" class="input type1">
+        <input name="choiceCat" type="radio" value="type2" id="type2" class=" input type2">
+        <input name="choiceCat" type="radio" value="type3" id="type3" class="input type3">
+        <input name="choiceCat" type="radio" value="type4" id="type4" class="input type4">
+        <input name="choiceCat" type="radio" value="typeAll" id="typeAll" class="input typeAll">
+        <div class="navigation">
+            <div class="breed abissian"><label for="type1">Абиссинская</label></div>
+            <div class="breed britain"><label for="type2">Британская</label></div>
+            <div class="breed rusblue"><label for="type3">Русская голубая</label></div>
+            <div class="breed siam"><label for="type4">Сиамская</label></div>
+            <div class="breed all"><label for="typeAll">Выбрать всех</label></div>
+        </div>
+        <div class="gallery">
+            <div class="cell breed3 catSizeSmall">
+                <img src="russian_blue2.jpg" alt="Фото Пупсика" title="Пупсик" class="imgCat">
+                <div class="description">Пупсик, 3 месяца</div>
+            </div>
+            <div class="cell breed4 catSizeAverage">
+                <img src="siamskaya1.jpg" alt="Фото Красотки" title="Красотка" class="imgCat">
+                <div class="description">Красотка, 2 годика</div>
+            </div>
+            <div class="cell breed4 catSizeSmall">
+                <img src="siamskaya2.jpg" alt="Фото Ляли" title="Ляля" class="imgCat">
+                <div class="description">Ляля, 1 годик</div>
+            </div>
+            <div class="cell breed2 catSizeSmall">
+                <img src="britanskaya2.jpg" alt="Фото Близняток"
+                    title="Близнятки" class="imgCat">
+                <div class="description">Близнята, 7 месяцев</div>
+            </div>
+            <div class="cell breed1 catSizeSmall">
+                <img src="abyssinian1.jpg" alt="Фото Заботушки" title="Заботушка" class="imgCat">
+                <div class="description">Заботушка, 4 годика</div>
+            </div>
+            <div class="cell breed2 catSizeAverage">
+                <img src="britanskaya1.jpg" alt="Фото Плюшечки"
+                    title="Плюшечка" class="imgCat">
+                <div class="description">Плюшечка, 6 годиков</div>
+            </div>
+            <div class="cell breed3 catSizeSmall">
+                <img src="russian_blue1.jpg" alt="Фото Шустрика" title="Шустрик" class="imgCat">
+                <div class="description">Шустрик, 1 годик</div>
+            </div>
+            <div class="cell breed1 catSizeBig">
+                <img src="abyssinian2.jpg" alt="Фото Хищника" title="Хищник" class="imgCat">
+                <div class="description">Хищник, 10 месяцев</div>
+            </div>
+        </div>
+        <div class="rating">
+            <h3>Рейтинг</h3>
+            По убыванию <input type="checkbox">
+            <div class="catrating second">
+                <p>Абиссинская</p>
+                <div class="scale"><div class="count nine"></div>9</div>
+            </div>
+            <div class="catrating third">
+                <p>Британская</p>
+                <div class="scale"><div class="count eight"></div>8</div>
+            </div>
+            <div class="catrating first">
+                <p>Русская голубая</p>
+                <div class="scale"><div class="count ten"></div>10</div>
+            </div>
+            <div class="catrating fourth">
+                <p>Сиамская</p>
+                <div class="scale"><div class="count four"></div>4</div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="firm">ООО Миленькие котятки, 2016</div>
+        <address>Наш адрес: ул. Котейкина, д.3</address>
+    </footer>
+</div>
 </body>
 </html>

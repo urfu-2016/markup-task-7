@@ -1,0 +1,230 @@
+html
+{
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body
+{
+    background-color: #fae291;
+    color: #322703;
+    height: 100%;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header
+{
+    text-align: center;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+.navigation
+{
+    display: flex;
+    flex-direction: column;
+    background-color: #fccc7a;
+    padding-top: 3px;
+}
+
+.breed
+{
+    padding: 5px;
+    border-bottom: 1px solid #443504;
+    font-size: 1.2em;
+}
+
+.breed:hover
+{
+    background-color: #eeb046;
+}
+
+.breed label
+{
+    cursor: pointer;
+}
+
+.gallery
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: #fccc7a;
+    width: 860px;
+}
+
+.input
+{
+    display: none;
+}
+
+.cell
+{
+    margin: 3px;
+    position: relative;
+    height: 250px;
+}
+
+.cell > .description
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(252,204,122,.3);
+    padding: 7px 15px;
+    font-size: 1.2em;
+    font-weight: 600;
+    bottom: 15px;
+}
+
+.cell:hover > .description
+{
+    display: block;
+}
+
+.catSizeAverage
+{
+    width: 566px;
+}
+
+.catSizeSmall
+{
+    width: 280px;
+}
+
+.catSizeBig
+{
+    width: 852px;
+}
+
+.imgCat
+{
+    width: inherit;
+    height: 100%;
+    object-fit: cover;
+}
+
+.type1:checked ~ .gallery .cell:not(.breed1),
+.type2:checked ~ .gallery .cell:not(.breed2),
+.type3:checked ~ .gallery .cell:not(.breed3),
+.type4:checked ~ .gallery .cell:not(.breed4)
+{
+    opacity: .5;
+    transition: opacity 1s;
+}
+
+.type1:checked ~ .gallery .cell:not(.breed1) .description,
+.type2:checked ~ .gallery .cell:not(.breed2) .description,
+.type3:checked ~ .gallery .cell:not(.breed3) .description,
+.type4:checked ~ .gallery .cell:not(.breed4) .description
+{
+    display: none;
+}
+
+.type1:checked ~ .navigation .abissian,
+.type2:checked ~ .navigation .britain,
+.type3:checked ~ .navigation .rusblue,
+.type4:checked ~ .navigation .siam,
+.typeAll:checked ~ .navigation .all
+{
+    background-color: #eeb046;
+    text-shadow: 0 0 2px #3b170b;
+}
+
+.typeAll:checked ~ .gallery .cell
+{
+    opacity: 1;
+    transition: opacity 1s;
+}
+
+.rating
+{
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 0 10px;
+    background-color: #fccc7a;
+}
+
+.catrating
+{
+    margin: 10px 0;
+}
+
+.count
+{
+    margin-right: 4px;
+    height: 15px;
+    border: .5px solid grey;
+    display: inline-block;
+}
+
+.scale
+{
+    white-space: nowrap;
+}
+
+.scale .four
+{
+    width: 30%;
+    background: linear-gradient(to right, #df0101, #fff);
+}
+
+.scale .eight
+{
+    width: 60%;
+    background: linear-gradient(to right, #f7ef01, #fff);
+}
+
+.scale .nine
+{
+    width: 70%;
+    background: linear-gradient(to right, #04b404, #fff);
+}
+
+.scale .ten
+{
+    width: 80%;
+    background: linear-gradient(to right, #04b404, #fff);
+}
+
+input:checked ~ .first
+{
+    order: 1;
+}
+
+input:checked ~ .second
+{
+    order: 2;
+}
+
+input:checked ~ .third
+{
+    order: 3;
+}
+
+input:checked ~ .fourth
+{
+    order: 4;
+}
+
+footer
+{
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-top: 1px solid  #322703;
+}
