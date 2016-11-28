@@ -1,0 +1,372 @@
+body
+{
+    background: #eee;
+}
+
+html,
+body
+{
+    height: 100%;
+}
+
+main
+{
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+article
+{
+    flex-basis: 100%;
+}
+
+footer
+{
+    flex-basis: 100%;
+    align-self: flex-end;
+}
+
+article
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+.checkbox-cat
+{
+    display: none;
+}
+
+.kind-cat
+{
+    display: block;
+    font-size: 24px;
+    padding: 5% 10px;
+    transition: .5s;
+}
+
+nav hr
+{
+    margin: 0;
+}
+
+nav,
+aside
+{
+    background-color: #ccc;
+    width: 20%;
+}
+
+.kind-cat:hover
+{
+    background-color: #999;
+}
+
+.input-1:checked ~ nav .kind-1,
+.input-2:checked ~ nav .kind-2,
+.input-3:checked ~ nav .kind-3,
+.input-4:checked ~ nav .kind-4
+{
+    background-color: #777;
+}
+
+.checkbox-cat:checked ~ section .cat img
+{
+    opacity: .6;
+}
+
+.input-1:checked ~ section .mein-kun img,
+.input-2:checked ~ section .oriental img,
+.input-3:checked ~ section .somali img,
+.input-4:checked ~ section .ociket img
+{
+    opacity: 1;
+}
+
+section
+{
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+    flex-wrap: wrap;
+    width: 55%;
+}
+
+.cat
+{
+    position: relative;
+    padding: 3px 0;
+}
+
+.cat img
+{
+    width: 100%;
+}
+
+.cat-name
+{
+    font-size: 24px;
+    position: absolute;
+    bottom: 20%;
+    left: 0;
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+    opacity: 0;
+    transition: .3s;
+}
+
+.cat img:hover ~ .cat-name,
+.cat-name:hover
+{
+    opacity: .5;
+}
+
+.first-cat,
+.third-cat,
+.fourth-cat,
+.fifth-cat,
+.seventh-cat
+{
+    flex-basis: 33.3%;
+}
+
+.second-cat,
+.sixth-cat
+{
+    flex-basis: 66.6%;
+}
+
+.eighth-cat
+{
+    flex-basis: 100%;
+}
+
+aside
+{
+    align-self: flex-start;
+    min-height: 550px;
+}
+
+.header-rate
+{
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 26px;
+    text-align: left;
+    color: #8b0000;
+    text-transform: uppercase;
+}
+
+aside input,
+aside label
+{
+    float: right;
+}
+
+aside label
+{
+    font-size: 18px;
+}
+
+.ratings
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.rating
+{
+    flex-basis: 100%;
+    display: block;
+    margin: 5%;
+    height: 70px;
+}
+
+.rating p
+{
+    font-size: 20px;
+    margin-bottom: .5em;
+}
+
+.scale1,
+.scale2,
+.scale3,
+.scale4
+{
+    float: left;
+    height: 30px;
+    margin-right: 1em;
+}
+
+.mark
+{
+    float: left;
+    font-size: 30px;
+}
+
+.scale1
+{
+    width: 63%;
+    background: linear-gradient(to right, #0f0, #fff);
+    border: 1px solid #0f0;
+}
+
+.scale2
+{
+    width: 70%;
+    background: linear-gradient(to right, #0f0, #fff);
+    border: 1px solid #0f0;
+}
+
+.scale3
+{
+    width: 28%;
+    background: linear-gradient(to right, #f00, #fff);
+    border: 1px solid #f00;
+}
+
+.scale4
+{
+    width: 42%;
+    background: linear-gradient(to right, #ff0, #fff);
+    border: 1px solid #ff0;
+}
+
+.descending:checked ~ .ratings .rating-1
+{
+    -webkit-order: 2;
+    -ms-order: 2;
+    order: 2;
+}
+
+.descending:checked ~ .ratings .rating-2
+{
+    -webkit-order: 1;
+    -ms-order: 1;
+    order: 1;
+}
+
+.descending:checked ~ .ratings .rating-3
+{
+    -webkit-order: 4;
+    -ms-order: 4;
+    order: 4;
+}
+
+.descending:checked ~ .ratings .rating-4
+{
+    -webkit-order: 3;
+    -ms-order: 3;
+    order: 3;
+}
+
+footer span
+{
+    display: block;
+    padding: 0 0 20px;
+    font-size: 24px;
+}
+
+footer hr
+{
+    margin: 20px 0;
+}
+
+footer .corp
+{
+    float: left;
+    margin-left: 2%;
+}
+
+footer .addr
+{
+    float: right;
+    margin-right: 2%;
+}
+
+.grid-checker:checked ~ main
+{
+    display: grid;
+    grid-template-columns: 100% 100%;
+    grid-template-rows: auto 90px;
+    grid-template-areas: 'm' 'f';
+}
+
+.grid-checker:checked ~ main article
+{
+    grid-area: m;
+    display: grid;
+    grid-template-columns: 20% 55% 20%;
+    grid-template-rows: 550px auto;
+    grid-template-areas: 'a b c' 'a b e';
+}
+
+.grid-checker:checked ~ main footer
+{
+    grid-area: f;
+}
+
+.grid-checker:checked ~ main nav
+{
+    grid-area: a;
+    width: 100%;
+}
+
+.grid-checker:checked ~ main section
+{
+    grid-area: b;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas: 'x y y' 'k l m' 'g g h' 'z z z';
+}
+
+.grid-checker:checked ~ main aside
+{
+    grid-area: c;
+    width: 100%;
+}
+
+.grid-checker:checked ~ main .first-cat
+{
+    grid-area: x;
+}
+
+.grid-checker:checked ~ main .second-cat
+{
+    grid-area: y;
+}
+
+.grid-checker:checked ~ main .third-cat
+{
+    grid-area: k;
+}
+
+.grid-checker:checked ~ main .fourth-cat
+{
+    grid-area: l;
+}
+
+.grid-checker:checked ~ main .fifth-cat
+{
+    grid-area: m;
+}
+
+.grid-checker:checked ~ main .sixth-cat
+{
+    grid-area: g;
+}
+
+.grid-checker:checked ~ main .seventh-cat
+{
+    grid-area: h;
+}
+
+.grid-checker:checked ~ main .eighth-cat
+{
+    grid-area: z;
+}
