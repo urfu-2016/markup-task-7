@@ -9,37 +9,29 @@ body
     height: 100%;
 }
 
-header
-{
-    font-size: 40px;
-    font-weight: 600;
-    text-align: center;
-    margin-top: 70px;
-    margin-bottom: 50px;
-}
-
 main
 {
-    display: flex;
-    flex-direction: column;
     height: 100%;
+    display: flex;
+    height: 100%;
+    flex-wrap: wrap;
 }
 
 article
 {
-    flex: 1 0 auto;
+    flex-basis: 100%;
 }
 
 footer
 {
-    flex: 0 0 auto;
+    flex-basis: 100%;
+    align-self: flex-end;
 }
 
 article
 {
     display: flex;
     justify-content: space-around;
-    align-items: stretch;
 }
 
 .checkbox-cat
