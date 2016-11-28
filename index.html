@@ -8,36 +8,38 @@
 <body>
     <div class="wrapper">
         <div class="content">
-            <div class="title">Бабуленькины котятки</div>
+            <h1>Бабуленькины котятки</h1>
             <div class="layout">
                 <input id="select-abyssinian" type="checkbox" class="select-abyssinian">
                 <input id="select-british" type="checkbox" class="select-british">
                 <input id="select-blue" type="checkbox" class="select-blue">
                 <input id="select-siamese" type="checkbox" class="select-siamese">
-                <div class="cat-breed">
-                    <label for="select-abyssinian">
-                        <span class="select-breed"><span class="breed-name">Абиссинская</span></span>
-                    </label>
-                    <label for="select-british">
-                        <span class="select-breed"><span class="breed-name">Британская</span></span>
-                    </label>
-                    <label for="select-blue">
-                        <span class="select-breed"><span class="breed-name">Русская голубая</span></span>
-                    </label>
-                    <label for="select-siamese">
-                        <span class="select-breed"><span class="breed-name">Сиамская</span></span>
-                    </label>
-                </div>
-                <div class="cat-gallery">
-                    <div class="line"><div class="photo"></div><div class="photo"></div></div>
+                <nav>
+                    <label for="select-abyssinian">Абиссинская</label>
+                    <label for="select-british">Британская</label>
+                    <label for="select-blue">Русская голубая</label>
+                    <label for="select-siamese">Сиамская</label>
+                </nav>
+                <main>
                     <div class="line">
-                        <div class="photo"></div><div class="photo"></div><div class="photo"></div>
+                        <div class="image"><img src="images/1.jpg"></div>
+                        <div class="image"><img src="images/2.jpg"></div>
                     </div>
-                    <div class="line"><div class="photo"></div><div class="photo"></div></div>
-                    <div class="line"><div class="photo"></div></div>
-                </div>
-                <div class="cat-rating-box">
-                    <div class="rating-title">рейтинг</div>
+                    <div class="line">
+                        <div class="image"><img src="images/3.jpg"></div>
+                        <div class="image"><img src="images/4.jpg"></div>
+                        <div class="image"><img src="images/5.jpg"></div>
+                    </div>
+                    <div class="line">
+                        <div class="image"><img src="images/6.jpg"></div>
+                        <div class="image"><img src="images/7.jpg"></div>
+                    </div>
+                    <div class="line">
+                        <div class="image"><img src="images/8.jpg"></div>
+                    </div>
+                </main>
+                <aside>
+                    <h2>рейтинг</h2>
                     <label for="descending">по убыванию</label>
                     <input type="checkbox" id="descending" class="descending">
                     <div class="cat-rating-info">
@@ -66,13 +68,15 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </aside>
             </div>
         </div>
-        <div class="footer">
+        <footer>
             <div class="copyright">&copy; ООО Бабуленькины котятки, 2016</div>
-            <div class="address">Наш адрес: улица Котовая, д.5</div>
-        </div>
+            <address>
+                Наш адрес: улица Котовая, д.5
+            </address>
+        </footer>
     </div>
 </body>
 </html>

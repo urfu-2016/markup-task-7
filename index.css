@@ -5,7 +5,7 @@ body
     padding: 0;
     height: 100%;
     background-color: #ebebeb;
-    min-width: 1300px;
+    font-family: Tahoma, sans-serif;
 }
 
 .wrapper
@@ -15,20 +15,16 @@ body
     height: 100%;
 }
 
-.content
-{
-    flex: 1 0 auto;
-}
-
 .copyright,
-.address
+address
 {
     margin: 0 40px;
 }
 
-.address
+address
 {
     color: #00f;
+    font-style: normal;
 }
 
 .layout
@@ -37,13 +33,13 @@ body
     justify-content: center;
 }
 
-.cat-breed,
-.cat-rating-box
+nav,
+aside
 {
     background-color: #d9d9d9;
 }
 
-.cat-gallery
+main
 {
     display: flex;
     width: 770px;
@@ -51,176 +47,165 @@ body
     max-width: 1300px;
 }
 
-.cat-gallery div
+.line
 {
     display: flex;
-    height: 290px;
-    margin: 0 0 10px;
+    align-items: flex-end;
 }
 
-.cat-gallery div div
+.line:nth-child(4n-3) .image:nth-child(1),
+.line:nth-child(4n-2) .image:nth-child(1),
+.line:nth-child(4n-2) .image:nth-child(2),
+.line:nth-child(4n-1) .image:nth-child(1)
 {
-    margin: 0 6px;
+    margin-right: 12px;
 }
 
-.line:nth-child(4n-3) div:nth-child(1)
+.line:nth-child(4n-3) .image:nth-child(1) img,
+.line:nth-child(4n-2) .image img,
+.line:nth-child(4n-2) image:nth-child(2) img
 {
-    flex-basis: 256px;
-    background: url('images/1.jpg'), center, no-repeat;
-    background-size: cover;
+    width: 249px;
 }
 
-.line:nth-child(4n-3) div:nth-child(1):hover::after
+.line:nth-child(4n-3) .image:nth-child(2) img,
+.line:nth-child(4n-1) .image:nth-child(1) img
 {
-    content: 'Гоша, 4 года';
+    width: 510px;
 }
 
-.line:nth-child(4n-3) div:nth-child(2)
+.line:nth-child(4n) img
 {
-    flex-basis: 512px;
-    background: url('images/2.jpg'), center, no-repeat;
-    background-size: cover;
+    width: 771px;
 }
 
-.line:nth-child(4n-3) div:nth-child(2):hover::after
+img
 {
-    content: 'Макс, 5 лет';
+    height: 289px;
 }
 
-.line:nth-child(4n-2) div:nth-child(1)
-{
-    flex-basis: 256px;
-    background: url('images/3.jpg'), center, no-repeat;
-    background-size: cover;
-}
-
-.line:nth-child(4n-2) div:nth-child(1):hover::after
-{
-    content: 'Сёма, 3 года';
-}
-
-.line:nth-child(4n-2) div:nth-child(2)
-{
-    flex-basis: 250px;
-    background: url('images/4.jpg'), center, no-repeat;
-    background-size: cover;
-}
-
-.line:nth-child(4n-2) div:nth-child(2):hover::after
-{
-    content: 'Саня, 7 лет';
-}
-
-.line:nth-child(4n-2) div:nth-child(3)
-{
-    flex-basis: 250px;
-    background: url('images/5.jpg'), center, no-repeat;
-    background-size: cover;
-}
-
-.line:nth-child(4n-2) div:nth-child(3):hover::after
-{
-    content: 'Кеша, 3 года';
-}
-
-.line:nth-child(4n-1) div:nth-child(1)
-{
-    flex-basis: 514px;
-    background: url('images/6.jpg'), center, no-repeat;
-    background-size: cover;
-}
-
-.line:nth-child(4n-1) div:nth-child(1):hover::after
-{
-    content: 'Тёма, 6 лет';
-}
-
-.line:nth-child(4n-1) div:nth-child(2)
-{
-    flex-basis: 248px;
-    background: url('images/7.jpg'), center, no-repeat;
-    background-size: cover;
-}
-
-.line:nth-child(4n-1) div:nth-child(2):hover::after
-{
-    content: 'Рома, 9 лет';
-}
-
-.line:nth-child(4n) div:nth-child(1)
-{
-    width: 100%;
-    background: url('images/8.jpg'), center, no-repeat;
-    background-size: cover;
-}
-
-.line:nth-child(4n) div:nth-child(1):hover::after
-{
-    content: 'Саня, 4 года';
-}
-
+.line:nth-child(4n-3),
+.line:nth-child(4n-2),
+.line:nth-child(4n-1),
 .line:nth-child(4n)
+{
+    margin-bottom: 9px;
+}
+
+.line:last-child
 {
     margin-bottom: 0;
 }
 
-.cat-rating-box
+.line:nth-child(4n-3) .image:nth-child(1):hover::after
+{
+    content: 'Гоша, 4 года';
+}
+
+.line:nth-child(4n-3) .image:nth-child(2):hover::after
+{
+    content: 'Макс, 5 лет';
+}
+
+.line:nth-child(4n-2) .image:nth-child(1):hover::after
+{
+    content: 'Сёма, 3 года';
+}
+
+.line:nth-child(4n-2) .image:nth-child(2):hover::after
+{
+    content: 'Саня, 7 лет';
+}
+
+.line:nth-child(4n-2) .image:nth-child(3):hover::after
+{
+    content: 'Кеша, 3 года';
+}
+
+.line:nth-child(4n-1) .image:nth-child(1):hover::after
+{
+    content: 'Тёма, 6 лет';
+}
+
+.line:nth-child(4n-1) .image:nth-child(2):hover::after
+{
+    content: 'Рома, 9 лет';
+}
+
+.line:nth-child(4n) .image:nth-child(1):hover::after
+{
+    content: 'Саня, 4 года';
+}
+
+aside
 {
     flex-shrink: 0;
     align-self: flex-start;
-    width: 245px;
-    margin: 0 20px 0 5px;
-    padding: 5px 10px 10px;
+    width: 242px;
+    margin: 0 20px 0 12px;
 }
 
-.cat-breed
+nav
 {
     flex-shrink: 0;
     width: 210px;
-    margin: 0 10px 0 30px;
+    margin: 0 16px 0 28px;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
 }
-
-.select-breed
+nav label
 {
-    width: 210px;
+    padding-left: 20px;
+    margin: 0;
     height: 60px;
-    border-bottom: 2px ridge white;
-    position: relative;
-    left: 10px;
+    width: 190px;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px ridge #fff;
     font-size: 23px;
 }
 
-.select-breed:hover
+nav label:hover
 {
     cursor: pointer;
 }
 
-.select-abyssinian:checked ~ .cat-gallery .line:nth-child(1) .photo,
-.select-british:checked ~ .cat-gallery .line:nth-child(2) .photo,
-.select-blue:checked ~ .cat-gallery .line:nth-child(3) .photo,
-.select-siamese:checked ~ .cat-gallery .line:nth-child(4) .photo
+.select-abyssinian:checked ~ main .line:nth-child(1) .image:nth-child(1) img,
+.select-abyssinian:checked ~ main .line:nth-child(2) .image:nth-child(2) img,
+.select-british:checked ~ main .line:nth-child(1) .image:nth-child(2) img,
+.select-british:checked ~ main .line:nth-child(2) .image:nth-child(1) img,
+.select-british:checked ~ main .line:nth-child(3) .image:nth-child(2) img,
+.select-blue:checked ~ main .line:nth-child(2) .image:nth-child(3) img,
+.select-blue:checked ~ main .line:nth-child(4) .image:nth-child(1) img,
+.select-siamese:checked ~ main .line:nth-child(3) .image:nth-child(1) img
 {
     opacity: .3;
 }
 
-.select-abyssinian:checked ~ .cat-breed label:nth-child(1) .select-breed,
-.select-british:checked ~ .cat-breed label:nth-child(2) .select-breed,
-.select-blue:checked ~ .cat-breed label:nth-child(3) .select-breed,
-.select-siamese:checked ~ .cat-breed label:nth-child(4) .select-breed
+.select-abyssinian:checked ~ main .line:nth-child(1) .image:nth-child(1):after,
+.select-abyssinian:checked ~ main .line:nth-child(2) .image:nth-child(2):after,
+.select-british:checked ~ main .line:nth-child(1) .image:nth-child(2):after,
+.select-british:checked ~ main .line:nth-child(2) .image:nth-child(1):after,
+.select-british:checked ~ main .line:nth-child(3) .image:nth-child(2):after,
+.select-blue:checked ~ main .line:nth-child(2) .image:nth-child(3):after,
+.select-blue:checked ~ main .line:nth-child(4) .image:nth-child(1):after,
+.select-siamese:checked ~ main .line:nth-child(3) .image:nth-child(1):after
+{
+    display: none;
+}
+
+.select-abyssinian:checked ~ nav label:nth-child(1),
+.select-british:checked ~ nav label:nth-child(2),
+.select-blue:checked ~ nav label:nth-child(3),
+.select-siamese:checked ~ nav label:nth-child(4)
 {
     background-color: #5a5a5a;
     color: #fff;
 }
 
-.footer
+footer
 {
-    font-family: Tahoma, sans-serif;
     display: flex;
     height: 65px;
     justify-content: space-between;
@@ -230,45 +215,51 @@ body
     margin-top: 65px;
 }
 
-.title
+h1
 {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 170px;
-    font-family: Tahoma, sans-serif;
+    height: 110px;
     font-size: 45px;
     font-weight: bold;
 }
 
-.photo:hover::after
+.image
+{
+    position: relative;
+    height: 289px;
+}
+
+.image:hover::after
 {
     content: '';
     color: #fff;
-    font-family: Tahoma, sans-serif;
     font-size: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 70px;
-    margin-top: 195px;
-    background-color: rgba(0,0,0,.37);
+    position: absolute;
+    top: 195px;
+    background-color: rgba(0, 0, 0, .37);
 }
 
-.rating-title
+
+h2
 {
     text-transform: uppercase;
     color: #db0606;
     font-family: Arial, sans-serif;
     font-size: 28px;
-    margin-bottom: 10px;
+    font-weight: normal;
+    margin: 5px 0 10px 10px;
 }
 
-label
+aside label
 {
-    font-family: Tahoma, sans-serif;
-    margin: 0 10px 0 100px;
+    margin-left: 90px;
 }
 
 .cat-rating-info
@@ -281,6 +272,7 @@ label
 {
     display: flex;
     flex-direction: column;
+    margin: 0 0 10px 10px;
 }
 
 .rating
@@ -288,13 +280,12 @@ label
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 220px;
+    width: 200px;
     align-items: center;
 }
 
 .breed
 {
-    font-family: Tahoma, sans-serif;
     font-size: 23px;
     margin: 15px 0 10px;
 }
@@ -333,7 +324,6 @@ label
 .rating-value
 {
     font-weight: bold;
-    font-family: Tahoma, sans-serif;
     font-size: 20px;
 }
 
