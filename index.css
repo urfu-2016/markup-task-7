@@ -153,6 +153,7 @@ nav
     display: flex;
     flex-direction: column;
 }
+
 nav label
 {
     padding-left: 20px;
@@ -245,7 +246,6 @@ h1
     top: 195px;
     background-color: rgba(0, 0, 0, .37);
 }
-
 
 h2
 {
