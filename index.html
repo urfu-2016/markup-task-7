@@ -2,7 +2,81 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Бабуленькины котятки</title>
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
+    <div class="wrapper">
+        <div class="content">
+            <h1>Бабуленькины котятки</h1>
+            <div class="layout">
+                <input id="select-abyssinian" type="checkbox" class="select-abyssinian">
+                <input id="select-british" type="checkbox" class="select-british">
+                <input id="select-blue" type="checkbox" class="select-blue">
+                <input id="select-siamese" type="checkbox" class="select-siamese">
+                <nav>
+                    <label for="select-abyssinian">Абиссинская</label>
+                    <label for="select-british">Британская</label>
+                    <label for="select-blue">Русская голубая</label>
+                    <label for="select-siamese">Сиамская</label>
+                </nav>
+                <main>
+                    <div class="line">
+                        <div class="image"><img src="images/1.jpg" alt="Cat Photo"></div>
+                        <div class="image"><img src="images/2.jpg" alt="Cat Photo"></div>
+                    </div>
+                    <div class="line">
+                        <div class="image"><img src="images/3.jpg" alt="Cat Photo"></div>
+                        <div class="image"><img src="images/4.jpg" alt="Cat Photo"></div>
+                        <div class="image"><img src="images/5.jpg" alt="Cat Photo"></div>
+                    </div>
+                    <div class="line">
+                        <div class="image"><img src="images/6.jpg" alt="Cat Photo"></div>
+                        <div class="image"><img src="images/7.jpg" alt="Cat Photo"></div>
+                    </div>
+                    <div class="line">
+                        <div class="image"><img src="images/8.jpg" alt="Cat Photo"></div>
+                    </div>
+                </main>
+                <aside>
+                    <h2>рейтинг</h2>
+                    <label for="descending">по убыванию</label>
+                    <input type="checkbox" id="descending" class="descending">
+                    <div class="cat-rating-info">
+                        <div class="breed-rating">
+                            <div class="breed">Абиссинская</div>
+                            <div class="rating">
+                                <div class="rating-diagram-high"></div><div class="rating-value">9</div>
+                            </div>
+                        </div>
+                        <div class="breed-rating">
+                            <div class="breed">Британская</div>
+                            <div class="rating">
+                                <div class="rating-diagram-medium"></div><div class="rating-value">8</div>
+                            </div>
+                        </div>
+                        <div class="breed-rating">
+                            <div class="breed">Русская голубая</div>
+                            <div class="rating">
+                                <div class="rating-diagram-high"></div><div class="rating-value">10</div>
+                            </div>
+                        </div>
+                        <div class="breed-rating">
+                            <div class="breed">Сиамская</div>
+                            <div class="rating">
+                                <div class="rating-diagram-low"></div><div class="rating-value">4</div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </div>
+        </div>
+        <footer>
+            <div class="copyright">&copy; ООО Бабуленькины котятки, 2016</div>
+            <address>
+                Наш адрес: улица Котовая, д.5
+            </address>
+        </footer>
+    </div>
 </body>
 </html>

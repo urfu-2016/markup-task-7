@@ -1,0 +1,421 @@
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: #ebebeb;
+    font-family: Tahoma, sans-serif;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.copyright,
+address
+{
+    margin: 0 40px;
+}
+
+address
+{
+    color: #00f;
+    font-style: normal;
+}
+
+.layout
+{
+    display: flex;
+    justify-content: center;
+}
+
+nav,
+aside
+{
+    background-color: #d9d9d9;
+}
+
+main
+{
+    display: flex;
+    width: 770px;
+    flex-direction: column;
+    max-width: 1300px;
+}
+
+.line
+{
+    display: flex;
+    align-items: flex-end;
+}
+
+.line:nth-child(4n-3) .image:nth-child(1),
+.line:nth-child(4n-2) .image:nth-child(1),
+.line:nth-child(4n-2) .image:nth-child(2),
+.line:nth-child(4n-1) .image:nth-child(1)
+{
+    margin-right: 12px;
+}
+
+.line:nth-child(4n-3) .image:nth-child(1) img,
+.line:nth-child(4n-2) .image img,
+.line:nth-child(4n-2) image:nth-child(2) img
+{
+    width: 249px;
+}
+
+.line:nth-child(4n-3) .image:nth-child(2) img,
+.line:nth-child(4n-1) .image:nth-child(1) img
+{
+    width: 510px;
+}
+
+.line:nth-child(4n) img
+{
+    width: 771px;
+}
+
+img
+{
+    height: 289px;
+}
+
+.line:nth-child(4n-3),
+.line:nth-child(4n-2),
+.line:nth-child(4n-1),
+.line:nth-child(4n)
+{
+    margin-bottom: 9px;
+}
+
+.line:last-child
+{
+    margin-bottom: 0;
+}
+
+.line:nth-child(4n-3) .image:nth-child(1):hover::after
+{
+    content: 'Гоша, 4 года';
+}
+
+.line:nth-child(4n-3) .image:nth-child(2):hover::after
+{
+    content: 'Макс, 5 лет';
+}
+
+.line:nth-child(4n-2) .image:nth-child(1):hover::after
+{
+    content: 'Сёма, 3 года';
+}
+
+.line:nth-child(4n-2) .image:nth-child(2):hover::after
+{
+    content: 'Саня, 7 лет';
+}
+
+.line:nth-child(4n-2) .image:nth-child(3):hover::after
+{
+    content: 'Кеша, 3 года';
+}
+
+.line:nth-child(4n-1) .image:nth-child(1):hover::after
+{
+    content: 'Тёма, 6 лет';
+}
+
+.line:nth-child(4n-1) .image:nth-child(2):hover::after
+{
+    content: 'Рома, 9 лет';
+}
+
+.line:nth-child(4n) .image:nth-child(1):hover::after
+{
+    content: 'Саня, 4 года';
+}
+
+aside
+{
+    flex-shrink: 0;
+    align-self: flex-start;
+    width: 242px;
+    margin: 0 20px 0 12px;
+}
+
+nav
+{
+    flex-shrink: 0;
+    width: 210px;
+    margin: 0 16px 0 28px;
+    display: flex;
+    flex-direction: column;
+}
+
+nav label
+{
+    padding-left: 20px;
+    margin: 0;
+    height: 60px;
+    width: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border-bottom: 2px ridge #fff;
+    font-size: 23px;
+}
+
+nav label:hover
+{
+    cursor: pointer;
+}
+
+.select-abyssinian:checked ~ main .line:nth-child(1) .image:nth-child(1) img,
+.select-abyssinian:checked ~ main .line:nth-child(2) .image:nth-child(2) img,
+.select-british:checked ~ main .line:nth-child(1) .image:nth-child(2) img,
+.select-british:checked ~ main .line:nth-child(2) .image:nth-child(1) img,
+.select-british:checked ~ main .line:nth-child(3) .image:nth-child(2) img,
+.select-blue:checked ~ main .line:nth-child(2) .image:nth-child(3) img,
+.select-blue:checked ~ main .line:nth-child(4) .image:nth-child(1) img,
+.select-siamese:checked ~ main .line:nth-child(3) .image:nth-child(1) img
+{
+    opacity: .3;
+}
+
+.select-abyssinian:checked ~ main .line:nth-child(1) .image:nth-child(1):after,
+.select-abyssinian:checked ~ main .line:nth-child(2) .image:nth-child(2):after,
+.select-british:checked ~ main .line:nth-child(1) .image:nth-child(2):after,
+.select-british:checked ~ main .line:nth-child(2) .image:nth-child(1):after,
+.select-british:checked ~ main .line:nth-child(3) .image:nth-child(2):after,
+.select-blue:checked ~ main .line:nth-child(2) .image:nth-child(3):after,
+.select-blue:checked ~ main .line:nth-child(4) .image:nth-child(1):after,
+.select-siamese:checked ~ main .line:nth-child(3) .image:nth-child(1):after
+{
+    display: none;
+}
+
+.select-abyssinian:checked ~ nav label:nth-child(1),
+.select-british:checked ~ nav label:nth-child(2),
+.select-blue:checked ~ nav label:nth-child(3),
+.select-siamese:checked ~ nav label:nth-child(4)
+{
+    background-color: #5a5a5a;
+    color: #fff;
+}
+
+footer
+{
+    display: flex;
+    height: 65px;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px ridge white;
+    flex: none;
+    margin-top: 65px;
+}
+
+h1
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 110px;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.image
+{
+    position: relative;
+    height: 289px;
+}
+
+.image:hover::after
+{
+    content: '';
+    color: #fff;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 70px;
+    position: absolute;
+    top: 195px;
+    background-color: rgba(0, 0, 0, .37);
+}
+
+h2
+{
+    text-transform: uppercase;
+    color: #db0606;
+    font-family: Arial, sans-serif;
+    font-size: 28px;
+    font-weight: normal;
+    margin: 5px 0 10px 10px;
+}
+
+aside label
+{
+    margin-left: 90px;
+}
+
+.cat-rating-info
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.breed-rating
+{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 10px 10px;
+}
+
+.rating
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 200px;
+    align-items: center;
+}
+
+.breed
+{
+    font-size: 23px;
+    margin: 15px 0 10px;
+}
+
+.rating-diagram-high,
+.rating-diagram-medium,
+.rating-diagram-low
+{
+    height: 20px;
+}
+
+.rating-diagram-high
+{
+    background: linear-gradient(to right, #01e86e, #fff);
+    border-left: 1px solid #01b053;
+    border-right: 1px solid #cacccb;
+    width: 150px;
+}
+
+.rating-diagram-medium
+{
+    background: linear-gradient(to right, #fff601, #fff);
+    border-left: 1px solid #b2ac01;
+    border-right: 1px solid #cacccb;
+    width: 131px;
+}
+
+.rating-diagram-low
+{
+    background: linear-gradient(to right, #e80802, #fff);
+    border-left: 1px solid #b10400;
+    border-right: 1px solid #cacccb;
+    width: 64px;
+}
+
+.rating-value
+{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.rating-diagram-high::before,
+.rating-diagram-high::after,
+.rating-diagram-medium::before,
+.rating-diagram-medium::after,
+.rating-diagram-low::before,
+.rating-diagram-low::after
+{
+    content: '';
+    display: block;
+    margin: 0;
+    height: 1px;
+}
+
+.rating-diagram-high::before,
+.rating-diagram-high::after
+{
+    width: 150px;
+}
+
+.rating-diagram-medium::before,
+.rating-diagram-medium::after
+{
+    width: 131px;
+}
+
+.rating-diagram-low::before,
+.rating-diagram-low::after
+{
+    width: 64px;
+}
+
+.rating-diagram-high:before,
+.rating-diagram-high:after
+{
+    background: linear-gradient(to right, #01b053, #cacccb);
+}
+
+.rating-diagram-medium:before,
+.rating-diagram-medium:after
+{
+    background: linear-gradient(to right, #b2ac01, #cacccb);
+}
+
+.rating-diagram-low:before,
+.rating-diagram-low:after
+{
+    background: linear-gradient(to right, #b10400, #cacccb);
+}
+
+.rating-diagram-high:after,
+.rating-diagram-medium:after,
+.rating-diagram-low:after
+{
+    position: relative;
+    top: 19px;
+    right: 1px;
+}
+
+.rating-diagram-high:after
+{
+    width: 152px;
+}
+
+.rating-diagram-medium:after
+{
+    width: 133px;
+}
+
+.rating-diagram-low:after
+{
+    width: 66px;
+}
+
+.descending:checked ~ .cat-rating-info .breed-rating:nth-child(1)
+{
+    order: 1;
+}
+
+.descending:checked ~ .cat-rating-info .breed-rating:nth-child(2)
+{
+    order: 2;
+}
+
+.descending:checked ~ .cat-rating-info .breed-rating:nth-child(4)
+{
+    order: 3;
+}
+
+.layout > input
+{
+    display: none;
+}
