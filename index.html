@@ -2,7 +2,129 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Котики бабульки</title>
+    <link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
+    <div class="content">
+        <input type="checkbox" class="grid" id="grid">
+        <label for="grid" class="grid">To grid</label>
+        <header>
+            <h1>Бабуленькины котятки</h1>
+        </header>
+        <main>
+            <input type="checkbox" name="cat-category" class="bengal" id="bengal">
+            <input type="checkbox" name="cat-category" class="britain" id="britain">
+            <input type="checkbox" name="cat-category" class="egypt" id="egypt">
+            <input type="checkbox" name="cat-category" class="persid" id="persid">
+            <article class="species">
+                <label for="bengal" class="bengal">Бенгальская</label>
+                <label for="britain" class="britain">Британская</label>
+                <label for="egypt" class="egypt">Египетская</label>
+                <label for="persid" class="persid">Персидская</label>
+            </article>
+            <article class="cats">
+                <div class="cat-image bengal">
+                    <img src="img/bengal-cat2.jpg" width="430" height="385"
+                         alt="Гоша" title="Гоша">
+                    <section class="description">
+                        <h2>Гоша, 4 года</h2>
+                    </section>
+                </div>
+                <div class="cat-image egypt">
+                    <img src="img/egypt-cat1.jpg" width="638" height="330"
+                         alt="Цезарь" title="Цезарь">
+                    <section class="description">
+                        <h2>Цезарь, 5 лет</h2>
+                    </section>
+                </div>
+                <div class="cat-image britain">
+                    <img src="img/britain-cat1.jpg" width="398" height="393"
+                         alt="Пушок" title="Пушок">
+                    <section class="description">
+                        <h2>Пушок, 2 года</h2>
+                    </section>
+                </div>
+                <div class="cat-image persid">
+                    <img src="img/persid-cat1.jpg" width="472" height="411"
+                         alt="Жак" title="Жак">
+                    <section class="description">
+                        <h2>Жак, 2 года</h2>
+                    </section>
+                </div>
+                <div class="cat-image britain">
+                    <img src="img/britain-cat2.jpg" width="465" height="412"
+                         alt="Габриэль" title="Габриэль">
+                    <section class="description">
+                        <h2>Габриэль, 10 лет</h2>
+                    </section>
+                </div>
+                <div class="cat-image bengal">
+                    <img src="img/bengal-cat1.jpg" width="772" height="389"
+                         alt="Леон" title="Леон">
+                    <section class="description">
+                        <h2>Леон, 7 лет</h2>
+                    </section>
+                </div>
+                <div class="cat-image egypt">
+                    <img src="img/egypt-cat2.jpg" width="454" height="414"
+                         alt="Барсик" title="Барсик">
+                    <section class="description">
+                        <h2>Барсик, 3 года</h2>
+                    </section>
+                </div>
+                <div class="cat-image persid">
+                    <img src="img/persid-cat2.jpg" width="738" height="351"
+                         alt="Недовольный" title="Недовольный">
+                    <section class="description">
+                        <h2>Недовольный, 2 года</h2>
+                    </section>
+                </div>
+            </article>
+            <article class="rating-column">
+                <h2>Рейтинг</h2>
+                <input type="checkbox" class="rating-down" id="rating-down">
+                <label for="rating-down" class="rating-down">По убыванию</label>
+                <div class="rating-items">
+                    <div class="britain-rating five-rating">
+                        <p>Британская</p>
+                        <div class="rating-wrapper">
+                            <div class="rating-image five-rating"></div>
+                            <span class="mark">5</span>
+                        </div>
+                    </div>
+                    <div class="bengal-rating ten-rating">
+                        <p>Бенгальская</p>
+                        <div class="rating-wrapper">
+                            <div class="rating-image ten-rating"></div>
+                            <span class="mark">10</span>
+                        </div>
+                    </div>
+                    <div class="persid-rating four-rating">
+                        <p>Персидская</p>
+                        <div class="rating-wrapper">
+                            <div class="rating-image four-rating"></div>
+                            <span class="mark">4</span>
+                        </div>
+                    </div>
+                    <div class="egypt-rating seven-rating">
+                        <p>Египетская</p>
+                        <div class="rating-wrapper">
+                            <div class="rating-image seven-rating"></div>
+                            <span class="mark">7</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+    <footer>
+        <section class="copyright">
+            &#169; ООО Бабуленькины котятки, 2016
+        </section>
+        <address>
+            Наш адрес: ул. Котовая, д. 5
+        </address>
+    </footer>
 </body>
 </html>

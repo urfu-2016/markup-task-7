@@ -1,0 +1,445 @@
+html
+{
+    height: 100%;
+}
+
+body
+{
+    background: #d3d3d3;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header
+{
+    text-align: center;
+    font-size: 2em;
+}
+
+.content
+{
+    flex: 1 0 auto;
+}
+
+main
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-bottom: 30px;
+}
+
+main .species label:hover
+{
+    background: #999;
+}
+
+.species
+{
+    background: #a9a9a9;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    text-align: center;
+}
+
+.cats
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    justify-content: center;
+    overflow: hidden;
+}
+
+main > input
+{
+    display: none;
+}
+
+.species label
+{
+    font-size: 2em;
+    padding-bottom: 30px;
+    border-bottom: solid 1px;
+    cursor: pointer;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.bengal:checked ~ .species label[for='bengal'],
+.britain:checked ~ .species label[for='britain'],
+.egypt:checked ~ .species label[for='egypt'],
+.persid:checked ~ .species label[for='persid']
+{
+    background: #808080;
+}
+
+.cats .cat-image
+{
+    position: relative;
+    margin: .5%;
+}
+
+.cats .cat-image:nth-of-type(1),
+.cats .cat-image:nth-of-type(2)
+{
+    margin-top: 0;
+}
+
+.cats .cat-image:last-of-type
+{
+    margin-bottom: 0;
+}
+
+.cat-image img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cats .cat-image:nth-of-type(8n-7),
+.cats .cat-image:nth-of-type(8n-5),
+.cats .cat-image:nth-of-type(8n-4),
+.cats .cat-image:nth-of-type(8n-3),
+.cats .cat-image:nth-of-type(8n-1)
+{
+    width: 32%;
+}
+
+.cats .cat-image:nth-of-type(8n-6),
+.cats .cat-image:nth-of-type(8n-2)
+{
+    width: 65%;
+}
+
+.cats .cat-image:nth-of-type(8n)
+{
+    width: 98%;
+}
+
+.cat-image .description
+{
+    position: absolute;
+    bottom: 15%;
+    background: rgba(0, 0, 0, .5);
+    display: none;
+    padding: 0 15px;
+    color: #fff;
+}
+
+.cat-image:hover .description
+{
+    display: block;
+}
+
+.bengal:checked ~ .cats .bengal,
+.britain:checked ~ .cats .britain,
+.egypt:checked ~ .cats .egypt,
+.persid:checked ~ .cats .persid
+{
+    opacity: 1;
+}
+
+.bengal:checked ~ .cats .bengal:hover .description,
+.britain:checked ~ .cats .britain:hover .description,
+.egypt:checked ~ .cats .egypt:hover .description,
+.persid:checked ~ .cats .persid:hover .description
+{
+    display: block;
+}
+
+main > input:checked ~ .cats div
+{
+    opacity: .4;
+}
+
+main > input:checked ~ .cats .cat-image:hover .description
+{
+    display: none;
+}
+
+.rating-column
+{
+    background: #a9a9a9;
+    flex-grow: 1;
+    align-self: flex-start;
+    display: block;
+    padding: 0 10px;
+    text-align: right;
+}
+
+.rating-column h2
+{
+    color: #eb0c0c;
+    font-size: 2.4em;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.rating-column p
+{
+    font-size: 2em;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.rating-column label.rating-down
+{
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+.rating-items
+{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.rating-column .rating-down:checked ~ .rating-items > .ten-rating
+{
+    order: 0;
+}
+
+.rating-column .rating-down:checked ~ .rating-items > .seven-rating
+{
+    order: 1;
+}
+
+.rating-column .rating-down:checked ~ .rating-items > .five-rating
+{
+    order: 2;
+}
+
+.rating-column .rating-down:checked ~ .rating-items > .four-rating
+{
+    order: 3;
+}
+
+.rating-column .rating-wrapper
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.rating-wrapper .rating-image
+{
+    border: solid 1px;
+    margin-bottom: 20px;
+    height: 20px;
+}
+
+.rating-wrapper .ten-rating
+{
+    width: 80%;
+    background: linear-gradient(to right, #008000 0, #fff 100%);
+}
+
+.rating-wrapper .five-rating
+{
+    width: 40%;
+    background: linear-gradient(to right, #ff0 0, #fff 100%);
+}
+
+.rating-wrapper .seven-rating
+{
+    width: 60%;
+    background: linear-gradient(to right, #90ee90 0, #fff 100%);
+}
+
+.rating-wrapper .four-rating
+{
+    width: 30%;
+    background: linear-gradient(to right, #eb0c0c 0, #fff 100%);
+}
+
+.rating-column .mark
+{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+footer
+{
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    border-top: solid 1px;
+}
+
+footer .copyright
+{
+    margin: 20px 0;
+}
+
+footer address
+{
+    margin: 20px 0;
+    font-style: normal;
+}
+
+/*задание на звездочку*/
+
+.grid:checked ~ header
+{
+    display: grid;
+}
+
+.grid:checked ~ main
+{
+    display: grid;
+    grid-template-columns: 1fr 10px 3fr 10px 1fr;
+}
+
+.grid:checked ~ main .species
+{
+    grid-column: 1;
+}
+
+.grid:checked ~ main .cats
+{
+    width: 100%;
+    display: grid;
+    grid-column: 3;
+    justify-content: center;
+    grid-template-columns: 10px 32% 10px 32% 10px 32% 10px;
+    grid-template-rows: 270px 10px 270px 10px 270px 10px 270px;
+}
+
+.grid:checked ~ main .rating-column
+{
+    grid-column: 5;
+}
+
+.grid:checked ~ main .cats .cat-image
+{
+    width: 100%;
+    margin: 0;
+    text-align: center;
+    overflow: hidden;
+}
+
+.grid:checked ~ main .cats .cat-image img
+{
+    width: 100%;
+    height: 270px;
+    margin: 0;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(1)
+{
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(2)
+{
+    grid-column: 4 / 7;
+    grid-row: 1;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(3)
+{
+    grid-column: 2;
+    grid-row: 3;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(4)
+{
+    grid-column: 4;
+    grid-row: 3;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(5)
+{
+    grid-column: 6;
+    grid-row: 3;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(6)
+{
+    grid-column: 2 / 5;
+    grid-row: 5;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(7)
+{
+    grid-column: 6;
+    grid-row: 5;
+}
+
+.grid:checked ~ main .cats .cat-image:nth-of-type(8)
+{
+    grid-column: 2 / 7;
+    grid-row: 7;
+}
+
+.grid:checked ~ footer
+{
+    display: grid;
+    grid-template-areas: 'a b';
+}
+
+@media (min-width: 800px) and (max-width: 1000px)
+{
+    .grid:checked ~ main .cats
+    {
+        grid-template-rows: 200px 10px 200px 10px 200px 10px 200px;
+    }
+
+    .grid:checked ~ main .cats .cat-image img
+    {
+        height: 200px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 800px)
+{
+    .grid:checked ~ main .cats
+    {
+        grid-template-rows: 150px 10px 150px 10px 150px 10px 150px;
+    }
+
+    .grid:checked ~ main .cats .cat-image img
+    {
+        height: 150px;
+    }
+}
+
+@media (min-width: 600px) and (max-width: 700px)
+{
+    .grid:checked ~ main .cats
+    {
+        grid-template-rows: 100px 10px 100px 10px 100px 10px 100px;
+    }
+
+    .grid:checked ~ main .cats .cat-image img
+    {
+        height: 100px;
+    }
+}
+
+@media (max-width: 600px)
+{
+    .grid:checked ~ main .cats
+    {
+        grid-template-rows: 50px 10px 50px 10px 50px 10px 50px;
+    }
+
+    .grid:checked ~ main .cats .cat-image img
+    {
+        height: 50px;
+    }
+}
