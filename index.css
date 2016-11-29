@@ -16,14 +16,15 @@ label
 
 h2
 {
+	text-transform: uppercase;
+	margin-left: 5%;
     color: red;
 }
 
 footer
 {
     background-color: #d3d3d3;
-    position: fixed;
-    bottom: 0;
+    position: absolute;
     left: 0;
     width: 100%;
 }
@@ -36,7 +37,7 @@ hr
 
 .breed
 {
-    align-content: stretch;
+	margin-right: 1%;
 }
 
 .breed hr
@@ -69,37 +70,28 @@ hr
 .breed,
 .rating
 {
-    width: 30%;
+    width: 25%;
     flex-direction: column;
-    flex-wrap: wrap;
     background-color: #c0c0c0;
-}
-
-.breed-and-content
-{
-    flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
-    float: left;
-    width: 70%;
 }
 
 .cats
 {
-    justify-content: space-between;
     flex-wrap: wrap;
-    width: 70%;
+    width: 50%;
+    justify-content: space-between;
 }
 
 .rating
 {
-    width: 30%;
+
+	margin-left: 1%;
+	align-self: flex-start;
 }
 
 .rating div
 {
     margin-left: 5%;
-    height: auto;
 }
 
 .description
