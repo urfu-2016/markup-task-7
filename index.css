@@ -40,6 +40,7 @@ body
 {
     object-fit: cover;
     height: 100%;
+    width: 100%;
 }
 
 .cat-checkbox:not(:checked) > .cat-div.big,
@@ -268,6 +269,7 @@ img
 .view-type:checked ~ .cat-imgs
 {
     display: grid;
+    width: 100%;
     grid-template-columns: 20% auto 20%;
 }
 
@@ -313,9 +315,10 @@ img
 
 .view-type:checked ~ .cat-imgs .content
 {
+    width: calc(100% - 44px);
     display: grid;
     grid-row-gap: 4px;
-    grid-column-gap: 4px;
+    grid-column-gap: 18px;
     grid-template-columns: 33% 33% 33%;
     grid-template-areas: 's1 m1 m1'
         's2 s3 s4'
@@ -327,12 +330,14 @@ img
 .view-type:checked ~ .cat-imgs .content .cat-div img
 {
     margin: 0;
+    padding-bottom: 5px;
     min-height: 300px;
 }
 
 .view-type:checked ~ .cat-imgs .content :last-child
 {
-    margin-bottom: -2px;
+    padding-bottom: 0;
+    margin-bottom: -9px;
 }
 
 .view-type:checked ~ .cat-imgs .content .cat-div img
