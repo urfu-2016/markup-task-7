@@ -2,7 +2,115 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Бабуленькины котейки</title>
+    <link rel="stylesheet" href="index.css" media="screen">
 </head>
 <body>
+    <header class="main-header">
+        Бабуленькины котейки
+    </header>
+    <main>
+        <input class="nav-input breed1" id="breed1" type="checkbox">
+        <input class="nav-input breed2" id="breed2" type="checkbox">
+        <input class="nav-input breed3" id="breed3" type="checkbox">
+        <input class="nav-input breed4" id="breed4" type="checkbox">
+        <nav class="breeds-nav">
+            <label class="nav-item" for="breed1">
+                Абиссинская
+            </label>
+            <label class="nav-item" for="breed2">
+                Британская
+            </label>
+            <label class="nav-item" for="breed3">
+                Русская голубая
+            </label>
+            <label class="nav-item" for="breed4">
+                Сиамская
+            </label>
+        </nav>
+        <article class="main-content">
+            <div class="cat cat-1 abissian">
+                <div class="cat-label">
+                    Ашот, 5 года
+                </div>
+            </div>
+            <div class="cat cat-2 british">
+                <div class="cat-label">
+                    Бандит, 4 года
+                </div>
+            </div>
+            <div class="cat cat-3 british">
+                <div class="cat-label">
+                    Гоша, меньше года
+                </div>
+            </div>
+            <div class="cat cat-4 abissian">
+                <div class="cat-label">
+                    Жора, 2 года
+                </div>
+            </div>
+            <div class="cat cat-5 siamese">
+                <div class="cat-label">
+                    Упорот, 4 года
+                </div>
+            </div>
+            <div class="cat cat-6 russian">
+                <div class="cat-label">
+                    Гоша, 4 года
+                </div>
+            </div>
+            <div class="cat cat-7 abissian">
+                <div class="cat-label">
+                    Гоша, 4 года
+                </div>
+            </div>
+            <div class="cat cat-8 russian">
+                <div class="cat-label">
+                    Гоша, 4 года
+                </div>
+            </div>
+        </article>
+        <aside class="rating">
+            <h2 class="red-text">Рейтинг</h2>
+            <div class="rating-breeds">
+                <input class="rating-input" id="rating-sort" type="checkbox">
+                <label for="rating-sort" class="rating-label">
+                    по убыванию
+                </label>
+                <div class="rating-item">
+                    <h3>Абиссинская</h3>
+                    <div class="rating-scale">
+                        <div class="score score-9"></div>
+                        9
+                    </div>
+                </div>
+                <div class="rating-item">
+                    <h3>Британская</h3>
+                    <div class="rating-scale">
+                        <div class="score score-8"></div>
+                        8
+                    </div>
+                </div>
+                <div class="rating-item">
+                    <h3>Русская голубая</h3>
+                    <div class="rating-scale">
+                        <div class="score score-10"></div>
+                        10
+                    </div>
+                </div>
+                <div class="rating-item">
+                    <h3>Сиамская</h3>
+                    <div class="rating-scale">
+                        <div class="score score-4"></div>
+                        4
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="main-footer">
+        <span class="copyright">&copy; ООО Бабуленькины котейки, 2016</span>
+        <address>Наш адресс: улица Котовая, д.5</address>
+    </footer>
 </body>
 </html>
