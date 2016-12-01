@@ -4,6 +4,8 @@ html
     margin: 0;
     padding: 0;
     font-family: arial, sans-serif;
+    min-height: 100vh;
+    position: relative;
 }
 
 body
@@ -20,15 +22,19 @@ body
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 1170px;
+    margin: 0 auto;
 }
 
 main
 {
     background: #ebebeb;
     display: flex;
-    flex: 9;
+    flex: 1;
     padding-bottom: 50px;
     border-bottom: 1px solid #fff;
+    width: 1170px;
+    margin: 0 auto;
 }
 
 main .breeds-nav
@@ -49,25 +55,17 @@ main .breeds-nav ul
 {
     flex: 3;
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
 }
 
-.main-content .row
+.main-content .cat
 {
-    flex: 1 0 15em;
-    display: flex;
-    margin: 5px 0;
-    justify-content: space-between;
-}
-
-.main-content .row .cat
-{
-    margin: 0 5px;
-    padding: 0 5px;
+    height: 200px;
     position: relative;
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
+    margin: 5px;
 }
 
 .cat .cat-label
@@ -130,17 +128,23 @@ main .breeds-nav ul
     background-image: url('images/Грусняш.jpg');
 }
 
-.cat:nth-child(1),
-.row:nth-child(2n) .cat:nth-child(n),
-.row:nth-child(3n) .cat:nth-child(2)
+.cat:nth-child(n),
+.cat:nth-child(3n),
+.cat:nth-child(4n),
+.cat:nth-child(5n),
+.cat:nth-child(7n)
 {
-    flex-grow: 1;
+    width: 204px;
 }
 
-.row:nth-child(4n-3) .cat:nth-child(2),
-.row:nth-child(3n) .cat:nth-child(1)
+.cat:nth-child(even):not(:nth-child(4n))
 {
-    flex-grow: 2;
+    width: 418px;
+}
+
+.cat:nth-child(8n)
+{
+    width: 100%;
 }
 
 main .rating
@@ -156,13 +160,14 @@ main .rating
 {
     height: 70px;
     background: #ebebeb;
-    width: 100%;
     border-top: 1px solid #a9a8a8;
     flex: 1;
     display: flex;
     flex-direction: row;
     align-items: center;
     max-height: 70px;
+    width: 1170px;
+    margin: 0 auto;
 }
 
 address
@@ -192,10 +197,10 @@ address
     display: none;
 }
 
-.nav-input[id='breed1']:checked ~ .breeds-nav .nav-item:nth-of-type(1),
-.nav-input[id='breed2']:checked ~ .breeds-nav .nav-item:nth-of-type(2),
-.nav-input[id='breed3']:checked ~ .breeds-nav .nav-item:nth-of-type(3),
-.nav-input[id='breed4']:checked ~ .breeds-nav .nav-item:nth-of-type(4),
+.breed1:checked ~ .breeds-nav .nav-item:nth-of-type(1),
+.breed2:checked ~ .breeds-nav .nav-item:nth-of-type(2),
+.breed3:checked ~ .breeds-nav .nav-item:nth-of-type(3),
+.breed4:checked ~ .breeds-nav .nav-item:nth-of-type(4),
 .breeds-nav .nav-item:hover
 {
     background: #666;
@@ -208,22 +213,22 @@ address
     background: #999;
 }
 
-.nav-input[id='breed1']:checked ~ .main-content .abissian,
-.nav-input[id='breed2']:checked ~ .main-content .british,
-.nav-input[id='breed3']:checked ~ .main-content .russian,
-.nav-input[id='breed4']:checked ~ .main-content .siamese
+.breed1:checked ~ .main-content .abissian,
+.breed2:checked ~ .main-content .british,
+.breed3:checked ~ .main-content .russian,
+.breed4:checked ~ .main-content .siamese
 {
     opacity: .5;
 }
 
-.nav-input[id='breed1']:checked ~ .main-content .cat-1:hover .cat-label,
-.nav-input[id='breed1']:checked ~ .main-content .cat-4:hover .cat-label,
-.nav-input[id='breed1']:checked ~ .main-content .cat-7:hover .cat-label,
-.nav-input[id='breed2']:checked ~ .main-content .cat-2:hover .cat-label,
-.nav-input[id='breed2']:checked ~ .main-content .cat-3:hover .cat-label,
-.nav-input[id='breed3']:checked ~ .main-content .cat-6:hover .cat-label,
-.nav-input[id='breed3']:checked ~ .main-content .cat-8:hover .cat-label,
-.nav-input[id='breed4']:checked ~ .main-content .cat-5:hover .cat-label
+.breed1:checked ~ .main-content .cat-1:hover .cat-label,
+.breed1:checked ~ .main-content .cat-4:hover .cat-label,
+.breed1:checked ~ .main-content .cat-7:hover .cat-label,
+.breed2:checked ~ .main-content .cat-2:hover .cat-label,
+.breed2:checked ~ .main-content .cat-3:hover .cat-label,
+.breed3:checked ~ .main-content .cat-6:hover .cat-label,
+.breed3:checked ~ .main-content .cat-8:hover .cat-label,
+.breed4:checked ~ .main-content .cat-5:hover .cat-label
 {
     transform: translateX(-100%);
 }
@@ -246,34 +251,38 @@ address
     display: flex;
     flex-direction: column;
     width: 100%;
+    position: relative;
 }
 
 .rating-label
 {
-    float: right;
+    text-align: right;
+    display: block;
+    margin-right: 15px;
 }
 
 .rating-input
 {
-    float: right;
+    position: absolute;
+    align-self: flex-end;
 }
 
-.rating-input:checked ~ .rating-breeds .rating-item:nth-of-type(1)
+.rating-input:checked ~ .rating-item:nth-of-type(1)
 {
     order: 2;
 }
 
-.rating-input:checked ~ .rating-breeds .rating-item:nth-of-type(2)
+.rating-input:checked ~ .rating-item:nth-of-type(2)
 {
     order: 3;
 }
 
-.rating-input:checked ~ .rating-breeds .rating-item:nth-of-type(3)
+.rating-input:checked ~ .rating-item:nth-of-type(3)
 {
     order: 1;
 }
 
-.rating-input:checked ~ .rating-breeds .rating-item:nth-of-type(4)
+.rating-input:checked ~ .rating-item:nth-of-type(4)
 {
     order: 4;
 }
