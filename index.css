@@ -1,5 +1,14 @@
+html,
 body
 {
+    height: 100%;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     background: #c0c0c0;
 }
 
@@ -10,27 +19,30 @@ header
 
 main
 {
+    flex: 1 0 auto;
+}
+
+.content
+{
     display: inline-flex;
     justify-content: space-around;
 }
 
 .gallery
 {
-    width: 50%;
-    height: 120%;
-    margin: 0;
-    padding: 0;
-    display: inline-flex;
+    min-width: 300px;
+    display: flex;
+    flex: 0 0 50%;
     flex-wrap: wrap;
-    align-content: space-between;
-    justify-content: space-between;
 }
 
 .menu
 {
     width: 18%;
+    min-width: 200px;
     background: #d8bfd8;
     margin: 0 1%;
+    padding: 3px 0;
 }
 
 .cat
@@ -92,13 +104,25 @@ main
 {
     align-self: flex-start;
     width: 18%;
-    margin: 0 1%;
+    min-width: 200px;
+    margin: 3px 1%;
     background: #d8bfd8;
 }
 
 img
 {
-    height: 100%;
+    display: flex;
+    width: 100%;
+    object-fit: cover;
+    box-sizing: border-box;
+}
+
+.block-picture
+{
+    height: 200px;
+    display: flex;
+    padding: 3px;
+    box-sizing: border-box;
 }
 
 section > div:nth-child(8n+1),
@@ -107,38 +131,19 @@ section > div:nth-child(8n+4),
 section > div:nth-child(8n+5),
 section > div:nth-child(8n+7)
 {
-    position: relative;
-    width: 30%;
-    overflow: hidden;
-    margin: 2.5% 0;
+    width: 33.3%;
 }
 
 section > div:nth-child(8n+2),
 section > div:nth-child(8n+6)
 {
-    position: relative;
-    width: 65%;
-    overflow: hidden;
-    margin: 2.5% 0;
+    width: 66.7%;
 }
 
 section > div:nth-child(8n)
 {
-    position: relative;
     width: 100%;
-    overflow: hidden;
-    margin: 2.5% 0;
-}
-
-section > div:nth-child(1),
-section > div:nth-child(2)
-{
-    margin: 0 0 2.5% ;
-}
-
-section > div:last-child
-{
-    margin: 2.5% 0 0;
+    padding-bottom: 0;
 }
 
 .description
@@ -151,20 +156,14 @@ span
     font-weight: 800;
 }
 
-.block-picture
-{
-    height: 200px;
-}
-
 .block-picture:hover > .description
 {
-    width: 200px;
     display: block;
     position: absolute;
-    bottom: 20px;
-    left: 20px;
+    width: 15%;
     background: rgba(0,0,0,.7);
     color: #fff;
+    margin: 130px 0 0 10px;
 }
 
 .rating-header
@@ -224,7 +223,13 @@ span
 .rating-block
 {
     display: flex;
+    align-items: center;
     justify-content: space-between;
+}
+
+.notation-rating
+{
+    padding: 0  2px;
 }
 
 .addr
@@ -232,20 +237,11 @@ span
     color: #00f;
 }
 
-.push,
-.footer
-{
-    display: flex;
-    height: 50px;
-    margin: 0;
-    justify-content: space-between;
-    border-top: 1px solid #000;
-}
-
 footer
 {
+    flex: 0 0 auto;
     display: flex;
-    max-height: 50px;
+    width: 100%;
     justify-content: space-between;
     border-top: 1px solid #000;
 }
