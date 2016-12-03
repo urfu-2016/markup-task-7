@@ -2,7 +2,165 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <title>Бабуленькины котятки</title>
 </head>
 <body>
+    <input type="checkbox" id="flex-grid" class="flex-grid">
+    <label for="flex-grid">Включить grid</label>
+    <header>
+        Бабуленькины котятки
+    </header>
+    <main>
+        <input type="radio" id="abissinskaya" name="breed-flex" class="abis">
+        <input type="radio" id="britanskaya" name="breed-flex" class="brit">
+        <input type="radio" id="russkaya" name="breed-flex" class="rus">
+        <input type="radio" id="siamskaya" name="breed-flex" class="siam">
+        <input type="radio" id="all" name="breed-flex" class="all" checked>
+        <ul class="menu">
+            <li class="menu-button abissinskaya">
+                <label for="abissinskaya" class="label-full-button">
+                        Абиссинская
+                </label>
+            </li>
+            <li class="menu-button britanskaya">
+                <label for="britanskaya" class="label-full-button">
+                    Британская
+                </label>
+            </li>
+            <li class="menu-button russkaya">
+                <label for="russkaya" class="label-full-button">
+                    Русская голубая
+                </label>
+            </li>
+            <li class="menu-button siamskaya">
+                <label for="siamskaya" class="label-full-button">
+                    Сиамская
+                </label>
+            </li>
+            <li class="menu-button all">
+                <label for="all" class="label-full-button">
+                    Все
+                </label>
+            </li>
+        </ul>   
+        <div class="photos flex">
+            <div class="photo abissinskaya">
+                <img src="img/Абиссинская1.jpg" alt="Абиссинская кот Гоша" width="250" height="286">
+                <div class="description">Гоша, 2 года</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo abissinskaya">
+                <img src="img/Абиссинская2.jpg" alt="Абиссинская кошка Клеопатра" width="512" height="286">
+                <div class="description">Клеопатра, 3 месяца</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo britanskaya">
+                <img src="img/Британская1.jpg" alt="Британская кошка Няша" width="250" height="286">
+                <div class="description">Няша, 1.5 года</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo britanskaya">
+                <img src="img/Британская2.jpg" alt="Британский кот Люмьер" width="250" height="286">
+                <div class="description">Люмьер, 1 год</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo russkaya">
+                <img src="img/русская_голубая1.jpg" alt="Русская голубая кошка Лиза" width="250" height="286">
+                <div class="description">Лиза, 4 месяца</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo russkaya">
+                <img src="img/русская_голубая2.jpg" alt="Русский голубой кот Марк" width="512" height="286">
+                <div class="description">Марк, 6 месяца</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo siamskaya">
+                <img src="img/сиамская1.jpg" alt="Сиамская кот Макс" width="250" height="286">
+                <div class="description">Макс, 2 месяца</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo siamskaya">
+                <img src="img/сиамская2.jpg" alt="Сиамская кошка Фелиция" width="776" height="286">
+                <div class="description">Фелиция, 3 года</div>
+                <div class="close-photo"></div>
+            </div>
+        </div>
+        <div class="photos grid">
+            <div class="photo abissinskaya first">
+                <img src="img/Абиссинская1.jpg" alt="Абиссинская кот Гоша">
+                <div class="description">Гоша, 2 года</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo abissinskaya second" >
+                <img src="img/Абиссинская2.jpg" alt="Абиссинская кошка Клеопатра">
+                <div class="description">Клеопатра, 3 месяца</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo britanskaya third">
+                <img src="img/Британская1.jpg" alt="Британская кошка Няша">
+                <div class="description">Няша, 1.5 года</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo britanskaya forth">
+                <img src="img/Британская2.jpg" alt="Британский кот Люмьер">
+                <div class="description">Люмьер, 1 год</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo russkaya fifth">
+                <img src="img/русская_голубая1.jpg" alt="Русская голубая кошка Лиза">
+                <div class="description">Лиза, 4 месяца</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo russkaya sixth">
+                <img src="img/русская_голубая2.jpg" alt="Русский голубой кот Марк">
+                <div class="description">Марк, 6 месяца</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo siamskaya seventh">
+                <img src="img/сиамская1.jpg" alt="Сиамская кот Макс">
+                <div class="description">Макс, 2 месяца</div>
+                <div class="close-photo"></div>
+            </div>
+            <div class="photo siamskaya eighth">
+                <img src="img/сиамская2.jpg" alt="Сиамская кошка Фелиция">
+                <div class="description">Фелиция, 3 года</div>
+                <div class="close-photo"></div>
+            </div>
+        </div>
+        <div class="rating">
+            <h1>РЭЙТИНГ</h1>
+            <div class="sort-rates">
+                <input type="checkbox" id="sort-rating-flex" class="sort-rating-checkbox">
+                <label for="sort-rating-flex" class="sort-rating-checkbox">по убыванию</label>
+                <div class="rates">
+                    <div class="rate-item nine">
+                        <div>Абиссинская</div>
+                        <div class="rate"></div>
+                        <div class="rate-number">9</div>
+                    </div>
+                    <div class="rate-item eight">
+                        <div>Британская</div>
+                        <div class="rate"></div>
+                        <div class="rate-number">8</div>
+                    </div>
+                    <div class="rate-item ten">
+                        <div>Русская голубая</div>
+                        <div class="rate"></div>
+                        <div class="rate-number">10</div>
+                    </div>
+                    <div class="rate-item four">
+                        <div>Сиамская</div>
+                        <div class="rate"></div>
+                        <div class="rate-number">4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <span>©ООО Бабуленькины котятки</span>
+        <a href="#">Наш адрес: ул.Котовая, 5</a>
+    </footer>
 </body>
 </html>
