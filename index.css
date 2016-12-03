@@ -6,14 +6,14 @@ html
 header
 {
     position: relative;
-    left: 400px;
+    text-align: center;
     font-family: sans-serif;
 }
 
 .wraper
 {
     display: flex;
-    width: 1080px;
+    justify-content: center;
 }
 
 .navigation,
@@ -34,35 +34,35 @@ header
 
 .cart:hover .description
 {
-    display: flex;
-    align-content: center;
-    justify-content: center;
+    display: block;
 }
 
 .cart
 {
     margin: 5px;
     position: relative;
-}
-
-img
-{
+    overflow: hidden;
     height: 150px;
 }
 
-img.size1
+.size1
 {
     width: 200px;
+    height: 100%;
 }
 
-img.size2
+.size2
 {
     width: 410px;
+    position: relative;
+    top: -50px;
 }
 
-img.size3
+.size3
 {
     width: 620px;
+    position: relative;
+    top: -150px;
 }
 
 .description
@@ -76,7 +76,7 @@ img.size3
     width: 100px;
     height: 50px;
     font-size: 15px;
-    color: white;
+    color: #fff;
 }
 
 .rating
@@ -167,10 +167,10 @@ footer
 {
     display: flex;
     justify-content: space-between;
-    width: 1080px;
     height: 50px;
     border-top: 1px solid #000;
     margin-top: 10px;
+
 }
 
 label[class^='cat']
@@ -207,4 +207,18 @@ input[class='cat2']:checked ~ .content .cat2,
 input[class='cat3']:checked ~ .content .cat3
 {
     opacity: 1;
+}
+
+input[class='cat1']:checked ~ .content .description,
+input[class='cat2']:checked ~ .content .description,
+input[class='cat3']:checked ~ .content .description
+{
+    display: none;
+}
+
+input[class='cat1']:checked ~ .content .cart:hover .cat1 ~ .description,
+input[class='cat2']:checked ~ .content .cart:hover .cat2 ~ .description,
+input[class='cat3']:checked ~ .content .cart:hover .cat3 ~ .description
+{
+    display: block;
 }
