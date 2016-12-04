@@ -54,22 +54,22 @@ img
     display: none;
 }
 
-[value="Bengal"]:checked ~ .Bengal
+[value='Bengal']:checked ~ .Bengal
 {
     opacity: .5;
 }
 
-[value="Siberian"]:checked ~ .Siberian
+[value='Siberian']:checked ~ .Siberian
 {
     opacity: .5;
 }
 
-[value="Siamese"]:checked ~ .Siamese
+[value='Siamese']:checked ~ .Siamese
 {
     opacity: .5;
 }
 
-[value="Angora"]:checked ~ .Angora
+[value='Angora']:checked ~ .Angora
 {
     opacity: .5;
 }
