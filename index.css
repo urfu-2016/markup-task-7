@@ -1,0 +1,172 @@
+body
+{
+    background-color: #edebe9;
+}
+
+header
+{
+    font-size: 40px;
+    font-weight: bold;
+    font-family: sans-serif;
+    margin: 50px 0;
+    text-align: center;
+}
+
+main,
+.flex-wrapper,
+.rating-line,
+.rating-lines
+{
+    display: flex;
+}
+
+main,
+.rating-lines
+{
+    flex-direction: column;
+}
+
+img
+{
+    margin: 5px;
+}
+
+.flex-wrapper
+{
+    justify-content: space-around;
+}
+
+.breed-menu
+{
+    margin-right: 5px;
+    background-color: #dddad6;
+    font-size: 30px;
+}
+
+.breed-menu label
+{
+    padding: 10px;
+    border-bottom: ridge 2px;
+}
+
+.photo-area input
+{
+    display: none;
+}
+
+[value="Bengal"]:checked ~ .Bengal
+{
+    opacity: .5;
+}
+
+[value="Siberian"]:checked ~ .Siberian
+{
+    opacity: .5;
+}
+
+[value="Siamese"]:checked ~ .Siamese
+{
+    opacity: .5;
+}
+
+[value="Angora"]:checked ~ .Angora
+{
+    opacity: .5;
+}
+
+.breed,
+label
+{
+    display: block;
+}
+
+.photo-area
+{
+    flex-basis: 940px;
+}
+
+.breed-rating
+{
+    background-color: #dddad6;
+    padding: 20px 10px;
+    min-width: 130px;
+    align-self: flex-start;
+}
+
+.breed-rating label
+{
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.rating-header
+{
+    display: block;
+    font-size: 30px;
+    color: #f00;
+}
+
+.rating-line
+{
+    justify-content: space-between;
+}
+
+.Bengal-rating-bar,
+.Siberian-rating-bar,
+.Siamese-rating-bar,
+.Angora-rating-bar
+{
+    height: 20px;
+}
+
+.Bengal-rating-bar
+{
+    background: linear-gradient(to right, green, white);
+    width: 90px;
+}
+
+.Siberian-rating-bar
+{
+    background: linear-gradient(to right, yellow, white);
+    width: 80px;
+}
+
+.Siamese-rating-bar
+{
+    background: linear-gradient(to right, green, white);
+    width: 100px;
+}
+
+.Angora-rating-bar
+{
+    background: linear-gradient(to right, red, white);
+    width: 40px;
+}
+
+.breed-rating input:checked ~ .rating-lines .Siamese-rating-card
+{
+    order: 0;
+}
+
+.breed-rating input:checked ~ .rating-lines .Bengal-rating-card
+{
+    order: 1;
+}
+
+.breed-rating input:checked ~ .rating-lines .Siberian-rating-card
+{
+    order: 2;
+}
+
+.breed-rating input:checked ~ .rating-lines .Angora-rating-card
+{
+    order: 3;
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px;
+}
+

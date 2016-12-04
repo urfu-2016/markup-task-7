@@ -1,8 +1,74 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <title>cat market</title>
+    <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
 </head>
 <body>
+    <header>Бабуленькины котятки</header>
+    <main>
+        <div class="flex-wrapper">
+            <div class="breed-menu">
+                <label for="Bengal" class="breed">бенгальская</label>
+                <label for="Siberian" class="breed">сибирская</label>
+                <label for="Siamese" class="breed">сиамская</label>
+                <label for="Angora" class="breed">ангорская</label>
+            </div>
+            <div class="photo-area">
+                <input type="radio" name="breed" value="Bengal" id="Bengal">
+                <input type="radio" name="breed" value="Siberian" id="Siberian">
+                <input type="radio" name="breed" value="Siamese" id="Siamese">
+                <input type="radio" name="breed" value="Angora" id="Angora">
+                <img class="Bengal" src="files/1.jpg" title="" alt="">
+                <img class="Siberian" src="files/4.jpg" title="" alt="">
+                <img class="Angora" src="files/7.jpg" title="" alt="">
+                <img class="Siamese" src="files/6.jpg" title="" alt="">
+                <img class="Bengal" src="files/2.jpg" title="" alt="">
+                <img class="Bengal" src="files/3.jpg" title="" alt="">
+                <img class="Siberian" src="files/5.jpg" title="" alt="">
+                <img class="Angora" src="files/8.jpg" title="" alt="">
+            </div>
+            <div class="breed-rating">
+                <span class="rating-header">Рейтинг</span>
+                <label for="in-descending-order">По убыванию</label>
+                <input id="in-descending-order" type="checkbox">
+                <div class="rating-lines">
+                    <div class="Bengal-rating-card ">
+                        бенгальская
+                        <div class="rating-line">
+                            <div class="Bengal-rating-bar"></div>
+                            <div class="point">9</div>
+                        </div>
+                    </div>
+                    <div class="Siberian-rating-card">
+                        сибирская
+                        <div class="rating-line">
+                            <div class="Siberian-rating-bar"></div>
+                            <div class="point">8</div>
+                        </div>
+                    </div>
+                    <div class="Siamese-rating-card">
+                        сиамская
+                        <div class="rating-line">
+                            <div class="Siamese-rating-bar"></div>
+                            <div class="point">10</div>
+                        </div>
+                    </div>
+                    <div class="Angora-rating-card">
+                        ангорская
+                        <div class="rating-line">
+                            <div class="Angora-rating-bar"></div>
+                            <div class="point">4</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <span>ООО Бабуленькины котятки, 2016</span>
+            <address>Наш адрес: улица Котовая, д. 5</address>
+        </footer>
+    </main>
 </body>
 </html>
