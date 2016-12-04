@@ -1,34 +1,86 @@
 body
 {
-    background-color: #b5b8b1;
+    background-color: #ebebeb;
+    font: sans-serif;
+}
+
+main
+{
     display: flex;
+    flex-wrap: wrap;
+    font-size: 25px;
+}
+
+a
+{
+    text-decoration: none;
+    color: #000;
 }
 
 .cats
 {
+    width: 70%;
+    z-index: 1px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    align-content: space-around;
 }
 
 .images
 {
-    background-color: #808080;
-    height: 300px;
+    height: 350px;
+    max-width: 100%;
 }
 
-.first_line
+.first-line
 {
-    height: 300px;
+    order: 1;
 }
 
-.cat_breed
+.second-line
 {
-    white-space: nowrap;
-    background-color: #808080;
-    float: left;
+    order: 2;
+}
+
+.third-line
+{
+    order: 3;
+}
+
+.fourth-line
+{
+    order: 4;
+}
+
+.fifth-line
+{
+    order: 5;
+}
+
+header
+{
     text-align: center;
+    font-size: 25px;
+}
+
+.breed-input
+{
+    display: none;
+}
+
+.breed
+{
+    display: block;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 0 1px #000;
+}
+
+.cat-breed
+{
+    width: 15%;
+    background-color: #d9d9d9;
 }
 
 .text
@@ -36,23 +88,141 @@ body
     margin: 10px;
 }
 
+.rating h4
+{
+    width: 100%;
+    color: #db0606;
+    display: block;
+    font-size: 30px;
+}
+
+.text
+{
+    width: 100%;
+}
+
 .rating
 {
-    background-color: #808080;
-    float: right;
+    width: 15%;
+    height: 100%;
+    background-color: #d9d9d9;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.siamese-cats-rating,
+.abyssinian-cats-rating,
+.british-cats-rating,
+.russian-cats-rating
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.number
+{
+    margin: -13% 65% 0;
+}
+
+.descending
+{
+    font-size: 18px;
+}
+
+.russian-rating,
+.siamese-rating
+{
+    background: linear-gradient(to left, #fefcea, #fff609);
+    width: 80px;
+    height: 25px;
+}
+
+.abyssinian-rating
+{
+    background: linear-gradient(to left, #fefcea, #3eee91);
+    width: 100px;
+    height: 25px;
+}
+
+.british-rating
+{
+    background: linear-gradient(to left, #fefcea, #ea1813);
+    width: 60px;
+    height: 25px;
 }
 
 .description
 {
+    z-index: 1;
+    position: absolute;
+    background-color: #000;
+    color: #fff;
+    opacity: .4;
     display: none;
+    padding: 10px;
+    margin: -100px 0;
 }
 
-.images:hover ~ .description:nth-child(1)
+input[id='descending']:checked ~ .siamese-cats-rating,
+input[id='descending']:checked ~ .russian-cats-rating
+{
+    order: 2;
+}
+
+footer
+{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.address
+{
+    font-size: 15px;
+    color: #4055ad;
+}
+
+input[id='descending']:checked ~ .abyssinian-cats-rating
+{
+    order: 1;
+}
+
+input[id='descending']:checked ~ .british-cats-rating
+{
+    order: 3;
+}
+
+.first-line:hover .description,
+.second-line:hover .description,
+.third-line:hover .description,
+.fourth-line:hover .description,
+.fifth-line:hover .description
 {
     display: block;
 }
 
-input.abcat:checked ~ .cats .abcatimg
+input[id='abyssiniancat']:checked ~ .cats > :not(.abyssinianimg),
+input[id='britishcat']:checked ~ .cats > :not(.britishimg),
+input[id='russiancat']:checked ~ .cats > :not(.russianimg),
+input[id='siamesecat']:checked ~ .cats > :not(.siamimg)
 {
     opacity: .5;
+}
+
+input[id='abyssiniancat']:checked ~ .cat-breed .abyssinian,
+input[id='britishcat']:checked ~ .cat-breed .british,
+input[id='russiancat']:checked ~ .cat-breed .russian,
+input[id='siamesecat']:checked ~ .cat-breed .siamese
+{
+    background-color: #5a5a5a;
+    color: #fff;
+}
+
+main:not(input[id='abyssiniancat']:checked) ~ .cats > .abyssinianimg,
+main:not(input[id='britishcat']:checked) ~ .cats > .britishimg,
+main:not(input[id='russiancat']:checked) ~ .cats > .russianimg,
+main:not(input[id='siamesecat']:checked) ~ .cats > .siamimg
+{
+    opacity: 1;
 }
