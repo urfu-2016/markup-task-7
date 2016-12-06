@@ -1,8 +1,141 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
+    <title>markup-test-7</title>
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sofia" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nothing+You+Could+Do" rel="stylesheet">
 </head>
 <body>
+    <header class="header">
+        <nav class="nav">
+            <div class="nav__menu">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">Contact</a></li>
+                    <li><a href="">Sitemap</a></li>
+                    <li><a href="">Blog</a></li>
+                    <li><a href="">Sing in</a></li>
+                </ul>
+            </div>
+            <div class="nav__options">
+                <ul>
+                    <li>USD</li>
+                    <li>English</li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="banner">
+        <div class="banner__slogan">
+            <h1>Make this world <br>little bit better</h1>
+        </div>
+    </div>
+    <div class="title">
+        <h2>Granny's kittens</h2>
+    </div>
+    <main class="main">
+        <input type="radio" name="cats" id="cats-1" class="cats cats-1">
+        <input type="radio" name="cats" id="cats-2" class="cats cats-2">
+        <input type="radio" name="cats" id="cats-3" class="cats cats-3">
+        <input type="radio" name="cats" id="cats-4" class="cats cats-4">
+        <nav class="main__nav">
+            <h4>Breed</h4>
+            <ul>
+                <li class="nav-cat-1"><label for="cats-1">Abyssinian</label></li>
+                <li class="nav-cat-2"><label for="cats-2">British</label></li>
+                <li class="nav-cat-3"><label for="cats-3">Russian blue</label></li>
+                <li class="nav-cat-4"><label for="cats-4">Siamese</label></li>
+            </ul>
+        </nav>
+        <section class="main__content cats">
+            <div class="cats-item cats_cat-1">
+                <img src="img/cat_1.png" alt="cat"  title="saimon">
+                <div class="cats-item__name">
+                    <span>Saimon, 4 years</span>
+                </div>
+            </div>
+            <div class="cats-item cats_cat-2">
+                <img src="img/cat_2.png" alt="cat"  title="saimon">
+                <div class="cats-item__name">
+                    <span>Saimon, 4 years</span>
+                </div>
+            </div>
+            <div class="cats-item cats_cat-3">
+                <img src="img/cat_3.png" alt="cat"  title="saimon">
+                <div class="cats-item__name">
+                    <span>Saimon, 4 years</span>
+                </div>
+            </div>
+            <div class="cats-item cats_cat-4">
+                <img src="img/cat_4.png" alt="cat"  title="saimon">
+                <div class="cats-item__name">
+                    <span>Saimon, 4 years</span>
+                </div>
+            </div>
+            <div class="cats-item cats_cat-1">
+                <img src="img/cat_1.png" alt="cat"  title="saimon">
+                <div class="cats-item__name">
+                    <span>Saimon, 4 years</span>
+                </div>
+            </div>
+            <div class="cats-item cats_cat-2">
+                <img src="img/cat_2.png" alt="cat"  title="saimon">
+                <div class="cats-item__name">
+                    <span>Saimon, 4 years</span>
+                </div>
+            </div>
+            <div class="cats-item cats_cat-3">
+                <img src="img/cat_3.png" alt="cat"  title="saimon">
+                <div class="cats-item__name">
+                    <span>Saimon, 4 years</span>
+                </div>
+            </div>
+            <div class="cats-item cats_cat-4">
+                <img src="img/cat_4.png" alt="cat"  title="saimon">
+                <div class="cats-item__name">
+                    <span>Saimon, 4 years</span>
+                </div>
+            </div>
+        </section>
+        <aside class="main__sidebar">
+            <h4>Ranking</h4>
+            <input type="checkbox" id="ranking" name="ranking">
+            <label for="ranking">descending</label>
+            <div class="progress-bar">
+                <div class="progress-bar__item">
+                    <h5>Abyssinian</h5>
+                    <div class="progress-bar__line progress-bar__line_range--9"></div>
+                    <span>9</span>
+                </div>
+                <div class="progress-bar__item">
+                    <h5>British</h5>
+                    <div class="progress-bar__line progress-bar__line_range--8"></div>
+                    <span>8</span>
+                </div>
+                <div class="progress-bar__item">
+                    <h5>Russian blue</h5>
+                    <div class="progress-bar__line progress-bar__line_range--10"></div>
+                    <span>10</span>
+                </div>
+                <div class="progress-bar__item">
+                    <h5>Siamese</h5>
+                    <div class="progress-bar__line progress-bar__line_range--4"></div>
+                    <span>4</span>
+                </div>
+            </div>
+        </aside>
+    </main>
+    <footer class="footer-wrap">
+        <div class="footer">
+            <span>© 2016 - Granny's kittens™</span>
+            <address>Our address: Kotova st. 5</address>
+        </div>
+    </footer>
 </body>
 </html>
