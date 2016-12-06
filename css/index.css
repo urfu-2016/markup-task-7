@@ -11,8 +11,7 @@
 
 .nav
 {
-    width: 90%;
-    margin: 0 auto;
+    margin: 0 100px;
     overflow: hidden;
     height: 54px;
 }
@@ -23,7 +22,6 @@
 }
 
 .nav__menu li
-
 {
     display: inline-block;
     line-height: 54px;
@@ -62,7 +60,6 @@
 
 .nav__menu a
 {
-    color: #858586;
     text-decoration: none;
     font-weight: 400;
     display: block;
@@ -75,21 +72,21 @@
 {
     font-family: 'Material Icons';
     display: inline-block;
-    font-weight: normal;
+    font-weight: 400;
     position: absolute;
     left: 0;
     top: 0;
     transition: .5s linear all;
 }
 
-.nav__menu a:hover
+.nav__menu a:hover,
+.nav__menu a:hover:before
 {
     color: #3797a3;
 }
 
 .nav__menu a:hover:before
 {
-    color: #3797a3;
     transform: rotateY(360deg);
 }
 
@@ -102,7 +99,6 @@
 {
     display: inline-block;
     line-height: 54px;
-    color: #858586;
     font-weight: 400;
     transition: .5s linear all;
     cursor: pointer;
@@ -115,12 +111,9 @@
 
 .nav__options li:after
 {
-    content: '\f107';
-    font-family: 'FontAwesome';
-    font-size: 18px;
-    line-height: 18px;
-    color: #858586;
-    font-weight: normal;
+    content: '\e313';
+    font: 400 18px/18px 'Material Icons';
+    font-family: 'Material Icons';
     padding-left: 4px;
     vertical-align: -1px;
 }
@@ -132,21 +125,21 @@
 
 .banner
 {
-    background: url(../img/header_bg.jpg) 150px center no-repeat;
+    background: url(../img/header_bg.jpg) center right no-repeat;
     background-size: contain;
     height: 500px;
     position: relative;
     margin-top: 58px;
 }
 
-.banner__slogon
+.banner__slogan
 {
     position: absolute;
     top: 40%;
     left: 16%;
 }
 
-.banner__slogon h1
+.banner__slogan h1
 {
     font-size: 40px;
     background: transparent;
@@ -156,7 +149,7 @@
     position: relative;
 }
 
-.banner__slogon h1:after
+.banner__slogan h1:after
 {
     content: '';
     position: absolute;
@@ -179,18 +172,15 @@
 
 .title h2
 {
-    font-size: 30px;
+    font: 30px/54px 'Sofia';
     text-align: center;
-    font-family: 'Sofia';
-    line-height: 54px;
     color: #1db8ea;
 }
 
 .main
 {
     display: flex;
-    width: 90%;
-    margin: 40px auto;
+    margin: 40px 100px;
 }
 
 .main__nav,
@@ -207,12 +197,9 @@
 .main__nav h4,
 .main__sidebar h4
 {
-    font-size: 26px;
-    font-family: 'Sofia';
+    font: 400 26px 'Sofia';
     text-align: center;
     margin: 30px 0;
-    color: #858586;
-    font-weight: 400px;
     transition: color .2s linear;
 }
 
@@ -223,11 +210,7 @@
     margin-bottom: 4px;
     background: #333;
     padding: 0 20px;
-    line-height: 40px;
-    color: #858586;
-    font-size: 20px;
-    font-weight: 400px;
-    font-family: 'Sofia';
+    font: 400 20px/40px 'Sofia';
     transition: background .2s linear;
 }
 
@@ -272,10 +255,7 @@
 
 .main__sidebar label
 {
-    font-size: 18px;
-    font-weight: 400;
-    color: #858586;
-    font-family: 'Sofia';
+    font: 400 18px 'Sofia';
     padding-left: 20px;
     position: relative;
     cursor: pointer;
@@ -346,18 +326,13 @@
 {
     font-size: 18px;
     font-weight: 400;
-    color: #858586;
     font-family: 'Sofia';
 }
 
 .progress-bar__item > span
 {
     float: right;
-    margin-top: 6px;
-    font-size: 18px;
-    font-weight: 400;
-    color: #858586;
-    font-family: 'Sofia';
+    font: 400 18px 'Sofia';
 }
 
 .progress-bar__line
@@ -368,37 +343,56 @@
     float: left;
 }
 
-.progress-bar__line span
+.progress-bar__line_range--1,
+.progress-bar__line_range--2,
+.progress-bar__line_range--3,
+.progress-bar__line_range--4
 {
-    width: 100%;
-    height: 100%;
-    display: block;
-    background: linear-gradient(to right, #1db8ea 0%, #858586 100%);
+    background: linear-gradient(to right, #ff8373 0%
+    , rgba(125, 185, 232, 0) 100%);
 }
 
-.progress-bar__line_range--9 span
+.progress-bar__line_range--5,
+.progress-bar__line_range--6,
+.progress-bar__line_range--7,
+.progress-bar__line_range--8
 {
-    width: 90%;
+    background: linear-gradient(to right, #ffe473 0%
+    , rgba(125, 185, 232, 0) 100%);
 }
 
-.progress-bar__line_range--8 span
+.progress-bar__line_range--9,
+.progress-bar__line_range--10
+{
+    background: linear-gradient(to right, #64df85 0%
+    , rgba(125, 185, 232, 0) 100%);
+}
+
+.progress-bar__line_range--9
 {
     width: 80%;
 }
 
-.progress-bar__line_range--10 span
+.progress-bar__line_range--8
 {
-    width: 100%;
+    width: 70%;
 }
 
-.progress-bar__line_range--4 span
+.progress-bar__line_range--10
 {
-    width: 40%;
+    width: 90%;
+}
+
+.progress-bar__line_range--4
+{
+    width: 30%;
 }
 
 .cats:checked ~ .cats .cats-item
 {
-    display: none;
+    filter: grayscale(100%);
+    box-shadow: inset 0 0 8px rgba(0, 0, 0, .7);
+    opacity: .5;
 }
 
 .cats-item
@@ -458,13 +452,14 @@
     transition: opacity .2s linear;
 }
 
-.cats-item__name p
+.cats-item__name span
 {
     font-size: 20px;
     font-family: 'Sofia';
     text-align: center;
     line-height: 60px;
     color: #333;
+    display: block;
 }
 
 .cats-item:hover .cats-item__name
@@ -472,33 +467,49 @@
     opacity: .7;
 }
 
-.cats-1:checked ~ .cats .cats_cat-1
-{
-    display: block;
-}
-
-.cats-2:checked ~ .cats .cats_cat-2
-{
-    display: block;
-}
-
-.cats-3:checked ~ .cats .cats_cat-3
-{
-    display: block;
-}
-
+.cats-1:checked ~ .cats .cats_cat-1,
+.cats-2:checked ~ .cats .cats_cat-2,
+.cats-3:checked ~ .cats .cats_cat-3,
 .cats-4:checked ~ .cats .cats_cat-4
 {
-    display: block;
+    filter: none;
+    box-shadow: inset 0 0 0 transparent, 0 0 4px rgba(133, 133, 134, .5);
+    opacity: 1;
+}
+
+.cats-1:checked ~ .cats .cats_cat-1:hover,
+.cats-2:checked ~ .cats .cats_cat-2:hover,
+.cats-3:checked ~ .cats .cats_cat-3:hover,
+.cats-4:checked ~ .cats .cats_cat-4:hover
+{
+    box-shadow: 0 0 8px rgba(55, 151, 163, .7);
+}
+
+.cats-1:checked ~ .main__nav .nav-cat-1,
+.cats-2:checked ~ .main__nav .nav-cat-2,
+.cats-3:checked ~ .main__nav .nav-cat-3,
+.cats-4:checked ~ .main__nav .nav-cat-4
+{
+    background: #1db8ea;
 }
 
 .footer
 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 54px;
     background: #333;
     border-bottom: 2px solid #1db8ea;
     overflow: hidden;
+}
+
+.footer-wrap
+{
     flex: 1;
+    min-height: 54px;
+    position: relative;
 }
 
 .footer address,
@@ -507,17 +518,16 @@
     line-height: 54px;
     font-size: 14px;
     font-family: 'Sofia';
-    color: #858586;
-}
-
-.footer address
-{
-    float: left;
-    margin-left: 5%;
 }
 
 .footer span
 {
+    float: left;
+    margin-left: 100px;
+}
+
+.footer address
+{
     float: right;
-    margin-right: 5%;
+    margin-right: 100px;
 }

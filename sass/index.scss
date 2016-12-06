@@ -13,8 +13,7 @@
 
 .nav
 {
-    width: 90%;
-    margin: 0 auto;
+    margin: 0 100px;
     overflow: hidden;
     height: 54px;
 
@@ -61,7 +60,6 @@
 
         & a
         {
-            color: #858586;
             text-decoration: none;
             font-weight: 400;
             display: block;
@@ -73,21 +71,21 @@
             {
                 font-family: 'Material Icons';
                 display: inline-block;
-                font-weight: normal;
+                font-weight: 400;
                 position: absolute;
                 left: 0;
                 top: 0;
                 transition: .5s linear all;
             }
 
-            &:hover
+            &:hover,
+            &:hover:before
             {
                 color: #3797a3;
             }
 
             &:hover:before
             {
-                color: #3797a3;
                 transform: rotateY(360deg);
             }
         }
@@ -101,7 +99,6 @@
         {
             display: inline-block;
             line-height: 54px;
-            color: #858586;
             font-weight: 400;
             transition: .5s linear all;
             cursor: pointer;
@@ -113,12 +110,9 @@
 
             &:after
             {
-                content: '\f107';
-                font-family: 'FontAwesome';
-                font-size: 18px;
-                line-height: 18px;
-                color: #858586;
-                font-weight: normal;
+                content: '\e313';
+                font: 400 18px/18px 'Material Icons';
+                font-family: 'Material Icons';
                 padding-left: 4px;
                 vertical-align: -1px;
             }
@@ -135,13 +129,13 @@
 
 .banner
 {
-    background: url(../img/header_bg.jpg) 150px center no-repeat;
+    background: url(../img/header_bg.jpg) center right no-repeat;
     background-size: contain;
     height: 500px;
     position: relative;
     margin-top: 58px;
 
-    &__slogon
+    &__slogan
     {
         position: absolute;
         top: 40%;
@@ -183,10 +177,8 @@
 
     & h2
     {
-        font-size: 30px;
+        font: 30px/54px 'Sofia';
         text-align: center;
-        font-family: 'Sofia';
-        line-height: 54px;
         color: #1db8ea;
     }
 }
@@ -196,8 +188,7 @@
 .main
 {
     display: flex;
-    width: 90%;
-    margin: 40px auto;
+    margin: 40px 100px;
 
     &__nav,
     &__sidebar
@@ -211,12 +202,9 @@
 
         & h4
         {
-            font-size: 26px;
-            font-family: 'Sofia';
+            font: 400 26px 'Sofia';
             text-align: center;
             margin: 30px 0;
-            color: #858586;
-            font-weight: 400px;
             transition: color .2s linear;
         }
 
@@ -226,11 +214,7 @@
             margin-bottom: 4px;
             background: #333;
             padding: 0 20px;
-            line-height: 40px;
-            color: #858586;
-            font-size: 20px;
-            font-weight: 400px;
-            font-family: 'Sofia';
+            font: 400 20px/40px 'Sofia';
             transition: background .2s linear;
 
             & label
@@ -275,10 +259,7 @@
 
         & label
         {
-            font-size: 18px;
-            font-weight: 400;
-            color: #858586;
-            font-family: 'Sofia';
+            font: 400 18px 'Sofia';
             padding-left: 20px;
             position: relative;
             cursor: pointer;
@@ -352,18 +333,13 @@
         {
             font-size: 18px;
             font-weight: 400;
-            color: #858586;
             font-family: 'Sofia';
         }
 
         & > span
         {
             float: right;
-            margin-top: 6px;
-            font-size: 18px;
-            font-weight: 400;
-            color: #858586;
-            font-family: 'Sofia';
+            font: 400 18px 'Sofia';
         }
     }
 
@@ -374,34 +350,51 @@
         margin-top: 6px;
         float: left;
 
-        & span
-        {
-            width: 100%;
-            height: 100%;
-            display: block;
-            background: linear-gradient(to right,  #1db8ea 0%,#858586 100%);
-        }
-
         &_range
         {
-            &--9 span
+            &--1,
+            &--2,
+            &--3,
+            &--4
             {
-                width: 90%;
+                background: linear-gradient(to right,  rgba(255,131,115,1) 0%
+                ,rgba(125,185,232,0) 100%);
             }
 
-            &--8 span
+            &--5,
+            &--6,
+            &--7,
+            &--8
+            {
+                background: linear-gradient(to right, rgba(255,228,115,1) 0%
+                ,rgba(125,185,232,0) 100%);
+            }
+
+            &--9,
+            &--10
+            {
+                background: linear-gradient(to right, rgba(100,223,133,1) 0%
+                ,rgba(125,185,232,0) 100%);
+            }
+
+            &--9
             {
                 width: 80%;
             }
 
-            &--10 span
+            &--8
             {
-                width: 100%;
+                width: 70%;
             }
 
-            &--4 span
+            &--10
             {
-                width: 40%;
+                width: 90%;
+            }
+
+            &--4
+            {
+                width: 30%;
             }
         }
     }
@@ -411,7 +404,9 @@
 
 .cats:checked ~ .cats .cats-item
 {
-    display: none;
+    filter: grayscale(100%);
+    box-shadow: inset 0 0 8px rgba(0,0,0,.7);
+    opacity: .5;
 }
 
 .cats
@@ -471,13 +466,14 @@
             overflow: hidden;
             transition: opacity .2s linear;
 
-            & p
+            & span
             {
                 font-size: 20px;
                 font-family: 'Sofia';
                 text-align: center;
                 line-height: 60px;
                 color: #333;
+                display: block;
             }
         }
 
@@ -487,24 +483,28 @@
         }
     }
 
-    &-1:checked ~ .cats .cats_cat-1
-    {
-        display: block;
-    }
-
-    &-2:checked ~ .cats .cats_cat-2
-    {
-        display: block;
-    }
-
-    &-3:checked ~ .cats .cats_cat-3
-    {
-        display: block;
-    }
-
+    &-1:checked ~ .cats .cats_cat-1,
+    &-2:checked ~ .cats .cats_cat-2,
+    &-3:checked ~ .cats .cats_cat-3,
     &-4:checked ~ .cats .cats_cat-4
     {
-        display: block;
+        filter: none;
+        box-shadow: inset 0 0 0 rgba(0,0,0,0)
+            , 0 0 4px rgba(133, 133, 134, .5);
+        opacity: 1;
+
+        &:hover
+        {
+            box-shadow: 0 0 8px rgba(55,151,163,.7);
+        }
+    }
+
+    &-1:checked ~ .main__nav .nav-cat-1,
+    &-2:checked ~ .main__nav .nav-cat-2,
+    &-3:checked ~ .main__nav .nav-cat-3,
+    &-4:checked ~ .main__nav .nav-cat-4
+    {
+        background: #1db8ea;
     }
 }
 
@@ -512,11 +512,21 @@
 
 .footer
 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     height: 54px;
     background: #333;
     border-bottom: 2px solid #1db8ea;
     overflow: hidden;
-    flex: 1;
+
+    &-wrap
+    {
+        flex: 1;
+        min-height: 54px;
+        position: relative;
+    }
 
     & address,
     & span
@@ -524,18 +534,17 @@
         line-height: 54px;
         font-size: 14px;
         font-family: 'Sofia';
-        color: #858586;
-    }
-
-    & address
-    {
-        float: left;
-        margin-left: 5%;
     }
 
     & span
     {
+        float: left;
+        margin-left: 100px;
+    }
+
+    & address
+    {
         float: right;
-        margin-right: 5%;
+        margin-right: 100px;
     }
 }

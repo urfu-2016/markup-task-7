@@ -30,7 +30,7 @@ body
     flex-direction: column;
     min-width: 1024px;
     margin: 0 auto;
-    color: #252525;
+    color: #858586;
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     background: #fff;
     font-size: 16px;
@@ -40,4 +40,9 @@ ol,
 ul
 {
     list-style: none;
+}
+
+a
+{
+    color: #858586;
 }
