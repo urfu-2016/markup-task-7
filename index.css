@@ -1,44 +1,58 @@
-body
+body,
+html
 {
+    margin: 0;
+    padding: 0;
     background-color: #edebe9;
+    height: 100%;
 }
 
 header
 {
-    font-size: 40px;
-    font-weight: bold;
-    font-family: sans-serif;
+    font: bold 40px sans-serif;
     margin: 50px 0;
     text-align: center;
 }
 
-main,
 .flex-wrapper,
+.breed-menu,
 .rating-line,
-.rating-lines
+.rating-lines,
+.photo-area,
+body
 {
     display: flex;
 }
 
-main,
+.flex-wrapper,
+.photo-area,
+.rating-line
+{
+    justify-content: space-between;
+}
+
+.flex-wrapper
+{
+    flex-grow: 1;
+    flex-shrink: 0;
+}
+
+body,
+.breed-menu,
 .rating-lines
 {
     flex-direction: column;
 }
 
-img
+body
 {
-    margin: 5px;
-}
-
-.flex-wrapper
-{
-    justify-content: space-around;
+    flex-wrap: nowrap;
 }
 
 .breed-menu
 {
-    margin-right: 5px;
+    min-width: 200px;
+    flex-basis: 56px;
     background-color: #dddad6;
     font-size: 30px;
 }
@@ -49,47 +63,64 @@ img
     border-bottom: ridge 2px;
 }
 
+.photo-area
+{
+    flex-direction: row;
+    flex-wrap: wrap;
+    min-width: 940px;
+    flex-basis: 940px;
+}
+
 .photo-area input
 {
     display: none;
 }
 
-[value='Bengal']:checked ~ .Bengal
+.caption
 {
+    display: none;
+    position: absolute;
+    background-color: #000;
     opacity: .5;
+    color: #edebe9;
+    font: 20px sans-serif;
+    z-index: 100;
+    left: 20px;
+    top: 0;
+    padding: 10px;
 }
 
-[value='Siberian']:checked ~ .Siberian
+.photo-card
 {
-    opacity: .5;
+    margin: 5px 5px;
+    object-fit: fill;
+    position: relative;
 }
 
-[value='Siamese']:checked ~ .Siamese
+.photo-card:hover > .caption
 {
-    opacity: .5;
+    display: inline-block;
 }
 
-[value='Angora']:checked ~ .Angora
+.one-cell-image
 {
-    opacity: .5;
+    width: calc((100% / 3) - 20px);
 }
 
-.breed,
-label
+.two-cell-image
 {
-    display: block;
+    width: calc((100% - 100% / 3) - 20px);
 }
 
-.photo-area
+.three-cell-image
 {
-    flex-basis: 940px;
+    width: 100%;
 }
 
 .breed-rating
 {
     background-color: #dddad6;
     padding: 20px 10px;
-    min-width: 130px;
     align-self: flex-start;
 }
 
@@ -106,9 +137,12 @@ label
     color: #f00;
 }
 
-.rating-line
+[value='Bengal']:checked ~ .Bengal,
+[value='Siberian']:checked ~ .Siberian,
+[value='Siamese']:checked ~ .Siamese,
+[value='Angora']:checked ~ .Angora
 {
-    justify-content: space-between;
+    opacity: .5;
 }
 
 .Bengal-rating-bar,
@@ -168,5 +202,16 @@ label
     display: flex;
     justify-content: space-between;
     padding: 10px 30px;
+}
+
+.breed,
+label
+{
+    display: block;
+}
+
+address
+{
+    display: inline;
 }
 
