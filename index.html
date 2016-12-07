@@ -10,52 +10,52 @@
             <h1>Бабуленькины котятки</h1>
         </header>
         <main>
-            <input id="abyssiniancat" class="breed-input" type="checkbox"
-                name="abyssiniancheck" value="1">
-            <input id="britishcat" class="breed-input" type="checkbox"
-                name="britishcheck" value="1">
-            <input id="russiancat" class="breed-input" type="checkbox"
-                name="russiancheck" value="1">
-            <input id="siamesecat" class="breed-input" type="checkbox"
-                name="siamesecheck" value="1">
+            <input id="abyssiniancat" class="breed-input" type="radio"
+                name="cat" value="1">
+            <input id="britishcat" class="breed-input" type="radio"
+                name="cat" value="1">
+            <input id="russiancat" class="breed-input" type="radio"
+                name="cat" value="1">
+            <input id="siamesecat" class="breed-input" type="radio"
+                name="cat" value="1">
             <nav class="cat-breed">
-                <label for="abyssiniancat" class="breed abyssinian">Абиссинская</label>
-                <label for="britishcat" class="breed british">Британская</label>
-                <label for="russiancat" class="breed russian">Русская голубая</label>
-                <label for="siamesecat" class="breed siamese">Сиамская</label>
+                <div class="breed-text"><label for="abyssiniancat" class="breed abyssinian">Абиссинская</label></div>
+                <div class="breed-text"><label for="britishcat" class="breed british">Британская</label></div>
+                <div class="breed-text"><label for="russiancat" class="breed russian">Русская голубая</label></div>
+                <div class="breed-text"><label for="siamesecat" class="breed siamese">Сиамская</label></div>
             </nav>
             <section class="cats">
-                <div class="first-line siamimg">
+                <div class="first-line lines one-half-point siamimg">
                     <img alt="Гоша" src="scat.gif" class="images">
-                    <div class="description">Гоша, 4 года</div>
+                    <div class="description siam-description">Гоша, 4 года</div>
                 </div>
-                <div class="second-line abyssinianimg">
-                    <img alt="Кеша" src="abcat12.jpg" class="images">
-                    <div class="description">Кеша, 7 лет</div>
-                </div>
-                <div class="second-line siamimg">
-                    <img alt="Вася" src="s2.jpg" class="images">
-                    <div class="description">Вася, 5 лет</div>
-                </div>
-                <div class="third-line britishimg">
-                    <img alt="Кот" src="brcat1.jpg" class="images">
-                    <div class="description">Кот, 1 год</div>
-                </div>
-                <div class="first-line russianimg">
+                <div class="first-line lines two-point russianimg">
                     <img alt="Клеопатра" src="rg10.jpg" class="images">
-                    <div class="description">Клеопатра, 5 лет</div>
+                    <div class="description russian-description">Клеопатра, 5 лет</div>
                 </div>
-                <div class="fourth-line russianimg">
+                <div class="second-line lines one-half-point abyssinianimg">
+                    <img alt="Кеша" src="abcat12.jpg" class="images">
+                    <div class="description abyssinian-description">Кеша, 7 лет</div>
+                </div>
+                <div class="second-line lines one-point siamimg">
+                    <img alt="Вася" src="s2.jpg" class="images">
+                    <div class="description siam-description">Вася, 5 лет</div>
+                </div>
+                <div class="third-line lines one-point britishimg">
+                    <img alt="Кот" src="brcat1.jpg" class="images">
+                    <div class="description british-description">Кот, 1 год</div>
+                </div>
+                <div class="fourth-line lines two-half-point russianimg">
                     <img alt="Сметанка" src="rg9.jpg" class="images">
-                    <div class="description">Сметанка, 1 год</div>
+                    <div class="description russian-description">Сметанка, 1 год</div>
                 </div>
-                <div class="fourth-line abyssinianimg">
+                <div class="fourth-line lines one-point abyssinianimg">
                     <img alt="Кеша" src="abcat1.jpg" class="images">
-                    <div class="description">Кеша, 7 лет</div>
+                    <div class="description abyssinian-description">Кеша, 7 лет</div>
                 </div>
-                <div class="fifth-line abyssinianimg">
+                <div class="fifth-line lines three-point abyssinianimg">
                     <img alt="Маша" src="abcat8.jpg" class="images">
-                    <div class="description">Маша, 3 года</div>
+                    <div class="description abyssinian-description">Маша, 3 года</div>
                 </div>
             </section>
             <section class="rating">
@@ -64,27 +64,26 @@
                 <label for="descending" class="descending">По убыванию</label>
                 <article class="siamese-cats-rating">
                     <div class="text">Сиамская</div>
-                    <div class="siamese-rating"></div>
+                    <div class="yellow-rating"></div>
                     <div class="number">2</div>
                 </article>
                 <article class="abyssinian-cats-rating">
                     <div class="text">Абиссинская</div>
-                    <div class="abyssinian-rating"></div>
+                    <div class="green-rating"></div>
                     <div class="number">3</div>
                 </article>
                 <article class="british-cats-rating">
                     <div class="text">Британская</div>
-                    <div class="british-rating"></div>
+                    <div class="red-rating"></div>
                     <div class="number">1</div>
                 </article>
                 <article class="russian-cats-rating">
                     <div class="text">Русская голубая</div>
-                    <div class="russian-rating"></div>
+                    <div class="yellow-rating"></div>
                     <div class="number">2</div>
                 </article>
             </section>
         </main>
-        <hr>
         <footer>
             <div>© OOO Бабуленькины котятки, 2016</div>
             <div class="address">Наш адрес: улица Котовая, д.25</div>
