@@ -190,6 +190,11 @@ aside
     background: linear-gradient(to right, #0f0, #fff);
 }
 
+address
+{
+    display: inline;
+}
+
 input:checked ~ .first
 {
     order: 1;
