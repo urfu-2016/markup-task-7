@@ -20,8 +20,9 @@ header
 main
 {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex: 1 0 auto;
+
 }
 
 h1
@@ -44,6 +45,7 @@ aside
     display: flex;
     flex-direction: column;
     padding-top: 3px;
+    min-width: 170px;
 }
 
 .breed
@@ -129,9 +131,17 @@ aside
 .breed1:checked ~ .abissian,
 .breed2:checked ~ .britain,
 .breed3:checked ~ .rusblue,
-.breed4:checked ~ .siam,
+.breed4:checked ~ .siam
 {
     background-color: #444;
+}
+
+.breed1:checked ~ .breed-choise .abissian,
+.breed2:checked ~ .breed-choise .britain,
+.breed3:checked ~ .breed-choise .rusblue,
+.breed4:checked ~ .breed-choise .siam
+{
+    background-color: #777;
 }
 
 .top
