@@ -92,7 +92,7 @@ body
 
 .photo-card
 {
-    margin: 5px 5px;
+    margin: 5px;
     object-fit: fill;
     position: relative;
 }
