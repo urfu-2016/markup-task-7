@@ -1,0 +1,210 @@
+html,
+body
+{
+    background-color: #ccc;
+    height: 100%;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header
+{
+    text-align: center;
+}
+
+main
+{
+    display: flex;
+    justify-content: center;
+    flex: 1 0 auto;
+}
+
+h1
+{
+    font-size: 3em;
+}
+
+h2
+{
+    color: #c00;
+}
+
+aside
+{
+    background: #aaa;
+}
+
+.breed-choise
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
+}
+
+.breed
+{
+    padding: 5px;
+    border-bottom: 1px solid #000;
+    font-size: 1.5em;
+}
+
+.breed:hover
+{
+    background-color: #666;
+}
+
+.gallery
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 950px;
+}
+
+.input
+{
+    display: none;
+}
+
+.cell
+{
+    margin: 3px;
+    position: relative;
+    height: 250px;
+}
+
+.cell > .description
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(50,50,50,.6);
+    padding: 10px 15px;
+    font-size: 1.2em;
+    color: #fff;
+    bottom: 15px;
+}
+
+.cell:hover > .description
+{
+    display: block;
+}
+
+.double-size
+{
+    width: 606px;
+}
+
+.default-size
+{
+    width: 300px;
+}
+
+.triple-size
+{
+    width: 912px;
+}
+
+.imgCat
+{
+    width: inherit;
+    height: 100%;
+    object-fit: cover;
+}
+
+.breed1:checked ~ .gallery .cell:not(.breed1),
+.breed2:checked ~ .gallery .cell:not(.breed2),
+.breed3:checked ~ .gallery .cell:not(.breed3),
+.breed4:checked ~ .gallery .cell:not(.breed4)
+{
+    opacity: .5;
+    transition: opacity .5s;
+}
+
+.breed1:checked ~ .abissian,
+.breed2:checked ~ .britain,
+.breed3:checked ~ .rusblue,
+.breed4:checked ~ .siam,
+{
+    background-color: #444;
+}
+
+.top
+{
+    display: flex;
+    font-size: 1.5em;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 0 15px;
+}
+
+.scale
+{
+    margin-right: 10px;
+    height: 15px;
+    display: inline-block;
+}
+
+.top-element
+{
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.top-element .four
+{
+    width: 32%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.top-element .eight
+{
+    width: 64%;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.top-element .nine
+{
+    width: 72%;
+    background: linear-gradient(to right, #0f0, #fff);
+}
+
+.top-element .ten
+{
+    width: 80%;
+    background: linear-gradient(to right, #0f0, #fff);
+}
+
+input:checked ~ .first
+{
+    order: 1;
+}
+
+input:checked ~ .second
+{
+    order: 2;
+}
+
+input:checked ~ .third
+{
+    order: 3;
+}
+
+input:checked ~ .fourth
+{
+    order: 4;
+}
+
+footer
+{
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 2px solid #000;
+}
