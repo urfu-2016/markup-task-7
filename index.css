@@ -17,19 +17,29 @@ a
     color: #000;
 }
 
+.breed-input
+{
+    display: none;
+}
+
 .cats
 {
-    width: 70%;
+    min-width: 300px;
+    flex: 0 0 70%;
     z-index: 1px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .images
 {
+    height: 100%;
+}
+
+.lines
+{
     height: 350px;
-    max-width: 100%;
 }
 
 .first-line
@@ -54,18 +64,38 @@ a
 
 .fifth-line
 {
+    height: 330px;
     order: 5;
+}
+
+.one-half-point
+{
+    width: 41%;
+    padding: 3px;
+}
+
+.one-point
+{
+    width: 27%;
+    margin: 3px;
+}
+
+.two-point
+{
+    width: 56%;
+    margin: 3px;
+}
+
+.three-point
+{
+    width: 70%;
+    margin: 3px;
 }
 
 header
 {
     text-align: center;
     font-size: 25px;
-}
-
-.breed-input
-{
-    display: none;
 }
 
 .breed
@@ -79,12 +109,19 @@ header
 
 .cat-breed
 {
+    min-width: 150px;
     width: 15%;
     background-color: #d9d9d9;
 }
 
+.breed-text
+{
+    width: 100%;
+}
+
 .text
 {
+    width: 100%;
     margin: 10px;
 }
 
@@ -96,14 +133,10 @@ header
     font-size: 30px;
 }
 
-.text
-{
-    width: 100%;
-}
-
 .rating
 {
     width: 15%;
+    min-width: 150px;
     height: 100%;
     background-color: #d9d9d9;
     display: flex;
@@ -129,22 +162,21 @@ header
     font-size: 18px;
 }
 
-.russian-rating,
-.siamese-rating
+.yellow-rating
 {
     background: linear-gradient(to left, #fefcea, #fff609);
     width: 80px;
     height: 25px;
 }
 
-.abyssinian-rating
+.green-rating
 {
     background: linear-gradient(to left, #fefcea, #3eee91);
     width: 100px;
     height: 25px;
 }
 
-.british-rating
+.red-rating
 {
     background: linear-gradient(to left, #fefcea, #ea1813);
     width: 60px;
@@ -171,10 +203,17 @@ input[id='descending']:checked ~ .russian-cats-rating
 
 footer
 {
-    width: 100%;
+    margin-top: 45px;
+    border-top: 1px solid black;
     display: flex;
     justify-content: space-between;
+    background-color: #ebebeb;
+}
 
+hr
+{
+    margin-top: 5px;
+    height: 4px;
 }
 
 .address
@@ -193,11 +232,7 @@ input[id='descending']:checked ~ .british-cats-rating
     order: 3;
 }
 
-.first-line:hover .description,
-.second-line:hover .description,
-.third-line:hover .description,
-.fourth-line:hover .description,
-.fifth-line:hover .description
+.lines:hover .description
 {
     display: block;
 }
@@ -210,6 +245,19 @@ input[id='siamesecat']:checked ~ .cats > :not(.siamimg)
     opacity: .5;
 }
 
+input.breed-input:checked ~ .cats .lines .description
+{
+    opacity: 0;
+}
+
+input[id='abyssiniancat']:checked ~ .cats .lines .abyssinian-description,
+input[id='britishcat']:checked ~ .cats .lines .british-description,
+input[id='russiancat']:checked ~ .cats .lines .russian-description,
+input[id='siamesecat']:checked ~ .cats .lines .siam-description
+{
+    opacity: .5;
+}
+
 input[id='abyssiniancat']:checked ~ .cat-breed .abyssinian,
 input[id='britishcat']:checked ~ .cat-breed .british,
 input[id='russiancat']:checked ~ .cat-breed .russian,
@@ -217,12 +265,4 @@ input[id='siamesecat']:checked ~ .cat-breed .siamese
 {
     background-color: #5a5a5a;
     color: #fff;
-}
-
-main:not(input[id='abyssiniancat']:checked) ~ .cats > .abyssinianimg,
-main:not(input[id='britishcat']:checked) ~ .cats > .britishimg,
-main:not(input[id='russiancat']:checked) ~ .cats > .russianimg,
-main:not(input[id='siamesecat']:checked) ~ .cats > .siamimg
-{
-    opacity: 1;
 }
