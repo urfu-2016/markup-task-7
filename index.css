@@ -1,5 +1,5 @@
-body,
-html
+html,
+body
 {
     margin: 0;
     padding: 0;
@@ -9,9 +9,10 @@ html
 
 header
 {
-    font: bold 40px sans-serif;
-    margin: 50px 0;
+    font: bold 45px sans-serif;
+    margin: 61px 0 55px;
     text-align: center;
+    letter-spacing: 1px;
 }
 
 .flex-wrapper,
@@ -19,6 +20,7 @@ header
 .rating-line,
 .rating-lines,
 .photo-area,
+.breed-rating,
 body
 {
     display: flex;
@@ -33,13 +35,14 @@ body
 
 .flex-wrapper
 {
-    flex-grow: 1;
-    flex-shrink: 0;
+    flex: 1 0 auto;
+    margin: 0 28px;
 }
 
 body,
 .breed-menu,
-.rating-lines
+.rating-lines,
+.breed-rating
 {
     flex-direction: column;
 }
@@ -57,42 +60,49 @@ body
     font-size: 30px;
 }
 
-.breed-menu label
+.breed
 {
-    padding: 10px;
+    padding: 18px;
     border-bottom: ridge 2px;
+    font: 23px sans-serif;
+    text-transform: capitalize;
 }
 
 .photo-area
 {
     flex-direction: row;
     flex-wrap: wrap;
-    min-width: 940px;
-    flex-basis: 940px;
+    flex-basis: 980px;
 }
 
-.photo-area input
+.breed-selector
 {
     display: none;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
 }
 
 .caption
 {
     display: none;
     position: absolute;
-    background-color: #000;
-    opacity: .5;
+    background-color: rgba(0, 0, 0, .5);
     color: #edebe9;
     font: 20px sans-serif;
     z-index: 100;
-    left: 20px;
-    top: 0;
+    bottom: 20px;
     padding: 10px;
+    margin: 0;
 }
 
 .photo-card
 {
-    margin: 5px;
+    padding: 0;
+    margin: 0 10px 10px;
     object-fit: fill;
     position: relative;
 }
@@ -117,32 +127,63 @@ body
     width: 100%;
 }
 
+.three-cell-image:last-child
+{
+    margin-bottom: 0;
+}
+
 .breed-rating
 {
     background-color: #dddad6;
-    padding: 20px 10px;
+    padding: 5px 10px;
     align-self: flex-start;
+    min-width: 220px;
 }
 
 .breed-rating label
 {
     display: inline-block;
-    padding-bottom: 20px;
+    text-transform: lowercase;
+    margin-left: 80px;
+    font-family: sans-serif;
 }
 
 .rating-header
 {
     display: block;
-    font-size: 30px;
+    font: 30px sans-serif;
     color: #f00;
+    text-transform: uppercase;
+    margin-bottom: 10px;
 }
 
-[value='Bengal']:checked ~ .Bengal,
-[value='Siberian']:checked ~ .Siberian,
-[value='Siamese']:checked ~ .Siamese,
-[value='Angora']:checked ~ .Angora
+[value='Bengal']:checked ~ .photo-area > :not(.Bengal),
+[value='Siberian']:checked ~ .photo-area > :not(.Siberian),
+[value='Siamese']:checked ~ .photo-area > :not(.Siamese),
+[value='Angora']:checked ~ .photo-area > :not(.Angora)
 {
     opacity: .5;
+}
+
+[value='Bengal']:checked ~ .photo-area > :not(.Bengal) .caption,
+[value='Siberian']:checked ~ .photo-area > :not(.Siberian) .caption,
+[value='Siamese']:checked ~ .photo-area > :not(.Siamese) .caption,
+[value='Angora']:checked ~ .photo-area > :not(.Angora) .caption
+{
+    display: none;
+}
+
+.breed:hover,
+.breed:hover,
+.breed:hover,
+.breed:hover,
+[value='Bengal']:checked ~ .breed-menu > [for='Bengal'],
+[value='Siberian']:checked ~ .breed-menu > [for='Siberian'],
+[value='Siamese']:checked ~ .breed-menu > [for='Siamese'],
+[value='Angora']:checked ~ .breed-menu > [for='Angora']
+{
+    background-color: #54595a;
+    color: #fff;
 }
 
 .Bengal-rating-bar,
@@ -151,30 +192,55 @@ body
 .Angora-rating-bar
 {
     height: 20px;
+    margin-top: 10px;
+    border: 1px double #555;
+}
+
+.rating-card
+{
+    margin-top: 25px;
+}
+
+.from-0-to-4-rating
+{
+    background: linear-gradient(to right, red, white);
+}
+
+.from-4-to-8-rating
+{
+    background: linear-gradient(to right, yellow, white);
+}
+
+.from-9-to-10-rating
+{
+    background: linear-gradient(to right, green, white);
 }
 
 .Bengal-rating-bar
 {
-    background: linear-gradient(to right, green, white);
-    width: 90px;
+    width: 90%;
 }
 
 .Siberian-rating-bar
 {
-    background: linear-gradient(to right, yellow, white);
-    width: 80px;
+    width: 80%;
 }
 
 .Siamese-rating-bar
 {
-    background: linear-gradient(to right, green, white);
-    width: 100px;
+    width: 100%;
 }
 
 .Angora-rating-bar
 {
-    background: linear-gradient(to right, red, white);
-    width: 40px;
+    width: 40%;
+}
+
+.rating-lines
+{
+    text-transform: capitalize;
+    font: 20px sans-serif;
+    margin-right: 20px;
 }
 
 .breed-rating input:checked ~ .rating-lines .Siamese-rating-card
@@ -197,14 +263,27 @@ body
     order: 3;
 }
 
-.footer
+.point
 {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 30px;
+    font-weight: bold;
+    margin: 10px 0 0 20px;
 }
 
-.breed,
+.footer
+{
+    margin: 30px 0;
+    border-top: 1px groove #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px 0;
+}
+
+.footer a
+{
+    text-decoration: none;
+}
+
+.breed-rating,
 label
 {
     display: block;
