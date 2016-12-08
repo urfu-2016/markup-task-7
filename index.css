@@ -1,5 +1,11 @@
 body
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    margin: 0;
     background: #808080;
 }
 
@@ -181,7 +187,7 @@ input[id='abyssinian']:checked ~ .labels label[id='label-abyssinian'],
 input[id='british']:checked ~ .labels label[id='label-british'],
 input[id='persian']:checked ~ .labels label[id='label-persian']
 {
-    background: black;
+    background: #000;
 }
 
 input[id='all']:checked ~ .content .cats:hover .description,
@@ -214,28 +220,43 @@ input[id='persian']:checked ~ .content .persian
 {
     flex-grow: 1;
     width: 29%;
-    margin: 5px 1%;
+    margin: 0 1% 10px;
 }
 
 .horizontal
 {
     flex-grow: 2;
     width: 60%;
-    margin: 5px 1%;
+    margin: 0 1% 10px;
 }
 
 .down
 {
     width: 100%;
-    margin: 5px 1%;
+    margin: 0 1%;
 }
 
 .image
 {
     opacity: 1;
     position: absolute;
-    object-fit: cover;
     min-width: 100%;
     min-height: 100%;
     zoom: 1%;
+}
+
+.footer
+{
+    display: flex;
+    justify-content: space-between;
+    font: 16px 'Times New Roman';
+    padding: 10px;
+    margin-top: 20px;
+    border-top: 1px solid #000;
+    min-width: 940px;
+}
+
+.indent
+{
+    margin: 10px 0;
 }
