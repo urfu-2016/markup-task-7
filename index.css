@@ -186,19 +186,16 @@ img
     color: #fff;
 }
 
-.Bengal-rating-bar,
-.Siberian-rating-bar,
-.Siamese-rating-bar,
-.Angora-rating-bar
+.rating-bar
 {
     height: 20px;
-    margin-top: 10px;
+    margin: 10px 20px 0 0;
     border: 1px double #555;
 }
 
 .rating-card
 {
-    margin-top: 25px;
+    margin: 25px 0 10px 10px;
 }
 
 .from-0-to-4-rating
@@ -263,10 +260,17 @@ img
     order: 3;
 }
 
+.rating-bar-wrapper
+{
+    width: 100%;
+    margin-right: 20px;
+}
+
 .point
 {
+    width: 25px;
     font-weight: bold;
-    margin: 10px 0 0 20px;
+    margin: 10px 0 0;
 }
 
 .footer
