@@ -1,0 +1,305 @@
+html,
+body
+{
+    margin: 0;
+    padding: 0;
+    background-color: #edebe9;
+    height: 100%;
+}
+
+header
+{
+    font: bold 45px sans-serif;
+    margin: 61px 0 55px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+.flex-wrapper,
+.breed-menu,
+.rating-line,
+.rating-lines,
+.photo-area,
+.breed-rating,
+body
+{
+    display: flex;
+}
+
+.flex-wrapper,
+.photo-area,
+.rating-line
+{
+    justify-content: space-between;
+}
+
+.flex-wrapper
+{
+    flex: 1 0 auto;
+    margin: 0 28px;
+}
+
+body,
+.breed-menu,
+.rating-lines,
+.breed-rating
+{
+    flex-direction: column;
+}
+
+body
+{
+    flex-wrap: nowrap;
+}
+
+.breed-menu
+{
+    min-width: 200px;
+    flex-basis: 56px;
+    background-color: #dddad6;
+    font-size: 30px;
+}
+
+.breed
+{
+    padding: 18px;
+    border-bottom: ridge 2px;
+    font: 23px sans-serif;
+    text-transform: capitalize;
+}
+
+.photo-area
+{
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex-basis: 980px;
+}
+
+.breed-selector
+{
+    display: none;
+}
+
+img
+{
+    width: 100%;
+    height: 100%;
+}
+
+.caption
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, .5);
+    color: #edebe9;
+    font: 20px sans-serif;
+    z-index: 100;
+    bottom: 20px;
+    padding: 10px;
+    margin: 0;
+}
+
+.photo-card
+{
+    padding: 0;
+    margin: 0 10px 10px;
+    object-fit: fill;
+    position: relative;
+}
+
+.photo-card:hover > .caption
+{
+    display: inline-block;
+}
+
+.one-cell-image
+{
+    width: calc((100% / 3) - 20px);
+}
+
+.two-cell-image
+{
+    width: calc((100% - 100% / 3) - 20px);
+}
+
+.three-cell-image
+{
+    width: 100%;
+}
+
+.three-cell-image:last-child
+{
+    margin-bottom: 0;
+}
+
+.breed-rating
+{
+    background-color: #dddad6;
+    padding: 5px 10px;
+    align-self: flex-start;
+    min-width: 220px;
+}
+
+.breed-rating label
+{
+    display: inline-block;
+    text-transform: lowercase;
+    margin-left: 80px;
+    font-family: sans-serif;
+}
+
+.rating-header
+{
+    display: block;
+    font: 30px sans-serif;
+    color: #f00;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+[value='Bengal']:checked ~ .photo-area > :not(.Bengal),
+[value='Siberian']:checked ~ .photo-area > :not(.Siberian),
+[value='Siamese']:checked ~ .photo-area > :not(.Siamese),
+[value='Angora']:checked ~ .photo-area > :not(.Angora)
+{
+    opacity: .5;
+}
+
+[value='Bengal']:checked ~ .photo-area > :not(.Bengal) .caption,
+[value='Siberian']:checked ~ .photo-area > :not(.Siberian) .caption,
+[value='Siamese']:checked ~ .photo-area > :not(.Siamese) .caption,
+[value='Angora']:checked ~ .photo-area > :not(.Angora) .caption
+{
+    display: none;
+}
+
+.breed:hover,
+.breed:hover,
+.breed:hover,
+.breed:hover,
+[value='Bengal']:checked ~ .breed-menu > [for='Bengal'],
+[value='Siberian']:checked ~ .breed-menu > [for='Siberian'],
+[value='Siamese']:checked ~ .breed-menu > [for='Siamese'],
+[value='Angora']:checked ~ .breed-menu > [for='Angora']
+{
+    background-color: #54595a;
+    color: #fff;
+}
+
+.rating-bar
+{
+    height: 20px;
+    margin: 10px 20px 0 0;
+    border: 1px double #555;
+}
+
+.rating-card
+{
+    margin: 25px 0 10px 10px;
+}
+
+.from-0-to-4-rating
+{
+    background: linear-gradient(to right, red, white);
+}
+
+.from-4-to-8-rating
+{
+    background: linear-gradient(to right, yellow, white);
+}
+
+.from-9-to-10-rating
+{
+    background: linear-gradient(to right, green, white);
+}
+
+.Bengal-rating-bar
+{
+    width: 90%;
+}
+
+.Siberian-rating-bar
+{
+    width: 80%;
+}
+
+.Siamese-rating-bar
+{
+    width: 100%;
+}
+
+.Angora-rating-bar
+{
+    width: 40%;
+}
+
+.rating-lines
+{
+    text-transform: capitalize;
+    font: 20px sans-serif;
+    margin-right: 20px;
+}
+
+.breed-rating input:checked ~ .rating-lines .Siamese-rating-card
+{
+    order: 0;
+}
+
+.breed-rating input:checked ~ .rating-lines .Bengal-rating-card
+{
+    order: 1;
+}
+
+.breed-rating input:checked ~ .rating-lines .Siberian-rating-card
+{
+    order: 2;
+}
+
+.breed-rating input:checked ~ .rating-lines .Angora-rating-card
+{
+    order: 3;
+}
+
+.rating-bar-wrapper
+{
+    width: 100%;
+    margin-right: 20px;
+}
+
+.point
+{
+    width: 25px;
+    font-weight: bold;
+    margin: 10px 0 0;
+}
+
+.footer
+{
+    margin: 30px 0;
+    border-top: 1px groove #000;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px 0;
+}
+
+.footer div
+{
+    color: #00f;
+}
+
+.footer a
+{
+    text-decoration: none;
+}
+
+.breed-rating,
+label
+{
+    display: block;
+}
+
+address
+{
+    display: inline;
+}
+

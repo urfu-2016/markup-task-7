@@ -1,8 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <title>cat market</title>
+    <link rel="stylesheet" href="index.css">
     <meta charset="utf-8">
 </head>
 <body>
+    <header>Бабуленькины котятки</header>
+    <main class="flex-wrapper">
+        <input class="breed-selector" type="radio" name="breed" value="Bengal" id="Bengal">
+        <input class="breed-selector" type="radio" name="breed" value="Siberian" id="Siberian">
+        <input class="breed-selector" type="radio" name="breed" value="Siamese" id="Siamese">
+        <input class="breed-selector" type="radio" name="breed" value="Angora" id="Angora">
+        <div class="breed-menu">
+            <label for="Bengal" class="breed">бенгальская</label>
+            <label for="Siberian" class="breed">сибирская</label>
+            <label for="Siamese" class="breed">сиамская</label>
+            <label for="Angora" class="breed">ангорская</label>
+        </div>
+        <div class="photo-area">
+            <div class="photo-card one-cell-image Bengal">
+                <img src="files/1.jpg" title="" alt="Бенгальский кот в профиль">
+                <div class="caption-background"></div>
+                <p class="caption">Вася, 5 лет</p>
+            </div>
+            <div class="photo-card two-cell-image Siberian">
+                <img src="files/4.jpg" title="" alt="Сибирский кот боком стоит">
+                <div class="caption-background"></div>
+                <p class="caption">Дикси, 13 лет</p>
+            </div>
+            <div class="photo-card one-cell-image Angora">
+                <img src="files/7.jpg" title="" alt="Ангорский кот сидит в полный рост">
+                <div class="caption-background"></div>
+                <p class="caption">Муня, 5 лет</p>
+            </div>
+            <div class="photo-card one-cell-image Siamese">
+                <img src="files/6.jpg" title="" alt="Сиамский кот облизывается">
+                <div class="caption-background"></div>
+                <p class="caption">Тимми, 1 год</p>
+            </div>
+            <div class="photo-card one-cell-image Bengal">
+                <img src="files/2.jpg" title="" alt="Бенгальский кот лежит анфас">
+                <div class="caption-background"></div>
+                <p class="caption">Стартер, 3 года</p>
+            </div>
+            <div class="photo-card two-cell-image Bengal">
+                <img src="files/3.jpg" title="" alt="Бенгальский кот потягивается">
+                <div class="caption-background"></div>
+                <p class="caption">Пинни, 3 года</p>
+            </div>
+            <div class="photo-card one-cell-image Siberian">
+                <img src="files/5.jpg" title="" alt="Сибирский кот сидит анфас">
+                <div class="caption-background"></div>
+                <p class="caption">Снежок, 8 лет</p>
+            </div>
+            <div class="photo-card three-cell-image Angora">
+                <img src="files/8.jpg" title="" alt="Ангорский кот лежит">
+                <div class="caption-background"></div>
+                <p class="caption">Раффаелка, 7 лет</p>
+            </div>
+        </div>
+        <div class="breed-rating">
+            <span class="rating-header">Рейтинг</span>
+            <label for="in-descending-order">По убыванию</label>
+            <input class="in-descending-order-checkbox" id="in-descending-order" type="checkbox">
+            <div class="rating-lines">
+                <div class="Bengal-rating-card rating-card">
+                    бенгальская
+                    <div class="rating-line">
+                        <div class="rating-bar-wrapper">
+                            <div class="rating-bar Bengal-rating-bar from-9-to-10-rating"></div>
+                        </div>
+                        <div class="point">9</div>
+                    </div>
+                </div>
+                <div class="Siberian-rating-card rating-card">
+                    сибирская
+                    <div class="rating-line">
+                        <div class="rating-bar-wrapper">
+                            <div class="rating-bar Siberian-rating-bar from-4-to-8-rating"></div>
+                        </div>
+                        <div class="point">8</div>
+                    </div>
+                </div>
+                <div class="Siamese-rating-card rating-card">
+                    сиамская
+                    <div class="rating-line">
+                        <div class="rating-bar-wrapper">
+                            <div class="rating-bar Siamese-rating-bar from-9-to-10-rating"></div>
+                        </div>
+                        <div class="point">10</div>
+                    </div>
+                </div>
+                <div class="Angora-rating-card rating-card">
+                    ангорская
+                    <div class="rating-line">
+                        <div class="rating-bar-wrapper">
+                            <div class="rating-bar Angora-rating-bar from-0-to-4-rating"></div>
+                        </div>
+                        <div class="point">4</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <span>ООО Бабуленькины котятки, <time>2016</time></span>
+        <div>Наш адрес: <address><a href="#">улица Котовая, д. 5</a></address></div>
+    </footer>
 </body>
 </html>
