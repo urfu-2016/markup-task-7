@@ -1,12 +1,22 @@
+html
+{
+    height: 100%;
+}
+
 body
 {
     background-color: #ebebeb;
     font: sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    margin: 0;
 }
 
 main
 {
     display: flex;
+    flex: 1 1;
     flex-wrap: wrap;
     font-size: 25px;
 }
@@ -24,22 +34,26 @@ a
 
 .cats
 {
-    min-width: 300px;
-    flex: 0 0 70%;
+    flex: 1 1 70%;
     z-index: 1px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 .images
 {
+    width: 100%;
+    object-fit: cover;
     height: 100%;
 }
 
-.lines
+.second-line,
+.third-line,
+.fourth-line,
+.fifth-line
 {
-    height: 350px;
+    padding-top: 1%;
 }
 
 .first-line
@@ -64,32 +78,32 @@ a
 
 .fifth-line
 {
-    height: 330px;
     order: 5;
 }
 
 .one-half-point
 {
     width: 41%;
-    padding: 3px;
 }
 
 .one-point
 {
     width: 27%;
-    margin: 3px;
 }
 
 .two-point
 {
     width: 56%;
-    margin: 3px;
+}
+
+.two-half-point
+{
+    width: 70%;
 }
 
 .three-point
 {
-    width: 70%;
-    margin: 3px;
+    width: 98%;
 }
 
 header
@@ -109,7 +123,6 @@ header
 
 .cat-breed
 {
-    min-width: 150px;
     width: 15%;
     background-color: #d9d9d9;
 }
@@ -136,7 +149,6 @@ header
 .rating
 {
     width: 15%;
-    min-width: 150px;
     height: 100%;
     background-color: #d9d9d9;
     display: flex;
@@ -203,17 +215,12 @@ input[id='descending']:checked ~ .russian-cats-rating
 
 footer
 {
-    margin-top: 45px;
     border-top: 1px solid black;
     display: flex;
+    width: 99%;
+    height: 22px;
     justify-content: space-between;
     background-color: #ebebeb;
-}
-
-hr
-{
-    margin-top: 5px;
-    height: 4px;
 }
 
 .address
@@ -235,6 +242,11 @@ input[id='descending']:checked ~ .british-cats-rating
 .lines:hover .description
 {
     display: block;
+}
+
+input[id='all']:checked ~ .cats
+{
+    opacity: 1;
 }
 
 input[id='abyssiniancat']:checked ~ .cats > :not(.abyssinianimg),
@@ -261,7 +273,8 @@ input[id='siamesecat']:checked ~ .cats .lines .siam-description
 input[id='abyssiniancat']:checked ~ .cat-breed .abyssinian,
 input[id='britishcat']:checked ~ .cat-breed .british,
 input[id='russiancat']:checked ~ .cat-breed .russian,
-input[id='siamesecat']:checked ~ .cat-breed .siamese
+input[id='siamesecat']:checked ~ .cat-breed .siamese,
+input[id='all']:checked ~ .cat-breed .all
 {
     background-color: #5a5a5a;
     color: #fff;
