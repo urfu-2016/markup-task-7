@@ -64,6 +64,30 @@ main
     opacity: .6;
 }
 
+.breed-category-radio[title='mainecoon']:checked ~ .cards-grid-template .card:not(
+[title='maincoone'])
+{
+    opacity: .6;
+}
+
+.breed-category-radio[title='home']:checked ~ .cards-grid-template .card:not(
+[title='home'])
+{
+    opacity: .6;
+}
+
+.breed-category-radio[title='bengal']:checked ~ .cards-grid-template .card:not(
+[title='bengal'])
+{
+    opacity: .6;
+}
+
+.breed-category-radio[title='somaly']:checked ~ .cards-grid-template .card:not(
+[title='somaly'])
+{
+    opacity: .6;
+}
+
 .rating
 {
     grid-row: auto;
@@ -92,6 +116,7 @@ main
 .cards-grid-template > .card
 {
     height: 250px;
+    width: 99%;
     padding: 2px;
     position: relative;
 }
@@ -197,60 +222,100 @@ main
 {
     width: 50%;
     background: yellow;
+    background: -webkit-linear-gradient(left, yellow, white);
+    background: -o-linear-gradient(right, yellow, white);
+    background: -moz-linear-gradient(right, yellow, white);
+    background: linear-gradient(to right, yellow, white);
 }
 
 .rating-bar[title='10']
 {
     width: 100%;
     background: green;
+    background: -webkit-linear-gradient(left, green, white);
+    background: -o-linear-gradient(right, green, white);
+    background: -moz-linear-gradient(right, green, white);
+    background: linear-gradient(to right, green, white);
 }
 
 .rating-bar[title='1']
 {
     width: 10%;
     background: red;
+    background: -webkit-linear-gradient(left, red, white);
+    background: -o-linear-gradient(right, red, white);
+    background: -moz-linear-gradient(right, red, white);
+    background: linear-gradient(to right, red, white);
 }
 
 .rating-bar[title='2']
 {
     width: 20%;
     background: red;
+    background: -webkit-linear-gradient(left, red, white);
+    background: -o-linear-gradient(right, red, white);
+    background: -moz-linear-gradient(right, red, white);
+    background: linear-gradient(to right, red, white);
 }
 
 .rating-bar[title='3']
 {
     width: 30%;
     background: red;
+    background: -webkit-linear-gradient(left, red, white);
+    background: -o-linear-gradient(right, red, white);
+    background: -moz-linear-gradient(right, red, white);
+    background: linear-gradient(to right, red, white);
 }
 
 .rating-bar[title='4']
 {
     width: 40%;
     background: red;
+    background: -webkit-linear-gradient(left, red, white);
+    background: -o-linear-gradient(right, red, white);
+    background: -moz-linear-gradient(right, red, white);
+    background: linear-gradient(to right, red, white);
 }
 
 .rating-bar[title='6']
 {
     width: 60%;
     background: yellow;
+    background: -webkit-linear-gradient(left, yellow, white);
+    background: -o-linear-gradient(right, yellow, white);
+    background: -moz-linear-gradient(right, yellow, white);
+    background: linear-gradient(to right, yellow, white);
 }
 
 .rating-bar[title='7']
 {
     width: 70%;
     background: yellow;
+    background: -webkit-linear-gradient(left, yellow, white);
+    background: -o-linear-gradient(right, yellow, white);
+    background: -moz-linear-gradient(right, yellow, white);
+    background: linear-gradient(to right, yellow, white);
 }
 
 .rating-bar[title='8']
 {
     width: 80%;
     background: green;
+    background: -webkit-linear-gradient(left, green, white);
+    background: -o-linear-gradient(right, green, white);
+    background: -moz-linear-gradient(right, green, white);
+    background: linear-gradient(to right, green, white);
 }
 
 .rating-bar[title='9']
 {
     width: 90%;
     background: green;
+    background: -webkit-linear-gradient(left, green, white);
+    background: -o-linear-gradient(right, green, white);
+    background: -moz-linear-gradient(right, green, white);
+    background: linear-gradient(to right, green, white);
 }
 
 .rating-sort:checked ~ .rating-info[title='10']
