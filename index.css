@@ -64,8 +64,8 @@ main
     opacity: .6;
 }
 
-.breed-category-radio[title='mainecoon']:checked ~ 
-.cards-grid-template .card:not([title='maincoone'])
+.breed-category-radio[title='mainecoon']:checked ~ .cards-grid-template 
+.card:not([title='maincoone'])
 {
     opacity: .6;
 }
