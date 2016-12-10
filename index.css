@@ -149,7 +149,7 @@ main .cat_size_3
 .cat .name
 {
     position: absolute;
-    top: 200px;
+    top: 180px;
     background: rgba(0, 0, 0, .5);
     font-size: 18px;
     color: #fff;
@@ -198,25 +198,25 @@ h2
 .scale4
 {
     background: linear-gradient(to left, #ff5f5f, #313131);
-    width: 72px;
+    width: 52px;
 }
 
 .scale9
 {
     background: linear-gradient(to left, #ff5f5f, #313131);
-    width: 162px;
+    width: 142px;
 }
 
 .scale8
 {
     background: linear-gradient(to left, #ff5f5f, #313131);
-    width: 144px;
+    width: 124px;
 }
 
 .scale10
 {
     background: linear-gradient(to left, #ff5f5f, #313131);
-    width: 180px;
+    width: 160px;
 }
 
 .rating-value
