@@ -64,7 +64,8 @@ main
     opacity: .6;
 }
 
-.breed-category-radio[title='mainecoon']:checked ~ .cards-grid-template .card:not(
+.breed-category-radio[title='mainecoon']:checked ~
+.cards-grid-template .card:not(
 [title='maincoone'])
 {
     opacity: .6;
@@ -218,6 +219,7 @@ main
     grid-column-end: bar-end;
 }
 
+/* stylelint-disable declaration-block-no-duplicate-properties */
 .rating-bar[title='5']
 {
     width: 50%;
@@ -318,6 +320,7 @@ main
     background: linear-gradient(to right, green, white);
 }
 
+/* stylelint-enable declaration-block-no-duplicate-properties */
 .rating-sort:checked ~ .rating-info[title='10']
 {
     order: 3;
