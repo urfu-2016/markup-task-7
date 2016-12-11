@@ -3,6 +3,13 @@ html
     background-color: #e6e9ee;
 }
 
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 header
 {
     position: relative;
@@ -32,37 +39,32 @@ header
     flex-basis: 625px;
 }
 
-.cart:hover .description
+.card:hover .description
 {
     display: block;
 }
 
-.cart
+.card
 {
     margin: 5px;
     position: relative;
     overflow: hidden;
-    height: 150px;
+    height: 250px;
 }
 
 .size1
 {
     width: 200px;
-    height: 100%;
 }
 
 .size2
 {
     width: 410px;
-    position: relative;
-    top: -50px;
 }
 
 .size3
 {
     width: 620px;
-    position: relative;
-    top: -150px;
 }
 
 .description
@@ -75,8 +77,9 @@ header
     background-color: rgba(81, 81, 81, .5);
     width: 100px;
     height: 50px;
-    font-size: 15px;
+    font-size: 1em;
     color: #fff;
+    text-align: center;
 }
 
 .rating
@@ -135,31 +138,31 @@ header
 
 .value1 .gradient
 {
-    width: 40px;
+    width: 20%;
     background: linear-gradient(to right, #b22222, rgba(255, 0, 0, 0));
 }
 
 .value2 .gradient
 {
-    width: 80px;
+    width: 40%;
     background: linear-gradient(to right, #e2a528, rgba(255, 0, 0, 0));
 }
 
 .value3 .gradient
 {
-    width: 120px;
+    width: 60%;
     background: linear-gradient(to right, #dada00, rgba(255, 0, 0, 0));
 }
 
 .value4 .gradient
 {
-    width: 160px;
+    width: 80%;
     background: linear-gradient(to right, #009c32, rgba(255, 0, 0, 0));
 }
 
 .value5 .gradient
 {
-    width: 200px;
+    width: 100%;
     background: linear-gradient(to right, #46cc00, rgba(255, 0, 0, 0));
 }
 
@@ -188,37 +191,37 @@ input[class^='cat']
     display: none;
 }
 
-input[class='cat1']:checked ~ .navigation .cat1,
-input[class='cat2']:checked ~ .navigation .cat2,
-input[class='cat3']:checked ~ .navigation .cat3
+input.cat1:checked ~ .navigation .cat1,
+input.cat2:checked ~ .navigation .cat2,
+input.cat3:checked ~ .navigation .cat3
 {
     background-color: #696969;
 }
 
-input[class='cat1']:checked ~ .content img,
-input[class='cat2']:checked ~ .content img,
-input[class='cat3']:checked ~ .content img
+input.cat1:checked ~ .content img,
+input.cat2:checked ~ .content img,
+input.cat3:checked ~ .content img
 {
     opacity: .5;
 }
 
-input[class='cat1']:checked ~ .content .cat1,
-input[class='cat2']:checked ~ .content .cat2,
-input[class='cat3']:checked ~ .content .cat3
+input.cat1:checked ~ .content .cat1,
+input.cat2:checked ~ .content .cat2,
+input.cat3:checked ~ .content .cat3
 {
     opacity: 1;
 }
 
-input[class='cat1']:checked ~ .content .description,
-input[class='cat2']:checked ~ .content .description,
-input[class='cat3']:checked ~ .content .description
+input.cat1:checked ~ .content .description,
+input.cat2:checked ~ .content .description,
+input.cat3:checked ~ .content .description
 {
     display: none;
 }
 
-input[class='cat1']:checked ~ .content .cart:hover .cat1 ~ .description,
-input[class='cat2']:checked ~ .content .cart:hover .cat2 ~ .description,
-input[class='cat3']:checked ~ .content .cart:hover .cat3 ~ .description
+input.cat1:checked ~ .content .card:hover .cat1 ~ .description,
+input.cat2:checked ~ .content .card:hover .cat2 ~ .description,
+input.cat3:checked ~ .content .card:hover .cat3 ~ .description
 {
     display: block;
 }
