@@ -1,8 +1,87 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+    <title>Магазин котов</title>
     <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
+<header>
+    <h1>Бабуленькины котятки</h1>
+</header>
+<div class="wrapper">
+    <main>
+        <input name="breed" type="radio" id="abissian" class="input breed1">
+        <input name="breed" type="radio" id="britain" class=" input breed2">
+        <input name="breed" type="radio" id="rusblue" class="input breed3">
+        <input name="breed" type="radio" id="siam" class="input breed4">
+        <aside class="breed-choise">
+            <div class="breed abissian"><label for="abissian">Абиссинская</label></div>
+            <div class="breed britain"><label for="britain">Британская</label></div>
+            <div class="breed rusblue"><label for="rusblue">Русская голубая</label></div>
+            <div class="breed siam"><label for="siam">Сиамская</label></div>
+        </aside>
+        <div class="gallery">
+            <figure class="cell breed3 default-size">
+                <img src="catsImgs/cat1.jpg" alt="Кошка раз" class="imgCat">
+                <figcaption class="description">Вася, 2 месяца</figcaption>
+            </figure>
+            <figure class="cell breed4 double-size">
+                <img src="catsImgs/cat2.jpg" alt="Кошка два" class="imgCat">
+                <figcaption class="description">Петя, 3 года</figcaption>
+            </figure>
+            <figure class="cell breed4 default-size">
+                <img src="catsImgs/cat3.jpg" alt="Кошка три" class="imgCat">
+                <figcaption class="description">Шарик, 1 год</figcaption>
+            </figure>
+            <figure class="cell breed2 default-size">
+                <img src="catsImgs/cat4.jpg" alt="Кошко четыре" class="imgCat">
+                <figcaption class="description">Снежок, 3 месяца</figcaption>
+            </figure>
+            <figure class="cell breed1 default-size">
+                <img src="catsImgs/cat5.jpg" alt="Кошка пять" class="imgCat">
+                <figcaption class="description">Принц, 11 месяцев</figcaption>
+            </figure>
+            <figure class="cell breed2 double-size">
+                <img src="catsImgs/cat6.jpg" alt="кошка шесть" class="imgCat">
+                <figcaption class="description">Муфаса, 6 лет</figcaption>
+            </figure>
+            <figure class="cell breed3 default-size">
+                <img src="catsImgs/cat7.jpg" alt="Кошка семь" class="imgCat">
+                <figcaption class="description">Арнольд, 1 год</figcaption>
+            </figure>
+            <figure class="cell breed1 triple-size">
+                <img src="catsImgs/cat8.jpg" alt="Кошка восемь" class="imgCat">
+                <figcaption class="description">Чак Норрис, 8 месяцев</figcaption>
+            </figure>
+        </div>
+        <aside class="top">
+            <h2>Рейтинг</h2>
+            <label for="sorting">По убыванию</label>
+            <input type="checkbox" id="sorting">
+            <div class="scores-9">
+                <p>Абиссинская</p>
+                <div class="top-element"><div class="scale"></div>9</div>
+            </div>
+            <div class="scores-8">
+                <p>Британская</p>
+                <div class="top-element"><div class="scale"></div>8</div>
+            </div>
+            <div class="scores-10">
+                <p>Русская голубая</p>
+                <div class="top-element"><div class="scale"></div>10</div>
+            </div>
+            <div class="scores-4">
+                <p>Сиамская</p>
+                <div class="top-element"><div class="scale"></div>4</div>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <div>&copy; ООО Бабуленькины котятки, 2016</div>
+        <div>Наш адрес: <address>ул. Котовая, д.5</address></div>
+    </footer>
+</div>
 </body>
 </html>

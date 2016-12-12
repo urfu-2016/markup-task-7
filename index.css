@@ -1,0 +1,291 @@
+html,
+body
+{
+    background-color: #ccc;
+    height: 100%;
+}
+
+.wrapper
+{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+header
+{
+    text-align: center;
+}
+
+main
+{
+    display: flex;
+    justify-content: space-between;
+    flex: 1 0 auto;
+
+}
+
+h1
+{
+    font-size: 3em;
+}
+
+h2
+{
+    color: #c00;
+}
+
+aside
+{
+    background: #aaa;
+}
+
+.breed-choise
+{
+    display: flex;
+    flex-direction: column;
+    padding-top: 3px;
+    min-width: 170px;
+}
+
+.breed
+{
+    padding: 5px;
+    border-bottom: 1px solid #000;
+    font-size: 1.5em;
+}
+
+.breed:hover
+{
+    background-color: #666;
+}
+
+.gallery
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 950px;
+}
+
+.input
+{
+    display: none;
+}
+
+.cell
+{
+    margin: 3px;
+    position: relative;
+    height: 250px;
+}
+
+.cell > .description
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(50,50,50,.6);
+    padding: 10px 15px;
+    font-size: 1.2em;
+    color: #fff;
+    bottom: 15px;
+}
+
+.cell:hover > .description
+{
+    display: block;
+}
+
+.double-size
+{
+    width: 606px;
+}
+
+.default-size
+{
+    width: 300px;
+}
+
+.triple-size
+{
+    width: 912px;
+}
+
+.imgCat
+{
+    width: inherit;
+    height: 100%;
+    object-fit: cover;
+}
+
+.breed1:checked ~ .gallery .cell:not(.breed1),
+.breed2:checked ~ .gallery .cell:not(.breed2),
+.breed3:checked ~ .gallery .cell:not(.breed3),
+.breed4:checked ~ .gallery .cell:not(.breed4)
+{
+    opacity: .5;
+    transition: opacity .5s;
+}
+
+.breed1:checked ~ .abissian,
+.breed2:checked ~ .britain,
+.breed3:checked ~ .rusblue,
+.breed4:checked ~ .siam
+{
+    background-color: #444;
+}
+
+.breed1:checked ~ .breed-choise .abissian,
+.breed2:checked ~ .breed-choise .britain,
+.breed3:checked ~ .breed-choise .rusblue,
+.breed4:checked ~ .breed-choise .siam
+{
+    background-color: #777;
+}
+
+.top
+{
+    display: flex;
+    font-size: 1.5em;
+    flex-direction: column;
+    align-self: flex-start;
+    padding: 0 15px;
+}
+
+.top-element div
+{
+    margin-right: 10px;
+    height: 15px;
+    display: inline-block;
+}
+
+.top-element
+{
+    white-space: nowrap;
+    font-weight: bold;
+}
+
+.scores-1 .scale
+{
+    width: 8%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scores-2 .scale
+{
+    width: 16%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scores-3 .scale
+{
+    width: 24%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scores-4 .scale
+{
+    width: 32%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scores-5 .scale
+{
+    width: 40%;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.scores-6 .scale
+{
+    width: 48%;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.scores-7 .scale
+{
+    width: 56%;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.scores-8 .scale
+{
+    width: 64%;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.scores-9 .scale
+{
+    width: 72%;
+    background: linear-gradient(to right, #0f0, #fff);
+}
+
+.scores-10 .scale
+{
+    width: 80%;
+    background: linear-gradient(to right, #0f0, #fff);
+}
+
+address
+{
+    display: inline;
+}
+
+input:checked ~ .scores-1
+{
+    order: 10;
+}
+
+input:checked ~ .scores-2
+{
+    order: 9;
+}
+
+input:checked ~ .scores-3
+{
+    order: 8;
+}
+
+input:checked ~ .scores-4
+{
+    order: 7;
+}
+
+input:checked ~ .scores-5
+{
+    order: 6;
+}
+
+input:checked ~ .scores-6
+{
+    order: 5;
+}
+
+input:checked ~ .scores-7
+{
+    order: 4;
+}
+
+input:checked ~ .scores-8
+{
+    order: 3;
+}
+
+input:checked ~ .scores-9
+{
+    order: 2;
+}
+
+input:checked ~ .scores-10
+{
+    order: 1;
+}
+
+footer
+{
+    display: flex;
+    flex: 0 0 auto;
+    justify-content: space-between;
+    padding: 20px;
+    border-top: 2px solid #000;
+}
