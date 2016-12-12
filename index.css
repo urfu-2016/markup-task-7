@@ -166,25 +166,61 @@ aside
     font-weight: bold;
 }
 
-.top-element .four
+.scores-1 .scale
+{
+    width: 8%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scores-2 .scale
+{
+    width: 16%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scores-3 .scale
+{
+    width: 24%;
+    background: linear-gradient(to right, #f00, #fff);
+}
+
+.scores-4 .scale
 {
     width: 32%;
     background: linear-gradient(to right, #f00, #fff);
 }
 
-.top-element .eight
+.scores-5 .scale
+{
+    width: 40%;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.scores-6 .scale
+{
+    width: 48%;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.scores-7 .scale
+{
+    width: 56%;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.scores-8 .scale
 {
     width: 64%;
     background: linear-gradient(to right, #ff0, #fff);
 }
 
-.top-element .nine
+.scores-9 .scale
 {
     width: 72%;
     background: linear-gradient(to right, #0f0, #fff);
 }
 
-.top-element .ten
+.scores-10 .scale
 {
     width: 80%;
     background: linear-gradient(to right, #0f0, #fff);
@@ -195,24 +231,54 @@ address
     display: inline;
 }
 
-input:checked ~ .first
+input:checked ~ .scores-1
 {
-    order: 1;
+    order: 10;
 }
 
-input:checked ~ .second
+input:checked ~ .scores-2
 {
-    order: 2;
+    order: 9;
 }
 
-input:checked ~ .third
+input:checked ~ .scores-3
+{
+    order: 8;
+}
+
+input:checked ~ .scores-4
+{
+    order: 7;
+}
+
+input:checked ~ .scores-5
+{
+    order: 6;
+}
+
+input:checked ~ .scores-6
+{
+    order: 5;
+}
+
+input:checked ~ .scores-7
+{
+    order: 4;
+}
+
+input:checked ~ .scores-8
 {
     order: 3;
 }
 
-input:checked ~ .fourth
+input:checked ~ .scores-9
 {
-    order: 4;
+    order: 2;
+}
+
+input:checked ~ .scores-10
+{
+    order: 1;
 }
 
 footer
