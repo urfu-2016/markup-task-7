@@ -10,6 +10,8 @@ body
     background-color: #edeef0;
     min-width: 1000px;
     max-width: 1366px;
+    font-family: 'Poiret One', cursive;
+    font-weight: bold;
 }
 
 header
@@ -22,8 +24,6 @@ header
     display: block;
     text-align: center;
     color: white;
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
 }
 
 header:first-letter
@@ -51,8 +51,6 @@ main
     width: 20%;
     flex-direction: column;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
 }
 
 .second-column
@@ -69,8 +67,6 @@ main
     padding: 10px;
     height: 100%;
     box-shadow: 0 0 5px rgba(0, 0, 0, .5);
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
 }
 
 .first-column label
@@ -89,10 +85,10 @@ main
 }
 
 .first-column label:hover,
-input[id='Abyssinian']:checked ~ .first-column label:nth-of-type(1),
-input[id='British']:checked ~ .first-column label:nth-of-type(2),
-input[id='Russian']:checked ~ .first-column label:nth-of-type(3),
-input[id='Siamese']:checked ~ .first-column label:nth-of-type(4)
+input[for='Abyssinian']:checked ~ .first-column label:nth-of-type(1),
+input[for='British']:checked ~ .first-column label:nth-of-type(2),
+input[for='Russian']:checked ~ .first-column label:nth-of-type(3),
+input[for='Siamese']:checked ~ .first-column label:nth-of-type(4)
 {
     background-color: #313131;
     color: #fff;
@@ -121,20 +117,20 @@ input[id='Siamese']:checked ~ .second-column .Siamese
     padding: 5px;
     box-sizing: border-box;
     position: relative;
-    max-height: 250px;
+    max-height: 280px;
 }
 
-main .cat_size_1
+.cat-size-1
 {
     width: 33.33%;
 }
 
-main .cat_size_2
+.cat-size-2
 {
     width: 66.66%;
 }
 
-main .cat_size_3
+.cat-size-3
 {
     width: 100%;
 }
@@ -149,13 +145,11 @@ main .cat_size_3
 .cat .name
 {
     position: absolute;
-    top: 180px;
+    bottom: -5px;
     background: rgba(0, 0, 0, .5);
     font-size: 18px;
     color: #fff;
     padding: 10px;
-    font-weight: bold;
-    font-family: 'Poiret One', cursive;
     display: none;
 
 }
@@ -197,26 +191,26 @@ h2
 
 .scale4
 {
-    background: linear-gradient(to left, #ff5f5f, #313131);
-    width: 52px;
+    background: linear-gradient(to left, #ff18c1, #313131);
+    width: 30%;
 }
 
 .scale9
 {
     background: linear-gradient(to left, #ff5f5f, #313131);
-    width: 142px;
+    width: 65%;
 }
 
 .scale8
 {
-    background: linear-gradient(to left, #ff5f5f, #313131);
-    width: 124px;
+    background: linear-gradient(to left, #ff7418, #313131);
+    width: 50%;
 }
 
 .scale10
 {
-    background: linear-gradient(to left, #ff5f5f, #313131);
-    width: 160px;
+    background: linear-gradient(to left, #ffe118, #313131);
+    width: 80%;
 }
 
 .rating-value
@@ -247,6 +241,7 @@ input[id='rating'] + label:hover
 input[id='rating']:checked ~ .rating10
 {
     -webkit-order: 1;
+    -moz-order: 1;
     -ms-order: 1;
     order: 1;
 }
@@ -254,6 +249,7 @@ input[id='rating']:checked ~ .rating10
 input[id='rating']:checked ~ .rating9
 {
     -webkit-order: 2;
+    -moz-order: 2;
     -ms-order: 2;
     order: 2;
 }
@@ -261,6 +257,7 @@ input[id='rating']:checked ~ .rating9
 input[id='rating']:checked ~ .rating8
 {
     -webkit-order: 3;
+    -moz-order: 3;
     -ms-order: 3;
     order: 3;
 }
@@ -268,6 +265,7 @@ input[id='rating']:checked ~ .rating8
 input[id='rating']:checked ~ .rating4
 {
     -webkit-order: 4;
+    -moz-order: 4;
     -ms-order: 4;
     order: 4;
 }
@@ -280,8 +278,6 @@ footer
     color: white;
     font-size: 20px;
     line-height: 35px;
-    font-family: 'Poiret One', cursive;
-    font-weight: bold;
     width: 98.8%;
     min-width: 1000px;
     box-sizing: border-box;
@@ -302,5 +298,4 @@ footer
 address
 {
     color: #6589ae;
-    cursor: pointer;
 }
