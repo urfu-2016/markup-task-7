@@ -2,7 +2,109 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <title>Бабуленькины котятки</title>
+    <link href="index.css" rel="stylesheet">
 </head>
 <body>
+    <header>Бабуленькины котятки</header>
+    <main>
+        <div class="assortment">
+            <input type="checkbox" name="breed-choice-bengal" id="bengal" class="breed bengal-breed">
+            <input type="checkbox" name="breed-choice-neva" id="neva" class="breed neva-breed">
+            <input type="checkbox" name="breed-choice-somali" id="somali" class="breed somali-breed">
+            <input type="checkbox" name="breed-choice-turkish" id="turkish" class="breed turkish-breed">
+            <nav class="breeds">
+                <label for="bengal" class="bengal-label">Бенгальская</label>
+                <label for="neva" class="neva-label">Невская маскарадная</label>
+                <label for="somali" class="somali-label">Сомалийская</label>
+                <label for="turkish" class="turkish-label">Турецкая ангора</label>
+            </nav>
+            <section class="cat-cards">
+                <div class="bengal-card card">
+                    <img src="https://clck.ru/ANZZg" alt="Бенгальская" title="Бенгальская" class="image">
+                    <p class="info">Рамакришна, 3 года</p>
+                </div>
+                <div class="bengal-card card">
+                    <img src="https://clck.ru/AN7DR" alt="Бенгальская" title="Бенгальская" class="image">
+                    <p class="info">Вишванатх, 5 лет</p>
+                </div>
+                <div class="neva-card card">
+                    <img src="https://clck.ru/AN7Dh" alt="Невская маскарадная" title="Невская маскарадная"
+                    class="image">
+                    <p class="info">Васька, 1 год</p>
+                </div>
+                <div class="neva-card card">
+                    <img src="https://clck.ru/AN7U8" alt="Невская маскарадная" title="Невская маскарадная"
+                    class="image">
+                    <p class="info">Петро, 4 года</p>
+                </div>
+                <div class="somali-card card">
+                    <img src="https://clck.ru/AN7Up" alt="Сомалийская" title="Сомалийская" class="image">
+                    <p class="info">Хусейн, 8 лет</p>
+                </div>
+                <div class="somali-card card">
+                    <img src="https://clck.ru/ANZLt" alt="Сомалийская" title="Сомалийская" class="image">
+                    <p class="info">Сиад, 3 года</p>
+                </div>
+                <div class="somali-card card">
+                    <img src="https://clck.ru/AN7W6" alt="Сомалийская" title="Сомалийская" class="image">
+                    <p class="info">Аден, 6 лет</p>
+                </div>
+                <div class="turkish-card card">
+                    <img src="https://clck.ru/ANZKw" alt="Турецкая ангора" title="Турецкая ангора"
+                    class="image">
+                    <p class="info">Мехмет, 5 лет</p>
+                </div>
+                <div class="turkish-card card">
+                    <img src="https://clck.ru/AN7Zp" alt="Турецкая ангора" title="Турецкая ангора"
+                    class="image">
+                    <p class="info">Реджеп, 4 года</p>
+                </div>
+                <div class="turkish-card card">
+                    <img src="https://clck.ru/AN7Zt" alt="Турецкая ангора" title="Турецкая ангора"
+                    class="image">
+                    <p class="info">Фатих, 3 года</p>
+                </div>
+            </section>
+            <aside class="raiting">
+                <p class="raiting-title">РЕЙТИНГ</p>
+                <label for="descending">По убыванию</label>
+                <input type="checkbox" name="mode" id="descending" class="descending">
+                <div class="breed-raiting bengal-raiting">
+                    <p class="name">Бенгальская</p>
+                    <div class="stats">
+                        <div class="bar"></div>
+                        <div class="mark">8</div>
+                    </div>
+                </div>
+                <div class="breed-raiting neva-raiting">
+                    <p class="name">Невская маскарадная</p>
+                    <div class="stats">
+                        <div class="bar"></div>
+                        <div class="mark">5</div>
+                    </div>
+                </div>
+                <div class="breed-raiting somali-raiting">
+                    <p class="name">Сомалийская</p>
+                    <div class="stats">
+                        <div class="bar"></div>
+                        <div class="mark">7</div>
+                    </div>
+                </div>
+                <div class="breed-raiting turkish-raiting">
+                    <p class="name">Турецкая ангора</p>
+                    <div class="stats">
+                        <div class="bar"></div>
+                        <div class="mark">10</div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+    <hr>
+    <footer>
+            <span class="firm">&copy; ООО Бабуленькины котятки, 2016</span>
+            <span class="address">Наш адрес: Кошачий переулок, 17</span>
+    </footer>
 </body>
 </html>
