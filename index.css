@@ -317,55 +317,55 @@ header
 .r9 .progress-bar
 {
     width: 90%;
-   background: linear-gradient(to right, black 0%, rgb(28, 0, 227));
+    background: linear-gradient(to right, black 0%, rgb(28, 0, 227));
 }
 
 .r8 .progress-bar
 {
     width: 80%;
-   background: linear-gradient(to right, black 0%, rgb(57, 0, 198));
+    background: linear-gradient(to right, black 0%, rgb(57, 0, 198));
 }
 
 .r7 .progress-bar
 {
     width: 70%;
-   background: linear-gradient(to right, black 0%, rgb(85, 0, 170));
+    background: linear-gradient(to right, black 0%, rgb(85, 0, 170));
 }
 
 .r6 .progress-bar
 {
     width: 60%;
-   background: linear-gradient(to right, black 0%, rgb(113, 0, 142));
+    background: linear-gradient(to right, black 0%, rgb(113, 0, 142));
 }
 
 .r5 .progress-bar
 {
     width: 50%;
-   background: linear-gradient(to right, black 0%, rgb(142, 0, 113));
+    background: linear-gradient(to right, black 0%, rgb(142, 0, 113));
 }
 
 .r4 .progress-bar
 {
     width: 40%;
-   background: linear-gradient(to right, black 0%, rgb(170, 0, 85));
+    background: linear-gradient(to right, black 0%, rgb(170, 0, 85));
 }
 
 .r3 .progress-bar
 {
     width: 30%;
-   background: linear-gradient(to right, black 0%, rgb(198, 0, 57));
+    background: linear-gradient(to right, black 0%, rgb(198, 0, 57));
 }
 
 .r2 .progress-bar
 {
     width: 20%;
-   background: linear-gradient(to right, black 0%, rgb(227, 0, 28));
+    background: linear-gradient(to right, black 0%, rgb(227, 0, 28));
 }
 
 .r1 .progress-bar
 {
     width: 10%;
-   background: linear-gradient(to right, black 0%, rgb(255, 0 ,0));
+    background: linear-gradient(to right, black 0%, rgb(255, 0 ,0));
 }
 
 .rating-checkbox:checked ~ .rating-wrapper:nth-child(4)
