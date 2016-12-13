@@ -141,31 +141,31 @@ header
 
 .value1 .gradient
 {
-    width: 20%;
+    width: 10%;
     background: linear-gradient(to right, #b22222, rgba(255, 0, 0, 0));
 }
 
 .value2 .gradient
 {
-    width: 40%;
+    width: 30%;
     background: linear-gradient(to right, #e2a528, rgba(255, 0, 0, 0));
 }
 
 .value3 .gradient
 {
-    width: 60%;
+    width: 50%;
     background: linear-gradient(to right, #dada00, rgba(255, 0, 0, 0));
 }
 
 .value4 .gradient
 {
-    width: 80%;
+    width: 70%;
     background: linear-gradient(to right, #009c32, rgba(255, 0, 0, 0));
 }
 
 .value5 .gradient
 {
-    width: 100%;
+    width: 90%;
     background: linear-gradient(to right, #46cc00, rgba(255, 0, 0, 0));
 }
 
