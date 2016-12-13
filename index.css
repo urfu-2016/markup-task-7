@@ -30,15 +30,25 @@ main
     border-bottom: 1px solid #000;
 }
 
-.breed
-{
-    display: none;
-}
-
 .breed:checked ~ .cat-cards .card
 {
     background: #e3e3e3;
     opacity: .5;
+}
+
+.breed,
+.info,
+.breed:checked ~ .cat-cards .card:hover .info
+{
+    display: none;
+}
+
+.bengal-breed:checked ~ .cat-cards .bengal-card:hover .info,
+.neva-breed:checked ~ .cat-cards .neva-card:hover .info,
+.somali-breed:checked ~ .cat-cards .somali-card:hover .info,
+.turkish-breed:checked ~ .cat-cards .turkish-card:hover .info
+{
+    display: block;
 }
 
 .bengal-breed:checked ~ .cat-cards .bengal-card,
@@ -69,8 +79,9 @@ main
 .assortment
 {
     display: flex;
-    width: 100%;
-    min-width: 800px;
+    width: 90%;
+    min-width: 1400px;
+    margin: auto;
 }
 
 .breeds
@@ -94,7 +105,7 @@ main
 {
     position: relative;
     margin: 1%;
-    height: 400px;
+    height: 300px;
 }
 
 .raiting
@@ -106,11 +117,6 @@ main
     margin: 0 1% 1%;
     padding: 1%;
     height: 100%;
-}
-
-.info
-{
-    display: none;
 }
 
 .card img
