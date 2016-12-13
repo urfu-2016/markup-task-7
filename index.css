@@ -89,10 +89,10 @@ header
     top: 8rem;
 }
 
-.left-input:nth-child(2):checked ~ .central-column .pic:not(.c2) img,
-.left-input:nth-child(3):checked ~ .central-column .pic:not(.c3) img,
-.left-input:nth-child(4):checked ~ .central-column .pic:not(.c4) img,
-.left-input:nth-child(5):checked ~ .central-column .pic:not(.c5) img
+.left-input:nth-child(2):checked ~ .central-column .pic:not(.category-fluffy) img,
+.left-input:nth-child(3):checked ~ .central-column .pic:not(.category-sad) img,
+.left-input:nth-child(4):checked ~ .central-column .pic:not(.category-funny) img,
+.left-input:nth-child(5):checked ~ .central-column .pic:not(.category-amused) img
 {
     opacity: .3;
 }
