@@ -1,0 +1,409 @@
+body
+{
+    margin: 0;
+}
+
+html,
+body,
+.root
+{
+    min-height: 100%;
+}
+
+main
+{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 10rem 0 5rem;
+    background-color: #fff;
+    box-shadow: #bbb 0 0 2rem 0;
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    display: flex;
+    height: 10rem;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    color: #222;
+    font-size: 3rem;
+    z-index: -1;
+}
+
+.columns
+{
+    position: relative;
+    display: flex;
+    max-width: 80rem;
+    margin: 4rem;
+    align-self: center;
+    align-items: stretch;
+}
+
+.left-column
+{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    align-items: stretch;
+    background-color: #eee;
+}
+
+.left-input
+{
+    opacity: 0;
+    width: 15rem;
+    height: 2rem;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+}
+
+.left-input:nth-child(1)
+{
+    top: 0;
+}
+
+.left-input:nth-child(2)
+{
+    top: 2rem;
+}
+
+.left-input:nth-child(3)
+{
+    top: 4rem;
+}
+
+.left-input:nth-child(4)
+{
+    top: 6rem;
+}
+
+.left-input:nth-child(5)
+{
+    top: 8rem;
+}
+
+.left-input:nth-child(2):checked ~ .central-column .pic:not(.cat-fluffy) img,
+.left-input:nth-child(3):checked ~ .central-column .pic:not(.cat-sad) img,
+.left-input:nth-child(4):checked ~ .central-column .pic:not(.cat-funny) img,
+.left-input:nth-child(5):checked ~ .central-column .pic:not(.cat-amused) img
+{
+    opacity: .3;
+}
+
+.left-input:nth-child(1):checked ~ .left-column .type:nth-child(1)
+{
+    background-color: #75d16b;
+    color: #fff;
+}
+
+.left-input:nth-child(2):checked ~ .left-column .type:nth-child(2),
+.left-input:nth-child(3):checked ~ .left-column .type:nth-child(3),
+.left-input:nth-child(4):checked ~ .left-column .type:nth-child(4),
+.left-input:nth-child(5):checked ~ .left-column .type:nth-child(5)
+{
+    background-color: #75d16b;
+    color: #fff;
+}
+
+.type
+{
+    display: flex;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.central-column
+{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-basis: 0;
+}
+
+.row
+{
+    display: flex;
+    height: 15rem;
+}
+
+.pic
+{
+    margin-left: .5rem;
+    margin-bottom: .5rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.pic:last-of-type
+{
+    margin-right: .5rem;
+}
+
+.row:last-of-type .pic
+{
+    margin-bottom: 0;
+}
+
+.pic img
+{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: opacity .3s;
+}
+
+.small
+{
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+}
+
+.wide
+{
+    flex-grow: 2;
+    flex-shrink: 2;
+    flex-basis: .5rem;
+}
+
+.hella-wide
+{
+    flex-grow: 3;
+    flex-shrink: 3;
+    flex-basis: 1rem;
+}
+
+.description
+{
+    position: relative;
+    height: 4rem;
+    width: 100%;
+    transition: margin-top .2s;
+    font-size: 2rem;
+    padding: 1rem;
+    color: #fff;
+    background: linear-gradient(to bottom, rgba(0,0,0,0), #000);
+    box-sizing: border-box;
+}
+
+.pic:hover .description
+{
+    margin-top: -4rem;
+}
+
+.right-column
+{
+    display: flex;
+    flex-direction: column;
+    width: 15rem;
+    align-self: flex-start;
+    background-color: #eee;
+    padding-bottom: 1rem;
+}
+
+.rating-header
+{
+    font-size: 2rem;
+    margin: 1rem 0 0 1rem;
+}
+
+.rating-checkbox
+{
+    height: 1rem;
+    width: 1rem;
+    margin: 1rem;
+}
+
+.checkbox-name
+{
+    margin: -2rem 0 0 2.5rem;
+}
+
+.rating-wrapper
+{
+    display: flex;
+    flex-direction: column;
+    align-content: stretch;
+    margin: 1rem 0 0 1rem;
+}
+
+.rating-value
+{
+    margin-top: .5rem;
+    width: 10rem;
+    box-sizing: content-box;
+    border: .2rem solid #ddd;
+    font-size: 1rem;
+    height: 1rem;
+}
+
+.progress-bar
+{
+    height: 1rem;
+}
+
+.rating-value:after
+{
+    top: -1rem;
+    left: 11rem;
+    position: relative;
+}
+
+.r10:after
+{
+    content: '10';
+}
+
+.r9:after
+{
+    content: '9';
+}
+
+.r8:after
+{
+    content: '8';
+}
+
+.r7:after
+{
+    content: '7';
+}
+
+.r6:after
+{
+    content: '6';
+}
+
+.r5:after
+{
+    content: '5';
+}
+
+.r4:after
+{
+    content: '4';
+}
+
+.r3:after
+{
+    content: '3';
+}
+
+.r2:after
+{
+    content: '2';
+}
+
+.r1:after
+{
+    content: '1';
+}
+
+.r10 .progress-bar
+{
+    width: 100%;
+    background: linear-gradient(to right, black 0%, rgb(0, 0 ,255));
+}
+
+.r9 .progress-bar
+{
+    width: 90%;
+    background: linear-gradient(to right, black 0%, rgb(28, 0, 227));
+}
+
+.r8 .progress-bar
+{
+    width: 80%;
+    background: linear-gradient(to right, black 0%, rgb(57, 0, 198));
+}
+
+.r7 .progress-bar
+{
+    width: 70%;
+    background: linear-gradient(to right, black 0%, rgb(85, 0, 170));
+}
+
+.r6 .progress-bar
+{
+    width: 60%;
+    background: linear-gradient(to right, black 0%, rgb(113, 0, 142));
+}
+
+.r5 .progress-bar
+{
+    width: 50%;
+    background: linear-gradient(to right, black 0%, rgb(142, 0, 113));
+}
+
+.r4 .progress-bar
+{
+    width: 40%;
+    background: linear-gradient(to right, black 0%, rgb(170, 0, 85));
+}
+
+.r3 .progress-bar
+{
+    width: 30%;
+    background: linear-gradient(to right, black 0%, rgb(198, 0, 57));
+}
+
+.r2 .progress-bar
+{
+    width: 20%;
+    background: linear-gradient(to right, black 0%, rgb(227, 0, 28));
+}
+
+.r1 .progress-bar
+{
+    width: 10%;
+    background: linear-gradient(to right, black 0%, rgb(255, 0 ,0));
+}
+
+.rating-checkbox:checked ~ .rating-wrapper:nth-child(4)
+{
+    order: 1;
+}
+
+.rating-checkbox:checked ~ .rating-wrapper:nth-child(5)
+{
+    order: 4;
+}
+
+.rating-checkbox:checked ~ .rating-wrapper:nth-child(6)
+{
+    order: 2;
+}
+
+.rating-checkbox:checked ~ .rating-wrapper:nth-child(7)
+{
+    order: 3;
+}
+
+footer
+{
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 5rem;
+    width: 100%;
+}
+
+.footer-content
+{
+    font-size: 1.2rem;
+    display: flex;
+    width: 80rem;
+    justify-content: space-between;
+}
