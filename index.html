@@ -8,28 +8,29 @@
 <body>
 <h1>Бабулинкины котята.</h1>
 <div class="main">
-    <input type="radio" name="cat" class="def" checked>
-    <input type="radio" name="cat" id="2" class="but1">
-    <input type="radio" name="cat" id="3" class="but2">
-    <input type="radio" name="cat" id="4" class="but3">
-    <input type="radio" name="cat" id="5" class="but4">
+    <input type="radio" name="cat" class="def" id="def" checked>
+    <input type="radio" name="cat" id="but1" class="but1">
+    <input type="radio" name="cat" id="but2" class="but2">
+    <input type="radio" name="cat" id="but3" class="but3">
+    <input type="radio" name="cat" id="but4" class="but4">
     <div class="menu">
-        <label for="2" class="label_menu">
+        <label for="def" class="default"></label>
+        <label for="but1" class="label_menu">
                 <span class="first_cat">
                     Без породы
                 </span>
         </label>
-        <label for="3" class="label_menu second_cat">
+        <label for="but2" class="label_menu second_cat">
                 <span class="second_cat">
                     Рысь
                 </span>
         </label>
-        <label for="4" class="label_menu third_cat">
+        <label for="but3" class="label_menu third_cat">
                 <span class="third_cat">
                     Русская голубая
                 </span>
         </label>
-        <label for="5" class="label_menu four_cat">
+        <label for="but4" class="label_menu four_cat">
                 <span class="four_cat">
                     Британская
                 </span>
@@ -37,34 +38,34 @@
     </div>
     <div class="cats">
         <div class="first_row">
-            <div class="help" data-title="Тоша, 6 месяцев">
+            <div class="help1 help" data-title="Тоша, 6 месяцев">
                 <img  class="rus" src="img/русская_голубая2.jpg" title="Киса" alt="Котик">
             </div>
-            <div class="help" data-title="Лорд, 5,5 месяцев">
+            <div class="help4 help" data-title="Лорд, 5,5 месяцев">
                 <img class="Brit" src="img/британец.jpg" title="Киса" alt="Котик">
             </div>
         </div>
         <div class="second_row">
-            <div class="help" data-title="Луна, 2,5 месяца">
+            <div class="help3 help" data-title="Луна, 2,5 месяца">
                 <img class="no_breed" src="img/без_породы2.jpg" title="Киса" alt="Котик">
             </div>
-            <div class="help" data-title="Лили, 3 месяца">
+            <div class="help1 help" data-title="Лили, 3 месяца">
                 <img class="rus" src="img/русская_голубая.jpg" title="Киса" alt="Котик">
             </div>
-            <div class="help" data-title="Дракоша, 2 месяца">
+            <div class="help2 help" data-title="Дракоша, 2 месяца">
                 <img class="lynx" src="img/рысь.jpg" title="Киса" alt="Котик">
             </div>
         </div>
         <div class="third_row">
-            <div class="rose help" data-title="Роза, 6 месяцев">
+            <div class="rose help4 help" data-title="Роза, 6 месяцев">
                 <img class="Brit" src="img/британец2.jpg" title="Киса" alt="Котик">
             </div>
-            <div class="liza help" data-title="Лиза, 5 месяцев">
+            <div class="liza help2 help" data-title="Лиза, 5 месяцев">
                 <img class="lynx" src="img/рысь2.jpg" title="Киса" alt="Котик">
             </div>
         </div>
         <div class="last_row">
-            <div class="help" data-title="Алиса и Милана, 4 месяца">
+            <div class="help3 help" data-title="Алиса и Милана, 4 месяца">
                 <img class="no_breed" src="img/без_породы.jpg" title="Киса" alt="Котик">
             </div>
         </div>
@@ -80,13 +81,13 @@
         <label for="sort" class="label_down">по убыванию</label><br>
         <div class="up_down_sort">
             <div class="title">Британская</div>
-            <div class="r_brit">3</div>
+            <div class="rating_brit">3</div>
             <div class="title">Русская голубая</div>
-            <div class="r_rus">5</div>
+            <div class="rating_rus">5</div>
             <div class="title">Рысь</div>
-            <div class="r_lynx">7</div>
+            <div class="rating_lynx">7</div>
             <div class="title">Без породы</div>
-            <div class="r_no_br">9</div>
+            <div class="rating_no_breed">9</div>
         </div>
     </div>
 </div>
