@@ -50,9 +50,9 @@ header
     position: relative;
     overflow: hidden;
     height: 250px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .size1
