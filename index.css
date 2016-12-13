@@ -1,0 +1,377 @@
+html
+{
+    background-color: #f5f5f5;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    min-height: 100%;
+}
+
+.organization
+{
+    display: flex;
+    justify-content: space-between;
+    font: 20px arial;
+    padding: 10px;
+    margin-top: 15px;
+    border-top: 1px solid #000;
+}
+
+.type
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font: 20px arial;
+}
+
+.info
+{
+    width: 190px;
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.rate1,
+.rate2,
+.rate3
+{
+    height: 20px;
+}
+
+.rate1
+{
+    width: 100px;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.rate2
+{
+    width: 140px;
+    background: linear-gradient(to right, #008500, #fff);
+}
+
+.rate3
+{
+    width: 120px;
+    background: linear-gradient(to right, #ff0, #fff);
+}
+
+.sort:checked ~ .first-profession
+{
+    order: 3;
+}
+
+.sort:checked ~ .second-profession
+{
+    order: 1;
+}
+
+.sort:checked ~ .third-profession
+{
+    order: 2;
+}
+
+.place
+{
+    display: flex;
+    color: #1533ad;
+    align-items: center;
+}
+
+.rating
+{
+    display: flex;
+    flex-flow: row wrap;
+    flex-basis: 180px;
+    min-width: 200px;
+    align-self: flex-start;
+    margin-left: 8px;
+    margin-right: 8px;
+    background-color: #dcdcdc;
+    padding-left: 10px;
+    font-family: arial;
+}
+
+.rating h2
+{
+    margin-top: 0;
+    font-size: 23px;
+    color: #a60000;
+}
+
+.theme
+{
+    text-align: center;
+}
+
+.card:nth-child(1),
+.card:nth-child(2)
+{
+    margin-top: 0;
+}
+
+.card:last-child
+{
+    margin-bottom: 0;
+}
+
+.menu
+{
+    background-color: #dcdcdc;
+    margin: 0 8px;
+    flex-basis: 200px;
+    min-width: 100px;
+}
+
+.category
+{
+    display: flex;
+    cursor: pointer;
+    padding-left: 10px;
+    align-items: center;
+    height: 50px;
+    font-size: 20px;
+    border-bottom: 1px solid #000;
+}
+
+.category:hover
+{
+    background-color: #c2c2c2;
+}
+
+.card:nth-child(2n)
+{
+    flex: 1 62%;
+}
+
+.card:first-child,
+.card:nth-child(3n),
+.card:nth-child(4n),
+.card:nth-child(5n),
+.card:nth-child(7n),
+.card:nth-child(9n)
+{
+    flex: 1 28.5%;
+}
+
+.card:nth-child(6n)
+{
+    flex: 1 62%;
+}
+
+.card:nth-child(8n)
+{
+    flex: 1 100%;
+}
+
+.card
+{
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+    margin: 8px;
+}
+
+.rating label
+{
+    width: 80%;
+}
+
+.card img
+{
+    object-fit: cover;
+    min-height: 100%;
+    min-width: 100%;
+    zoom: 1%;
+}
+
+.card p
+{
+    position: absolute;
+    left: 0;
+    background: #000;
+    color: #fff;
+    display: none;
+    font-size: 30px;
+    bottom: 10px;
+    opacity: .7;
+}
+
+.card:hover p
+{
+    display: block;
+}
+
+.choose
+{
+    cursor: pointer;
+    width: 100%;
+}
+
+.container > input
+{
+    display: none;
+}
+
+.cats
+{
+    flex: 1 1 50%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.container
+{
+    display: flex;
+    align-self: flex-start;
+}
+
+.all:checked ~ .menu .all-cats,
+.normal:checked ~ .menu .normal-cats,
+.lazy:checked ~ .menu .lazy-cats,
+.slogger:checked ~ .menu .slogger-cats
+{
+    background-color: #c2c2c2;
+}
+
+.normal:checked ~ .cats .lazy-cat,
+.normal:checked ~ .cats .slogger-cat,
+.lazy:checked ~ .cats .normal-cat,
+.lazy:checked ~ .cats .slogger-cat,
+.slogger:checked ~ .cats .normal-cat,
+.slogger:checked ~ .cats .lazy-cat
+{
+    opacity: .5;
+}
+
+.normal:checked ~ .cats .lazy-cat:hover p,
+.normal:checked ~ .cats .slogger-cat:hover p,
+.lazy:checked ~ .cats .normal-cat:hover p,
+.lazy:checked ~ .cats .slogger-cat:hover p,
+.slogger:checked ~ .cats .normal-cat:hover p,
+.slogger:checked ~ .cats .lazy-cat:hover p
+{
+
+    display: none;
+}
+
+.invisible-input
+{
+    display: none;
+}
+
+.switch
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.switch:after
+{
+    content: ' Grid';
+}
+
+.switch-on:checked ~ .switch:after
+{
+    content: ' Flex';
+}
+
+/*Grid*/
+
+input[id='switch']:checked ~ .container
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 16% 67.25% 16.75%;
+    grid-template-areas: 'menu cats rating';
+}
+
+input[id='switch']:checked ~ .container .menu
+{
+    grid-area: menu;
+}
+
+input[id='switch']:checked ~ .container .rating
+{
+    grid-area: rating;
+}
+
+input[id='switch']:checked ~ .container .cats
+{
+    justify-content: normal;
+    grid-area: cats;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 31.57% 31.57% 31.57%;
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-areas: 'small1 middle1 middle1'
+        'small2 small3 small4'
+        'middle2 middle2 small5'
+        'big big big';
+}
+
+input[id='switch']:checked ~ .container .cats .card
+{
+    margin: 0;
+}
+
+input[id='switch']:checked ~ .container .cats
+{
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+input[id='switch']:checked ~ .container .cats .card:first-child
+{
+    grid-area: small1;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(2)
+{
+    grid-area: middle1;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(3)
+{
+    grid-area: small2;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(4)
+{
+    grid-area: small3;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(5)
+{
+    grid-area: small4;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(6)
+{
+    grid-area: middle2;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(7)
+{
+    grid-area: small5;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(8)
+{
+    grid-area: big;
+}
