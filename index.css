@@ -3,6 +3,11 @@ h1
     text-align: center;
 }
 
+.default
+{
+    display: none;
+}
+
 .h3
 {
     font-size: 25px;
@@ -77,17 +82,6 @@ img
     display: inline-table;
 }
 
-.help:hover::after
-{
-    content: attr(data-title);
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 5px;
-    background-color: royalblue;
-    border: 1px solid;
-}
-
 .cats
 {
     width: 60%;
@@ -137,6 +131,36 @@ img
     background-color: darkgray;
 }
 
+.def:checked ~ .cats > .first_row > .help:hover::after,
+.def:checked ~ .cats > .second_row > .help:hover::after,
+.def:checked ~ .cats > .third_row > .help:hover::after,
+.def:checked ~ .cats > .last_row > .help:hover::after,
+.but1:checked ~ .cats > .first_row > .help3:hover::after,
+.but1:checked ~ .cats > .second_row > .help3:hover::after,
+.but1:checked ~ .cats > .third_row > .help3:hover::after,
+.but1:checked ~ .cats > .last_row > .help3:hover::after,
+.but2:checked ~ .cats > .first_row > .help2:hover::after,
+.but2:checked ~ .cats > .second_row > .help2:hover::after,
+.but2:checked ~ .cats > .third_row > .help2:hover::after,
+.but2:checked ~ .cats > .last_row > .help2:hover::after,
+.but3:checked ~ .cats > .first_row > .help1:hover::after,
+.but3:checked ~ .cats > .second_row > .help1:hover::after,
+.but3:checked ~ .cats > .third_row > .help1:hover::after,
+.but3:checked ~ .cats > .last_row > .help1:hover::after,
+.but4:checked ~ .cats > .first_row > .help4:hover::after,
+.but4:checked ~ .cats > .second_row > .help4:hover::after,
+.but4:checked ~ .cats > .third_row > .help4:hover::after,
+.but4:checked ~ .cats > .last_row > .help4:hover::after
+{
+    content: attr(data-title);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    background-color: royalblue;
+    border: 1px solid;
+}
+
 .label_down,
 .label_up
 {
@@ -181,30 +205,30 @@ footer
     background-color: beige;
 }
 
-.r_brit
+.rating_brit
 {
-    width: 50px;
+    width: 25%;
     border: 1px solid;
     background: linear-gradient(to right, red, white);
 }
 
-.r_rus
+.rating_rus
 {
-    width: 100px;
+    width: 50%;
     background: linear-gradient(to right, yellow, white);
     border: 1px solid;
 }
 
-.r_lynx
+.rating_lynx
 {
-    width: 150px;
+    width: 75%;
     background: linear-gradient(to right, lightgreen, white);
     border: 1px solid;
 }
 
-.r_no_br
+.rating_no_breed
 {
-    width: 200px;
+    width: 90%;
     background: linear-gradient(to right, green, white);
     border: 1px solid;
 }
