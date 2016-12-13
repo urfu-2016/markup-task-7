@@ -2,7 +2,100 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <link href="index.css" rel="stylesheet">
+    <title>Бабуленькины котята</title>
 </head>
 <body>
+    <header>
+        <h1>Бабуленькины котята</h1>
+    </header>
+    <main>
+        <div class="wraper">
+            <input type="checkbox" id="cat1" class="cat1">
+            <input type="checkbox" id="cat2" class="cat2">
+            <input type="checkbox" id="cat3" class="cat3">
+            <div class="navigation">
+                <label for="cat1" class="cat1">Абиссинская</label>
+                <label for="cat2" class="cat2">Британская</label>
+                <label for="cat3" class="cat3">Сиамская</label>
+            </div>
+            <div class="content">
+                <div class="card size1">
+                    <img class="cat1" src="images/cat3.jpg" title="Абиссинская" alt="Абиссинская">
+                    <div class="description">
+                        <p>Гоша, 4 года</p>
+                    </div>
+                </div>
+                <div class="card size2">
+                    <img class="cat3" src="images/abissin.jpg" title="Сиамская" alt="Сиамская">
+                    <div class="description">
+                        <p>Вася, 3 года</p>
+                    </div>
+                </div>
+                <div class="card size1">
+                    <img class="cat1" src="images/siam.jpg" title="Абиссинская" alt="Абиссинская">
+                    <div class="description">
+                        <p>Сема, 1 год</p>
+                    </div>
+                </div>
+                <div class="card size1">
+                    <img class="cat3" src="images/cat33.jpg" title="Сиамская" alt="Сиамская">
+                    <div class="description">
+                        <p>Кузя, 42 года</p>
+                    </div>
+                </div>
+                <div class="card size1">
+                    <img class="cat3" src="images/cat1.jpg" title="Сиамская" alt="Сиамская">
+                    <div class="description">
+                        <p>Миша, 5 лет</p>
+                    </div>
+                </div>
+                <div class="card size2">
+                    <img class="cat2" src="images/british.jpg" title="Британская" alt="Британская">
+                    <div class="description">
+                        <p>Вася, 9 лет</p>
+                    </div>
+                </div>
+                <div class="card size1">
+                    <img class="cat2" src="images/cat22.jpg" title="Британская" alt="Британская">
+                    <div class="description">
+                        <p>Коля, 4 года</p>
+                    </div>
+                </div>
+                <div class="card size3">
+                    <img class="cat2" src="images/cat2.jpg" title="Британская" alt="Британская">
+                    <div class="description">
+                        <p>Леня, 2 года</p>
+                    </div>
+                </div>
+            </div>
+            <div class="rating">
+                <h3>Рейтинг</h3>
+                <input type="checkbox" id="sort" class="sort">
+                <label for="sort">По убыванию</label>
+                <div class="info">
+                    <div class="value1">
+                        <h5>Абиссинская</h5>
+                        <div class="gradient"></div>
+                        <span>1</span>
+                    </div>
+                    <div class="value5">
+                        <h5>Британская</h5>
+                        <div class="gradient"></div>
+                        <span>5</span>
+                    </div>
+                    <div class="value2">
+                        <h5>Сиамская</h5>
+                        <div class="gradient"></div>
+                        <span>2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>ООО Бабуленькины котятки, 2016</p>
+        <address>Наш адрес: улица котовая, д.5</address>
+    </footer>
 </body>
 </html>
