@@ -91,9 +91,11 @@ body
 {
     display: flex;
     flex-flow: row wrap;
-    flex-basis: 190px;
+    flex-basis: 180px;
+    min-width: 200px;
     align-self: flex-start;
-    margin: 0 8px;
+    margin-left: 8px;
+    margin-right: 8px;
     background-color: #dcdcdc;
     padding-left: 10px;
     font-family: arial;
@@ -158,7 +160,7 @@ body
 .card:nth-child(7n),
 .card:nth-child(9n)
 {
-    flex: 1 29%;
+    flex: 1 28.5%;
 }
 
 .card:nth-child(6n)
@@ -263,4 +265,113 @@ body
 {
 
     display: none;
+}
+
+.invisible-input
+{
+    display: none;
+}
+
+.switch
+{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+
+.switch:after
+{
+    content: ' Grid';
+}
+
+.switch-on:checked ~ .switch:after
+{
+    content: ' Flex';
+}
+
+/*Grid*/
+
+input[id='switch']:checked ~ .container
+{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 16% 67.25% 16.75%;
+    grid-template-areas: 'menu cats rating';
+}
+
+input[id='switch']:checked ~ .container .menu
+{
+    grid-area: menu;
+}
+
+input[id='switch']:checked ~ .container .rating
+{
+    grid-area: rating;
+}
+
+input[id='switch']:checked ~ .container .cats
+{
+    justify-content: normal;
+    grid-area: cats;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 31.57% 31.57% 31.57%;
+    grid-row-gap: 16px;
+    grid-column-gap: 16px;
+    grid-template-areas: 'small1 middle1 middle1'
+        'small2 small3 small4'
+        'middle2 middle2 small5'
+        'big big big';
+}
+
+input[id='switch']:checked ~ .container .cats .card
+{
+    margin: 0;
+}
+
+input[id='switch']:checked ~ .container .cats
+{
+    margin-right: 8px;
+    margin-left: 8px;
+}
+
+input[id='switch']:checked ~ .container .cats .card:first-child
+{
+    grid-area: small1;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(2)
+{
+    grid-area: middle1;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(3)
+{
+    grid-area: small2;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(4)
+{
+    grid-area: small3;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(5)
+{
+    grid-area: small4;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(6)
+{
+    grid-area: middle2;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(7)
+{
+    grid-area: small5;
+}
+
+input[id='switch']:checked ~ .container .cats .card:nth-child(8)
+{
+    grid-area: big;
 }
