@@ -1,0 +1,382 @@
+h1
+{
+    text-align: center;
+}
+
+.default
+{
+    display: none;
+}
+
+.h3
+{
+    font-size: 25px;
+    font-weight: bold;
+    color: red;
+    padding-right: 40%;
+}
+
+input
+{
+    display: none;
+}
+
+img
+{
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+}
+
+.main
+{
+    display: flex;
+}
+
+.menu
+{
+    flex-direction: column;
+    float: left;
+    width: 15%;
+    background-color: beige;
+}
+
+.first_row > .help:last-child
+{
+    width: 24%;
+    height: 200px;
+}
+
+.first_row > .help:first-child
+{
+    width: 75%;
+    height: 200px;
+}
+
+.second_row > .help
+{
+    width: 33%;
+    height: 250px;
+}
+
+.third_row > .help
+{
+    width: 50%;
+    height: 350px;
+}
+
+.third_row > .help:first-child
+{
+    width: 49%;
+}
+
+.last_row > .help
+{
+    width: 100%;
+    height: 500px;
+}
+
+.help
+{
+    position: relative;
+    display: inline-table;
+}
+
+.cats
+{
+    width: 60%;
+    flex-wrap: wrap;
+}
+
+.label_up
+{
+    position: absolute;
+    top: 105px;
+    color: green;
+}
+
+.label_down
+{
+    position: absolute;
+    top: 105px;
+    color: red;
+}
+
+.first_cat,
+.second_cat,
+.third_cat,
+.four_cat
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50px;
+    background-color: lightgray;
+}
+
+.first_cat:hover,
+.second_cat:hover,
+.third_cat:hover,
+.four_cat:hover
+{
+    background-color: darkgray;
+}
+
+.but1:checked ~ .menu > label > .first_cat,
+.but2:checked ~ .menu > label > .second_cat,
+.but3:checked ~ .menu > label > .third_cat,
+.but4:checked ~ .menu > label > .four_cat
+{
+    color: red;
+    background-color: darkgray;
+}
+
+.def:checked ~ .cats > .first_row > .help:hover::after,
+.def:checked ~ .cats > .second_row > .help:hover::after,
+.def:checked ~ .cats > .third_row > .help:hover::after,
+.def:checked ~ .cats > .last_row > .help:hover::after,
+.but1:checked ~ .cats > .first_row > .help3:hover::after,
+.but1:checked ~ .cats > .second_row > .help3:hover::after,
+.but1:checked ~ .cats > .third_row > .help3:hover::after,
+.but1:checked ~ .cats > .last_row > .help3:hover::after,
+.but2:checked ~ .cats > .first_row > .help2:hover::after,
+.but2:checked ~ .cats > .second_row > .help2:hover::after,
+.but2:checked ~ .cats > .third_row > .help2:hover::after,
+.but2:checked ~ .cats > .last_row > .help2:hover::after,
+.but3:checked ~ .cats > .first_row > .help1:hover::after,
+.but3:checked ~ .cats > .second_row > .help1:hover::after,
+.but3:checked ~ .cats > .third_row > .help1:hover::after,
+.but3:checked ~ .cats > .last_row > .help1:hover::after,
+.but4:checked ~ .cats > .first_row > .help4:hover::after,
+.but4:checked ~ .cats > .second_row > .help4:hover::after,
+.but4:checked ~ .cats > .third_row > .help4:hover::after,
+.but4:checked ~ .cats > .last_row > .help4:hover::after
+{
+    content: attr(data-title);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 5px;
+    background-color: royalblue;
+    border: 1px solid;
+}
+
+.label_down,
+.label_up
+{
+    display: none;
+}
+
+.sort:checked ~ .label_up
+{
+    display: block;
+}
+
+.sort:not(:checked) ~ .label_down
+{
+    display: block;
+}
+
+footer
+{
+    align-content: flex-end;
+    text-align: center;
+    border-top: 1px solid;
+}
+
+.sort:checked ~ .up_down_sort
+{
+    flex-direction: column;
+}
+
+.up_down_sort
+{
+    display: inherit;
+    flex-direction: column-reverse;
+}
+
+.rating
+{
+    flex-direction: column;
+    height: 100%;
+    text-align: right;
+    width: 20%;
+    display: flex;
+    background-color: beige;
+}
+
+.rating_brit
+{
+    width: 25%;
+    border: 1px solid;
+    background: linear-gradient(to right, red, white);
+}
+
+.rating_rus
+{
+    width: 50%;
+    background: linear-gradient(to right, yellow, white);
+    border: 1px solid;
+}
+
+.rating_lynx
+{
+    width: 75%;
+    background: linear-gradient(to right, lightgreen, white);
+    border: 1px solid;
+}
+
+.rating_no_breed
+{
+    width: 90%;
+    background: linear-gradient(to right, green, white);
+    border: 1px solid;
+}
+
+.def:checked ~ .cats > .first_row > .help > img,
+.def:checked ~ .cats > .second_row > .help > img,
+.def:checked ~ .cats > .third_row > .help > img,
+.def:checked ~ .cats > .last_row > .help > img,
+.but4:checked ~ .cats > .first_row > .help > .Brit,
+.but4:checked ~ .cats > .second_row > .help > .Brit,
+.but4:checked ~ .cats > .third_row > .help > .Brit,
+.but4:checked ~ .cats > .last_row > .help > .Brit,
+.but1:checked ~ .cats > .first_row > .help > .no_breed,
+.but1:checked ~ .cats > .second_row > .help > .no_breed,
+.but1:checked ~ .cats > .third_row > .help > .no_breed,
+.but1:checked ~ .cats > .last_row > .help > .no_breed,
+.but2:checked ~ .cats > .first_row > .help > .lynx,
+.but2:checked ~ .cats > .second_row > .help > .lynx,
+.but2:checked ~ .cats > .third_row > .help > .lynx,
+.but2:checked ~ .cats > .last_row > .help > .lynx,
+.but3:checked ~ .cats > .first_row > .help > .rus,
+.but3:checked ~ .cats > .second_row > .help > .rus,
+.but3:checked ~ .cats > .third_row > .help > .rus,
+.but3:checked ~ .cats > .last_row > .help > .rus
+{
+    opacity: 1;
+}
+
+.menu div
+{
+    width: 100%;
+}
+
+.up_down_sort .title
+{
+    text-align: left;
+}
+
+@media only screen and (max-width: 1300px)
+{
+    .first_row > .help:last-child
+    {
+        width: 24%;
+        height: 150px;
+    }
+
+    .first_row > .help:first-child
+    {
+        width: 74%;
+        height: 150px;
+    }
+
+    .second_row > .help
+    {
+        width: 32%;
+        height: 150px;
+    }
+
+    .third_row > .help
+    {
+        width: 48%;
+        height: 250px;
+    }
+
+    .third_row > .help:first-child
+    {
+        width: 49%;
+    }
+
+    .last_row > .help
+    {
+        width: 98%;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 193px)
+{
+    .first_row > .help:last-child
+    {
+        width: 22%;
+        height: 50px;
+    }
+
+    .first_row > .help:first-child
+    {
+        width: 72%;
+        height: 50px;
+    }
+
+    .second_row > .help
+    {
+        width: 32%;
+        height: 100px;
+    }
+
+    .third_row > .help
+    {
+        width: 47%;
+        height: 200px;
+    }
+
+    .third_row > .help:first-child
+    {
+        width: 47%;
+    }
+
+    .last_row > .help
+    {
+        width: 94%;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 161px)
+{
+    .first_row > .help:last-child
+    {
+        width: 20%;
+        height: 30px;
+    }
+
+    .first_row > .help:first-child
+    {
+        width: 70%;
+        height: 30px;
+    }
+
+    .second_row > .help
+    {
+        width: 30%;
+        height: 70px;
+    }
+
+    .third_row > .help
+    {
+        width: 45%;
+        height: 150px;
+    }
+
+    .third_row > .help:first-child
+    {
+        width: 45%;
+    }
+
+    .last_row > .help
+    {
+        width: 90%;
+        height: 150px;
+    }
+}
