@@ -266,3 +266,117 @@ footer
 {
     text-align: left;
 }
+
+@media only screen and (max-width: 1300px)
+{
+    .first_row > .help:last-child
+    {
+        width: 24%;
+        height: 150px;
+    }
+
+    .first_row > .help:first-child
+    {
+        width: 74%;
+        height: 150px;
+    }
+
+    .second_row > .help
+    {
+        width: 32%;
+        height: 150px;
+    }
+
+    .third_row > .help
+    {
+        width: 48%;
+        height: 250px;
+    }
+
+    .third_row > .help:first-child
+    {
+        width: 49%;
+    }
+
+    .last_row > .help
+    {
+        width: 98%;
+        height: 300px;
+    }
+}
+
+@media only screen and (max-width: 193px)
+{
+    .first_row > .help:last-child
+    {
+        width: 22%;
+        height: 50px;
+    }
+
+    .first_row > .help:first-child
+    {
+        width: 72%;
+        height: 50px;
+    }
+
+    .second_row > .help
+    {
+        width: 32%;
+        height: 100px;
+    }
+
+    .third_row > .help
+    {
+        width: 47%;
+        height: 200px;
+    }
+
+    .third_row > .help:first-child
+    {
+        width: 47%;
+    }
+
+    .last_row > .help
+    {
+        width: 94%;
+        height: 250px;
+    }
+}
+
+@media only screen and (max-width: 161px)
+{
+    .first_row > .help:last-child
+    {
+        width: 20%;
+        height: 30px;
+    }
+
+    .first_row > .help:first-child
+    {
+        width: 70%;
+        height: 30px;
+    }
+
+    .second_row > .help
+    {
+        width: 30%;
+        height: 70px;
+    }
+
+    .third_row > .help
+    {
+        width: 45%;
+        height: 150px;
+    }
+
+    .third_row > .help:first-child
+    {
+        width: 45%;
+    }
+
+    .last_row > .help
+    {
+        width: 90%;
+        height: 150px;
+    }
+}
